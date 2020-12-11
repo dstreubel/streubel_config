@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>BRUA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>BRMA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>BRTA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+
+	<!--activity>
+		<runIndependent>true</runIndependent>
+		<workflowId>Bradley_HEFS_Stats</workflowId>
+	</activity-->  
+
+</workflow>

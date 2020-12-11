@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelf
+t.nl/fews http://c
+hps1/schemas/transformationModule.xsd" version="1.0">
+
+<!-- DESCRIPTION: This module creates 6h FMAT data from 24h TFMX and TFMN data.
+     
+     The general idea is as follows:
+     - Input is TFMX/N time series with values at 12Z.
+     - Define time series to store TFMX/N values at 24h staggered to start every 6 hour: 
+       18, 0, 6, and 12Z.
+     - At each step, define a 'before' and 'after' version to contain the closest TFMX/N value
+       before or after the desired time, respectively, found in the input time sries.
+     - Define time series to contain FMAT values computed at 24h time steps corresponding
+       to the TFMX/N series just created.  That is, one series with values at 18Z, one series
+       with values at 0Z, and so on.
+     - Perform sample transformation to populate the before and after 18, 0, 6, and 12Z variable
+       time series.  Perform an extrapolation to make sure that values are defined starting at 
+       the first value after T0 and end the first value before the end time of the time series.
+     - Perform user transformations mimicking MEFP fortran code to compute the FMAT values from
+       the TFMX/N values.  See below for more details.
+     - Merge the four time series to acquire the 6h FMAT time series.
+
+    To modify the constants used in the diurnal constants, see below; look for the text
+    'COMPUTING FMAT VALUES'. -->
+
+    <!-- Inputs are the TFMN and TFMX output by the MEFP Ensemble Generator. -->
+    <variable>
+        <variableId>input_tfmn</variableId>
+        <timeSeriesSet>
+            <moduleInstanceSetId>ALL_MEFP_TFMN_TFMX_Forecasts</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep times="12:00"/>
+            <readWriteMode>read complete forecast</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>input_tfmx</variableId>
+        <timeSeriesSet>
+            <moduleInstanceSetId>ALL_MEFP_TFMN_TFMX_Forecasts</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep times="12:00"/>
+            <readWriteMode>read complete forecast</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+
+    <!-- Output is the FMAT time series. -->
+    <variable>
+        <variableId>output_fmat</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    
+    <!-- Intermediary: 18Z time series -->
+    
+    <variable>
+        <variableId>tfmn_18z_after</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <qualifierId>sample18Zafter</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmn_18z_before</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <qualifierId>sample18Zbefore</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmx_18z_after</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <qualifierId>sample18Zafter</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmx_18z_before</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <qualifierId>sample18Zbefore</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    
+    <!-- Intermediary: 0Z time series -->
+    
+    <variable>
+        <variableId>tfmn_0z_after</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <qualifierId>sample0Zafter</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="00:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmn_0z_before</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <qualifierId>sample0Zbefore</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="00:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmx_0z_after</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <qualifierId>sample0Zafter</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="00:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmx_0z_before</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <qualifierId>sample0Zbefore</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="00:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    
+    <!-- Intermediary: 6Z time series -->
+    
+    <variable>
+        <variableId>tfmn_6z_after</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <qualifierId>sample6Zafter</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="06:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmn_6z_before</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <qualifierId>sample6Zbefore</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="06:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmx_6z_after</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <qualifierId>sample6Zafter</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="06:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmx_6z_before</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <qualifierId>sample6Zbefore</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="06:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    
+    
+    <!-- Intermediary: 12Z time series -->
+    
+    <variable>
+        <variableId>tfmn_12z_after</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <qualifierId>sample12Zafter</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="12:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmn_12z_before</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <qualifierId>sample12Zbefore</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="12:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmx_12z_after</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <qualifierId>sample12Zafter</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="12:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>tfmx_12z_before</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <qualifierId>sample12Zbefore</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="12:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    
+    <!-- Intermediary: Four FMAT time series computed via diurnal computations from shifted TS. -->
+    
+    <variable>
+        <variableId>output_fmat_18z</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <qualifierId>shift18</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable> 
+    <variable>
+        <variableId>output_fmat_0z</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <qualifierId>shift12</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="00:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>output_fmat_6z</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <qualifierId>shift6</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="06:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>output_fmat_12z</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <qualifierId>shift0</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="12:00"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="365" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    
+    <!-- Create the 18Z time series-->
+    
+    <transformation id="tfmn_create_18z_after">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmn</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmn_18z_after</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestForward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmn_18z_after</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmn_create_18z_before">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmn</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmn_18z_before</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmn_18z_before</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmx_create_18z_after">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmx</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmx_18z_after</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestForward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmx_18z_after</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmx_create_18z_before">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmx</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmx_18z_before</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmx_18z_before</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    
+    <transformation id="tfmn_18z_before_fill_beginning">
+        <interpolationSerial>
+           <extrapolateConstant>
+                <inputVariable>
+                   <variableId>tfmn_18z_before</variableId>
+                </inputVariable>
+                <extrapolateDirection>start</extrapolateDirection>
+                <outputVariable>
+                   <variableId>tfmn_18z_before</variableId>
+                </outputVariable>
+           </extrapolateConstant>
+        </interpolationSerial>
+    </transformation>
+    <transformation id="tfmx_18z_before_fill_beginning">
+        <interpolationSerial>
+           <extrapolateConstant>
+                <inputVariable>
+                   <variableId>tfmx_18z_before</variableId>
+                </inputVariable>
+                <extrapolateDirection>start</extrapolateDirection>
+                <outputVariable>
+                   <variableId>tfmx_18z_before</variableId>
+                </outputVariable>
+           </extrapolateConstant>
+        </interpolationSerial>
+    </transformation>
+    
+    <!-- Create the 0Z time series-->
+    
+    <transformation id="tfmn_create_0z_after">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmn</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmn_0z_after</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestForward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmn_0z_after</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmn_create_0z_before">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmn</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmn_0z_before</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmn_0z_before</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmx_create_0z_after">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmx</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmx_0z_after</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestForward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmx_0z_after</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmx_create_0z_before">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmx</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmx_0z_before</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmx_0z_before</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    
+    <transformation id="tfmn_0z_before_fill_beginning">
+        <interpolationSerial>
+           <extrapolateConstant>
+                <inputVariable>
+                   <variableId>tfmn_0z_before</variableId>
+                </inputVariable>
+                <extrapolateDirection>start</extrapolateDirection>
+                <outputVariable>
+                   <variableId>tfmn_0z_before</variableId>
+                </outputVariable>
+           </extrapolateConstant>
+        </interpolationSerial>
+    </transformation>
+    <transformation id="tfmx_0z_before_fill_beginning">
+        <interpolationSerial>
+           <extrapolateConstant>
+                <inputVariable>
+                   <variableId>tfmx_0z_before</variableId>
+                </inputVariable>
+                <extrapolateDirection>start</extrapolateDirection>
+                <outputVariable>
+                   <variableId>tfmx_0z_before</variableId>
+                </outputVariable>
+           </extrapolateConstant>
+        </interpolationSerial>
+    </transformation>
+    
+    <!-- Create the 6Z time series-->
+    
+    <transformation id="tfmn_create_6z_after">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmn</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmn_6z_after</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestForward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmn_6z_after</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmn_create_6z_before">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmn</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmn_6z_before</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmn_6z_before</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmx_create_6z_after">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmx</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmx_6z_after</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestForward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmx_6z_after</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmx_create_6z_before">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>input_tfmx</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmx_6z_before</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmx_6z_before</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    
+    <transformation id="tfmn_6z_before_fill_beginning">
+        <interpolationSerial>
+           <extrapolateConstant>
+                <inputVariable>
+                   <variableId>tfmn_6z_before</variableId>
+                </inputVariable>
+                <extrapolateDirection>start</extrapolateDirection>
+                <outputVariable>
+                   <variableId>tfmn_6z_before</variableId>
+                </outputVariable>
+           </extrapolateConstant>
+        </interpolationSerial>
+    </transformation>
+    <transformation id="tfmx_6z_before_fill_beginning">
+        <interpolationSerial>
+           <extrapolateConstant>
+                <inputVariable>
+                   <variableId>tfmx_6z_before</variableId>
+                </inputVariable>
+                <extrapolateDirection>start</extrapolateDirection>
+                <outputVariable>
+                   <variableId>tfmx_6z_before</variableId>
+                </outputVariable>
+           </extrapolateConstant>
+        </interpolationSerial>
+    </transformation>
+    
+    
+    <!-- Create the 12Z time series-->
+    
+    <transformation id="tfmn_create_12z_after">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>tfmn_18z_after</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmn_12z_after</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestForward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmn_12z_after</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmn_create_12z_before">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>tfmn_6z_before</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmn_12z_before</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmn_12z_before</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmx_create_12z_after">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>tfmx_18z_after</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmx_12z_after</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestForward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmx_12z_after</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    <transformation id="tfmx_create_12z_before">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>tfmx_6z_before</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>tfmx_12z_before</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>tfmx_12z_before</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    
+    <transformation id="tfmn_12z_before_fill_beginning">
+        <interpolationSerial>
+           <extrapolateConstant>
+                <inputVariable>
+                   <variableId>tfmn_12z_before</variableId>
+                </inputVariable>
+                <extrapolateDirection>start</extrapolateDirection>
+                <outputVariable>
+                   <variableId>tfmn_12z_before</variableId>
+                </outputVariable>
+           </extrapolateConstant>
+        </interpolationSerial>
+    </transformation>
+    <transformation id="tfmx_12z_before_fill_beginning">
+        <interpolationSerial>
+           <extrapolateConstant>
+                <inputVariable>
+                   <variableId>tfmx_12z_before</variableId>
+                </inputVariable>
+                <extrapolateDirection>start</extrapolateDirection>
+                <outputVariable>
+                   <variableId>tfmx_12z_before</variableId>
+                </outputVariable>
+           </extrapolateConstant>
+        </interpolationSerial>
+    </transformation>
+    <transformation id="tfmn_12z_after_fill_end">
+        <interpolationSerial>
+           <extrapolateConstant>
+                <inputVariable>
+                   <variableId>tfmn_12z_after</variableId>
+                </inputVariable>
+                <extrapolateDirection>end</extrapolateDirection>
+                <outputVariable>
+                   <variableId>tfmn_12z_after</variableId>
+                </outputVariable>
+           </extrapolateConstant>
+        </interpolationSerial>
+    </transformation>
+    <transformation id="tfmx_12z_after_fill_end">
+        <interpolationSerial>
+           <extrapolateConstant>
+                <inputVariable>
+                   <variableId>tfmx_12z_after</variableId>
+                </inputVariable>
+                <extrapolateDirection>end</extrapolateDirection>
+                <outputVariable>
+                   <variableId>tfmx_12z_after</variableId>
+                </outputVariable>
+           </extrapolateConstant>
+        </interpolationSerial>
+    </transformation>
+    
+    <!-- COMPUTING FMAT VALUES
+    
+         From the transformations done above, at each time step of the output_fmat_#z time series, we
+	 are guaranteed to have a value (assuming no input data is missing) for four different time series:
+	 
+	   tfmn_#z_after: the first TFMN value found AFTER the time
+	   tfmn_#z_before: the first TFMN value found BEFORE the time
+	   tfmx_#z_after: the first TFMX value found AFTER the time
+	   tfmx_#z_before: the first TFMX value found BEFORE the time
+	 
+	 In all cases, the end point values are repeated in order to fill in gaps at the beginning.  For
+	 example, with a T0 of 4/30/12 12Z, the first TFMN/X input values are at 5/1/12 12Z.  However the
+	 first 18Z value is 4/30/12 18Z.  There is are no TFMN/X values BEFORE the first 18Z value.  Hence,
+	 it uses the first input TFMN/X value, or that for 5/1/12 12Z.
+	 
+	 Additionally, at 12z, we have the input time series, input_tfmn and input_tfmx.  Note that for
+	 12z, the before and after time series created above via transformations are not inclusive, meaning
+	 that the before values are always those from the previous 12z measurement, while after is always
+	 the ones in the next 12z measurement.
+	 
+	 Below, we define the diurnal patter equations by putting coefficients in front of the four time
+	 series that sum to 1.  The default provided below are those used in the scientific prototype.
+	 Replace the coefficients as necessary, but make sure that they sum to one.
+
+     -->   
+     
+    <transformation id="fmat_hour_18z">
+        <user>
+            <simple>
+                <expression> COEFF_18Z_TFMN_AFTER*tfmn_18z_after + COEFF_18Z_TFMN_BEFORE*tfmn_18z_before + COEFF_18Z_TFMX_AFTER*tfmx_18z_after + COEFF_18Z_TFMX_BEFORE*tfmx_18z_before</expression>
+		<coefficientSetId>FMAT 18Z</coefficientSetId>
+                <coefficientSetFile>MEFP_TFMN_TFMX_to_FMAT_Coefficients</coefficientSetFile>
+		<outputVariable>
+                    <variableId>output_fmat_18z</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation>
+    <transformation id="fmat_hour_0z">
+        <user>
+            <simple>
+                <expression>COEFF_0Z_TFMN_AFTER*tfmn_0z_after + COEFF_0Z_TFMN_BEFORE*tfmn_0z_before + COEFF_0Z_TFMX_AFTER*tfmx_0z_after + COEFF_0Z_TFMX_BEFORE*tfmx_0z_before</expression>
+		<coefficientSetId>FMAT 0Z</coefficientSetId>
+                <coefficientSetFile>MEFP_TFMN_TFMX_to_FMAT_Coefficients</coefficientSetFile>
+		<outputVariable>
+                    <variableId>output_fmat_0z</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation>
+    <transformation id="fmat_hour_6z">
+        <user>
+            <simple>
+                <expression>COEFF_6Z_TFMN_AFTER*tfmn_6z_after + COEFF_6Z_TFMN_BEFORE*tfmn_6z_before + COEFF_6Z_TFMX_AFTER*tfmx_6z_after + COEFF_6Z_TFMX_BEFORE*tfmx_6z_before</expression>
+		<coefficientSetId>FMAT 6Z</coefficientSetId>
+                <coefficientSetFile>MEFP_TFMN_TFMX_to_FMAT_Coefficients</coefficientSetFile>
+                <outputVariable>
+                    <variableId>output_fmat_6z</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation>
+    <transformation id="fmat_hour_12z">
+        <user>
+            <simple>
+                <expression>COEFF_12Z_TFMN_AFTER*tfmn_12z_after + COEFF_12Z_TFMN_BEFORE*tfmn_12z_before + COEFF_12Z_TFMX_AFTER*tfmx_12z_after + COEFF_12Z_TFMX_BEFORE*tfmx_12z_before  + COEFF_12Z_TFMN_ON*input_tfmn + COEFF_12Z_TFMX_ON*input_tfmx</expression>
+		<coefficientSetId>FMAT 12Z</coefficientSetId>
+                <coefficientSetFile>MEFP_TFMN_TFMX_to_FMAT_Coefficients</coefficientSetFile>
+                <outputVariable>
+                    <variableId>output_fmat_12z</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation>
+    
+    
+    <!-- Combine the four FMAT time series into one time series.  Do not change the merge below! -->
+    <transformation id="tfmx_daily_max_18Z">
+        <merge>
+            <simple>
+	        <inputVariable>
+                    <variableId>output_fmat_18z</variableId>
+                </inputVariable>
+	        <inputVariable>
+                    <variableId>output_fmat_0z</variableId>
+                </inputVariable>
+	        <inputVariable>
+                    <variableId>output_fmat_6z</variableId>
+                </inputVariable>
+	        <inputVariable>
+                    <variableId>output_fmat_12z</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>output_fmat</variableId>
+                </outputVariable>
+            </simple>
+        </merge>
+    </transformation>
+
+</transformationModule>

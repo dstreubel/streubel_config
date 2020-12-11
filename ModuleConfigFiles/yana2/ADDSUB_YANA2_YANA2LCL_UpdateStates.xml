@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>YANA2LCL_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>WEIGHTS_YANA2_YANA2LCL_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>YANA2LCL</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>YANA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_YANA2_NULA2RTD_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>YANA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>YANA2_SQIN_6_YANA2LCL</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_YANA2_YANA2LCL_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>YANA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="YANA2LCL">
+		<user>
+			<simple>
+				<expression>YANA2_SQIN_6+YANA2LCL_SQIN_6</expression>
+				<outputVariable>
+					<variableId>YANA2_SQIN_6_YANA2LCL</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+</transformationModule>

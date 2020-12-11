@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+   	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>MAPX_PreProcessing_HRRR</moduleInstanceId>
+	</activity>
+   	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>MATX_PreProcessing_QTE_HRRR</moduleInstanceId>
+	</activity>
+   	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>FMATX_PreProcessing_QTF_HRRR</moduleInstanceId>
+	</activity>
+   	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Southeast_MergeMAP_Forecast_HRRR</moduleInstanceId>
+	</activity>
+   	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Southeast_MergeMAP_UpdateStates_HRRR</moduleInstanceId>
+	</activity>
+   	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Export_HRRR_QPF</moduleInstanceId>
+	</activity>
+
+</workflow>

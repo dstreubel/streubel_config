@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationCoefficientSets version="1.0" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationCoefficientSets.xsd">
+
+    <coefficientSet id="QBANK">
+
+<!--ANCHORAGE-->
+	<locationCoefficientSet>
+            <location>
+                <locationId>CHRA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="105"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+         <locationCoefficientSet>
+            <location>
+                <locationId>CSRA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="200"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+         <locationCoefficientSet>
+            <location>
+                <locationId>SHIA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="830"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+         <locationCoefficientSet>
+            <location>
+                <locationId>ERBA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="3100"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>TRPA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="9811"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+
+<!--Southeast-->
+          <locationCoefficientSet>
+            <location>
+                <locationId>SRYA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="2340"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>ALSQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="37000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>TATQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="6750"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>ALKA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="142015"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>ALEA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="142015"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>CKTA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="16500"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>TYAA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="4360"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>SKGA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="3800"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>MCAA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="900"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>MNDA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="8000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>MNBA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="7600"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>JDCA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="102"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>TKUA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="77000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>STTQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="80000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>ISKQ2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="80000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>STKA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="215000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet> 
+          <locationCoefficientSet>
+            <location>
+                <locationId>SCKA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="11000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+
+<!--TANANA-->
+          <locationCoefficientSet>
+            <location>
+                <locationId>HNRA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="28000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>UCHA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="4200"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>CRHA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="7300"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>MCDA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="5700"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>CHLA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="2000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>MCDA2REZ</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="5750"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>CHFA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="12500"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>SALA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="14800"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>CRNA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="7250"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>NEBA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="26000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>TSGA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="39000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>GBDA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="7500"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>BGDA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="60000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>TAFA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="68000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>ENNA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="80000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>CRSA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="900"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>CHAA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="5800"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>MHSA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="155000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+<!--CANADIAN YUKON-->
+          <locationCoefficientSet>
+            <location>
+                <locationId>KLNQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="13750"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>SRMQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="112500"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>PRXQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="65000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>YWRQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="130000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>NIRQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="10800"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>WHRQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="28000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>YDAQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="257000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+<!--FORTYMILE-->
+          <locationCoefficientSet>
+            <location>
+                <locationId>FMMA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="28000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>FMKA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="5600"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>FMWA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="9300"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>FMRA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="37500"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+
+<!--PORCUPINE-->
+
+          <locationCoefficientSet>
+            <location>
+                <locationId>OCRQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="26000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>PROQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="130000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>PRBQ9</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="120000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+<!--KOYUKUK-->
+
+          <locationCoefficientSet>
+            <location>
+                <locationId>BTTA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="66000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>ALLA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="120000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>KRHA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="171700"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+<!--NORTH SLOPE-->
+
+          <locationCoefficientSet>
+            <location>
+                <locationId>KUPA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="43800"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>SGRA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="19000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>CRUA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="175000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+<!--UPPER YUKON-->
+
+          <locationCoefficientSet>
+            <location>
+                <locationId>YEAA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="455000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>CIRA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="975600"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>YFYA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="608178"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>YRBA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="807300"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>TALA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="987000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+
+<!--MIDDLE YUKON-->
+          <locationCoefficientSet>
+            <location>
+                <locationId>RBYA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="665000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>GYRA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="733500"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+<!--MATSU-->
+          <locationCoefficientSet>
+            <location>
+                <locationId>SUDA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="13600"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>MACA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="4600"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>GCSA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="46000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>TRTA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="24300"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>SUNA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="97000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>MONA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="1780"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>WLWA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="2610"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>WILA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="1800"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>LSUA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="1840"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>LSHA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="2000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>SKWA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="31330"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>YLKA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="45000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+<!--COPPER-->
+          <locationCoefficientSet>
+            <location>
+                <locationId>GAKA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="9600"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+         <locationCoefficientSet>
+            <location>
+                <locationId>GPOA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="1020"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>GRSA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="7100"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>GULA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="7600"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>TAZA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="21700"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>KLUA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="7200"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>TONA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="6400"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>POWA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="1000"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>EYAA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="2500"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+<!--KENAI-->
+
+          <locationCoefficientSet>
+            <location>
+                <locationId>SNOA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="8925"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>MPTA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="3067"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>COOA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="8900"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>SKLA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="16700"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>SXRA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="24200"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>RESA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="5700"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>SIXA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="2900"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>NINA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="4550"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>APTA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="5815"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>APBA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="2700"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+<!--SOUTHWEST-->
+
+          <locationCoefficientSet>
+            <location>
+                <locationId>ILRA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="19425"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>NRDA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="27719"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+          <locationCoefficientSet>
+            <location>
+                <locationId>NSHA2</locationId>
+            </location>
+            <user>
+               <simple>
+                   <coefficient id="QBANK" value="99250"/>
+               </simple>
+            </user>
+        </locationCoefficientSet>
+
+	</coefficientSet> 
+ </transformationCoefficientSets>

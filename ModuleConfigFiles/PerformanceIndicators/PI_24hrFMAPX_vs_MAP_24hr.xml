@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<performanceIndicatorSets xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/performanceIndicatorSets.xsd" version="1.1">
+
+    <!--Rules below apply to when accumulating multiple periods of the timestep interval via precipitationPerformanceIndicator-->
+    <!--relativeViewPeriod (RVP) of input variables determines the analysis window-->
+    <!-- A start time of -24 and end time of 0 will perform stats on the past 24 hours from your T0-->
+    <!-- A start time of -24 and end time of -6 will perform stats on 18 hours between -24 and -6 your from T0-->
+    <performanceIndicatorSet performanceIndicatorId="MAP_vs_FMAPX">
+        <inputVariable variableId="6hr_MAP">
+            <timeSeriesSet>
+                <moduleInstanceId>ImportSHEF</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>MAP</parameterId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <relativeViewPeriod unit="hour" start="-24" end="0"/>
+                <readWriteMode>read only</readWriteMode>
+            </timeSeriesSet>
+        </inputVariable>
+        <inputVariable variableId="6hr_FMAPX">
+            <timeSeriesSet>
+                <moduleInstanceId>FMAPX_PreProcessing_QPF</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>FMAPX</parameterId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <relativeViewPeriod unit="hour" start="-24" end="0"/>
+                <readWriteMode>read only</readWriteMode>
+            </timeSeriesSet>
+        </inputVariable>
+
+        <forecastSelectionPeriod start="-24" end="-18" unit="hour"/>
+        <!--forecastSelectionPeriod (FSP) notes below... -->
+        <!--The FSP is required when input variables use forecasting timeSeriesTypes (i.e. external/simulated forecasting)-->
+        <!--Determines what forecast to grab from the LDS for the input variables that are using forecasting timeSeriesType-->
+        <!--If multiple forecast timeseries are selected, calculations are performed on the latest (i.e. newest) forecast timeseries-->
+        <!--FSP needs to be -24 to -18 in this instance-->
+        <!--Not sure why the two lines above are different than modulePerformanceIndicator behavior-->
+        <!--Hint: Use debug mode to view Log and confirm what forecast TimeSeries are selected for the forecast input variable-->
+
+        <!--*******************************************************************************************************************-->
+        <precipitationPerformanceIndicator indicatorType="RMSE" observedVariableId="6hr_MAP" forecastVariableId="6hr_FMAPX" outputVariableId="24hr_RMSE_FMAPX">
+            <accumulationPeriod start="0" end="24" unit="hour"/>
+            <assessmentInterval unit="hour" multiplier="24"/>
+        </precipitationPerformanceIndicator>
+        <precipitationPerformanceIndicator indicatorType="RMSF" observedVariableId="6hr_MAP" forecastVariableId="6hr_FMAPX" outputVariableId="24hr_RMSF_FMAPX">
+            <!--<additionalCriteria criteria="" value=""/>-->
+            <!--Uncomment above and check out the additional criteria options-->
+            <accumulationPeriod start="0" end="24" unit="hour"/>
+            <assessmentInterval unit="hour" multiplier="24"/>
+        </precipitationPerformanceIndicator>
+        <precipitationPerformanceIndicator indicatorType="bias" observedVariableId="6hr_MAP" forecastVariableId="6hr_FMAPX" outputVariableId="24hr_bias_FMAPX">
+            <accumulationPeriod start="0" end="24" unit="hour"/>
+            <assessmentInterval unit="hour" multiplier="24"/>
+        </precipitationPerformanceIndicator>
+
+        <!--The accumulationPeriod (AP) is the accumulated duration that you want to do analysis on-->
+
+        <!--AssessmentInterval (AI) answers the question... Of the forecast found by the FSP and within the RVP, how often do you want to group the forecast for statistical analysis?-->
+        <!--In other words, the AI and FSP work together to determine how many periods will be in the output and also the "n" value in the RMSE and RMSF equations-->
+        <!--"n" equals the number of forecast found within the AI for the given analysis period-->
+
+        <!--Example1: Lets say you have the following settings in hours-->
+        <!--RVP start=-120 end=0 | FSP start=-120 end=-18 | AP start=0 end=24 |AI multiplier=6-->
+        <!--This would result in an output of five timesteps.. each a 24 hour analsysis for the given QPF forecast that it found-->
+        <!--In this case five.. the "n" value would be 1 in the RMSE and RMSF equations-->
+
+        <!--Example2: Lets say you have the following settings in hours-->
+        <!--RVP start=-120 end=0 | FSP start=-120 end=-18 | AP start=0 end=24 |AI multiplier=120-->
+        <!--This would result in an output of one timestep since the AI covers the entire RVP-->
+        <!--An error is calculated for each 24 hour QPF forecast that the FSP finds... in this case 5-->
+        <!--The bias output in this scenario is the average of the 5 error calulations-->
+        <!--The square error amd square factor is also calculated 5 times for the RMSE and RMSF equations... so "n" is 5-->
+
+        <!--Example3: Lets say you have the following settings in hours-->
+        <!--RVP start=-120 end=0 | FSP start=-120 end=-18 | AP start=0 end=24 |AI multiplier=48-->
+        <!--Five forecast are still located... but a computation is done every 48 hours... so the output is three timesteps-->
+        <!--The first timestep (i.e.interval) includes two forecast and it averages the two errors for bias and "n" is 2-->
+        <!--The second timestep (i.e.interval) again includes two forecast and it also averages the two errors for bias and "n" is 2-->
+        <!--The third timestep only includes one forecast... so its bias and RMSE will be the same since "n" is 1-->
+        <!--*******************************************************************************************************************-->
+
+        <outputVariable variableId="24hr_RMSE_FMAPX">
+            <timeSeriesSet>
+                <moduleInstanceId>PI_24hrFMAPX_vs_MAP_24hr</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>RMSE</parameterId>
+                <qualifierId>RMSE.FMAPX.24</qualifierId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="nonequidistant"/>
+                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                <readWriteMode>add originals</readWriteMode>
+                <synchLevel>1</synchLevel>
+                <expiryTime unit="year"/>
+            </timeSeriesSet>
+        </outputVariable>
+        <outputVariable variableId="24hr_RMSF_FMAPX">
+            <timeSeriesSet>
+                <moduleInstanceId>PI_24hrFMAPX_vs_MAP_24hr</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>RMSF</parameterId>
+                <qualifierId>RMSF.FMAPX.24</qualifierId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="nonequidistant"/>
+                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                <readWriteMode>add originals</readWriteMode>
+                <synchLevel>1</synchLevel>
+                <expiryTime unit="year"/>
+            </timeSeriesSet>
+        </outputVariable>
+        <outputVariable variableId="24hr_bias_FMAPX">
+            <timeSeriesSet>
+                <moduleInstanceId>PI_24hrFMAPX_vs_MAP_24hr</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>bias</parameterId>
+                <qualifierId>bias.FMAPX.24</qualifierId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="nonequidistant"/>
+                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                <readWriteMode>add originals</readWriteMode>
+                <synchLevel>1</synchLevel>
+                <expiryTime unit="year"/>
+            </timeSeriesSet>
+        </outputVariable>
+    </performanceIndicatorSet>
+</performanceIndicatorSets>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>SetTimes_LastObserved</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>RRS_SampleSNWE_nrcs</moduleInstanceId>
+	</activity>
+<!--
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>RRS_SampleSWE_current</moduleInstanceId>
+	</activity>
+-->
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>MergeSWE_SnowAnalysis</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>MergeSNWE_SnowAnalysis</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>DayMonthSampleSNWE_SnowAnalysis</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>DayMonthSampleSWE_SnowAnalysis</moduleInstanceId>
+	</activity>
+</workflow>

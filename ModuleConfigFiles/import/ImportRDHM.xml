@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/rdhm/max01</folder>
+ 			<idMapId>IdImportGRIB1_Kauai_RDHM</idMapId>
+			<unitConversionsId>ImportGrib</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+<!--			<gridStartPoint>SW</gridStartPoint>-->
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportRDHM</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>MAXQ01</parameterId>
+			<locationId>HRAP_QTR_KAUAI_RDHM</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+	</import>
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/rdhm/rp01</folder>
+ 			<idMapId>IdImportGRIB1_Kauai_RDHM_TR</idMapId>
+			<unitConversionsId>ImportGrib</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+<!--			<gridStartPoint>SW</gridStartPoint>-->
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportRDHM</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>TR</parameterId>
+			<locationId>HRAP_QTR_KAUAI_RDHM</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+	</import>		
+</timeSeriesImportRun>

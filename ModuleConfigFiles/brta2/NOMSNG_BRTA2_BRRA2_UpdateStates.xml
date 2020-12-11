@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>BRRA2_QIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_BRTA2_BRRA2OB6_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>BRRA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>BRRA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NOMSNG_BRTA2_BRRA2_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>BRRA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="BRRA2_Interpolate">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>BRRA2_QIN_6</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>BRRA2_SQIN_6</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="BRRA2_Extrapolate">
+		<interpolationSerial>
+			<extrapolateExponential>
+				<inputVariable>
+					<variableId>BRRA2_SQIN_6</variableId>
+				</inputVariable>
+				<extrapolateDirection>both</extrapolateDirection>
+				<baseValue>0.0</baseValue>
+				<recessionConstant>1.0</recessionConstant>
+				<outputVariable>
+					<variableId>BRRA2_SQIN_6</variableId>
+				</outputVariable>
+			</extrapolateExponential>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="BRRA2_Default">
+		<interpolationSerial>
+			<default>
+				<inputVariable>
+					<variableId>BRRA2_SQIN_6</variableId>
+				</inputVariable>
+				<defaultValue>0</defaultValue>
+				<outputVariable>
+					<variableId>BRRA2_SQIN_6</variableId>
+				</outputVariable>
+			</default>
+		</interpolationSerial>
+	</transformation>
+</transformationModule>

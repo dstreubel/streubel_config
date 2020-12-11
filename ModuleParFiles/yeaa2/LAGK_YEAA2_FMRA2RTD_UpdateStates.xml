@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+     <parameter id="LAGQ_PAIRS">
+      <table>
+         <columnTypes A="double"/>
+         <row A="9.000"/>
+      </table>
+    </parameter>
+     <parameter id="KQ_PAIRS">
+      <table>
+         <columnTypes A="double"/>
+         <row A="3.000"/>
+      </table>
+    </parameter>
+    <parameter id="CONSTANT_LAG_VALUE">
+      <dblValue>9.0</dblValue>
+    </parameter>
+    <parameter id="NUMBER_OF_KQ_PAIRS">
+      <intValue>0</intValue>
+    </parameter>
+    <parameter id="INFLOW_TS_DATA_TYPE">
+      <stringValue>QINE</stringValue>
+    </parameter>
+    <parameter id="OUTFLOW_TS_DATA_TYPE">
+      <stringValue>SQIN</stringValue>
+    </parameter>
+    <parameter id="CONSTANT_K_VALUE">
+      <dblValue>3.0</dblValue>
+    </parameter>
+    <parameter id="TRANSMISSION_LOSS_THRESHOLD_FLOW">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="METR_OR_ENGL_UNITS">
+      <stringValue>ENGL</stringValue>
+    </parameter>
+    <parameter id="INFLOW_TS_ID">
+      <stringValue>FMRA2</stringValue>
+    </parameter>
+    <parameter id="OUTFLOW_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="INFLOW_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="TRANSMISSION_LOSS_COEFFICIENT">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="OUTFLOW_TS_ID">
+      <stringValue>FMRA2RTD</stringValue>
+    </parameter>
+    <parameter id="NUMBER_OF_LAGQ_PAIRS">
+      <intValue>0</intValue>
+    </parameter>
+  </group>
+</parameters>

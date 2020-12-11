@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+   
+    <variable>
+        <variableId>gefs_mean_grid</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_Interpolate_USA</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>FMAP</parameterId>
+            <locationId>HEFS_GEFS_USA</locationId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read complete forecast</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+    </variable>
+   
+    <variable>
+        <variableId>gefs_scalar</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_Interpolate_Location_FMAP</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAP</parameterId>
+            <qualifierId>GEFS</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+    </variable>
+    
+    <transformation id="SpatiallyInterpolatedHEFS-GEFS">
+        <interpolationSpatial>
+            <closestDistance>
+                <inputVariable>
+                    <variableId>gefs_mean_grid</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>gefs_scalar</variableId>
+                </outputVariable>
+            </closestDistance>
+        </interpolationSpatial>
+    </transformation>
+</transformationModule>

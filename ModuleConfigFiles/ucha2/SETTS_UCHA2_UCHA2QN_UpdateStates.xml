@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>UCHA2_QINE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SETTS_UCHA2_UCHA2QN_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>UCHA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="UCHA2QN">
+		<user>
+			<simple>
+				<expression>0.000E+00</expression>
+				<outputVariable>
+					<variableId>UCHA2_QINE_6</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+</transformationModule>

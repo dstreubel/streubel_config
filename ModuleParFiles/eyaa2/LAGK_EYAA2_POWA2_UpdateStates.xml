@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+    <parameter id="LAGQ_PAIRS">
+      <table>
+         <columnTypes A="double"/>
+         <row A="0.000"/>
+      </table>
+    </parameter>
+     <parameter id="KQ_PAIRS">
+      <table>
+         <columnTypes A="double" B="double"/>
+        <row A="1" B="4.4"/>
+        <row A="1" B="900"/>        
+        <row A="8" B="1452"/>       
+        <row A="10.8" B="2080"/>
+        <row A="12.35" B="3680"/>
+        <row A="12.30" B="5640"/>       
+        <row A="11.4" B="8300"/>
+        <row A="10.7" B="11340"/>        
+        <row A="10.8" B="12500"/>          
+        
+ <!--        <row A="17291.17" B="4.4"/>          
+         <row A="432.556" B="69.3"/>        
+         <row A="149.266" B="260.1"/>        
+         <row A="101.038" B="546"/>        
+         <row A="83.387" B="897.3"/>  
+        <row A="53.583" B="1451.6"/>          
+        <row A="47.889" B="2080.3"/>  
+        <row A="43.425" B="2737.6"/>      
+        <row A="32.889" B="3677.8"/>     
+        <row A="32.235" B="4649.7"/>         
+        <row A="32.086" B="5638.8"/>          
+        <row A="24.261" B="6963.7"/>       
+        <row A="24.453" B="8294.8"/>        
+        <row A="24.965" B="9614.9"/>        
+        <row A="19.386" B="11335.9"/>         
+        <row A="19.386" B="12461.4"/>  -->        
+      </table>
+    </parameter>
+    <parameter id="CONSTANT_LAG_VALUE">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="NUMBER_OF_KQ_PAIRS">
+      <intValue>9</intValue>
+    </parameter>
+    <parameter id="INFLOW_TS_DATA_TYPE">
+      <stringValue>SQIN</stringValue>
+    </parameter>
+    <parameter id="OUTFLOW_TS_DATA_TYPE">
+      <stringValue>SQIN</stringValue>
+    </parameter>
+    <parameter id="CONSTANT_K_VALUE">
+      <dblValue>0</dblValue>
+    </parameter>
+    <parameter id="TRANSMISSION_LOSS_THRESHOLD_FLOW">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="METR_OR_ENGL_UNITS">
+      <stringValue>ENGL</stringValue>
+    </parameter>
+    <parameter id="INFLOW_TS_ID">
+      <stringValue>EYAA2</stringValue>
+    </parameter>
+    <parameter id="OUTFLOW_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="INFLOW_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="TRANSMISSION_LOSS_COEFFICIENT">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="OUTFLOW_TS_ID">
+      <stringValue>EYAA2</stringValue>
+    </parameter>
+    <parameter id="NUMBER_OF_LAGQ_PAIRS">
+      <intValue>0</intValue>
+    </parameter>
+  </group>
+</parameters>

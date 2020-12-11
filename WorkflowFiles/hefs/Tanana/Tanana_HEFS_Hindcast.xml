@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+<!-- HEFS HINDCAST TOP LEVEL WORKFLOW  -->
+  <activity>
+    <runIndependent>false</runIndependent>
+    <workflowId>Tanana_MEFP_Forecast_Hindcast</workflowId>
+  </activity>
+  <activity>
+    <runIndependent>false</runIndependent>
+    <workflowId>Tanana_GEFS_Only_Forecast</workflowId>
+  </activity>
+  <activity>
+    <runIndependent>false</runIndependent>
+    <workflowId>Tanana_MEFP_FMAT_Export</workflowId>
+  </activity>
+  <activity>
+    <runIndependent>false</runIndependent>
+    <workflowId>Tanana_MEFP_FMAP_Export</workflowId>
+  </activity>
+  <activity>
+    <runIndependent>false</runIndependent>
+    <workflowId>Tanana_MEFP_SQIN_Export</workflowId>
+  </activity>
+  <activity>
+    <runIndependent>false</runIndependent>
+    <workflowId>Tanana_UpdateStates_SQIN_Export</workflowId>
+  </activity>
+  <activity>
+    <runIndependent>false</runIndependent>
+    <workflowId>Tanana_MEFP_SQME_Export</workflowId>
+  </activity>
+  <activity>
+    <runIndependent>false</runIndependent>
+    <workflowId>Tanana_UpdateStates_SQME_Export</workflowId>
+  </activity>
+</workflow>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>SUNA2LOC_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_SUNA2_SUNA2LOC_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>SUNA2LOC</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>GCSA2RTD_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MUSKROUT_SUNA2_GCSA2RTD_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>GCSA2RTD</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>CLTA2RTD_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MUSKROUT_SUNA2_CLTA2RTD_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>CLTA2RTD</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>TRTA2RTD_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MUSKROUT_SUNA2_TRTA2RTD_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>TRTA2RTD</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SUNA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_SUNA2_SUNA2LOC_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>SUNA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SUNA2LOC">
+		<user>
+			<simple>
+				<expression>max(max(max((max(+SUNA2LOC_SQIN_6+0.000E+00,0))+GCSA2RTD_SQIN_6,0)+CLTA2RTD_SQIN_6,0)+TRTA2RTD_SQIN_6,0)</expression>
+				<outputVariable>
+					<variableId>SUNA2_SQIN_6</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+</transformationModule>

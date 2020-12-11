@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explorer version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/explorer.xsd">
+	<description>desc</description>
+	<systemInformation>
+		<systemCaption>CHPS - Alaska-Pacific River Forecast Center</systemCaption>
+		<!--<systemHelpFile>%REGION_HOME%/Help.pdf</systemHelpFile>-->
+		<!--<systemHelpUrl>https://publicwiki.deltares.nl/display/FEWSDOC/Delft-FEWS+User+Guide</systemHelpUrl>-->
+	</systemInformation>
+	<globalDatum>Elevation</globalDatum>
+	<map>
+		<geoDatum>WGS 1984</geoDatum>
+		<projection>orthographic</projection>
+		<defaultExtent id="APRFC" name="APRFC">
+			<left>-168.67</left>
+			<right>-132.80</right>
+			<top>70.80</top>
+			<bottom>53.20</bottom>
+		</defaultExtent>
+		<extraExtent id="APRFC_Kenai" name="Kenai">
+			<left>-153.48</left>
+			<right>-146.05</right>
+			<top>61.11</top>
+			<bottom>59.41</bottom>
+	   </extraExtent>
+        <extraExtent id="APRFC_Matsu" name="Matsu">
+            <left>-153.00</left>
+            <right>-146.00</right>
+            <top>63.70</top>
+            <bottom>61.00</bottom>
+        </extraExtent>
+	<extraExtent id="APRFC_Copper" name="Copper">
+            <left>-148.00</left>
+            <right>-142.5</right>
+            <top>63.50</top>
+            <bottom>60.80</bottom>
+	</extraExtent>
+        <extraExtent id="APRFC_Tanana" name="Tanana">
+             <left>-152.00</left>
+             <right>-141.00</right>
+             <top>65.90</top>
+             <bottom>61.50</bottom>
+         </extraExtent>
+        <extraExtent id="APRFC_Fortym" name="Fortymile">
+             <left>-144.00</left>
+             <right>-140.00</right>
+             <top>64.94</top>
+             <bottom>62.88</bottom>
+         </extraExtent>
+        <extraExtent id="APRFC_Yuk_Can" name="Canadian Yukon">
+            <left>-142</left>
+            <right>-128</right>
+            <top>65.00</top>
+            <bottom>58.00</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_Porcupine" name="Porcupine">
+            <left>-146</left>
+            <right>-136</right>
+            <top>69.00</top>
+            <bottom>65.00</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_Southeast" name="Southeast">
+            <left>-140</left>
+            <right>-130</right>
+            <top>62.00</top>
+            <bottom>55</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_Northsl" name="North Slope">
+	    <left>-163.55</left>
+	    <right>-145.20</right>
+	    <top>71.00</top>
+	    <bottom>67.10</bottom>
+	</extraExtent>
+	<extraExtent id="APRFC_Koyukuk" name="Koyukuk">
+	    <left>-157.70</left>
+	    <right>-146.10</right>
+	    <top>68.50</top>
+	    <bottom>65.30</bottom>
+	</extraExtent>
+	<extraExtent id="APRFC_Southwest" name="Southwest">
+	    <left>-160.65</left>
+	    <right>-152.18</right>
+	    <top>61.54</top>
+	    <bottom>58.85</bottom>
+	</extraExtent>
+   	<extraExtent id="APRFC_Anch" name="Anchorage">
+	    <left>-150.55</left>
+	    <right>-147.86</right>
+	    <top>61.34</top>
+	    <bottom>60.79</bottom>
+	</extraExtent>
+        <extraExtent id="APRFC_Bradley" name="Bradley">
+            <left>-152.00</left>
+            <right>-149.00</right>
+            <top>60.00</top>
+            <bottom>59.10</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_Upyukon" name="UpYukon">
+            <left>-154.00</left>
+            <right>-139.00</right>
+            <top>69.00</top>
+            <bottom>63.90</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_Midyukon" name="MidYukon">
+            <left>-164.00</left>
+            <right>-153.00</right>
+            <top>66.30</top>
+            <bottom>61.30</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_Kusko" name="Kuskokwim">
+            <left>-169.89</left>
+            <right>-142.97</right>
+            <top>65.05</top>
+            <bottom>59.39</bottom>
+        </extraExtent>		
+        <extraExtent id="APRFC_Kauai" name="Kauai">
+            <left>-159.70</left>
+            <right>-159.30</right>
+            <top>22.35</top>
+            <bottom>21.75</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_Oahu" name="Oahu">
+            <left>-158.10</left>
+            <right>-157.90</right>
+            <top>21.75</top>
+            <bottom>21.20</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_Molokai" name="Molokai">
+            <left>-157.40</left>
+            <right>-156.60</right>
+            <top>21.25</top>
+            <bottom>21.00</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_Maui" name="Maui">
+            <left>-156.80</left>
+            <right>-155.90</right>
+            <top>21.10</top>
+            <bottom>20.50</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_BigIsland" name="BigIsland">
+            <left>-155.80</left>
+            <right>-155.00</right>
+            <top>20.30</top>
+            <bottom>18.90</bottom>
+        </extraExtent>
+        <extraExtent id="APRFC_Hawaii" name="Hawaii">
+            <left>-162.00</left>
+            <right>-153.00</right>
+            <top>22.50</top>
+            <bottom>18.50</bottom>
+        </extraExtent>
+		<scaleBarVisible>true</scaleBarVisible>
+		<northArrowVisible>true</northArrowVisible>
+		<labelsVisible>true</labelsVisible>
+		<backgroundColor>light steel blue2</backgroundColor>
+<!--		<backgroundColor>navy</backgroundColor>-->
+
+		<esriShapeLayer id="Canada">
+			<description>Canada</description>
+			<file>canada.shp</file>
+			<visible>true</visible>
+			<lineColor>black</lineColor>
+			<fillRgbColor>F7F5B8</fillRgbColor>
+		</esriShapeLayer>
+		<esriShapeLayer id="Russia">
+			<description>Country</description>
+			<file>russia.shp</file>
+			<visible>true</visible>
+			<lineColor>black</lineColor>
+			<fillRgbColor>F7F5B8</fillRgbColor>
+		</esriShapeLayer>
+		<esriShapeLayer id="AK Boundaries">
+			<description>AK Boundaries</description>
+			<file>ak_bnd_detailed.shp</file>
+			<visible>true</visible>
+			<lineColor>black</lineColor>
+			<fillRgbColor>F7F5B8</fillRgbColor>
+		</esriShapeLayer>
+
+		<esriAsciiGridLayer id="Topo North">
+			<file>akdem_N.asc</file>
+			<visible>false</visible>
+			<classBreaks>
+				<color lowerValue="-300" label="below 0 ft" color="light steel blue2" opaquenessPercentage="40"/>
+				<color lowerValue="0.01" label="0-100 ft" color="21A26B" opaquenessPercentage="80"/>
+				<color lowerValue="30" label="100-200 ft" color="42966B" opaquenessPercentage="80"/>
+				<color lowerValue="61" label="200-300 ft" color="427D5A" opaquenessPercentage="80"/>
+				<color lowerValue="91" label="300-400 ft" color="396D4A" opaquenessPercentage="80"/>
+				<color lowerValue="122" label="400-600 ft" color="185931" opaquenessPercentage="80"/>
+				<color lowerValue="183" label="600-800 ft" color="004500" opaquenessPercentage="80"/>
+				<color lowerValue="244" label="800-1000 ft" color="004D00" opaquenessPercentage="80"/>
+				<color lowerValue="305" label="1000-1250 ft" color="006100" opaquenessPercentage="80"/>
+				<color lowerValue="381" label="1250-1500 ft" color="4A6D31" opaquenessPercentage="80"/>
+				<color lowerValue="457" label="1500-1750 ft" color="5A7531" opaquenessPercentage="80"/>
+				<color lowerValue="533" label="1750-2000 ft" color="6B8239" opaquenessPercentage="80"/>
+				<color lowerValue="610" label="2000-2250 ft" color="6B8E29" opaquenessPercentage="80"/>
+				<color lowerValue="686" label="2250-2500 ft" color="8CA631" opaquenessPercentage="80"/>
+				<color lowerValue="762" label="2500-2750 ft" color="94B218" opaquenessPercentage="80"/>
+				<color lowerValue="838" label="2750-3000 ft" color="ADC710" opaquenessPercentage="80"/>
+				<color lowerValue="914" label="3000-3250 ft" color="C6D36B" opaquenessPercentage="80"/>
+				<color lowerValue="991" label="3250-3500 ft" color="DEE784" opaquenessPercentage="80"/>
+				<color lowerValue="1067" label="3500-3750 ft" color="F7F38C" opaquenessPercentage="80"/>
+				<color lowerValue="1143" label="3750-4000 ft" color="FFF3AD" opaquenessPercentage="80"/>
+				<color lowerValue="1219" label="4000-4250 ft" color="FFE39C" opaquenessPercentage="80"/>
+				<color lowerValue="1295" label="4250-4500 ft" color="F7CB84" opaquenessPercentage="80"/>
+				<color lowerValue="1372" label="4500-4750 ft" color="EFBA73" opaquenessPercentage="80"/>
+				<color lowerValue="1448" label="4750-5000 ft" color="EFB26B" opaquenessPercentage="80"/>
+				<color lowerValue="1524" label="5000-5500 ft" color="DE9E52" opaquenessPercentage="80"/>
+				<color lowerValue="1676" label="5500-6000 ft" color="CE8639" opaquenessPercentage="80"/>
+				<color lowerValue="1829" label="6000-6500 ft" color="B57131" opaquenessPercentage="80"/>
+				<color lowerValue="1981" label="6500-7000 ft" color="A56531" opaquenessPercentage="80"/>
+				<color lowerValue="2134" label="7000-7500 ft" color="785131" opaquenessPercentage="80"/>
+				<color lowerValue="2286" label="7500-8000 ft" color="634129" opaquenessPercentage="80"/>
+				<color lowerValue="2438" label="8000-8500 ft" color="4A2C10" opaquenessPercentage="80"/>
+				<color lowerValue="2591" label="8500-9000 ft" color="BCE0D4" opaquenessPercentage="80"/>
+				<color lowerValue="2743" label="9000-10000 ft" color="C9E5DC" opaquenessPercentage="80"/>
+				<color lowerValue="3048" label="10000-11000 ft" color="D3EAE2" opaquenessPercentage="80"/>
+				<color lowerValue="3353" label="11000-12000 ft" color="DCEFE9" opaquenessPercentage="80"/>
+				<color lowerValue="3658" label="12000-13000 ft" color="E6F2EE" opaquenessPercentage="80"/>
+				<color lowerValue="3962" label="over 13000 ft" color="FFFFFF" opaquenessPercentage="80"/>
+			</classBreaks>
+		</esriAsciiGridLayer>
+
+		<esriAsciiGridLayer id="Topo South">
+			<file>akdem_S.asc</file>
+			<visible>false</visible>
+			<classBreaks>
+				<color lowerValue="-300" label="below 0 ft" color="light steel blue2" opaquenessPercentage="40"/>
+				<color lowerValue="0.01" label="0-100 ft" color="21A26B" opaquenessPercentage="80"/>
+				<color lowerValue="30" label="100-200 ft" color="42966B" opaquenessPercentage="80"/>
+				<color lowerValue="61" label="200-300 ft" color="427D5A" opaquenessPercentage="80"/>
+				<color lowerValue="91" label="300-400 ft" color="396D4A" opaquenessPercentage="80"/>
+				<color lowerValue="122" label="400-600 ft" color="185931" opaquenessPercentage="80"/>
+				<color lowerValue="183" label="600-800 ft" color="004500" opaquenessPercentage="80"/>
+				<color lowerValue="244" label="800-1000 ft" color="004D00" opaquenessPercentage="80"/>
+				<color lowerValue="305" label="1000-1250 ft" color="006100" opaquenessPercentage="80"/>
+				<color lowerValue="381" label="1250-1500 ft" color="4A6D31" opaquenessPercentage="80"/>
+				<color lowerValue="457" label="1500-1750 ft" color="5A7531" opaquenessPercentage="80"/>
+				<color lowerValue="533" label="1750-2000 ft" color="6B8239" opaquenessPercentage="80"/>
+				<color lowerValue="610" label="2000-2250 ft" color="6B8E29" opaquenessPercentage="80"/>
+				<color lowerValue="686" label="2250-2500 ft" color="8CA631" opaquenessPercentage="80"/>
+				<color lowerValue="762" label="2500-2750 ft" color="94B218" opaquenessPercentage="80"/>
+				<color lowerValue="838" label="2750-3000 ft" color="ADC710" opaquenessPercentage="80"/>
+				<color lowerValue="914" label="3000-3250 ft" color="C6D36B" opaquenessPercentage="80"/>
+				<color lowerValue="991" label="3250-3500 ft" color="DEE784" opaquenessPercentage="80"/>
+				<color lowerValue="1067" label="3500-3750 ft" color="F7F38C" opaquenessPercentage="80"/>
+				<color lowerValue="1143" label="3750-4000 ft" color="FFF3AD" opaquenessPercentage="80"/>
+				<color lowerValue="1219" label="4000-4250 ft" color="FFE39C" opaquenessPercentage="80"/>
+				<color lowerValue="1295" label="4250-4500 ft" color="F7CB84" opaquenessPercentage="80"/>
+				<color lowerValue="1372" label="4500-4750 ft" color="EFBA73" opaquenessPercentage="80"/>
+				<color lowerValue="1448" label="4750-5000 ft" color="EFB26B" opaquenessPercentage="80"/>
+				<color lowerValue="1524" label="5000-5500 ft" color="DE9E52" opaquenessPercentage="80"/>
+				<color lowerValue="1676" label="5500-6000 ft" color="CE8639" opaquenessPercentage="80"/>
+				<color lowerValue="1829" label="6000-6500 ft" color="B57131" opaquenessPercentage="80"/>
+				<color lowerValue="1981" label="6500-7000 ft" color="A56531" opaquenessPercentage="80"/>
+				<color lowerValue="2134" label="7000-7500 ft" color="785131" opaquenessPercentage="80"/>
+				<color lowerValue="2286" label="7500-8000 ft" color="634129" opaquenessPercentage="80"/>
+				<color lowerValue="2438" label="8000-8500 ft" color="4A2C10" opaquenessPercentage="80"/>
+				<color lowerValue="2591" label="8500-9000 ft" color="BCE0D4" opaquenessPercentage="80"/>
+				<color lowerValue="2743" label="9000-10000 ft" color="C9E5DC" opaquenessPercentage="80"/>
+				<color lowerValue="3048" label="10000-11000 ft" color="D3EAE2" opaquenessPercentage="80"/>
+				<color lowerValue="3353" label="11000-12000 ft" color="DCEFE9" opaquenessPercentage="80"/>
+				<color lowerValue="3658" label="12000-13000 ft" color="E6F2EE" opaquenessPercentage="80"/>
+				<color lowerValue="3962" label="over 13000 ft" color="FFFFFF" opaquenessPercentage="80"/>
+			</classBreaks>
+		</esriAsciiGridLayer>
+
+        <esriShapeLayer id="Alaska Glaciers">
+             <description>Glaciers</description>
+             <file>%REGION_HOME%/Map/ak_glaciers_NAD27.shp</file>
+             <visible>false</visible>
+             <lineColor>light steel blue</lineColor>
+             <fillRgbColor>99F3FF</fillRgbColor>
+        </esriShapeLayer>
+        <esriShapeLayer id="Alaska Roads">
+             <description>Country</description>
+             <file>%REGION_HOME%/Map/ak_roads.shp</file>
+             <visible>false</visible>
+             <lineColor>brown</lineColor>
+             <fillRgbColor>F7F5B8</fillRgbColor>
+        </esriShapeLayer>
+        <esriShapeLayer id="KenaiPenBasins">
+             <description>Kenai Peninsula</description>
+             <file>%REGION_HOME%/Map/Catchments_Kenai.shp</file>
+             <visible>true</visible>
+             <toolTip>%UNIQUE_ID%</toolTip>
+             <lineColor>black</lineColor>
+             <fillColor>pale green</fillColor>
+             <opaquenessPercentage>30</opaquenessPercentage>
+        </esriShapeLayer>
+        <esriShapeLayer id="CopperBasins">
+             <description>Copper River Basin</description>
+             <file>%REGION_HOME%/Map/Catchments_Copper.shp</file>
+             <visible>true</visible>
+             <toolTip>%UNIQUE_ID%</toolTip>
+             <lineColor>black</lineColor>
+             <fillColor>red</fillColor>
+             <opaquenessPercentage>30</opaquenessPercentage>
+        </esriShapeLayer>
+	<esriShapeLayer id="AnchBowlBasins">
+	     <description>Anchorage Bowl</description>
+	     <file>%REGION_HOME%/Map/Catchments_Anch.shp</file>
+	     <visible>true</visible>
+	     <toolTip>%UNIQUE_ID%</toolTip>
+	     <lineColor>black</lineColor>
+	     <fillColor>purple</fillColor>
+	     <opaquenessPercentage>30</opaquenessPercentage>
+	</esriShapeLayer>
+		<esriShapeLayer id="TananaBasin">
+			<description>Tanana Basin</description>
+			<file>%REGION_HOME%/Map/Catchments_Tanana.shp</file>
+			<visible>true</visible>
+			<toolTip>%UNIQUE_ID%</toolTip>
+			<lineColor>black</lineColor>
+			<fillColor>yellow</fillColor>
+			<opaquenessPercentage>30</opaquenessPercentage>
+		</esriShapeLayer>
+		<esriShapeLayer id="MatsuBasin">
+			<description>Matsu Basin</description>
+			<file>%REGION_HOME%/Map/Catchments_Matsu.shp</file>
+			<visible>true</visible>
+			<toolTip>%UNIQUE_ID%</toolTip>
+			<lineColor>black</lineColor>
+			<fillColor>orange</fillColor>
+			<opaquenessPercentage>30</opaquenessPercentage>
+		</esriShapeLayer>
+		<esriShapeLayer id="SoutheastBasins">
+			<description>Southeast Basins</description>
+			<file>%REGION_HOME%/Map/Catchments_Southeast.shp</file>
+			<visible>true</visible>
+			<toolTip>%UNIQUE_ID%</toolTip>
+			<lineColor>black</lineColor>
+			<fillColor>dodger blue</fillColor>
+			<opaquenessPercentage>30</opaquenessPercentage>
+		</esriShapeLayer>
+		<esriShapeLayer id="Can_Yukon_Basins">
+			<description>Canadian Yukon Basins</description>
+			<file>%REGION_HOME%/Map/Catchments_Can_Yukon.shp</file>
+			<visible>true</visible>
+			<toolTip>%UNIQUE_ID%</toolTip>
+			<lineColor>black</lineColor>
+			<fillColor>light coral</fillColor>
+			<opaquenessPercentage>30</opaquenessPercentage>
+		</esriShapeLayer>
+		<esriShapeLayer id="PorcupineBasins">
+			<description>Porcupine Basins</description>
+			<file>%REGION_HOME%/Map/Catchments_Porcupine.shp</file>
+			<visible>true</visible>
+			<toolTip>%UNIQUE_ID%</toolTip>
+			<lineColor>black</lineColor>
+			<fillColor>sienna</fillColor>
+			<opaquenessPercentage>30</opaquenessPercentage>
+		</esriShapeLayer>
+<!--		<esriShapeLayer id="SouthwestBasins">
+			<description>Southwest Basins</description>
+			<file>%REGION_HOME%/Map/Catchments_Southwest.shp</file>
+			<visible>true</visible>
+			<toolTip>%UNIQUE_ID%</toolTip>
+			<lineColor>black</lineColor>
+			<fillColor>blue</fillColor>
+			<opaquenessPercentage>30</opaquenessPercentage>
+		</esriShapeLayer>-->
+		<esriShapeLayer id="SouthwestBasins">
+			<description>Southwest Basins</description>
+			<file>%REGION_HOME%/Map/Catchments_Southwest_Project.shp</file>
+			<visible>true</visible>
+			<toolTip>%hb5id%</toolTip>
+			<lineColor>black</lineColor>
+			<fillColor>blue</fillColor>
+			<opaquenessPercentage>30</opaquenessPercentage>
+		</esriShapeLayer>
+		<esriShapeLayer id="NorthSlopeBasins">
+			<description>North Slope Basins</description>
+			<file>%REGION_HOME%/Map/Catchments_NorthSlope.shp</file>
+			<visible>true</visible>
+			<toolTip>%UNIQUE_ID%</toolTip>
+			<lineColor>black</lineColor>
+			<fillColor>yellow green</fillColor>
+			<opaquenessPercentage>30</opaquenessPercentage>
+		</esriShapeLayer>
+		<esriShapeLayer id="KoyukukBasins">
+			<description>Koyukuk Basins</description>
+			<file>%REGION_HOME%/Map/Catchments_Koyukuk.shp</file>
+			<visible>true</visible>
+			<toolTip>%UNIQUE_ID%</toolTip>
+			<lineColor>black</lineColor>
+			<fillColor>cadet blue</fillColor>
+			<opaquenessPercentage>30</opaquenessPercentage>
+		</esriShapeLayer>
+                <esriShapeLayer id="BradleyBasins">
+                        <description>Bradley Basins</description>
+                        <file>%REGION_HOME%/Map/Catchments_Bradley.shp</file>
+                        <visible>true</visible>
+                        <toolTip>%UNIQUE_ID%</toolTip>
+                        <lineColor>black</lineColor>
+                        <fillColor>pink</fillColor>
+                        <opaquenessPercentage>30</opaquenessPercentage>
+                </esriShapeLayer>
+                <esriShapeLayer id="FortymileBasins">
+                        <description>Fortymile Basins</description>
+                        <file>%REGION_HOME%/Map/Catchments_Fortymile.shp</file>
+                        <visible>true</visible>
+                        <toolTip>%UNIQUE_ID%</toolTip>
+                        <lineColor>black</lineColor>
+                        <fillColor>brown</fillColor>
+                        <opaquenessPercentage>30</opaquenessPercentage>
+                </esriShapeLayer>
+                <esriShapeLayer id="Lower_Yukon_Basins">
+                        <description>Lower Yukon Basins</description>
+                        <file>%REGION_HOME%/Map/Catchments_Lower_Yukon.shp</file>
+                        <visible>true</visible>
+                        <toolTip>%UNIQUE_ID%</toolTip>
+                        <lineColor>black</lineColor>
+                        <fillColor>gray</fillColor>
+                        <opaquenessPercentage>30</opaquenessPercentage>
+                </esriShapeLayer>
+                <esriShapeLayer id="Upper_Yukon_Basins">
+                        <description>Upper Yukon Basins</description>
+                        <file>%REGION_HOME%/Map/Catchments_Upper_Yukon.shp</file>
+                        <visible>true</visible>
+                        <toolTip>%UNIQUE_ID%</toolTip>
+                        <lineColor>black</lineColor>
+                        <fillColor>tan</fillColor>
+                        <opaquenessPercentage>30</opaquenessPercentage>
+                </esriShapeLayer>
+                <esriShapeLayer id="Kuskokwim_Basins">
+                        <description>Kuskokwim Basins</description>
+                        <file>%REGION_HOME%/Map/Catchments_Kusko.shp</file>
+                        <visible>true</visible>
+                        <toolTip>%UNIQUE_ID%</toolTip>
+                        <lineColor>black</lineColor>
+                        <fillColor>pink</fillColor>
+                        <opaquenessPercentage>30</opaquenessPercentage>
+                </esriShapeLayer>
+		
+		<esriShapeLayer id="Lakes">
+			<description>Named lakes in Alaska</description>
+                        <file>%REGION_HOME%/Map/ak_named_lakes.shp</file>
+                        <visible>true</visible>
+                        <lineColor>black</lineColor>
+                        <fillColor>light steel blue2</fillColor>
+        </esriShapeLayer>
+		<esriShapeLayer id="Cities">				
+			<description>Alaska Cities</description>
+			<file>%REGION_HOME%/Map/Alaska_Cities_NAD83.shp</file>
+			<visible>true</visible>
+			<label>%Name%</label>
+			<labelFontSize>12</labelFontSize>
+			<lineColor>black</lineColor>
+			<fillColor>chartreuse2</fillColor>
+			<lineWidth value="10"/>				
+			<pointSize>10</pointSize>
+		</esriShapeLayer>
+		<esriShapeLayer id="Airports">				
+			<description>Alaska Airports</description>
+			<file>%REGION_HOME%/Map/FAA_Airports_and_Runways_NAD83.shp</file>
+			<visible>false</visible>
+			<label>%FACILNM%</label>
+			<labelFontSize>8</labelFontSize>
+			<lineColor>black</lineColor>
+			<fillColor>orchid</fillColor>
+			<lineWidth value="10"/>				
+			<pointSize>5</pointSize>
+		</esriShapeLayer>
+		<esriShapeLayer id="Catchments">
+			<description>Catchments</description>
+			<file>bsn_splits_WGS84.shp</file>
+			<visible>false</visible>
+			<lineColor>red</lineColor>
+		</esriShapeLayer>
+		<esriShapeLayer id="Basins">
+			<description>Basins</description>
+			<file>bsn_splits_diss_WGS84</file>
+			<visible>false</visible>
+            <toolTip>%hb5id%</toolTip>
+			<lineColor>black</lineColor>
+		</esriShapeLayer>
+
+
+
+		<esriShapeLayer id="Hawaii Roads">
+			<description>Hawaii Roads</description>
+			<file>hawaii_roads.shp</file>
+			<visible>true</visible>
+			<lineColor>red</lineColor>
+		</esriShapeLayer>
+		<esriShapeLayer id="Hawaii Streams">
+			<description>Hawaii Streams</description>
+			<file>hi_ref_sl.shp</file>
+			<visible>true</visible>
+			<lineColor>steel blue</lineColor>
+		</esriShapeLayer>
+		<esriShapeLayer id="Hawaii Basins">
+			<description>Hawaii Basins</description>
+			<file>hawaii_basins.shp</file>
+			<visible>true</visible>
+			<lineColor>black</lineColor>
+		</esriShapeLayer>
+		<esriShapeLayer id="Hawaii 500ft Contour">
+			<description>Hawaii 500ft Contour</description>
+			<file>hawaii_contour500.shp</file>
+			<visible>true</visible>
+			<lineColor>black</lineColor>
+		</esriShapeLayer>
+			<esriShapeLayer id="AKRivers">
+			<description>APRFC Rivers</description>
+			<file>rivers_med_project.shp</file>
+			<visible>true</visible>
+			<lineColor>blue2</lineColor>
+			<fillColor>light steel blue2</fillColor>
+			<lineWidth maxScale="10000" value="4"/>
+			<lineWidth maxScale="100000" value="3"/>
+			<lineWidth maxScale="180000" value="2"/>
+			<lineWidth maxScale="750000" value="1"/>
+		</esriShapeLayer>
+	</map>
+	<explorerTasks>
+			<explorerTask name="Plots">
+				<iconFile>graph.gif</iconFile>
+				<mnemonic>D</mnemonic>
+				<taskClass>nl.wldelft.fews.gui.plugin.timeseries.PlotsTimeSeriesDialog</taskClass>
+				<toolbarTask>true</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<allowMultipleInstances>true</allowMultipleInstances>
+				<accelerator>ctrl D</accelerator>
+				<loadAtStartup>true</loadAtStartup>
+			</explorerTask>
+			<explorerTask name="Topology">
+				<iconFile>interactive_forecast.png</iconFile>
+				<mnemonic>I</mnemonic>
+				<taskClass>nl.wldelft.fews.gui.plugin.forecast.TopologyPanel</taskClass>
+				<toolbarTask>true</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<accelerator>ctrl T</accelerator>
+				<loadAtStartup>true</loadAtStartup>
+			</explorerTask>
+			<explorerTask name="Spatial Data">
+				<iconFile>map.png</iconFile>
+				<mnemonic>p</mnemonic>
+				<arguments>SpatialDisplay</arguments>
+				<taskClass>nl.wldelft.fews.gui.plugin.grid.GridDisplay</taskClass>
+				<toolbarTask>true</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<allowMultipleInstances>true</allowMultipleInstances>
+				<accelerator>ctrl P</accelerator>
+			</explorerTask>
+			<explorerTask name="Manual Forecast">
+				<iconFile>manforc.png</iconFile>
+				<mnemonic>M</mnemonic>
+				<taskClass>nl.wldelft.fews.gui.plugin.manualforecast.ManualForecastDialog</taskClass>
+				<toolbarTask>true</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<accelerator>ctrl N</accelerator>
+				<permission>APRFC_Hydro</permission>
+			</explorerTask>
+			<explorerTask name="Forecast Management">
+				<iconFile>forcman.png</iconFile>
+				<mnemonic>F</mnemonic>
+				<taskClass>nl.wldelft.fews.gui.plugin.forecast.ForecastDialog</taskClass>
+				<toolbarTask>true</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<accelerator>ctrl F</accelerator>
+				<permission>APRFC_Hydro</permission>
+			</explorerTask>
+			<explorerTask name="System Monitor">
+				<iconFile>sysmon.png</iconFile>
+				<mnemonic>S</mnemonic>
+				<taskClass>nl.wldelft.fews.gui.plugin.systemmonitor.SystemMonitorDialog</taskClass>
+				<toolbarTask>true</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<accelerator>ctrl S</accelerator>
+			</explorerTask>
+			<explorerTask name="What-if Scenario">
+				<iconFile>whatif.png</iconFile>
+				<mnemonic>W</mnemonic>
+				<arguments>WhatIfScenarioFilters</arguments>
+				<taskClass>nl.wldelft.fews.gui.plugin.scenario.WhatIfScenarioDialog</taskClass>
+				<toolbarTask>false</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<accelerator>ctrl W</accelerator>
+			</explorerTask>
+			<explorerTask name="Modifiers">
+				<iconFile>wrench.png</iconFile>
+				<mnemonic>X</mnemonic>
+				<taskClass>nl.wldelft.fews.gui.plugin.modifiersdisplay.ModifiersPanel</taskClass>
+				<toolbarTask>true</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<accelerator>ctrl M</accelerator>
+				<loadAtStartup>true</loadAtStartup>
+			</explorerTask>
+			<explorerTask name="Workflow Navigator">
+				<iconFile>tree.png</iconFile>
+				<arguments>WorkflowNavigator</arguments>
+				<taskClass>nl.wldelft.fews.gui.plugin.workflownavigator.WorkflowNavigator</taskClass>
+				<toolbarTask>true</toolbarTask>
+				<menubarTask>true</menubarTask>
+			</explorerTask>
+			<explorerTask name="Snow updating analysis">
+				<iconFile>weather_snow.png</iconFile>
+				<arguments>sampleFunction DayMonthSample statisticalFunction principalcomponentanalysis</arguments>
+				<taskClass>nl.wldelft.fews.gui.plugin.timeseries.TimeSeriesDialog</taskClass>
+				<toolbarTask>true</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<permission>APRFC_Hydro</permission>
+			</explorerTask>
+			<explorerTask name="Map Display">
+				<iconFile>splitmap.gif</iconFile>
+				<mnemonic>a</mnemonic>
+				<taskClass>nl.wldelft.fews.gui.plugin.map.MapDisplay</taskClass>
+				<toolbarTask>false</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<allowMultipleInstances>true</allowMultipleInstances>
+				<accelerator>ctrl A</accelerator>
+			</explorerTask>
+			<explorerTask name="Data Editor">
+				<iconFile>edit.png</iconFile>
+				<mnemonic>E</mnemonic>
+				<taskClass>nl.wldelft.fews.gui.plugin.timeseries.DataEditorTimeSeriesDialog</taskClass>
+				<toolbarTask>false</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<accelerator>ctrl E</accelerator>
+				<permission>APRFC_Hydro</permission>
+			</explorerTask>
+			<explorerTask name="Tabular ConfigFiles Display">
+				<!--<iconFile>csvfile.png</iconFile>-->
+				<predefinedDisplay>tabular config files display</predefinedDisplay>
+				<toolbarTask>true</toolbarTask>
+				<menubarTask>true</menubarTask>
+				<accelerator>ctrl L</accelerator>
+				<toolWindow>false</toolWindow>
+				<loadAtStartup>true</loadAtStartup>
+			</explorerTask>	
+			<explorerTask name="Forecaster notes">
+				<taskClass>nl.wldelft.fews.gui.plugin.systemmonitor.ForecasterNotesPanel</taskClass>
+				<toolbarTask>false</toolbarTask>
+				<menubarTask>false</menubarTask>
+				<toolWindow>true</toolWindow>
+				<loadAtStartup>true</loadAtStartup>
+			</explorerTask>
+			<explorerTask name="Plot Overview">
+				<taskClass>nl.wldelft.fews.gui.plugin.displaythumbnails.ShortcutsThumbnailsDialog</taskClass>
+				<toolbarTask>false</toolbarTask>
+				<menubarTask>false</menubarTask>
+				<toolWindow>true</toolWindow>
+				<loadAtStartup>true</loadAtStartup>
+			</explorerTask>
+			<explorerTask name="Forecasts">
+				<taskClass>nl.wldelft.fews.gui.plugin.selection.SegmentSelectionDialog</taskClass>
+				<toolbarTask>false</toolbarTask>
+				<menubarTask>false</menubarTask>
+				<toolWindow>true</toolWindow>
+				<loadAtStartup>true</loadAtStartup>
+			</explorerTask>
+			<explorerTask name="Forecaster help">
+			<iconFile>help.png</iconFile>
+				<taskClass>nl.wldelft.fews.gui.plugin.information.ForecasterAidSelectionPanel</taskClass>
+				<toolbarTask>false</toolbarTask>
+				<menubarTask>false</menubarTask>
+				<toolWindow>true</toolWindow>
+				<loadAtStartup>true</loadAtStartup>
+			</explorerTask>
+		<explorerTask name="Document Viewer">
+			<taskClass>nl.wldelft.fews.gui.plugin.information.ForecasterAidDocumentPanel</taskClass>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+		</explorerTask>
+		<explorerTask name="Run Info">			
+			<taskClass>nl.wldelft.fews.gui.plugin.logger.SegmentSelectionLoggerPanel</taskClass>
+			<toolbarTask>false</toolbarTask>
+			<menubarTask>false</menubarTask>
+			<toolWindow>true</toolWindow>
+			<loadAtStartup>true</loadAtStartup>
+		</explorerTask>
+		<!-- ADDED FOR GRAPHGEN -->
+		<explorerTask name="GraphGen Editor">
+			<iconFile>graphGenEditor.png</iconFile>
+           		<taskClass>ohd.hseb.graphgen.GraphGenEditorExplorerPlugIn</taskClass>
+			<binDir>$OHDPLUGINSDIR$</binDir>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<allowMultipleInstances>false</allowMultipleInstances>
+		</explorerTask>
+		<explorerTask name="GraphGen Viewer">
+			<iconFile>graphGenViewer.png</iconFile>
+			<taskClass>ohd.hseb.graphgen.GraphGenViewerExplorerPlugIn</taskClass>
+			<binDir>$OHDPLUGINSDIR$</binDir>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<allowMultipleInstances>true</allowMultipleInstances>
+		</explorerTask>
+		<!--explorerTask name="GraphGen Tree">
+			<taskClass>ohd.hseb.graphgen.GraphGenTreeExplorerPlugIn</taskClass>
+			<binDir>$OHDPLUGINSDIR$</binDir>
+			<toolbarTask>false</toolbarTask>
+			<menubarTask>false</menubarTask>
+			<toolWindow>true</toolWindow>
+			<loadAtStartup>true</loadAtStartup>
+		</explorerTask>
+		<explorerTask name="GraphGen Thumbnails">
+			<taskClass>ohd.hseb.graphgen.GraphGenThumbnailExplorerPlugIn</taskClass>
+			<binDir>$OHDPLUGINSDIR$</binDir>
+			<toolbarTask>false</toolbarTask>
+			<menubarTask>false</menubarTask>
+			<toolWindow>true</toolWindow>
+			<loadAtStartup>true</loadAtStartup>
+		</explorerTask-->
+	       <!-- ADDED FOR HEFS EnsPostPE ================================================== -->
+
+	        <explorerTask name="EnsPostPE">
+                        <taskClass>ohd.hseb.hefs.enspost.pe.HEFSEnsPostPEExplorerPlugIn</taskClass>
+	                <toolbarTask>false</toolbarTask>
+	                <menubarTask>true</menubarTask>
+	        </explorerTask>
+
+	        <!-- END HEFS EnsPostPE ================================================== -->
+
+<!-- ADDED FOR MEFPPE ================================================== -->
+	        <explorerTask name="MEFPPE">
+		<taskClass>ohd.hseb.hefs.mefp.pe.MEFPPEExplorerPlugIn</taskClass>
+		<toolbarTask>false</toolbarTask>
+		<menubarTask>true</menubarTask>
+		</explorerTask>
+	</explorerTasks>
+		
+
+<!-- ADDED FOR MEFPPE ================================================== -->
+
+	<statusBarConfig>
+		<description>Standard date-time format</description>
+		<dateTimeFormat>HH:mm:ss</dateTimeFormat>
+		<timeGMT>true</timeGMT>
+		<timeCurrent>true</timeCurrent>
+		<timeLastRefresh>true</timeLastRefresh>
+		<statusOfSystem>true</statusOfSystem>
+		<mouseCoordinates>true</mouseCoordinates>
+		<userName>true</userName>
+	</statusBarConfig>
+	<dateTime>
+		<timeZoneOffset>+00:00</timeZoneOffset>
+		<dateTimeFormat>MM-dd-yyyy HH:mm</dateTimeFormat>
+		<cardinalTimeStep unit="hour" multiplier="6"></cardinalTimeStep>
+		<adjustSystemTimeAutomatically>false</adjustSystemTimeAutomatically>
+	</dateTime>
+	<logPanelConfig>
+		<clientFilter>
+			<clientId>Stand alone</clientId>
+			<logFilter>
+				<level>INFO</level>
+				<eventType>system</eventType>
+			</logFilter>
+			<logFilter>
+				<level>INFO</level>
+				<eventType>debug</eventType>
+			</logFilter>
+		</clientFilter>
+		<clientFilter>
+			<clientId>Operator Client</clientId>
+			<logFilter>
+				<level>INFO</level>
+				<eventType>system</eventType>
+			</logFilter>
+			<logFilter>
+				<level>INFO</level>
+				<eventType>debug</eventType>
+			</logFilter>
+		</clientFilter>
+	</logPanelConfig>
+	<panelSizes>
+		<loggingPanelSize>20</loggingPanelSize>
+		<listsPanelSize>20</listsPanelSize>
+		<filterListSize>30</filterListSize>
+		<locationListSize>30</locationListSize>
+		<parameterListSize>20</parameterListSize>
+		<forecastListSize>20</forecastListSize>
+	</panelSizes>
+	<piServicePortRange start="8100" end="8200"/>
+</explorer>

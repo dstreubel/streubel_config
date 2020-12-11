@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>KNFA2UPR_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_KNFA2_KNFA2UPR_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>KNFA2UPR</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>KNFA2LWR_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_KNFA2_KNFA2LWR_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>KNFA2LWR</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>KNFA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_KNFA2_KNFA2UPR_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>KNFA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="KNFA2UPR">
+		<user>
+			<simple>
+				<expression>max((max(+KNFA2UPR_SQIN_6+0.000E+00,0))+KNFA2LWR_SQIN_6,0)</expression>
+				<outputVariable>
+					<variableId>KNFA2_SQIN_6</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+</transformationModule>

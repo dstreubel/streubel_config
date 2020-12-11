@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unitConversions xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/unitConversions.xsd">
+   <unitConversion>
+      <inputUnitType>MM</inputUnitType>
+      <outputUnitType>IN</outputUnitType>
+      <multiplier>0.0393</multiplier>
+      <incrementer>0.00</incrementer>
+   </unitConversion>
+</unitConversions>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+     <export>
+        <general>
+            <exportType>HecDss</exportType>
+            <folder>$EXPORT_FOLDER$</folder>
+            <exportFileName>
+                <name>output.dss</name>
+            </exportFileName>
+        </general>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>Gages_Chena</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="day" start="-20" startOverrulable="true" end="5" endOverrulable="true"/>
+            <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet>
+ <!--       <timeSeriesSet>
+            <moduleInstanceSetId>$SET_OF_MODULES_PRODUCING_QINE$</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>Gages_Chena</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="day" start="-20" startOverrulable="true" end="5" endOverrulable="true"/>
+            <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet>        -->
+    </export>
+</timeSeriesExportRun>

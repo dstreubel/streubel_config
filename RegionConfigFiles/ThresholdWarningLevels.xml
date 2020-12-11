@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by WL | Delft Hydraulics (WL | Delft Hydraulics) -->
+<thresholdWarningLevels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/thresholdWarningLevels.xsd">
+	<thresholdWarningLevel id="default" name="No threshold exceeded">
+		<color>blue1</color>
+		<iconName>none.png</iconName>
+		<historicOverlayIconName>none.png</historicOverlayIconName>
+		<forecastOverlayIconName>none.png</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="GageMin" name="Zero Q">
+		<color>blue1</color>
+		<iconName>none.png</iconName>
+		<historicOverlayIconName>none.png</historicOverlayIconName>
+		<forecastOverlayIconName>none.png</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="MIDLEVEL" name="MidLevel Stage">
+		<color>blue1</color>
+		<iconName>fluvial_site_data.gif</iconName>
+		<historicOverlayIconName>fluvial_site_data.gif</historicOverlayIconName>
+		<forecastOverlayIconName>fluvial_site_data.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="ACTION" name="Action Stage">
+		<color>goldenrod</color>
+		<iconName>warninglevel1.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel3.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel3.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="MINOR" name="Minor Stage">
+		<color>orange</color>
+		<iconName>warninglevel3.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel4.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel4.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="MOD" name="Moderate Stage">
+		<color>red</color>
+		<iconName>warninglevel6.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel5.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel5.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="MAJOR" name="Major Stage">
+		<color>magenta</color>
+		<iconName>warninglevel8.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel7.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel7.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="RECORD" name="Record Stage">
+		<color>black</color>
+		<iconName>warninglevel8.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel7.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel7.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+        <thresholdWarningLevel id="GageLimit" name="Gage Operating Limit">
+	         <color>sea green</color>
+	        <iconName>warninglevel8.gif</iconName>
+	        <historicOverlayIconName>historicwarninglevel7.gif</historicOverlayIconName>
+	        <forecastOverlayIconName>forecastwarninglevel7.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="2YR" name="2-yr Flow">
+		<color>goldenrod</color>
+		<iconName>warninglevel1.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel3.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel3.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="10YR" name="10-yr Flow">
+		<color>orange</color>
+		<iconName>warninglevel3.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel4.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel4.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="25YR" name="25-yr Flow">
+		<color>red</color>
+		<iconName>warninglevel6.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel5.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel5.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="50YR" name="50-yr Flow">
+		<color>magenta</color>
+		<iconName>warninglevel8.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel7.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel7.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="100YR" name="100-yr Flow">
+		<color>black</color>
+		<iconName>warninglevel8.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel7.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel7.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="SSTG-STGE" name="SSTG-STGE Threshold">
+		<color>blue1</color>
+		<iconName>warninglevel1.gif</iconName>
+		<historicOverlayIconName>fluvial_site_data.gif</historicOverlayIconName>
+		<forecastOverlayIconName>fluvial_site_data.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="UPR_elev" name="Upr Elev">
+		<color>blue1</color>
+		<iconName>warninglevel1.gif</iconName>
+		<historicOverlayIconName>fluvial_site_data.gif</historicOverlayIconName>
+		<forecastOverlayIconName>fluvial_site_data.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="LWR_elev" name="Lwr Elev">
+		<color>blue1</color>
+		<iconName>warninglevel1.gif</iconName>
+		<historicOverlayIconName>fluvial_site_data.gif</historicOverlayIconName>
+		<forecastOverlayIconName>fluvial_site_data.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>	
+	<thresholdWarningLevel id="GL_elev" name="Glacier Elev">
+		<color>blue1</color>
+		<iconName>warninglevel1.gif</iconName>
+		<historicOverlayIconName>fluvial_site_data.gif</historicOverlayIconName>
+		<forecastOverlayIconName>fluvial_site_data.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="UG_elev" name="UG Elev">
+		<color>blue1</color>
+		<iconName>warninglevel1.gif</iconName>
+		<historicOverlayIconName>fluvial_site_data.gif</historicOverlayIconName>
+		<forecastOverlayIconName>fluvial_site_data.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="LG_elev" name="Lg Elev">
+		<color>blue1</color>
+		<iconName>warninglevel1.gif</iconName>
+		<historicOverlayIconName>fluvial_site_data.gif</historicOverlayIconName>
+		<forecastOverlayIconName>fluvial_site_data.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="LOC_elev" name="Loc Elev">
+		<color>blue1</color>
+		<iconName>warninglevel1.gif</iconName>
+		<historicOverlayIconName>fluvial_site_data.gif</historicOverlayIconName>
+		<forecastOverlayIconName>fluvial_site_data.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+</thresholdWarningLevels>

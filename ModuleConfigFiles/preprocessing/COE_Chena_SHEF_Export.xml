@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+	<export>
+		<general>
+			<exportType>SHEF</exportType>
+			<folder>$EXPORT_FOLDER$/COE_Chena</folder>
+			<exportFileName>
+				<name>_COE_Chena_chps_shef_export.</name>
+				<prefix>
+					<timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+				</prefix>
+				<suffix>
+					<currentTimeFormattingString>yyyyMMddHHmmss</currentTimeFormattingString>
+				</suffix>
+			</exportFileName>
+			<idMapId>IdExportSHEF</idMapId>
+			<unitConversionsId>exportEnglishUnits</unitConversionsId>
+			<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>false</omitMissingValues>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAPX_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAPX</parameterId>
+			<locationSetId>COE_Basins_Chena</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="162" endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationSetId>COE_Basins_Chena</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-72" startOverrulable="false" end="-6" endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>COE_Basins_Chena</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="162" endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+<!--		<timeSeriesSet>
+			<moduleInstanceId>MATX_PreProcessing_QTE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MATX</parameterId>
+			<locationSetId>COE_Basins_Chena</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-72" startOverrulable="false" end="0" endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>MATX_PreProcessing_QTE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MATX_MPE</parameterId>
+			<locationSetId>COE_Basins_Chena</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-72" startOverrulable="false" end="0" endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>-->
+	</export>
+</timeSeriesExportRun>

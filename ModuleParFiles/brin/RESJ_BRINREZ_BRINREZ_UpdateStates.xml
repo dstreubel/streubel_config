@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+    <parameter id="OPERATION_CONTENTS">
+      <stringValue>  TIMESERIES
+    TIMESTEP   6
+#   INPUT   BRINNG    MAP    6   BRIN_RAIN    # Precip over Reservoir
+    INPUT   BRIN      SQIN   6   REZ_INFLOW   # Bradley Lk Inflow      
+    INPUT   BRIA2     RQOT   6   OBS_OUTFLOW  # Bradley Lk Release - Power Generation
+    INPUT   BRIN      PELV   6   BRIN_OBSP    # Bradley Lk Observed Pool
+    OUTPUT  BRIA2OUT  SQIN   6   BRIA2_REL    # Simulated Bradley Lk Release
+    OUTPUT  BRIN      SPEL   6   BRIN_SPEL    # Simulated pool
+   ENDTIMESERIES
+#
+  TOPOLOGY
+    RESERVOIR   BRIA2
+  ENDTOPOLOGY
+#
+  PARAMETERS
+    UNITS ENGLISH
+    RESERVOIR  BRIA2   
+      TSINPUT   INFLOW    REZ_INFLOW
+      TSOUTPUT  RELEASE   BRIA2_REL
+      TSOUTPUT  POOL      BRIA2_SPEL
+      TABLE ELEV_STOR
+
+      TABLE    ELEV_STOR
+       1080.0        0.0
+       1090.0    18170.0
+       1100.0    36339.0
+       1110.0    61272.0
+       1120.0    86205.0
+       1130.0   114079.0
+       1140.0   144893.0
+       1150.0   175707.0
+       1160.0   211225.0
+       1170.0   246743.0
+       1180.0   284141.0
+       1190.0   323420.0
+       ENDTABLE
+      INITIALPOOL 1150.000000
+      INITIALRELEASE  900.0
+      INITIALWITHDRAW  0.000000
+      INITIALINFLOW  13.137691
+      PREVIOUSRELEASE  900.
+      PREVIOUSPOOL  1150.000000
+      PREVIOUSWITHDRAW  0.000000
+      PREVIOUSINFLOW  1343.902956
+     ENDRESERVOIR
+# 
+#    Ability to adjust BRIA2 TS based on expected-observed operation
+     ADJUST  BRIA2  BRIA2_ADJUST
+     TSINPUT  OBSERVEDPOOL  BRIN_OBSP
+     TSINPUT  OBSERVEDRELEASE  OBS_OUTFLOW
+     ADJSIM  OFF
+     ENDADJUST
+#
+     RAINEVAP BRIA2 BRIA2_RE
+     TSINPUT OBSERVEDPRECIP BRIN_RAIN
+     EVAP
+     VALUES
+     01/15   .000   .20   .50   .25   .05
+     02/15   .000
+     03/15   .000
+     04/15   .000
+     05/15   .000
+     06/15   .120
+     07/15   .160
+     08/15   .160
+     09/15   .120
+     10/15   .010
+     11/15   .000
+     12/15   .000
+     ENDVALUES
+     ENDEVAP
+     ENDRAINEVAP
+     #
+     #
+     SETELEVATION BRIA2 normal
+     VALUES
+     01/01/00:00 1158.0
+     02/01/00:00 1152.0
+     03/01/00:00 1145.0
+     04/01/00:00 1132.0
+     05/01/00:00 1130.0
+     06/01/00:00 1135.0
+     07/01/00:00 1145.0
+     08/01/00:00 1165.0
+     09/01/00:00 1175.0
+     10/01/00:00 1175.0
+     11/01/00:00 1170.0
+     12/01/00:00 1164.0
+     ENDVALUES
+     INTERPOLATE
+     BENDTS 16 17
+     BLENDTBL 16 1
+     ENDSETELEVATION
+     #
+     #
+     SETREALEASE BRIA2 minimum
+     VALUES
+     ELEV 1080. 1180. ENDELEV
+     01/01_00:00 100.0 100.00
+     12/31_00:00 100.0 100.00
+     ENDVALUES
+     ENDSETRELEASE
+     #
+     #
+     SETREALEASE BRIA2 maximum
+     VALUES
+     ELEV 1080. 1180. ENDELEV
+     01/01_00:00 900.0 900.00
+     12/31_00:00 900.0 900.00
+     ENDVALUES
+     ENDSETRELEASE
+     #
+     #
+     SETMAX BRIA2 normals
+      SETELEVATION BRIA2 normal
+      SETRELEASE BRIA2 maximum
+     ENDSETMAX
+     #
+     #
+     SETMIN BRIA2 norm
+      SETMAX BRIA2 normals
+      SETRELEASE BRIA2 maximum
+     ENDSETMIN
+     #
+     END PARAMETERS
+     RULES
+     [TRUE]
+     ::ADJUST BRIA2 BRIA2_adj
+     ::SETMIN BRIA2 minimum
+     ::SETMAX BRIA2 maximum
+     ENDRULES
+ENDRES-J
+</stringValue>
+    </parameter>
+  </group>
+</parameters>

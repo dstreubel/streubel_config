@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+    
+    <!--  2nd LEVEL MEFP_FORECAST HINDCAST CALLED FROM HEFS_HINDCAST WORKFLOW:
+         
+         ***** FORECAST GROUP SPECIFIC ******
+         
+         Those sections must be modified if forecast groups 
+	     are changed or added for generating
+         lagged ensembles or executing MEFP. -->
+         
+    <!-- ============================================ -->
+    <!--              Preprocess Data                 -->
+    <!-- ============================================ -->
+    <!--           NOT NEEDED                         -->
+    
+    <!-- ============================================ -->
+    <!--           Generate MEFP Forecast             -->
+    <!-- ============================================ -->
+    
+    <!-- ****** FORECAST GROUP SPECIFIC ****** -->
+    <!-- Execute the MEFP to generate FMAP and TFMN, 
+         TFMX forecasts -->
+    <!-- Add one activity per group and data type. -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Bradley_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Bradley_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+	<ensemble>
+            <ensembleId>MEFP</ensembleId>
+            <runInLoop>true</runInLoop>
+        </ensemble>
+    </activity>
+</workflow>

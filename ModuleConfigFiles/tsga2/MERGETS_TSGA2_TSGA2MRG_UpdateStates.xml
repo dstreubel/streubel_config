@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>TSGA2_QINE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADJUSTQ_TSGA2_TSGA2ADJ_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>TSGA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>TSGA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_TSGA2_TLNA2RTD_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>TSGA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>TSGA2MRG_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGETS_TSGA2_TSGA2MRG_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>TSGA2MRG</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="TSGA2MRG">
+	<merge>
+		<simple>
+			<inputVariable>
+				<variableId>TSGA2_QINE_6</variableId>
+			</inputVariable>
+			<inputVariable>
+				<variableId>TSGA2_SQIN_6</variableId>
+			</inputVariable>
+			<moduleParameterFile>MERGETS_TSGA2_TSGA2MRG_UpdateStates</moduleParameterFile>
+			<outputVariable>
+				<variableId>TSGA2MRG_SQIN_6</variableId>
+			</outputVariable>
+		</simple>
+	</merge>
+	</transformation>
+</transformationModule>

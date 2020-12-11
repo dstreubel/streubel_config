@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>flf_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportFLF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>FLF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>fmazx_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAZX_PreProcessing_FLF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAZX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>fmazx_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAZX_PreProcessing_FLF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAZX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>fmazx_basin_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAZX_PreProcessing_FLF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAZX</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>fmazx_basin_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAZX_PreProcessing_FLF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAZX</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SampleFMAZX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>flf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>fmazx_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>fmazx_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>fmazx_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+	<transformation id="SampleFMAZXbasin">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>flf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>fmazx_basin_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_basin_Scalar">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>fmazx_basin_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>fmazx_basin_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+</transformationModule>

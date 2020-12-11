@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>qtf_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QTF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>fmatx_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>fmatx_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>fmatx_basin_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>fmatx_basin_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>fmatx_chena_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>COE_Basins_Chena</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>fmatx_chena_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>COE_Basins_Chena</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+
+	<variable>
+		<variableId>gfst_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>GFST</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>gfsx_t_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>GFSX_T</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>gfsx_t_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>GFSX_T</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>gfsx_t_basin_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>GFSX_T</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>gfsx_t_basin_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>GFSX_T</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>namt_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>NAMT</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>namx_t_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NAMX_T</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>namx_t_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NAMX_T</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>namx_t_basin_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NAMX_T</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>namx_t_basin_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NAMX_T</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ecmt_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>ECMT</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ecmx_t_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ECMX_T</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ecmx_t_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ECMX_T</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ecmx_t_basin_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ECMX_T</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ecmx_t_basin_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ECMX_T</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+
+
+	<variable>
+		<variableId>mxdf_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>MXDF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mxdfx_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MXDFX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mxdfx_scalar_24hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MXDFX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+
+	<variable>
+		<variableId>mndf_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>MNDF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mndfx_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MNDFX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mndfx_scalar_24hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MNDFX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+
+	<transformation id="SampleFMATX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>qtf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>fmatx_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>fmatx_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>fmatx_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+	<transformation id="SampleFMATX_basin">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>qtf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>fmatx_basin_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar_basin">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>fmatx_basin_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>fmatx_basin_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+	<transformation id="SampleFMATXchena">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>qtf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>fmatx_chena_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_chena_Scalar">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>fmatx_chena_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>fmatx_chena_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+
+	<transformation id="SampleGFSX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>gfst_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>gfsx_t_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar_GFSX">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>gfsx_t_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>gfsx_t_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+	<transformation id="SampleGFSX_basin">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>gfst_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>gfsx_t_basin_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar_basin_GFSX">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>gfsx_t_basin_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>gfsx_t_basin_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+	<transformation id="SampleNAMX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>namt_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>namx_t_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar_NAMX">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>namx_t_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>namx_t_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+	<transformation id="SampleNAMX_basin">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>namt_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>namx_t_basin_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar_basin_NAMX">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>namx_t_basin_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>namx_t_basin_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+	<transformation id="SampleECMX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>ecmt_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>ecmx_t_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar_ECMX">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>ecmx_t_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>ecmx_t_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+	<transformation id="SampleECMX_basin">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>ecmt_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>ecmx_t_basin_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar_basin_ECMX">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>ecmx_t_basin_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>ecmx_t_basin_scalar_6hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+
+	<transformation id="SampleMXDFX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>mxdf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mxdfx_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_24hr_Scalar">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>mxdfx_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mxdfx_scalar_24hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+
+	<transformation id="SampleMNDFX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>mndf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mndfx_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_24hr_Scalar">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>mndfx_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mndfx_scalar_24hr</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+
+</transformationModule>

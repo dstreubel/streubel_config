@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>NIRQ9LWR_SWE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SNOW17_NIRQ9_NIRQ9LWR_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>NIRQ9LWR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>NIRQ9LWR_SWE_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_NIRQ9_NIRQ9LSW_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>NIRQ9LWR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="NIRQ9LWR">
+		<aggregation>
+			<instantaneous>
+				<inputVariable>
+					<variableId>NIRQ9LWR_SWE_6</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>NIRQ9LWR_SWE_24</variableId>
+				</outputVariable>
+			</instantaneous>
+		</aggregation>
+	</transformation>
+</transformationModule>

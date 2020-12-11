@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forecastLengthEstimator xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/forecastLengthEstimator.xsd">
+	<externalHistoricalTimeSeries>
+		<moduleInstanceId>SetTimes_LastObserved</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>MAT</parameterId>
+		<locationId>LastObserved</locationId>
+		<timeSeriesType>external historical</timeSeriesType>
+		<timeStep unit="hour" multiplier="6"/>
+		<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+		<readWriteMode>read only</readWriteMode>
+	</externalHistoricalTimeSeries>
+<!--	<externalForecastTimeSeries>
+		<moduleInstanceId>ImportSHEF</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>FMAT</parameterId>
+		<locationSetId>Catchments_FMAT</locationSetId>
+		<timeSeriesType>external forecasting</timeSeriesType>
+		<timeStep unit="hour" multiplier="6"/>
+		<relativeViewPeriod unit="hour" start="0" end="240"/>
+		<readWriteMode>read only</readWriteMode>
+	</externalForecastTimeSeries>-->
+	<simulatedForecastTimeSeries>
+		<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>MAT</parameterId>
+        	<locationSetId>Catchments_FMAT</locationSetId>
+		<timeSeriesType>simulated forecasting</timeSeriesType>
+		<timeStep unit="hour" multiplier="6"/>
+		<relativeViewPeriod unit="hour" start="0" end="240"/>
+		<readWriteMode>read only</readWriteMode>
+	</simulatedForecastTimeSeries>
+	<minForecastLength multiplier="7" unit="day"/>
+	<maxForecastLength multiplier="10" unit="day"/>	
+</forecastLengthEstimator>

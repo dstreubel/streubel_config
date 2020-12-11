@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>MAPX_Wght_Anch</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>FMAPX_PreProcessing_QPF</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>MATX_PreProcessing_QTE</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>FMAPX_PreProcessing_QPFensemble</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>APRFC_QPF_PreProcessing_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SetTimes_LastObserved</moduleInstanceId>
+	</activity>
+</workflow>

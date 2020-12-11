@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forecastLengthEstimator xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/forecastLengthEstimator.xsd">
+	<externalForecastTimeSeries>
+		<moduleInstanceId>MAPX_PreProcessing_NAMNEST</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>MAPX_R01</parameterId>
+		<locationSetId>Gages_HI_Precip</locationSetId>
+		<timeSeriesType>external forecasting</timeSeriesType>
+		<timeStep unit="hour" multiplier="1"/>
+		<relativeViewPeriod unit="hour" start="0" end="36" endOverrulable="true"/>
+		<readWriteMode>read only</readWriteMode>
+	</externalForecastTimeSeries>
+	<minForecastLength multiplier="36" unit="hour"/>
+</forecastLengthEstimator>

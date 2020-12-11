@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>$SEGMENT$_QIN_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN_USGS</parameterId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>$SEGMENT$_STG_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_$SEGMENT$_$SEGMENT$OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>$SEGMENT$_RO_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_$SEGMENT$_$SEGMENT$OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MARO</parameterId>
+			<qualifierId>RUNOFF_INCHES</qualifierId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="$SEGMENT$OB1">
+		<!--<stageDischarge>-->
+		<dischargeStage>
+		<ratingCurve>
+			<discharge>
+				<variableId>$SEGMENT$_QIN_1</variableId>
+			</discharge>
+			<stage>
+				<variableId>$SEGMENT$_STG_1</variableId>
+			</stage>
+		</ratingCurve>
+		</dischargeStage>
+	</transformation>
+	<transformation id="$SEGMENT$OB1_MARO">
+	<user>
+	        <simple>
+			<!--inputVariable>
+		 		<variableId>$SEGMENT$_QIN_1</variableId>
+			</inputVariable-->
+			<!--expression>($SEGMENT$_QIN_1 * 0.0283 * 39.37 * 3600 / $BASINAREA$)</expression-->
+			<!--  QIN units are CMS  MARO units are mm, BASINAREA units are M  -->
+			<expression>($SEGMENT$_QIN_1 * 3600 / $BASINAREA$ * 1000)</expression>
+			<outputVariable>
+				<variableId>$SEGMENT$_RO_1</variableId>
+			</outputVariable>
+		</simple>
+	</user>
+	</transformation>
+
+</transformationModule>

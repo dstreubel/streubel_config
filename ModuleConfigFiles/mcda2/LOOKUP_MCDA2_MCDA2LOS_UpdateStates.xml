@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MCDA2TOT_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_MCDA2_MCDA2LCL_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>MCDA2TOT</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MCDA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>LOOKUP_MCDA2_MCDA2LOS_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>MCDA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MCDA2LOS">
+		<lookup>
+			<simple>
+			<input>
+				<variableId>MCDA2TOT_SQIN_6</variableId>
+			</input>
+			<coefficientSet>
+				<interpolationType>linear</interpolationType>
+				<extrapolationType>extrapolate</extrapolationType>
+				<lookupTable>
+					<lookupTableRow input="0.0" output="0.0"></lookupTableRow>
+					<lookupTableRow input="113.26739" output="113.26739"></lookupTableRow>
+					<lookupTableRow input="226.53477" output="198.21792"></lookupTableRow>
+					<lookupTableRow input="424.75269" output="297.32689"></lookupTableRow>
+
+				</lookupTable>
+			</coefficientSet>
+			<output>
+				<variableId>MCDA2_SQIN_6</variableId>
+			</output>
+			</simple>
+		</lookup>
+	</transformation>
+</transformationModule>

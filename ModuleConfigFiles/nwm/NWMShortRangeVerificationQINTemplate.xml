@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<performanceIndicatorSets xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/performanceIndicatorSets.xsd" version="1.1">
+	<performanceIndicatorSet performanceIndicatorId="ShortRange">
+		<inputVariable variableId="QIN">
+			<timeSeriesSet>
+				<moduleInstanceId>ImportSHEF</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>QIN_USGS</parameterId>
+				<!--qualifierId>Assimilated</qualifierId-->
+				<locationSetId>Gages_HI_Priority_Basins</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour" multiplier="1"/>
+				<relativeViewPeriod unit="hour" start="-12" end="12"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</inputVariable>
+		<inputVariable variableId="QINE">
+			<timeSeriesSet>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>$Variable$</parameterId>
+				<qualifierId>$Type$</qualifierId>
+				<locationSetId>Gages_HI_Priority_Basins</locationSetId>
+				<timeSeriesType>external forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="1"/>
+				<relativeViewPeriod unit="hour" start="-12" end="12"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</inputVariable>
+		<forecastSelectionPeriod start="$FPstart$" end="$FPend$" unit="hour"></forecastSelectionPeriod>
+			<modulePerformanceIndicator indicatorType="meanabsoluteerror" calculatedVariableId="QINE" observedVariableId="QIN" outputVariableId="MAE"></modulePerformanceIndicator>
+			<modulePerformanceIndicator indicatorType="bias" calculatedVariableId="QINE" observedVariableId="QIN" outputVariableId="BIAS"></modulePerformanceIndicator>
+			<modulePerformanceIndicator indicatorType="nashsutcliffeefficiency" calculatedVariableId="QINE" observedVariableId="QIN" outputVariableId="NS_Q"></modulePerformanceIndicator>
+			<modulePerformanceIndicator indicatorType="volumeerror" calculatedVariableId="QINE" observedVariableId="QIN" outputVariableId="volumeError"></modulePerformanceIndicator>
+			<modulePerformanceIndicator indicatorType="CorrelationCoeffient" calculatedVariableId="QINE" observedVariableId="QIN" outputVariableId="CC"></modulePerformanceIndicator>
+		<!-- Something close to 0 is good, large positive numbers are bad (units are cfs) -->
+		<outputVariable variableId="MAE">
+			<timeSeriesSet>
+				<moduleInstanceId>$MODULE_INSTANCE_ID$</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>MAE</parameterId>
+				<qualifierId>CMS</qualifierId>
+				<locationSetId>Gages_HI_Priority_Basins</locationSetId>
+                                <timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+				<relativeViewPeriod unit="hour" start="0" end="0"/>
+				<readWriteMode>add originals</readWriteMode>
+			</timeSeriesSet>
+		</outputVariable>
+		<!-- Something close to 0 is good, large positive or negative numbers are bad (units are cfs) -->
+		<outputVariable variableId="BIAS">
+			<timeSeriesSet>
+				<moduleInstanceId>$MODULE_INSTANCE_ID$</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>bias</parameterId>
+				<qualifierId>CMS</qualifierId>
+				<locationSetId>Gages_HI_Priority_Basins</locationSetId>
+                                <timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+				<relativeViewPeriod unit="hour" start="0" end="0"/>
+				<readWriteMode>add originals</readWriteMode>
+			</timeSeriesSet>
+		</outputVariable>
+		<outputVariable variableId="NS_Q">
+                        <timeSeriesSet>
+                                <moduleInstanceId>$MODULE_INSTANCE_ID$</moduleInstanceId>
+                                <valueType>scalar</valueType>
+                                <parameterId>nashsutcliffeefficiency</parameterId>
+                                <qualifierId>NS</qualifierId>
+                                <locationSetId>Gages_HI_Priority_Basins</locationSetId>
+                                <timeSeriesType>external historical</timeSeriesType>
+                                <timeStep unit="nonequidistant"/>
+                                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                                <readWriteMode>add originals</readWriteMode>
+                        </timeSeriesSet>
+                </outputVariable>
+		<outputVariable variableId="CC">
+                        <timeSeriesSet>
+                                <moduleInstanceId>$MODULE_INSTANCE_ID$</moduleInstanceId>
+                                <valueType>scalar</valueType>
+                                <parameterId>CC</parameterId>
+                                <qualifierId>Correlation Coefficient</qualifierId>
+                                <locationSetId>Gages_HI_Priority_Basins</locationSetId>
+                                <timeSeriesType>external historical</timeSeriesType>
+                                <timeStep unit="nonequidistant"/>
+                                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                                <readWriteMode>add originals</readWriteMode>
+                        </timeSeriesSet>
+                </outputVariable>
+		<outputVariable variableId="volumeError">
+                        <timeSeriesSet>
+                                <moduleInstanceId>$MODULE_INSTANCE_ID$</moduleInstanceId>
+                                <valueType>scalar</valueType>
+                                <parameterId>volumeerror</parameterId>
+                                <qualifierId>Percent</qualifierId>
+                                <locationSetId>Gages_HI_Priority_Basins</locationSetId>
+                                <timeSeriesType>external historical</timeSeriesType>
+                                <timeStep unit="nonequidistant"/>
+                                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                                <readWriteMode>add originals</readWriteMode>
+                        </timeSeriesSet>
+                </outputVariable>
+	</performanceIndicatorSet>
+</performanceIndicatorSets>

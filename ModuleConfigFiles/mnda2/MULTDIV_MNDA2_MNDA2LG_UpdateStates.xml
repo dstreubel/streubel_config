@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MNDA2LGI_RAIM_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SNOW17_MNDA2_MNDA2LGI_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>RAIM</parameterId>
+			<locationId>MNDA2LGI</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MNDA2LNS_AIAI_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>LOOKUP_MNDA2_MNDA2LGI_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>AIAI</parameterId>
+			<locationId>MNDA2LNS</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MNDA2IML_RAIM_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MULTDIV_MNDA2_MNDA2LG_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>RAIM</parameterId>
+			<locationId>MNDA2IML</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MNDA2LG">
+		<user>
+			<simple>
+				<expression>MNDA2LGI_RAIM_6 * MNDA2LNS_AIAI_6</expression>
+				<outputVariable>
+					<variableId>MNDA2IML_RAIM_6</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+</transformationModule>

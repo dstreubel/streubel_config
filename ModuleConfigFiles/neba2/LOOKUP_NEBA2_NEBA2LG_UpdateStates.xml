@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>NEBA2LGS_SASC_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SNOW17_NEBA2_NEBA2LGS_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SASC</parameterId>
+			<locationId>NEBA2LGS</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>NEBA2LNS_SASC_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>LOOKUP_NEBA2_NEBA2LG_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SASC</parameterId>
+			<locationId>NEBA2LNS</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="NEBA2LG">
+		<lookup>
+			<simple>
+			<input>
+				<variableId>NEBA2LGS_SASC_6</variableId>
+			</input>
+			<coefficientSet>
+				<interpolationType>linear</interpolationType>
+				<extrapolationType>extrapolate</extrapolationType>
+				<lookupTable>
+					<lookupTableRow input="0.0" output="1.0"></lookupTableRow>
+					<lookupTableRow input="1.0" output="0.0"></lookupTableRow>
+
+				</lookupTable>
+			</coefficientSet>
+			<output>
+				<variableId>NEBA2LNS_SASC_6</variableId>
+			</output>
+			</simple>
+		</lookup>
+	</transformation>
+</transformationModule>

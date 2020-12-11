@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by ICT (Stichting Deltares) -->
+<validationRuleSets version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/validationRuleSets.xsd">
+	<!-- Water level limits -->
+	<validationRuleSet validationRuleSetId="AESSCHNG" timeZone="0">
+		<extremeValues>
+			<hardMax constantLimit="1.0"/>
+			<hardMin constantLimit="0.0"/>
+		</extremeValues>
+		<timeSeriesSet>
+			<moduleInstanceId>ExportMODS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>AESCCHNG</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-5" end="120"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</validationRuleSet>
+	<validationRuleSet validationRuleSetId="UADJ" timeZone="0">
+		<extremeValues>
+			<hardMin constantLimit="0" />
+			<softMax constantLimit="10.0" />
+			<softMin constantLimit="0.0" />
+		</extremeValues>
+		<timeSeriesSet>
+			<moduleInstanceId>ExportMODS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>UADJ</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-66" end="24"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</validationRuleSet>
+	<validationRuleSet validationRuleSetId="MFC" timeZone="0">
+		<extremeValues>
+			<hardMin constantLimit="0" ></hardMin>
+			<softMax constantLimit="5.0" />
+			<softMin constantLimit="0.0" />
+		</extremeValues>
+		<timeSeriesSet>
+			<moduleInstanceId>ExportMODS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MFC</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</validationRuleSet>
+	<validationRuleSet validationRuleSetId="WEADD" timeZone="0">
+		<extremeValues>
+			<softMax constantLimit="5"/>
+			<softMin constantLimit="-5.0" />
+		</extremeValues>
+		<timeSeriesSet>
+			<moduleInstanceId>ExportMODS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>WEADD</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-5" end="120"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</validationRuleSet>
+		<validationRuleSet validationRuleSetId="WECHNG" timeZone="0">
+		<extremeValues>
+			<hardMin constantLimit="0.0"/>
+			<softMax constantLimit="10"/>
+		</extremeValues>
+		<timeSeriesSet>
+			<moduleInstanceId>ExportMODS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>WECHNG</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-5" end="120"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</validationRuleSet>
+		<validationRuleSet validationRuleSetId="SACBASEF" timeZone="0">
+		<extremeValues>
+			<hardMin constantLimit="0.0"/>
+			<softMax constantLimit="10"/>
+		</extremeValues>
+		<timeSeriesSet>
+			<moduleInstanceId>ExportMODS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SACBASEF</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-24" end="48" />
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</validationRuleSet>
+</validationRuleSets>

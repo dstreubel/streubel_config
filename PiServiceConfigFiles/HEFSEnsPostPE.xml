@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by WL | Delft Hydraulics (WL | Delft Hydraulics) -->
+<fewsPiServiceConfig xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/fewsPiServiceConfig.xsd">
+    <general>
+        <!-- Define id-mappings here only if needed to force observed and
+             simulated streamflow to have matching locationIds.  
+             Add the appropriate new id-mapping file to Config/IdMapFiles. -->
+        <!--<importIdMap>IdImportPiService</importIdMap>
+            <exportIdMap>IdExportPiService</exportIdMap> -->
+    </general>
+
+    <!-- This one query is used to extract all needed time series from the localDataStore
+         and export them to files under Models/hefs/hefsEnsPostPERunArea/piXMLFiles  It 
+         should be configured to include ALL historical simulated and observed streamflows
+         that will be used to estimate parameters for EnsPost.  Within the software, the 
+         time series will be extracted one at a time, so don't worry about the size of the 
+         query results.
+             
+         The examples below can be considered as a template; modify as needed.-->
+    <timeSeries>
+        <id>All Time Series</id>
+        
+        <!-- Make the historical simulation time series available to the EnsPostPE.
+             By default, this assumes the HS data was imported using the 
+             ImportHSFlowsFromCHPSInGMT module.-->
+        <timeSeriesSet>
+            <moduleInstanceId>ImportHSFlowsFromCHPSInGMT</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>        
+        </timeSeriesSet>
+        <!--timeSeriesSet>
+            <moduleInstanceId>ImportHSFlowsFromCHPSInGMT</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>        
+        </timeSeriesSet-->
+ 
+        <!-- This is, typically, a 24h observed QME time series imported from a 
+             datacard file. -->
+        <timeSeriesSet>
+            <moduleInstanceId>ImportEnsPostPEDatacards</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>QME</parameterId>                         
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="24" timeZone="GMT-0"/>                         
+            <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet>                                
+
+
+    </timeSeries>
+    
+</fewsPiServiceConfig>

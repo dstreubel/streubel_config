@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+
+	<variable>
+		<variableId>PCA_diff</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NORMALIZE_ERRORSWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<qualifierId>diff</qualifierId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+<!--			<timeStep id="12Z"/>-->
+			<relativeViewPeriod unit="day" start="0" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PCA_diff_historic</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGE_PCA_diff_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<qualifierId>diff</qualifierId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+<!--			<timeStep id="12Z"/>-->
+			<readWriteMode>read complete forecast</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PCA_diff_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGE_PCA_diff_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<qualifierId>diff</qualifierId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+<!--			<timeStep id="12Z"/>-->
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	
+	<transformation id="merge_PCA_diff_to_history">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>PCA_diff</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>PCA_diff_historic</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>PCA_diff_merged</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+</transformationModule>

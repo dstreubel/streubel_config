@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+    <general>
+        <description>GraphGen Products</description>
+        <rootDir>%TEMP_DIR%</rootDir>
+        <workDir>%ROOT_DIR%/work</workDir>
+        <exportDir>%ROOT_DIR%/input</exportDir>
+        <exportDataSetDir>%ROOT_DIR%</exportDataSetDir>
+<!--        <exportIdMap>IdExportSACSMA</exportIdMap>-->
+        <importDir>%ROOT_DIR%/output</importDir>
+<!--        <importIdMap>IdImportSACSMA</importIdMap>-->
+        <dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+        <dumpDir>%ROOT_DIR%</dumpDir>
+        <diagnosticFile>%ROOT_DIR%/output/diag.xml</diagnosticFile>
+<!--        <timeZone>
+            <timeZoneOffset>-08:00</timeZoneOffset>
+        </timeZone>-->
+    </general>
+    <activities>
+        <startUpActivities>
+            <makeDir>
+                <dir>%ROOT_DIR%/output</dir>
+            </makeDir>
+            <makeDir>
+                <dir>%ROOT_DIR%/work</dir>
+            </makeDir>
+            <makeDir>
+                <dir>%ROOT_DIR%/products</dir>
+            </makeDir>
+        </startUpActivities>
+        <exportActivities>
+            <exportRunFileActivity>
+                <exportFile>%ROOT_DIR%/run_info.xml</exportFile>
+                <properties>
+		    <int key="printDebugInfo" value="0"/>
+<!-- comment out the next three lines for testing from a SA; will bypass global properties and run locally -->
+       		    <string key="piServiceBackendRFCIdentifier" value="$piServiceBackendRFCIdentifier$"/>
+		    <string key="piServiceHostName" value="$piServiceHostName$"/>
+		    <string key="piServicePortNumber" value="$piServicePortNumber$"/>          
+
+<!--                    <string key="model" value="ohd.hseb.graphgen.adapter.GraphGenModelAdapter"/>-->
+                    <string key="baseOutputDir" value="$EXPORT_FOLDER$/products"/>
+                    <string key="ohdGraphgenCentralDir" value="$ohdGraphgenCentralDir$"/>
+
+                    <string key="products.SRYA2" value="HEFS GEFS Ensembles; HEFS Short-Range Prob Guidance"/> 
+ 		    <string key="products.TYAA2" value="HEFS GEFS Ensembles; HEFS Short-Range Prob Guidance"/>
+  		    <string key="products.SCKA2" value="HEFS GEFS Ensembles; HEFS Short-Range Prob Guidance"/>
+           	
+ 		    <string key="products.UCHA2" value="HEFS GEFS Ensembles; HEFS Short-Range Prob Guidance"/>
+ 		    <string key="products.CHLA2" value="HEFS GEFS Ensembles; HEFS Short-Range Prob Guidance"/>
+
+                	
+           	    <string key="products.BRUA2" value="HEFS GEFS Ensembles; HEFS Short-Range Prob Guidance"/>
+ 		    <string key="products.BRMA2" value="HEFS GEFS Ensembles; HEFS Short-Range Prob Guidance"/>
+ 		    <string key="products.BRDA2" value="HEFS GEFS Ensembles SQIN"/>
+            	    <string key="products.BRIA2" value="HEFS GEFS Ensembles SQIN"/>
+                </properties>
+            </exportRunFileActivity>
+        </exportActivities>
+        <executeActivities>
+            <executeActivity>
+                <command>
+                    <className>ohd.hseb.graphgen.adapter.GraphGenModelAdapter</className>
+                    <binDir>$OHDBINDIR$</binDir>
+                </command>
+                <arguments>
+                    <argument>%ROOT_DIR%/run_info.xml</argument>
+                </arguments>
+                <timeOut>300000</timeOut>
+            </executeActivity>
+        </executeActivities>
+    </activities>
+</generalAdapterRun>

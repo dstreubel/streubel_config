@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSteps xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSteps.xsd">
+	<timeStep id="3Z" times="03:00"/>
+	<timeStep id="6Z" times="06:00"/>
+	<timeStep id="9Z" times="09:00"/>
+	<timeStep id="12Z" times="12:00"/>
+	<timeStep id="15Z" times="15:00"/>
+	<timeStep id="18Z" times="18:00"/>
+	<timeStep id="21Z" times="21:00"/>
+	<timeStep id="00Z" times="00:00"/>
+</timeSteps>

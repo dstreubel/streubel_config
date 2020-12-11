@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by WL | Delft Hydraulics (WL | Delft Hydraulics) -->
+<fewsPiServiceConfig xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/fewsPiServiceConfig.xsd">
+    <general>
+        <exportIdMap>IdExportMEFPPE</exportIdMap>
+    </general>
+
+    <!-- This one query is used to extract historical time series from the localDataStore
+         and export them to files under Models/hefs/mefppeRunArea/historicalData.  It 
+         should be configured to include ALL historical time series that will be used to 
+         estimate parameters for MEFP.  Within the software, the time series will be 
+         extracted one at a time, so don't worry about the size of the query results.
+             
+         The examples below can be considered as a template and should work if the
+         needed time series were imported from datacard files and you have the location
+         set "Catchments_HEFS" defined appropriately.  It allows for up to 100 years
+         of data prior to the current T0.
+    -->
+    <timeSeries>
+        <id>All Historical Data</id>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAP_to_GMT</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAP</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>  
+            <readWriteMode>read complete forecast</readWriteMode>                         
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <qualifierId>GMT sampled</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+	        <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet> 
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TAMX</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep id="12Z"/>
+            <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TAMN</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep id="12Z"/>
+            <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet>          
+    </timeSeries>
+    
+</fewsPiServiceConfig>

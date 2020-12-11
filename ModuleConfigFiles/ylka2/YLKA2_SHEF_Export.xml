@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+	<export>
+		<general>
+			<exportType>SHEF</exportType>
+			<folder>$EXPORT_FOLDER$</folder>
+			<exportFileName>
+				<name>_YLKA2_chps_shef_export.</name>
+				<prefix>
+					<timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+				</prefix>
+				<suffix>
+					<currentTimeFormattingString>yyyyMMddHHmmss</currentTimeFormattingString>
+				</suffix>
+			</exportFileName>
+			<idMapId>IdExportSHEF</idMapId>
+			<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>true</omitMissingValues>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_YLKA2_YLKA2LGC_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SASC</parameterId>
+			<locationId>YLKA2LG</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_YLKA2_YLKA2LGS_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>YLKA2LG</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_YLKA2_YLKA2LSC_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SASC</parameterId>
+			<locationId>YLKA2LWR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_YLKA2_YLKA2LSW_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>YLKA2LWR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_YLKA2_YLKA2UGC_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SASC</parameterId>
+			<locationId>YLKA2UG</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_YLKA2_YLKA2UGS_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>YLKA2UG</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_YLKA2_YLKA2USC_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SASC</parameterId>
+			<locationId>YLKA2UPR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_YLKA2_YLKA2USW_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>YLKA2UPR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ADJUSTQ_YLKA2_YLKA2ADJ_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>YLKA2</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_YLKA2_YLKA2LOC_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>YLKA2</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_YLKA2_YLKA2SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>YLKA2</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_YLKA2_YLKA2ADJ_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STGE</parameterId>
+			<locationId>YLKA2</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</export>
+</timeSeriesExportRun>

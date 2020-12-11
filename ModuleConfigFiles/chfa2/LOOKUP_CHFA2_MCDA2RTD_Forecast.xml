@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MCDA2RT_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>LAGK_CHFA2_MCDA2RT_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>MCDA2RT</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MCDA2RTD_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>LOOKUP_CHFA2_MCDA2RTD_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>MCDA2RTD</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MCDA2RTD">
+		<lookup>
+			<simple>
+			<input>
+				<variableId>MCDA2RT_SQIN_6</variableId>
+			</input>
+			<coefficientSet>
+				<interpolationType>linear</interpolationType>
+				<extrapolationType>extrapolate</extrapolationType>
+				<lookupTable>
+					<lookupTableRow input="0.0" output="0.0"></lookupTableRow>
+					<lookupTableRow input="84.951" output="84.951"></lookupTableRow>
+					<lookupTableRow input="99.1095" output="93.4461"></lookupTableRow>
+					<lookupTableRow input="212.3775" output="192.5556"></lookupTableRow>
+					<lookupTableRow input="424.755" output="339.804"></lookupTableRow>
+
+				</lookupTable>
+			</coefficientSet>
+			<output>
+				<variableId>MCDA2RTD_SQIN_6</variableId>
+			</output>
+			</simple>
+		</lookup>
+	</transformation>
+</transformationModule>

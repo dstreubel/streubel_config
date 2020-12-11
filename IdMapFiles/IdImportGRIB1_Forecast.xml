@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+	<map internalParameter="QPF" internalLocation="HAS" externalParameter="61" externalLocation="none"/>
+	<map internalParameter="QPF03" internalLocation="HAS" externalParameter="61" externalLocation="none"/>
+	<map internalParameter="GFSQPF" internalLocation="HAS" externalParameter="61" externalLocation="none"/>
+	<map internalParameter="NAMQPF" internalLocation="HAS" externalParameter="61" externalLocation="none"/>
+	<map internalParameter="ECMQPF" internalLocation="HAS" externalParameter="61" externalLocation="none"/>
+	<map internalParameter="NBMQPF" internalLocation="HAS" externalParameter="61" externalLocation="none"/>	
+	<map internalParameter="QTF" internalLocation="HAS" externalParameter="11" externalLocation="none"/>
+	<map internalParameter="GFST" internalLocation="HAS" externalParameter="11" externalLocation="none"/>
+	<map internalParameter="NAMT" internalLocation="HAS" externalParameter="11" externalLocation="none"/>
+	<map internalParameter="ECMT" internalLocation="HAS" externalParameter="11" externalLocation="none"/>
+	<map internalParameter="FLF" internalLocation="HAS" externalParameter="7" externalLocation="none"/>
+</idMap>

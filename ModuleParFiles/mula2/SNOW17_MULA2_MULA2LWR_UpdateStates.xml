@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+    <parameter id="MV">
+      <intValue>0</intValue>
+    </parameter>
+    <parameter id="MBASE">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="TAELEV">
+      <dblValue>457.0</dblValue>
+    </parameter>
+    <parameter id="TIPM">
+      <dblValue>0.1</dblValue>
+    </parameter>
+    <parameter id="SCF">
+      <dblValue>1.0</dblValue>
+    </parameter>
+    <parameter id="PXTEMP">
+      <dblValue>1.7</dblValue>
+    </parameter>
+    <parameter id="SASC_OUTPUT_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="SI">
+      <dblValue>600.0</dblValue>
+    </parameter>
+    <parameter id="ELEV">
+      <dblValue>457.0</dblValue>
+    </parameter>
+    <parameter id="PXADJ">
+      <dblValue>1.0</dblValue>
+    </parameter>
+    <parameter id="SWE_OUTPUT_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="UADJ">
+      <dblValue>0.03</dblValue>
+    </parameter>
+    <parameter id="MFMIN">
+      <dblValue>0.1</dblValue>
+    </parameter>
+    <parameter id="SNSG_OUTPUT_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="WETOL[0., 1.0]">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="NMF">
+      <dblValue>0.15</dblValue>
+    </parameter>
+    <parameter id="SCTOL[0., 1.0]">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="ALAT">
+      <dblValue>62.5</dblValue>
+    </parameter>
+    <parameter id="MFMAX">
+      <dblValue>0.9</dblValue>
+    </parameter>
+    <parameter id="PLWHC">
+      <dblValue>0.05</dblValue>
+    </parameter>
+    <parameter id="DAYGM">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="AREA_DEPLETION_CURVE">
+      <table>
+        <columnTypes A="double"/>
+        <row A="0.05"/>
+        <row A="0.22"/>
+        <row A="0.3"/>
+        <row A="0.4"/>
+        <row A="0.5"/>
+        <row A="0.58"/>
+        <row A="0.64"/>
+        <row A="0.69"/>
+        <row A="0.7"/>
+        <row A="0.8"/>
+        <row A="1.0"/>
+      </table>
+    </parameter>
+  </group>
+</parameters>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>SALA2UPR_MAP_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Tanana_MergeMAP_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationId>SALA2UPR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SALA2LOC_MAPX_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationId>SALA2LOC</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SALA2UMG_MAP_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGETS_SALA2_SALA2UMG_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationId>SALA2UMG</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SALA2UMG">
+	<merge>
+		<simple>
+			<inputVariable>
+				<variableId>SALA2UPR_MAP_6</variableId>
+			</inputVariable>
+			<inputVariable>
+				<variableId>SALA2LOC_MAPX_6</variableId>
+			</inputVariable>
+			<moduleParameterFile>MERGETS_SALA2_SALA2UMG_UpdateStates</moduleParameterFile>
+			<outputVariable>
+				<variableId>SALA2UMG_MAP_6</variableId>
+			</outputVariable>
+		</simple>
+	</merge>
+	</transformation>
+</transformationModule>

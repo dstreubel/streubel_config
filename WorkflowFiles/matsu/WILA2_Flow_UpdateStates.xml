@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+			<string key="FGROUP" value="Matsu"/>
+			<string key="CATCHMENT_TYPE" value="LOC"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_WILA2_WILA2RSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+			<string key="CATCHMENT" value="WILA2LOC"/>
+			<string key="FGROUP" value="Matsu"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_WILA2_WILA2LOC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>		
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+			<string key="CATCHMENT" value="WILA2LOC"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_WILA2_WILA2LOC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+			<string key="CATCHMENT" value="WILA2LOC"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_WILA2_WILA2LOC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>LAGK_WILA2_WLWA2LAG_UpdateStates</moduleInstanceId>
+	</activity>    
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_WILA2_WILA2LOC_UpdateStates</moduleInstanceId>
+	</activity>       
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_WILA2_WILA2UPR_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_WILA2_WILA2OB6_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_WILA2_WILA2LOC_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_WILA2_WILA2SIM_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_UpdateStates_template</moduleConfigFileName>
+	</activity>		
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_WILA2_WILA2ADJ_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_WILA2_WILA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+			<string key="ZONE" value="LOC"/>		
+			<string key="exportParameter" value="SWE"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_WILA2_WILA2SWE_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+			<string key="ZONE" value="LOC"/>		
+			<string key="exportParameter" value="SCA"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_WILA2_WILA2SCA_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_WILA2_WILA2RSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WILA2"/>
+			<string key="ZONE" value="LOC"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Matsu"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_WILA2_WILA2MAT_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+</workflow>

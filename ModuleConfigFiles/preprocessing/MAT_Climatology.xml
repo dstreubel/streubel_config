@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 sp1 (http://www.altova.com) by matthijs lemans (DeltaresUSA) -->
+<!--<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">-->
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MAT_cardfiles</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDataCard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-10" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+<!--	<variable>
+		<variableId>MAT_12Z</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="day" start="-730" end="0" startOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_18Z</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="18Z"/>
+			<relativeViewPeriod unit="day" start="-730" end="0" startOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_00Z</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="00Z"/>
+			<relativeViewPeriod unit="day" start="-730" end="0" startOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_6Z</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="6Z"/>
+			<relativeViewPeriod unit="day" start="-730" end="0" startOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>-->
+	<variable>
+		<variableId>MAT_Day_MY</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<qualifierId>MAT_Day_MY</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day"/>
+			<cycle unit="year"/>
+			<relativeViewPeriod unit="day" start="-730" end="0" startOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_Day_MY_trimmed</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<qualifierId>MAT_Day_MY_trimmed</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day"/>
+			<relativeViewPeriod unit="day" start="-365" end="365"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_Day_MY_Shifted</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<qualifierId>MAT_Day_MY_Shifted</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="day"/>
+			<cycle unit="year"/>
+			<relativeViewPeriod unit="day" start="-730" startOverrulable="true" end="365" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_merged_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<qualifierId>MAT_merged_tmp</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="day"/>
+			<relativeViewPeriod unit="day" start="-10" startOverrulable="true" end="365" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_Climo</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-10" startOverrulable="true" end="365" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<expiryTime unit="day" multiplier="365"/>
+		</timeSeriesSet>
+	</variable>
+	
+	<!--
+	<variable>
+		<variableId>MAT_Climo_Shifted</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<qualifierId>shifted</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="192"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	-->
+	
+	<!--multiyear aggrations-->
+
+<!--	<transformation id="MAT_12Z">
+		<aggregation>
+			<instantaneous>
+				<inputVariable>
+					<variableId>MAT_cardfiles</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAT_12Z</variableId>
+				</outputVariable>
+			</instantaneous>
+		</aggregation>
+	</transformation>
+	<transformation id="MAT_18Z">
+		<aggregation>
+			<instantaneous>
+				<inputVariable>
+					<variableId>MAT_cardfiles</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAT_18Z</variableId>
+				</outputVariable>
+			</instantaneous>
+		</aggregation>
+	</transformation>
+	<transformation id="MAT_00Z">
+		<aggregation>
+			<instantaneous>
+				<inputVariable>
+					<variableId>MAT_cardfiles</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAT_00Z</variableId>
+				</outputVariable>
+			</instantaneous>
+		</aggregation>
+	</transformation>
+	<transformation id="MAT_6Z">
+		<aggregation>
+			<instantaneous>
+				<inputVariable>
+					<variableId>MAT_cardfiles</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAT_6Z</variableId>
+				</outputVariable>
+			</instantaneous>
+		</aggregation>
+	</transformation>-->
+ 
+	<transformation id="MAT_Day_MY">
+		<statisticsPeriodic>
+			<mean>
+				<inputVariable>
+					<variableId>MAT_cardfiles</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAT_Day_MY</variableId>
+				</outputVariable>
+			</mean>
+		</statisticsPeriodic>
+	</transformation>
+	<transformation id="MAT_Day_MY_trimmed">
+		<user>
+			<simple>
+				<expression>MAT_Day_MY</expression>
+				<outputVariable>
+					<variableId>MAT_Day_MY_trimmed</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+        <transformation id="MAT_Day_MY_Shifted">
+                <timeShift>
+                        <constant>
+                                <inputVariable>
+                                        <variableId>MAT_Day_MY</variableId>
+                                </inputVariable>
+                                <direction>forward</direction>
+                                <numberOfTimeSteps>365</numberOfTimeSteps>
+                                <outputVariable>
+                                        <variableId>MAT_Day_MY_Shifted</variableId>
+                                </outputVariable>
+                        </constant>
+                </timeShift>
+        </transformation>
+
+	<transformation id="MergeMAT">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>MAT_Day_MY_trimmed</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAT_Day_MY_Shifted</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAT_merged_tmp</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	<transformation id="InterpolateMAT">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>MAT_merged_tmp</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAT_Climo</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<!--
+    <transformation id="MAT_Climo_Shifted">
+            <timeShift>
+                    <constant>
+                            <inputVariable>
+                                    <variableId>MAT_Climo</variableId>
+                            </inputVariable>
+                            <direction>backward</direction>
+                            <numberOfTimeSteps>2</numberOfTimeSteps>
+                            <outputVariable>
+                                    <variableId>MAT_Climo_Shifted</variableId>
+                            </outputVariable>
+                    </constant>
+            </timeShift>
+    </transformation>
+    -->
+</transformationModule>

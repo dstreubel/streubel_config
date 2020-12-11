@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>qte_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QTE</parameterId>
+			<locationId>RTMA</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>matx_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MATX_PreProcessing_QTE_HRRR</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MATX</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>matx_basin_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MATX_PreProcessing_QTE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MATX</parameterId>
+			<locationSetId>Catchements_Onehr</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SampleMATX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>qte_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>matx_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="SampleMATX_basin">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>qte_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>matx_basin_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+</transformationModule>

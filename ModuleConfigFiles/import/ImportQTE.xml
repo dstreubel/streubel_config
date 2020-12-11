@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qte/dqc/ta06</folder>
+			<idMapId>IdImportGRIB1_Estimate</idMapId>
+			<unitConversionsId>ImportGrib</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+        
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QTE</parameterId>
+			<locationId>HRAP</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="QTE"/> 
+	</import>
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qte/rtma/ta01</folder>
+			<idMapId>IdImportGRIB1_RTMA_Estimate</idMapId>
+			<unitConversionsId>ImportGrib</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+        
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QTE</parameterId>
+			<locationId>RTMA</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="QTE"/> 
+	</import>
+        <import>
+                <general>
+                        <importType>grib</importType>
+                        <folder>$IMPORT_FOLDER_GRIB1$/qte/rtma/tx24</folder>
+<!--                        <fileNamePatternFilter>tx24_rtma_*.grb</fileNamePatternFilter>-->
+                        <idMapId>IdImportGRIB1_TAMX_RTMA_Estimate</idMapId>
+                        <unitConversionsId>ImportGrib</unitConversionsId>
+                        <importTimeZone>
+                                <timeZoneOffset>+00:00</timeZoneOffset>
+                        </importTimeZone>
+                        <gridStartPoint>SW</gridStartPoint>
+                </general>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportQTE</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>TAMX</parameterId>
+                        <locationId>RTMA</locationId>
+                        <timeSeriesType>external historical</timeSeriesType>
+                        <timeStep unit="hour" multiplier="1"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <synchLevel>6</synchLevel>
+                        <expiryTime unit="day" multiplier="21"/>
+                </timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="TAMX"/>
+        </import>
+        <import>
+                <general>
+                        <importType>grib</importType>
+                        <folder>$IMPORT_FOLDER_GRIB1$/qte/rtma/tn24</folder>
+<!--                        <fileNamePatternFilter>tn24_rtma_*.grb</fileNamePatternFilter>-->
+                        <idMapId>IdImportGRIB1_TAMN_RTMA_Estimate</idMapId>
+                        <unitConversionsId>ImportGrib</unitConversionsId>
+                        <importTimeZone>
+                                <timeZoneOffset>+00:00</timeZoneOffset>
+                        </importTimeZone>
+                        <gridStartPoint>SW</gridStartPoint>
+                </general>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportQTE</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>TAMN</parameterId>
+                        <locationId>RTMA</locationId>
+                        <timeSeriesType>external historical</timeSeriesType>
+                        <timeStep unit="hour" multiplier="1"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <synchLevel>6</synchLevel>
+                        <expiryTime unit="day" multiplier="21"/>
+                </timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="TAMN"/>
+        </import>
+        <import>
+                <general>
+                        <importType>grib</importType>
+                        <folder>$IMPORT_FOLDER_GRIB1$/qte/dqc/tx24</folder>
+<!--                        <fileNamePatternFilter>tx24_rtma_*.grb</fileNamePatternFilter>-->
+                        <idMapId>IdImportGRIB1_TAMX_Estimate</idMapId>
+                        <unitConversionsId>ImportGrib</unitConversionsId>
+                        <importTimeZone>
+                                <timeZoneOffset>-00:00</timeZoneOffset>
+                        </importTimeZone>
+                        <gridStartPoint>SW</gridStartPoint>
+                </general>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportQTE</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>TAMX</parameterId>
+                        <locationId>HRAP</locationId>
+                        <timeSeriesType>external historical</timeSeriesType>
+                        <timeStep unit="hour" multiplier="1"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <synchLevel>6</synchLevel>
+                        <expiryTime unit="day" multiplier="21"/>
+                </timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="TAMX"/>
+        </import>
+        <import>
+                <general>
+                        <importType>grib</importType>
+                        <folder>$IMPORT_FOLDER_GRIB1$/qte/dqc/tn24</folder>
+<!--                        <fileNamePatternFilter>tn24_rtma_*.grb</fileNamePatternFilter>-->
+                        <idMapId>IdImportGRIB1_TAMN_Estimate</idMapId>
+                        <unitConversionsId>ImportGrib</unitConversionsId>
+                        <importTimeZone>
+                                <timeZoneOffset>+00:00</timeZoneOffset>
+                        </importTimeZone>
+                        <gridStartPoint>SW</gridStartPoint>
+                </general>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportQTE</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>TAMN</parameterId>
+                        <locationId>HRAP</locationId>
+                        <timeSeriesType>external historical</timeSeriesType>
+                        <timeStep unit="hour" multiplier="1"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <synchLevel>6</synchLevel>
+                        <expiryTime unit="day" multiplier="21"/>
+                </timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="TAMN"/>
+        </import>
+	
+</timeSeriesImportRun>

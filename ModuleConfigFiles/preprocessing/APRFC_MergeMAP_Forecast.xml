@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MAP_observed</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAP_sampleESP</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>APRFC_SampleESP_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAP_forecast</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAP_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>APRFC_MergeMAP_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MergeMAP">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>MAP_observed</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAP_forecast</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAP_sampleESP</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAP_merged</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	<transformation id="InterpolateMAP">
+		<interpolationSerial>
+			<default>
+				<inputVariable>
+					<variableId>MAP_merged</variableId>
+				</inputVariable>
+				<defaultValue>0.00</defaultValue>
+				<outputVariable>
+					<variableId>MAP_merged</variableId>
+				</outputVariable>
+			</default>
+		</interpolationSerial>
+	</transformation>
+</transformationModule>

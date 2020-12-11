@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientConfiguration xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/clientConfig.xsd">
+  <clientType>Operator Client</clientType>
+  <otherRootConfigFiles>
+    <name>patch.jar</name>
+    <name>pi_global.properties</name>
+  </otherRootConfigFiles>
+  <connection id="ACRMC02" name="APRFC">
+    <databaseServer>
+      <url>jdbc:postgresql://chps8:5432/acrdb02?sslfactory=org.postgresql.ssl.jdbc4.LibPQFactory&amp;sslmode=verify-ca</url>
+      <user>awips</user>
+    </databaseServer>
+  </connection>
+  <jvmOption>-Xmn1100m</jvmOption>
+  <jvmOption>-Xmx2048m</jvmOption>
+</clientConfiguration>

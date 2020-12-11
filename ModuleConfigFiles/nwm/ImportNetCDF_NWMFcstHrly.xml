@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+	<import>
+    		<general>
+      			<importType>NETCDF-CF_GRID</importType>
+     			<folder>$IMPORT_FOLDER_NETCDF$/UWISC</folder>
+      			<fileNamePatternFilter>ANALYSIS*.nc</fileNamePatternFilter>
+      			<fileNameForecastCreationDateTimePattern>'ANALYSIS_'yyyyMMddHH'-??????????.nc'</fileNameForecastCreationDateTimePattern>
+			<logWarningsForUnmappableTimeSeries>true</logWarningsForUnmappableTimeSeries>
+                        <logWarningsForUnmappableLocations>true</logWarningsForUnmappableLocations>
+      			<idMapId>IdImportNetCDF_UWISGrids</idMapId>
+      			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+      			<missingValue>-9999.0</missingValue>                        
+      			<importTimeZone>
+        			<timeZoneOffset>+00:00</timeZoneOffset>
+      			</importTimeZone>
+    		</general>
+    		<timeSeriesSet>
+      			<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+      			<valueType>grid</valueType>
+      			<parameterId>QPE</parameterId>
+      			<locationId>UWISQPE</locationId>
+      			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+      			<!--timeStep unit="hour" multiplier="1"/-->
+      			<readWriteMode>add originals</readWriteMode>
+      			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="1"/>
+    		</timeSeriesSet>
+    		<!--timeSeriesSet>
+      			<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+      			<valueType>grid</valueType>
+      			<parameterId>QTF</parameterId>
+      			<qualifierId>ShortRange</qualifierId>
+      			<locationId>NWM</locationId>
+      			<timeSeriesType>external forecasting</timeSeriesType>
+      			<timeStep unit="hour" multiplier="1"/>
+      			<readWriteMode>add originals</readWriteMode>
+      			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="1"/>
+    		</timeSeriesSet-->
+  	</import>
+
+</timeSeriesImportRun>

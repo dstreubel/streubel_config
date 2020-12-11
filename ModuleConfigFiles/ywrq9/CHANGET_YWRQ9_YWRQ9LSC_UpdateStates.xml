@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>YWRQ9LWR_SASC_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SNOW17_YWRQ9_YWRQ9LWR_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SASC</parameterId>
+			<locationId>YWRQ9LWR</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>YWRQ9LWR_SASC_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_YWRQ9_YWRQ9LSC_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SASC</parameterId>
+			<locationId>YWRQ9LWR</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="YWRQ9LSC">
+		<aggregation>
+			<instantaneous>
+				<inputVariable>
+					<variableId>YWRQ9LWR_SASC_6</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>YWRQ9LWR_SASC_24</variableId>
+				</outputVariable>
+			</instantaneous>
+		</aggregation>
+	</transformation>
+</transformationModule>

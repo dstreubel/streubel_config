@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+
+<!-- timestep to be updated when 12Z code fix is in place-->
+	<variable>
+		<variableId>Current_SWE_6h</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>SNOW17</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-5" end="-4"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SIM_swe_historical</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGE_SIM_swe_to_historical</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+			<expiryTime unit="year" multiplier="100"/>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SIM_swe_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGE_SIM_swe_to_historical</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-365" startOverrulable="true" end="-5"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>4</synchLevel>
+			<expiryTime unit="year" multiplier="100"/>
+		</timeSeriesSet>
+	</variable>
+	
+
+	<transformation id="Merge_WY_SWE">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SIM_swe_historical</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>Current_SWE_6h</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>SIM_swe_merged</variableId>
+				</outputVariable>
+			</simple>
+		</merge>	
+	</transformation>
+
+
+</transformationModule>

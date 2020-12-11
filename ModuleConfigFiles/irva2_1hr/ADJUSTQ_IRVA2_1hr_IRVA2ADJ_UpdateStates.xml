@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>IRVA2_QIN_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_IRVA2_1hr_IRVA2OB1_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>IRVA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>IRVA2_SQIN_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_IRVA2_1hr_IRVA2LOC_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>IRVA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>IRVA2_QINE_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADJUSTQ_IRVA2_1hr_IRVA2ADJ_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>IRVA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="IRVA2ADJ">
+		<adjust>
+			<adjustQUsingObservedInstantaneousDischarge>
+				<observedDischarge>
+					<variableId>IRVA2_QIN_1</variableId>
+				</observedDischarge>
+				<simulatedInstantaneousDischarge>
+					<variableId>IRVA2_SQIN_1</variableId>
+				</simulatedInstantaneousDischarge>
+				<moduleParameterFile>ADJUSTQ_IRVA2_1hr_IRVA2ADJ_UpdateStates</moduleParameterFile>
+				<adjustedForecastDischarge>
+					<variableId>IRVA2_QINE_1</variableId>
+				</adjustedForecastDischarge>
+			</adjustQUsingObservedInstantaneousDischarge>
+		</adjust>
+	</transformation>
+</transformationModule>

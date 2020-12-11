@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>SALA2UPN_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_SALA2_SALA2UPN_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>SALA2UPN</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SALA2UPS_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_SALA2_SALA2UPS_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>SALA2UPS</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SALA2LWR_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_SALA2_SALA2LWR_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>SALA2LWR</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SALA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_SALA2_SALA2UPN_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>SALA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SALA2_SQME_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_SALA2_SALA2UPN_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<locationId>SALA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id= "12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SALA2UPN">
+		<user>
+			<simple>
+				<expression>max(max((max(+SALA2UPN_SQIN_6+0.000E+00,0))+SALA2UPS_SQIN_6,0)+SALA2LWR_SQIN_6,0)</expression>
+				<outputVariable>
+					<variableId>SALA2_SQIN_6</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="SQME_24">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>SALA2_SQIN_6</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>SALA2_SQME_24</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+</transformationModule>

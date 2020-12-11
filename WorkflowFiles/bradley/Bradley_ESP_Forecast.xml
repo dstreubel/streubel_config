@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Bradley_PreProcessing_ESP_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BRIN_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1998" end="2017"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<!--activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BRMA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2008"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BRDA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2008"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BRIA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2008"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BRTA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2008"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity-->
+</workflow>

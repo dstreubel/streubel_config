@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>swe_grid_clm_gdas</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNOHRSC</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>LIS_CLM_GDAS</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>swe_grid_clm_nam</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNOHRSC</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>LIS_CLM_NAM</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>swe_grid_noah32_gdas</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNOHRSC</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>LIS_NOAH32_GDAS</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>swe_grid_noah32_nam</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNOHRSC</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>LIS_NOAH32_NAM</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>clm_gdas_scalar_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_CLM_GDAS</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>clm_gdas_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_CLM_GDAS</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>clm_nam_scalar_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_CLM_NAM</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>clm_nam_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_CLM_NAM</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>noah32_gdas_scalar_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_NOAH32_GDAS</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>noah32_gdas_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_NOAH32_GDAS</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>noah32_nam_scalar_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_NOAH32_NAM</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>noah32_nam_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_NOAH32_NAM</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ave6swe_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE-AVE6</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>pon_clm_gdas_scalar_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>CLM_GDAS_PON</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>pon_clm_gdas_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>CLM_GDAS_PON</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>pon_clm_nam_scalar_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>CLM_NAM_PON</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>pon_clm_nam_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>CLM_NAM_PON</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>pon_noah32_gdas_scalar_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NOAH32_GDAS_PON</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>pon_noah32_gdas_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NOAH32_GDAS_PON</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>pon_noah32_nam_scalar_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NOAH32_NAM_PON</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>pon_noah32_nam_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NOAH32_NAM_PON</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>swe_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>clm_gdas_diff_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>CLM_GDAS_COMP</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>clm_nam_diff_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>CLM_NAM_COMP</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>noah32_gdas_diff_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NOAH32_GDAS_COMP</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>noah32_nam_diff_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NOAH32_NAM_COMP</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>clm_gdas_comp2_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>CLM_GDAS_COMP2</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>clm_nam_comp2_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>CLM_NAM_COMP2</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>noah32_gdas_comp2_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NOAH32_GDAS_COMP2</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>noah32_nam_comp2_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>NOAH32_NAM_COMP2</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+
+
+	<transformation id="SampleSWE_CLM_GDAS">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>swe_grid_clm_gdas</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>clm_gdas_scalar_tmp</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="InterpolateSWE_CLM_GDAS">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>clm_gdas_scalar_tmp</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>clm_gdas_scalar</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="SampleSWE_CLM_NAM">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>swe_grid_clm_nam</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>clm_nam_scalar_tmp</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="InterpolateSWE_CLM_NAM">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>clm_nam_scalar_tmp</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>clm_nam_scalar</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="SampleSWE_NOAH32_GDAS">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>swe_grid_noah32_gdas</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>noah32_gdas_scalar_tmp</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="InterpolateSWE_NOAH32_GDAS">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>noah32_gdas_scalar_tmp</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>noah32_gdas_scalar</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="SampleSWE_NOAH32_NAM">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>swe_grid_noah32_nam</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>noah32_nam_scalar_tmp</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="InterpolateSWE_NOAH32_NAM">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>noah32_nam_scalar_tmp</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>noah32_nam_scalar</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="CLM_GDAS_PON">
+		<user>
+			<simple>
+				<expression>+100*(clm_gdas_scalar)/(ave6swe_scalar)</expression>
+				<outputVariable>
+					<variableId>pon_clm_gdas_scalar_tmp</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="InterpolateCLM_GDAS_PON">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>pon_clm_gdas_scalar_tmp</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>pon_clm_gdas_scalar</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="CLM_NAM_PON">
+		<user>
+			<simple>
+				<expression>+100*(clm_nam_scalar)/(ave6swe_scalar)</expression>
+				<outputVariable>
+					<variableId>pon_clm_nam_scalar_tmp</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="InterpolateCLM_NAM_PON">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>pon_clm_nam_scalar_tmp</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>pon_clm_nam_scalar</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="NOAH32_GDAS_PON">
+		<user>
+			<simple>
+				<expression>+100*(noah32_gdas_scalar)/(ave6swe_scalar)</expression>
+				<outputVariable>
+					<variableId>pon_noah32_gdas_scalar_tmp</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="InterpolateNOAH32_GDAS_PON">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>pon_noah32_gdas_scalar_tmp</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>pon_noah32_gdas_scalar</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="NOAH32_NAM_PON">
+		<user>
+			<simple>
+				<expression>+100*(noah32_nam_scalar)/(ave6swe_scalar)</expression>
+				<outputVariable>
+					<variableId>pon_noah32_nam_scalar_tmp</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="InterpolateNOAH32_NAM_PON">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>pon_noah32_nam_scalar_tmp</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>pon_noah32_nam_scalar</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="CLM_GDAS-CHPS SWE">
+		<user>
+			<simple>
+				<expression>+(clm_gdas_scalar)-(swe_scalar)</expression>
+				<outputVariable>
+					<variableId>clm_gdas_diff_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="CLM_NAM-CHPS SWE">
+		<user>
+			<simple>
+				<expression>+(clm_nam_scalar)-(swe_scalar)</expression>
+				<outputVariable>
+					<variableId>clm_nam_diff_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="NOAH32_GDAS-CHPS SWE">
+		<user>
+			<simple>
+				<expression>+(noah32_gdas_scalar)-(swe_scalar)</expression>
+				<outputVariable>
+					<variableId>noah32_gdas_diff_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="NOAH32_NAM-CHPS SWE">
+		<user>
+			<simple>
+				<expression>+(noah32_nam_scalar)-(swe_scalar)</expression>
+				<outputVariable>
+					<variableId>noah32_nam_diff_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="CLM_GDAS_COMP2">
+		<user>
+			<simple>
+				<expression>+(100*(clm_gdas_scalar))/(swe_scalar)</expression>
+				<outputVariable>
+					<variableId>clm_gdas_comp2_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="CLM_NAM_COMP2">
+		<user>
+			<simple>
+				<expression>+(100*(clm_nam_scalar))/(swe_scalar)</expression>
+				<outputVariable>
+					<variableId>clm_nam_comp2_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="NOAH32_GDAS_COMP2">
+		<user>
+			<simple>
+				<expression>+(100*(noah32_gdas_scalar))/(swe_scalar)</expression>
+				<outputVariable>
+					<variableId>noah32_gdas_comp2_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="NOAH32_NAM_COMP2">
+		<user>
+			<simple>
+				<expression>+(100*(noah32_nam_scalar))/(swe_scalar)</expression>
+				<outputVariable>
+					<variableId>noah32_nam_comp2_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+
+</transformationModule>

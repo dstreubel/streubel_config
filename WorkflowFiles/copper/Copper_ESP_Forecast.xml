@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Copper_PreProcessing_ESP_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>GAKA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2005"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>GPOA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2005"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>GRSA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2005"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>GULA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2005"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>TAZA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2005"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>KLUA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2005"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>TONA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2005"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>POWA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2005"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>	
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>EYAA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1970" end="2005"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>		
+</workflow>

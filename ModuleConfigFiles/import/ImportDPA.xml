@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+    <import>
+        <general>
+            <importType>ArcInfoAsciiGrid</importType>
+            <folder>$IMPORT_FOLDER_ROOT$/asciiGrid/DPA</folder>
+            <failedFolder>$IMPORT_FOLDER_ROOT$/failed</failedFolder>
+<!--        <backupFolder>$IMPORT_FOLDER_ROOT$/tmp</backupFolder>   -->
+            <logWarningsForUnmappableTimeSeries>true</logWarningsForUnmappableTimeSeries>
+            <logWarningsForUnmappableLocations>true</logWarningsForUnmappableLocations>
+            <idMapId>IdImportDPA</idMapId>
+            <geoDatum>WGS 1984</geoDatum>
+        </general>
+        <timeSeriesSet>
+            <moduleInstanceId>ImportDPA</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>PCPDPA</parameterId>
+            <locationId>DPA</locationId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="minute" multiplier="1"/>
+            <readWriteMode>add originals</readWriteMode>
+            <synchLevel>6</synchLevel>
+            <expiryTime unit="day" multiplier="360"/>
+        </timeSeriesSet>
+    </import>
+</timeSeriesImportRun>

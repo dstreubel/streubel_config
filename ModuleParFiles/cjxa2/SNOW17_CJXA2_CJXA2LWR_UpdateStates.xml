@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters
+    xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_modelparameters.xsd"
+    version="1.5" xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <group id="default">
+        <parameter id="MV">
+            <description></description>
+            <intValue>0</intValue>
+        </parameter>
+        <parameter id="MBASE">
+            <description></description>
+            <dblValue>0.0</dblValue>
+        </parameter>
+        <parameter id="TAELEV">
+            <description></description>
+            <dblValue>181.0</dblValue>
+        </parameter>
+        <parameter id="TIPM">
+            <description></description>
+            <dblValue>0.1</dblValue>
+        </parameter>
+        <parameter id="SCF">
+            <description></description>
+            <dblValue>1.0</dblValue>
+        </parameter>
+        <parameter id="PXTEMP">
+            <description></description>
+            <dblValue>1.7</dblValue>
+        </parameter>
+        <parameter id="SASC_OUTPUT_TS_INTERVAL">
+            <description></description>
+            <intValue>6</intValue>
+        </parameter>
+        <parameter id="SI">
+            <description></description>
+            <dblValue>9999.0</dblValue>
+        </parameter>
+        <parameter id="ELEV">
+            <description></description>
+            <dblValue>181.0</dblValue>
+        </parameter>
+        <parameter id="PXADJ">
+            <description></description>
+            <dblValue>1.0</dblValue>
+        </parameter>
+        <parameter id="AREA_ELEV_CURVE(METR)">
+            <description></description>
+            <table>
+                <columnTypes A="double" B="double"/>
+                <row A="46.0" B="0.0"/>
+                <row A="178.0" B="0.47"/>
+                <row A="243.0" B="0.79"/>
+                <row A="305.0" B="1.0"/>
+            </table>
+        </parameter>
+        <parameter id="SWE_OUTPUT_TS_INTERVAL">
+            <description></description>
+            <intValue>6</intValue>
+        </parameter>
+        <parameter id="UADJ">
+            <description></description>
+            <dblValue>0.05</dblValue>
+        </parameter>
+        <parameter id="MFMIN">
+            <description></description>
+            <dblValue>0.1</dblValue>
+        </parameter>
+        <parameter id="SNSG_OUTPUT_TS_INTERVAL">
+            <description></description>
+            <intValue>6</intValue>
+        </parameter>
+        <parameter id="WETOL[0., 1.0]">
+            <description></description>
+            <dblValue>0.0</dblValue>
+        </parameter>
+        <parameter id="NMF">
+            <description></description>
+            <dblValue>0.15</dblValue>
+        </parameter>
+        <parameter id="SCTOL[0., 1.0]">
+            <description></description>
+            <dblValue>0.0</dblValue>
+        </parameter>
+        <parameter id="ALAT">
+            <description></description>
+            <dblValue>62.8</dblValue>
+        </parameter>
+        <parameter id="MFMAX">
+            <description></description>
+            <dblValue>0.85</dblValue>
+        </parameter>
+        <parameter id="PLWHC">
+            <description></description>
+            <dblValue>0.05</dblValue>
+        </parameter>
+        <parameter id="RAIN_SNOW_ELEV_INPUT_OPTION">
+            <description></description>
+            <boolValue>true</boolValue>
+        </parameter>
+        <parameter id="DAYGM">
+            <description></description>
+            <dblValue>0.0</dblValue>
+        </parameter>
+        <parameter id="AREA_DEPLETION_CURVE">
+            <description></description>
+            <table>
+                <columnTypes A="double"/>
+                <row A="0.05000000074505806"/>
+                <row A="0.15000000596046448"/>
+                <row A="0.3100000023841858"/>
+                <row A="0.5299999713897705"/>
+                <row A="0.6600000262260437"/>
+                <row A="0.7400000095367432"/>
+                <row A="0.8199999928474426"/>
+                <row A="0.8799999952316284"/>
+                <row A="0.9200000166893005"/>
+                <row A="0.9599999785423279"/>
+                <row A="1.0"/>
+            </table>
+        </parameter>
+    </group>
+</parameters>

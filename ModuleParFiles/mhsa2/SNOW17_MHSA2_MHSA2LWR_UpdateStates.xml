@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+    <parameter id="MV">
+      <intValue>0</intValue>
+    </parameter>
+    <parameter id="MBASE">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="TAELEV">
+      <dblValue>315.0</dblValue>
+    </parameter>
+    <parameter id="TIPM">
+      <dblValue>0.1</dblValue>
+    </parameter>
+    <parameter id="SCF">
+      <dblValue>1.0</dblValue>
+    </parameter>
+    <parameter id="PXTEMP">
+      <dblValue>1.7</dblValue>
+    </parameter>
+    <parameter id="SASC_OUTPUT_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="SI">
+      <dblValue>9999.0</dblValue>
+    </parameter>
+    <parameter id="ELEV">
+      <dblValue>315.0</dblValue>
+    </parameter>
+    <parameter id="PXADJ">
+      <dblValue>1.0</dblValue>
+    </parameter>
+    <parameter id="SWE_OUTPUT_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="UADJ">
+      <dblValue>0.1</dblValue>
+    </parameter>
+    <parameter id="MFMIN">
+      <dblValue>0.1</dblValue>
+    </parameter>
+    <parameter id="SNSG_OUTPUT_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="WETOL[0., 1.0]">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="NMF">
+      <dblValue>0.15</dblValue>
+    </parameter>
+    <parameter id="AREA_ELEV_CURVE(METR)">
+      <table>
+        <columnTypes A="double" B="double"/>
+        <row A="74.0" B="0.0"/>
+        <row A="105.0" B="0.05"/>
+        <row A="131.0" B="0.1"/>
+        <row A="168.0" B="0.2"/>
+        <row A="215.0" B="0.35"/>
+        <row A="279.0" B="0.5"/>
+        <row A="346.0" B="0.6"/>
+        <row A="447.0" B="0.7"/>
+        <row A="504.0" B="0.75"/>
+        <row A="574.0" B="0.8"/>
+        <row A="655.0" B="0.85"/>
+        <row A="769.0" B="0.9"/>
+        <row A="913.0" B="0.95"/>
+        <row A="914.0" B="1.0"/>
+      </table>
+    </parameter>
+    <parameter id="SCTOL[0., 1.0]">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="ALAT">
+      <dblValue>64.4</dblValue>
+    </parameter>
+    <parameter id="MFMAX">
+      <dblValue>0.8</dblValue>
+    </parameter>
+    <parameter id="PLWHC">
+      <dblValue>0.05</dblValue>
+    </parameter>
+    <parameter id="RAIN_SNOW_ELEV_INPUT_OPTION">
+      <boolValue>true</boolValue>
+    </parameter>
+    <parameter id="DAYGM">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="AREA_DEPLETION_CURVE">
+      <table>
+        <columnTypes A="double"/>
+        <row A="0.05"/>
+        <row A="0.11"/>
+        <row A="0.19"/>
+        <row A="0.29"/>
+        <row A="0.35"/>
+        <row A="0.38"/>
+        <row A="0.41"/>
+        <row A="0.45"/>
+        <row A="0.51"/>
+        <row A="0.6"/>
+        <row A="1.0"/>
+      </table>
+    </parameter>
+  </group>
+</parameters>

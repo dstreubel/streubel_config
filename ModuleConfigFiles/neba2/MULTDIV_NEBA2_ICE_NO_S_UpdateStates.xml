@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>NEBA2LGI_RAIM_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SNOW17_NEBA2_NEBA2LGI_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>RAIM</parameterId>
+			<locationId>NEBA2LGI</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>NEBA2LNS_AIAI_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>LOOKUP_NEBA2_NEBA2LGI_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>AIAI</parameterId>
+			<locationId>NEBA2LNS</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>NEBA2LGM_RAIM_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MULTDIV_NEBA2_ICE_NO_S_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>RAIM</parameterId>
+			<locationId>NEBA2LGM</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="ICE_NO_S">
+		<user>
+			<simple>
+				<expression>NEBA2LGI_RAIM_6 * NEBA2LNS_AIAI_6</expression>
+				<outputVariable>
+					<variableId>NEBA2LGM_RAIM_6</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+</transformationModule>

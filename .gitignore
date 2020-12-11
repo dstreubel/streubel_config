@@ -1,0 +1,13 @@
+*.cbin
+*.tar
+*.sll
+*xml~
+*.sh
+# Binary Shapefile information#
+###############################
+#*.dbf
+#*.prj
+#*.sbn
+#*.sbx
+#*.shp
+#*.shx

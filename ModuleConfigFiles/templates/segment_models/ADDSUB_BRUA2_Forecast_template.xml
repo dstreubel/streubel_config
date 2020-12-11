@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>GL_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_BRUA2_BRUA2GL_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<!--locationRelationId>GL</locationRelationId-->
+			<locationId>BRUA2GL</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>NG_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_BRUA2_BRUA2NG_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<!--locationRelationId>NG</locationRelationId-->
+			<locationId>BRUA2NG</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_$SEGMENT$_$SEGMENT$_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+        <variable>
+                <variableId>SQME</variableId>
+                <timeSeriesSet>
+                        <moduleInstanceId>ADDSUB_$SEGMENT$_$SEGMENT$_Forecast</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>SQME</parameterId>
+                        <locationId>$SEGMENT$</locationId>
+                        <timeSeriesType>simulated forecasting</timeSeriesType>
+                        <timeStep unit="day" multiplier="1"/>
+                        <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+                        <readWriteMode>add originals</readWriteMode>
+                 </timeSeriesSet>
+        </variable>
+        <variable>
+                <variableId>QME</variableId>
+                <timeSeriesSet>
+                        <moduleInstanceId>ADDSUB_$SEGMENT$_$SEGMENT$_Forecast</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>QME</parameterId>
+                        <locationId>$SEGMENT$</locationId>
+                        <timeSeriesType>simulated historical</timeSeriesType>
+                        <timeStep unit="day" multiplier="1"/>
+                        <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+                        <readWriteMode>add originals</readWriteMode>
+                 </timeSeriesSet>
+        </variable>
+        <variable>
+                <variableId>QIN</variableId>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportSHEF</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>QIN_USGS</parameterId>
+                        <locationId>$SEGMENT$</locationId>
+                        <timeSeriesType>external historical</timeSeriesType>
+                        <timeStep unit="nonequidistant"/>
+                        <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+                        <readWriteMode>add originals</readWriteMode>
+                 </timeSeriesSet>
+        </variable>
+	<transformation id="$SEGMENT$_SUM">
+        <merge>
+            <relations>
+                <relation>
+                    <expression>1.50 * (GL_SQIN_6 + NG_SQIN_6)</expression>
+                    <outputComment>GL</outputComment>
+                </relation>
+                <outputVariable>
+                    <variableId>SQIN_6</variableId>
+                </outputVariable>
+            </relations>          
+        </merge> 
+    </transformation>
+    <transformation id="SQME_24">
+        <aggregation>
+                <instantaneousToMean>
+                        <inputVariable>
+                                <variableId>SQIN_6</variableId>
+                        </inputVariable>
+                        <outputVariable>
+                                <variableId>SQME</variableId>
+                        </outputVariable>
+                </instantaneousToMean>
+        </aggregation>
+    </transformation>
+    <transformation id="QME">
+        <aggregation>
+                <instantaneousToMean>
+                        <inputVariable>
+                                <variableId>QIN</variableId>
+                        </inputVariable>
+                        <outputVariable>
+                                <variableId>QME</variableId>
+                        </outputVariable>
+                </instantaneousToMean>
+        </aggregation>
+    </transformation>
+
+</transformationModule>

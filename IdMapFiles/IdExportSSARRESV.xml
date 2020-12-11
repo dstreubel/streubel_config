@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+	<parameter external="QINE" internal="QINE"/>
+	<parameter external="FBEL" internal="FBEL"/>
+	<parameter external="RQOT" internal="RQOT"/>
+	<!-- MODS TS -->
+	<parameter external="FREEFLOW" internal="FREEFLOW" internalQualifier="DS" externalQualifier="DS"/>
+	<parameter external="SETQ" internal="SETQ" internalQualifier="DS" externalQualifier="DS"/>
+	<parameter external="SETS" internal="SETS" internalQualifier="DS" externalQualifier="DS"/>
+	<parameter external="SETH" internal="SETH" internalQualifier="DS" externalQualifier="DS"/>
+	<parameter external="SETDQ" internal="SETDQ" internalQualifier="DS" externalQualifier="DS"/>
+	<parameter external="SETDS" internal="SETDS" internalQualifier="DS" externalQualifier="DS"/>
+	<parameter external="SETDH" internal="SETDH" internalQualifier="DS" externalQualifier="DS"/>
+	<enableOneToOneMapping/>
+</idMap>

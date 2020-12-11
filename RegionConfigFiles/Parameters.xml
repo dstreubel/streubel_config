@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameterGroups version="1.0" xmlns="http://www.wldelft.nl/fews"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/parameters.xsd">
+	<displayUnitConversionsId>displayEnglishUnits</displayUnitConversionsId>
+	<configUnitConversionsId>displayEnglishUnits</configUnitConversionsId>
+	<ratingCurveStageParameterId>STG</ratingCurveStageParameterId>
+	<ratingCurveDischargeParameterId>QINE</ratingCurveDischargeParameterId>
+	<parameterGroup id="Discharge">
+		<parameterType>instantaneous</parameterType>
+		<unit>CMS</unit>
+		<displayUnit>CFS</displayUnit>
+		<!--<valueResolution>0.0003048</valueResolution>-->
+		<valueResolution>0.01</valueResolution>
+		<parameter id="QIN" name="QIN - River Discharge Observed Instantaneous">
+			<shortName>QIN</shortName>
+		</parameter>
+		<parameter id="QIN_USGS" name="QIN_USGS - River Discharge Observed (NWIS)">
+			<shortName>QIN_USGS</shortName>
+		</parameter>
+		<parameter id="Q-1" name="Yesterday's Q forecast">			
+			<shortName>Q-1</shortName>
+			<valueResolution>.1</valueResolution>
+		</parameter>		
+		<parameter id="QIN_HIST" name="QIN_HIST - River Discharge Observed">
+			<shortName>QIN_HIST</shortName>
+		</parameter>
+		<parameter id="SQIN_CALB" name="SQIN_CALB - River Discharge Simulated Calibration">
+			<shortName>SQIN_CALB</shortName>
+		</parameter>
+		<parameter id="SQIN_R" name="SQIN_R - Persistence QPF">
+			<shortName>SQIN_R</shortName>
+		</parameter>
+		<parameter id="MAXQ01" name="MAXQ01 - Maximum Discharge">
+			<shortName>MAXQ01</shortName>
+		</parameter>
+		<parameter id="QINE" name="QINE - River Discharge Adjusted Instantaneous">
+			<shortName>QINE</shortName>
+		</parameter>
+		<parameter id="QINH" name="River Discharge Computed Instantaneous">
+			<shortName>QINH</shortName>
+		</parameter>
+		<parameter id="RQIN" name="Reservoir Inflow (Observed)">
+			<shortName>RQIN</shortName>
+		</parameter>
+		<parameter id="RQOT" name="Reservoir Outflow (Observed and Projected)">
+			<shortName>RQOT</shortName>
+		</parameter>
+		<parameter id="RQIE" name="Reservoir Outflow (Observed and Projected)">
+			<shortName>RQIE</shortName>
+		</parameter>
+		<parameter id="RQSW" name="Reservoir Spillway Observed">
+			<shortName>RQSW</shortName>
+		</parameter>
+		<parameter id="SDQI" name="Diversion Flow Simulated Instantaneous">
+			<shortName>SDQI</shortName>
+		</parameter>
+		<parameter id="SQIB" name="River Discharge Sim-Inst (Beginning)">
+			<shortName>SQIB</shortName>
+		</parameter>
+		<parameter id="SQIE" name="River Discharge Sim-Inst (End)">
+			<shortName>SQIE</shortName>
+		</parameter>
+		<parameter id="SQIN" name="SQIN - River Discharge Simulated Instantaneous">
+			<shortName>SQIN</shortName>
+		</parameter>
+		<parameter id="SQIN-QINE" name="SQIN-QINE - (Sim-Adj Discharge)">
+			<shortName>SQIN-QINE</shortName>
+		</parameter>
+		<parameter id="DQIE" name="DIVERSION FLOW OBSERVED+PROJECTED INSTANTANEOUS">
+			<shortName>DQIE</shortName>
+		</parameter>
+		<parameter id="DQIN" name="DIVERSION FLOW OBSERVED+PROJECTED INSTANTANEOUS">
+			<shortName>DQIN</shortName>
+		</parameter>
+		<parameter id="VSQI" name="STANDARD ERROR DISCHARGE SIMULATED INSTANTANEOUS">
+			<shortName>VSQI</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Velocity">
+		<parameterType>instantaneous</parameterType>
+		<unit>M/S</unit>
+		<displayUnit>FT/S</displayUnit>
+		<valueResolution>0.0003048</valueResolution>
+		<parameter id="SVIN" name="RIVER VELOCITY SIMULATED MEAN">
+			<shortName>SVIN</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="USGS Daily Flows">
+		<parameterType>instantaneous</parameterType>
+		<unit>KCFS</unit>
+		<displayUnit>CFS</displayUnit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="Q10" name="Q10 - 10th Percentile River Discharge">
+			<shortName>Q10</shortName>
+		</parameter>
+		<parameter id="Q50" name="Q50 - 50th Percentile River Discharge">
+			<shortName>Q50</shortName>
+		</parameter>
+		<parameter id="Q90" name="Q90 - 90th Percentile River Discharge">
+			<shortName>Q90</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="RDHM ThreshR">
+		<parameterType>instantaneous</parameterType>
+		<unit>yr</unit>
+<!--		<displayUnit>yr</displayUnit>-->
+		<valueResolution>0.01</valueResolution>
+		<parameter id="TR" name="TR - RDHM ThreshR">
+			<shortName>TR</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Discharge Mean">
+		<parameterType>accumulative</parameterType>
+		<unit>CMSD</unit>
+		<displayUnit>CFSD</displayUnit>
+		<valueResolution>0.0003048</valueResolution>
+		<parameter id="AQME" name="River Discharge Adjusted Mean">
+			<shortName>AQME</shortName>
+		</parameter>
+		<parameter id="QME" name="River Discharge Observed Mean">
+			<shortName>QME</shortName>
+		</parameter>
+		<parameter id="RQIM" name="Reservoir Inflow Observed Mean">
+			<shortName>RQIM</shortName>
+		</parameter>
+		<parameter id="RQME" name="Reservoir Outflow  (Observed and Projected) Mean">
+			<shortName>RQME</shortName>
+		</parameter>
+		<parameter id="RQMP" name="Reservoir Outflow  (Observed and Projected) Mean">
+			<shortName>RQMP</shortName>
+		</parameter>
+		<parameter id="SDQM" name="Diversion Flow Simulated Mean">
+			<shortName>SDQM</shortName>
+		</parameter>
+		<parameter id="SQME" name="River Discharge Simulated Mean">
+			<shortName>SQME</shortName>
+		</parameter>
+		<parameter id="DQME" name="DIVERSION FLOW OBSERVED+PROJECTED MEAN">
+			<shortName>DQME</shortName>
+		</parameter>
+		<parameter id="DQMP" name="DIVERSION FLOW OBSERVED+PROJECTED MEAN">
+			<shortName>DQMP</shortName>
+		</parameter>
+		<parameter id="RQGM" name="POWER GENERATION OBSERVED MEAN">
+			<shortName>RQGM</shortName>
+		</parameter>
+		<parameter id="VSQM" name="STANDARD ERROR DISCHARGE SIMULATED MEAN">
+			<shortName>VSQM</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Runoff">
+		<parameterType>accumulative</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+		<valueResolution>0.000254</valueResolution>
+		<parameter id="INFW" name="Runoff Inflow to Channel">
+			<shortName>INFW</shortName>
+		</parameter>
+		<parameter id="TCI" name="Total Channel Info">
+			<shortName>TCI</shortName>
+		</parameter>
+		<parameter id="DIR_RO" name="DIRECT RUNOFF">
+			<shortName>DIR_RO</shortName>
+		</parameter>
+		<parameter id="IMP_RO" name="IMPERVIOUS RUNOFF">
+			<shortName>IMP_RO</shortName>
+		</parameter>
+		<parameter id="INT_RO" name="INTERMEDIATE RUNOFF">
+			<shortName>INT_RO</shortName>
+		</parameter>
+		<parameter id="PRI_RO" name="PRIMARY RUNOFF">
+			<shortName>PRI_RO</shortName>
+		</parameter>
+		<parameter id="SUP_RO" name="SUPPLEMENTARY RUNOFF">
+			<shortName>SUP_RO</shortName>
+		</parameter>
+		<parameter id="SUR_RO" name="SURFACE RUNOFF">
+			<shortName>SUR_RO</shortName>
+		</parameter>
+		<parameter id="ROCL" name="RUNOFF COMPONENTS (SAC)">
+			<shortName>ROCL</shortName>
+		</parameter>
+		<parameter id="GWRO" name="GROUNDWATER (BASEFLOW)">
+			<shortName>GWRO</shortName>
+		</parameter>
+		<parameter id="SURO" name="RUNOFF STORM">
+			<shortName>SURO</shortName>
+		</parameter>
+		<parameter id="MARO" name="RUNOFF AREAL MEAN">
+			<shortName>MARO</shortName>
+		</parameter>
+		<parameter id="GOUT" name="Glacier Outflow Melt">
+			<shortName>GOUT</shortName>
+		</parameter>
+		<parameter id="AFAI" name="Antecedent Flow Index Function Glacier">
+			<shortName>AFAI</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Level">
+		<parameterType>instantaneous</parameterType>
+		<unit>M</unit>
+		<displayUnit>FT</displayUnit>
+<!--		<valueResolution>0.0003048</valueResolution>-->
+<!--		<valueResolution>0.01</valueResolution>-->
+		<valueResolution>0.001</valueResolution>
+		<usesDatum>true</usesDatum>
+		<parameter id="SSTG" name="SSTG - River Stage Simulated">
+			<shortName>SSTG</shortName>
+		</parameter>
+		<parameter id="STG" name="STG - River Stage Observed">
+			<shortName>STG</shortName>
+		</parameter>
+		<parameter id="STGE" name="STGE - River Stage Adjusted">
+			<shortName>STGE</shortName>
+		</parameter>
+		<parameter id="STGE-1" name="STGE-1 - previous day">
+			<shortName>STGE-1</shortName>
+		</parameter>
+		<parameter id="OFS-STGE" name="STGE - OFS">
+			<shortName>OFS-STGE</shortName>
+		</parameter>
+		<parameter id="SSTG-STGE" name="SSTG-STGE - (Sim-Adj Stage)">
+			<shortName>SSTG-STGE</shortName>
+		</parameter>
+		<parameter id="STGH" name="River Stage Computed Instantaneous">
+			<shortName>STGH</shortName>
+		</parameter>
+		<parameter id="STW" name="Tail Water Stage (Simulated)">
+			<shortName>STW</shortName>
+		</parameter>
+		<parameter id="TID" name="Observed Tide Instantaneous">
+			<shortName>TID</shortName>
+		</parameter>
+		<parameter id="TIDE" name="ADJUSTED TIDE OBSERVED+PROJECTED INSTANTANEOUS">
+			<shortName>TIDE</shortName>
+		</parameter>
+		<parameter id="STID" name="SIMULATED TIDE NOS GENERATED INSTANTANEOUS">
+			<shortName>STID</shortName>
+		</parameter>
+		<parameter id="FBEL" name="Reservoir Forebay Elevation (Observed)">
+			<shortName>FBEL</shortName>
+		</parameter>
+		<parameter id="PELE" name="Reservoir Pool Elevation (Simulated)">
+			<shortName>PELE</shortName>
+		</parameter>
+		<parameter id="SPEL" name="Reservoir Pool Stage (Simulated)">
+			<shortName>SPEL</shortName>
+		</parameter>
+		<parameter id="PELV" name="Reservoir Pool Elevation (Observed)">
+			<shortName>PELV</shortName>
+		</parameter>
+		<parameter id="TWEL" name="TAIL WATER STAGE OBSERVED">
+			<shortName>TWEL</shortName>
+		</parameter>
+		<parameter id="TWSW" name="TAILWATER STAGE SPILLWAY OBSERVED">
+			<shortName>TWSW</shortName>
+		</parameter>
+		<parameter id="LAKH" name="TAILWATER STAGE SPILLWAY OBSERVED">
+			<shortName>LAKH</shortName>
+		</parameter>
+		<parameter id="LELV" name="LAKE HEIGHT OBSERVED">
+			<shortName>LELV</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="RadarPrecipitation">
+		<parameterType>accumulative</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+		<valueResolution>0.001</valueResolution>
+		<parameter id="PCPDPA">
+		      <shortName>PCPDPA</shortName>
+		      <description>88D DPA File</description>
+	       </parameter>
+	</parameterGroup>
+	<parameterGroup id="Precipitation">
+		<parameterType>accumulative</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+<!--		<valueResolution>0.254</valueResolution>-->
+		<valueResolution>0.01</valueResolution>
+		<parameter id="PP24" name="Observed precipitation (24-hour)">
+			<shortName>PP24</shortName>
+		</parameter>
+		<parameter id="PP06" name="Observed precipitation (6-hour)">
+			<shortName>PP06</shortName>
+		</parameter>
+		<parameter id="PP01" name="Observed precipitation (1-hour)">
+			<shortName>PP01</shortName>
+		</parameter>
+		<parameter id="PPVR" name="Observed precipitation (less than 24 hour)">
+			<shortName>PPVR</shortName>
+		</parameter>
+		<parameter id="PTPP" name="Precipitation Point Missing not allowed">
+			<shortName>PTPP</shortName>
+		</parameter>
+		<parameter id="PTPX" name="Precipitation Point Missing allowed">
+			<shortName>PTPX</shortName>
+		</parameter>
+		<parameter id="MAP" name="MAP - Precipitation Areal Mean">
+			<shortName>MAP</shortName>
+		</parameter>
+		<parameter id="FMAP" name="FMAP - Precipitation Areal Mean (Forecast)">
+			<shortName>FMAP</shortName>
+		</parameter>
+		<parameter id="APCP" name="FMAP - Precipitation NWP QPF  (Forecast)">
+			<shortName>APCP</shortName>
+		</parameter>
+		<parameter id="APCP_DIFF" name="FMAP - Precipitation NWP QPF  (Forecast) - OBS">
+			<shortName>APCP_DIFF</shortName>
+		</parameter>
+		<parameter id="MAPG" name="Grid Precipitation Areal Mean">
+			<shortName>MAPG</shortName>
+		</parameter>
+		<parameter id="MAPX" name="MAPX - Gridded Precipitation Areal Mean">
+			<shortName>MAPX</shortName>
+		</parameter>
+		<parameter id="MAPX_R01" name="MAPX_R01 - Gridded Radar Precipitation Areal Mean">
+			<shortName>MAPX_R01</shortName>
+		</parameter>
+		<parameter id="MAPX_R06" name="MAPX_R06 - Gridded Radar Precipitation Areal Mean">
+			<shortName>MAPX_R06</shortName>
+		</parameter>
+		<parameter id="FMAPX" name="FMAPX - Gridded Precipitation Areal Mean (Forecast)">
+			<shortName>FMAPX</shortName>
+		</parameter>
+		<parameter id="GFSX" name="GFSX - GFS40 Gridded QPF Areal Mean (Forecast)">
+			<shortName>GFSX</shortName>
+		</parameter>
+		<parameter id="NAMX" name="NAMX - NAM12 Gridded QPF Areal Mean (Forecast)">
+			<shortName>NAMX</shortName>
+		</parameter>
+		<parameter id="ECMX" name="ECMX - ECMWF Gridded QPF Areal Mean (Forecast)">
+			<shortName>ECMX</shortName>
+		</parameter>
+		<parameter id="NBMX" name="NBMX - NBM Gridded QPF Areal Mean (Forecast)">
+			<shortName>NBMX</shortName>
+		</parameter>		
+		<parameter id="MAP-MAPX" name="MAP-MAPX (OFS - Gridded(MPE) Precip)">
+			<shortName>MAP-MAPX</shortName>
+		</parameter>
+		<parameter id="MAPW" name="MAPW - Weighted Stations Precipitation Areal Mean">
+			<shortName>MAPW</shortName>
+		</parameter>
+		<parameter id="FMAPW" name="FMAPW - Weighted Stations Precipitation Areal Mean (Forecast)">
+			<shortName>FMAPW</shortName>
+		</parameter>
+		<parameter id="MAPR" name="MAPR - RFS Weighted Station Precipitation Areal Mean">
+			<shortName>MAPR</shortName>
+		</parameter>
+		<parameter id="FMAPR"
+			name="FMAPR - RFS Weighted Station Precipitation Areal Mean (Forecast)">
+			<shortName>FMAPR</shortName>
+		</parameter>
+		<parameter id="QPF" name="QPF">
+			<shortName>QPF</shortName>
+		</parameter>
+		<parameter id="QPF03" name="QPF03">
+			<shortName>QPF03</shortName>
+		</parameter>
+		<parameter id="GFSQPF" name="GFS40 QPF">
+			<shortName>GFSQPF</shortName>
+		</parameter>
+		<parameter id="NAMQPF" name="NAM12 QPF">
+			<shortName>NAMQPF</shortName>
+		</parameter>
+		<parameter id="ECMQPF" name="ECMWF QPF">
+			<shortName>ECMQPF</shortName>
+		</parameter>
+		<parameter id="NBMQPF" name="NBMQPF">
+			<shortName>NBMQPF</shortName>
+		</parameter>
+		<parameter id="QPE" name="QPE - 6hr MPE-DQC">
+			<shortName>QPE</shortName>
+		</parameter>
+		<parameter id="QPE05" name="QPE 05 UWIS">
+			<shortName>QPE05</shortName>
+		</parameter>
+		<parameter id="QPE95" name="QPE 95 UWIS">
+			<shortName>QPE95</shortName>
+		</parameter>
+		<parameter id="QPE24" name="QPE - 24hr MPE-DQC">
+			<shortName>QPE24</shortName>
+		</parameter>
+		<parameter id="QPE01" name="QPE - 1hr MPE">
+			<shortName>QPE01</shortName>
+		</parameter>
+		<parameter id="MRMS06" name="QPE - 6hr MRMS">
+			<shortName>MRMS06</shortName>
+		</parameter>
+		<parameter id="QPMRG" name="QPE_QPF Merge">
+			<shortName>QPMRG</shortName>
+		</parameter>
+		<parameter id="RAIM" name="Precipitation Rain + Melt">
+			<shortName>RAIM</shortName>
+		</parameter>
+		<parameter id="SNOF" name="SNOWFALL DEPTH OBSERVED">
+			<shortName>SNOF</shortName>
+		</parameter>
+		<parameter id="PSFALL" name="Precipitation as Snow">
+			<shortName>PSFALL</shortName>
+		</parameter>
+		<parameter id="PRAIN" name="Precipitation as Rain">
+			<shortName>PRAIN</shortName>
+		</parameter>	
+	</parameterGroup>
+	<parameterGroup id="API">
+		<parameterType>instantaneous</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+		<valueResolution>0.000254</valueResolution>
+		<parameter id="MAPI" name="API Areal Mean">
+			<shortName>MAPI</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="TIME">
+		<parameterType>instantaneous</parameterType>
+		<unit>s</unit>
+		<displayUnit>HR</displayUnit>
+		<valueResolution>1</valueResolution>
+		<parameter id="HDAT" name="HOURS TO DATE OF AN OBSERVATION">
+			<shortName>HDAT</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Gate">
+		<parameterType>instantaneous</parameterType>
+		<unit>M</unit>
+		<displayUnit>FT</displayUnit>
+		<valueResolution>1</valueResolution>
+		<parameter id="GATE" name="GATE OPENINGS OBSERVED+PROJECTED">
+			<shortName>GATE</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Evaporation">
+		<parameterType>accumulative</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+		<valueResolution>0.000254</valueResolution>
+		<parameter id="EPL" name="EVAPORATION LAKE">
+			<shortName>EPL</shortName>
+		</parameter>
+		<parameter id="EPAN" name="EVAPORATION PAN">
+			<shortName>EPAN</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Evapotranspiration">
+		<parameterType>accumulative</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+		<valueResolution>0.000254</valueResolution>
+		<parameter id="MAPE" name="Evapotranspiration Potential Areal Mean">
+			<shortName>MAPE</shortName>
+		</parameter>
+		<parameter id="PTPE" name="EVAPOTRANSPIRATION POTENTIAL POINT">
+			<shortName>PTPE</shortName>
+		</parameter>
+		<parameter id="MOPE" name="EVAPOTRANSPIRATION POTENTIAL FROM MONTHLY MEAN">
+			<shortName>MOPE</shortName>
+		</parameter>
+		<parameter id="FMAPE" name="Forecasted Evapotranspiration Potential Areal Mean">
+			<shortName>FMAPE</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Temperature">
+		<parameterType>instantaneous</parameterType>
+		<unit>DEGC</unit>
+		<displayUnit>DEGF</displayUnit>
+		<valueResolution>0.1</valueResolution>
+		<parameter id="TAIN" name="Air Temperature Point Instantaneous">
+			<shortName>TAIN</shortName>
+		</parameter>
+		<parameter id="TAVR" name="Observed Air Temperature (Instantaneous)">
+			<shortName>TAVR</shortName>
+		</parameter>
+		<parameter id="SST" name="Simulated Snow Temperature">
+			<shortName>SST</shortName>
+		</parameter>
+<!--		<parameter id="SNTMP" name="SNTMP (Simulated Snowpack Temperature)">
+			<shortName>SNTMP</shortName>
+		</parameter>-->
+		<parameter id="SLSM" name="SLSM">
+			<shortName>SLSM</shortName>
+		</parameter>
+		<parameter id="FGINDEX" name="FGINDEX">
+			<shortName>FGINDEX</shortName>
+		</parameter>
+		<parameter id="QTF" name="Quantitative Temperature Forecast (Gridded)">
+			<shortName>QTF</shortName>
+		</parameter>
+		<parameter id="QTE" name="Quantitative Temperature Estimate (Gridded)">
+			<shortName>QTE</shortName>
+		</parameter>
+		<parameter id="QTMRG" name="QTE_QTF Merge">
+			<shortName>QTMRG</shortName>
+		</parameter>
+		<parameter id="GFST" name="GFS40 T">
+			<shortName>GFST</shortName>
+		</parameter>
+		<parameter id="NAMT" name="NAM12 T">
+			<shortName>NAMT</shortName>
+		</parameter>
+		<parameter id="ECMT" name="ECMWF T">
+			<shortName>ECMT</shortName>
+		</parameter>
+		<parameter id="RQTF" name="2 m above ground">
+			<shortName>RQTF</shortName>
+		</parameter>
+		<!--parameter id="FDD" name="freezing degree day">
+			<shortName>FDD</shortName>
+		</parameter-->
+	</parameterGroup>
+	<!--
+	<parameterGroup id="TemperatureDEGK">
+		<parameterType>instantaneous</parameterType>
+		<unit>DEGK</unit>
+		<displayUnit>DEGK</displayUnit>
+		<valueResolution>0.2</valueResolution>
+		<parameter id="RQTF" name="RAP Temperature Instantaneous">
+			<shortName>RQTF</shortName>
+		</parameter>
+	</parameterGroup>  -->
+	<parameterGroup id="Temperature Max-Min">
+		<parameterType>accumulative</parameterType>
+		<unit>DEGC</unit>
+		<displayUnit>DEGF</displayUnit>
+		<valueResolution>0.1</valueResolution>
+		<parameter id="TAMN" name="TAMN - Observed Air Temperature (24 hour Minimum)">
+			<shortName>TAMN</shortName>
+		</parameter>
+		<parameter id="TAMX" name="TAMX - Observed Air Temperature (24 hour Maximum)">
+			<shortName>TAMX</shortName>
+		</parameter>
+		<parameter id="TFMN" name="TFMN - Forecast Air Temperature (24 hour Minimum)">
+			<shortName>TFMN</shortName>
+		</parameter>
+		<parameter id="TFMX" name="TFMX - Forecast Air Temperature (24 hour Maximum)">
+			<shortName>TFMX</shortName>
+		</parameter>
+		<parameter id="MXDF" name="MXDF - MaxTDiffFromClimo">
+			<shortName>MXDF</shortName>
+		</parameter>
+		<parameter id="MNDF" name="MNDF - MinTDiffFromClimo">
+			<shortName>MNDF</shortName>
+		</parameter>
+		<parameter id="TXMRG" name="TXMRG - TAMX_TFMX Merge">
+			<shortName>TXMRG</shortName>
+		</parameter>
+		<parameter id="TNMRG" name="TNMRG - TAMN_TFMN Merge">
+			<shortName>TNMRG</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Temperature Mean">
+		<parameterType>mean</parameterType>
+		<unit>DEGC</unit>
+		<displayUnit>DEGF</displayUnit>
+		<valueResolution>0.1</valueResolution>
+		<parameter id="MAT" name="MAT - Air Temperature Areal Mean">
+			<shortName>MAT</shortName>
+		</parameter>
+		<parameter id="FMAT" name="FMAT - Air Temperature Areal Mean (Forecast)">
+			<shortName>FMAT</shortName>
+		</parameter>
+		<parameter id="MATX" name="MATX - RTMA Gridded Temperature Areal Mean">
+			<shortName>MATX</shortName>
+		</parameter>
+                <parameter id="MATX_MPE" name="MATX_MPE - MPE Gridded Temperature Areal Mean">
+                        <shortName>MATX_MPE</shortName>
+                </parameter>
+		<parameter id="FMATX" name="FMATX - Gridded Temperature Areal Mean (Forecast)">
+			<shortName>FMATX</shortName>
+		</parameter>
+		<parameter id="GFSX_T" name="GFS40 - Gridded Temperature Areal Mean (Forecast)">
+			<shortName>GFSX_T</shortName>
+		</parameter>
+		<parameter id="NAMX_T" name="NAM12 - Gridded Temperature Areal Mean (Forecast)">
+			<shortName>NAMX_T</shortName>
+		</parameter>
+		<parameter id="ECMX_T" name="ECMWF - Gridded Temperature Areal Mean (Forecast)">
+			<shortName>ECMX_T</shortName>
+		</parameter>
+<!--		<parameter id="MAT-MATX" name="MAT-MATX (OFS - Gridded(RTMA) Temps)">
+			<shortName>MAT-MATX</shortName>
+		</parameter>
+                <parameter id="MAT-MATX_MPE" name="MAT-MATX_MPE (OFS - Gridded(MPE) Temps)">
+                        <shortName>MAT-MATX_MPE</shortName>
+                </parameter>
+                <parameter id="MATX_COMP" name="MATX_COMP (RTMA-MPE Gridded Temps)">
+                        <shortName>MATX_COMP</shortName>
+                </parameter>-->
+                <parameter id="MXDFX" name="MXDFX - MaxTDiffFromClimo">
+                        <shortName>MXDFX</shortName>
+                </parameter>
+                <parameter id="MNDFX" name="MNDFX - MinTDiffFromClimo">
+                        <shortName>MNDFX</shortName>
+                </parameter>
+		<parameter id="MATW" name="MATW - Weighted Temperature Areal Mean">
+			<shortName>MATW</shortName>
+		</parameter>
+		<parameter id="FMATW" name="FMATW - Weighted Temperature Areal Mean (Forecast)">
+			<shortName>FMATW</shortName>
+		</parameter>
+		<parameter id="MATR" name="MATR - RFS Station Temperature Areal Mean">
+			<shortName>MATR</shortName>
+		</parameter>
+		<parameter id="FMATR" name="FMATR - RFS Station Temperature Areal Mean (Forecast)">
+			<shortName>FMATR</shortName>
+		</parameter>
+		<parameter id="TAVG" name="AIR TEMPERATURE POINT MEAN">
+			<shortName>TAVG</shortName>
+		</parameter>
+		<parameter id="MTE" name="MTE - TEMPERATURE MEAN ESTIMATED (climatology)">
+			<shortName>MTE</shortName>
+		</parameter>
+	</parameterGroup>
+	
+	<!-- Changed from "Tempeature Mean" to "Temperature Mean Difference" due to build 2015.02 -->
+	<parameterGroup id="Temperature Mean Difference">
+		<parameterType>mean</parameterType>
+		<unit>DEGC_DIFFERENCE</unit>
+		<displayUnit>DEGF</displayUnit>
+		<valueResolution>0.1</valueResolution>
+		<parameter id="MAT-MATX" name="MAT-MATX (OFS - Gridded(RTMA) Temps)">
+			<shortName>MAT-MATX</shortName>
+		</parameter>
+                <parameter id="MAT-MATX_MPE" name="MAT-MATX_MPE (OFS - Gridded(MPE) Temps)">
+                        <shortName>MAT-MATX_MPE</shortName>
+                </parameter>
+                <parameter id="MATX_COMP" name="MATX_COMP (RTMA-MPE Gridded Temps)">
+                        <shortName>MATX_COMP</shortName>
+                </parameter>
+	</parameterGroup>
+	<parameterGroup id="Snowpack Temperature">
+		<parameterType>instantaneous</parameterType>
+		<unit>DEGC</unit>
+<!--		<displayUnit>DEGC</displayUnit>-->
+		<valueResolution>0.1</valueResolution>
+		<parameter id="SNTMP" name="SNTMP (Simulated Snowpack Temperature)">
+			<shortName>SNTMP</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Snow Depth">
+		<parameterType>instantaneous</parameterType>
+		<unit>IN</unit>
+		<parameter id="SD" name="Snow Depth (NRCS, Observed)">
+			<shortName>Snow_Depth</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Snow Cover Depth">
+		<parameterType>instantaneous</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+<!--		<valueResolution>0.0003048</valueResolution>-->
+<!--		<valueResolution>0.3048</valueResolution>-->
+		<valueResolution>0.01</valueResolution>
+		<parameter id="SNSG" name="Snow Cover Depth (Simulated)">
+			<shortName>SNSG</shortName>
+		</parameter>
+		<parameter id="SNOG" name="Snow Cover Depth (Observed)">
+			<shortName>SNOG</shortName>
+		</parameter>
+		<parameter id="SWE" name="SWE (Simulated)">
+			<shortName>SWE</shortName>
+		</parameter>
+		<parameter id="SNWE" name="Snow Cover Water Equivalent (Observed)">
+			<shortName>SNWE</shortName>
+		</parameter>				
+		<parameter id="MAWE" name="SNOW COVER WATER EQUIVALENT AREAL MEAN">
+			<shortName>MAWE</shortName>
+		</parameter>
+		<parameter id="SWE-AVE" name="AVE SWE 12hr (Calibration)">
+			<shortName>SWE-AVE</shortName>
+		</parameter>
+		<parameter id="SWE-OFS" name="OFS SWE 12hr (Simulated)">
+			<shortName>SWE-OFS</shortName>
+		</parameter>
+		<parameter id="SWE-AVE6" name="AVE SWE 6hr (Calibration)">
+			<shortName>SWE-AVE6</shortName>
+		</parameter>
+		<parameter id="SWE-NOHRSC" name="NOHRSC SWE (Simulated)">
+			<shortName>SWE-NOHRSC</shortName>
+		</parameter>
+		<parameter id="SWE_CLM_GDAS" name="CLM_GDAS SWE (Simulated)">
+			<shortName>SWE_CLM_GDAS</shortName>
+		</parameter>
+		<parameter id="SWE_CLM_NAM" name="CLM_NAM SWE (Simulated)">
+			<shortName>SWE_CLM_NAM</shortName>
+		</parameter>
+		<parameter id="SWE_NOAH32_GDAS" name="NOAH32_GDAS SWE (Simulated)">
+			<shortName>SWE_NOAH32_GDAS</shortName>
+		</parameter>
+		<parameter id="SWE_NOAH32_NAM" name="NOAH32_NAM SWE (Simulated)">
+			<shortName>SWE_NOAH32_NAM</shortName>
+		</parameter>
+		<parameter id="NOHRSC_COMP" name="NOHRSC_COMP (NOHRSC-CHPS SWE)">
+			<shortName>NOHRSC_COMP</shortName>
+		</parameter>
+		<parameter id="CLM_GDAS_COMP" name="CLM_GDAS_COMP (CLM_GDAS-CHPS SWE)">
+			<shortName>CLM_GDAS_COMP</shortName>
+		</parameter>
+		<parameter id="CLM_NAM_COMP" name="CLM_NAM_COMP (CLM_NAM-CHPS SWE)">
+			<shortName>CLM_NAM_COMP</shortName>
+		</parameter>
+		<parameter id="NOAH32_GDAS_COMP" name="NOAH32_GDAS_COMP (NOAH32_GDAS-CHPS SWE)">
+			<shortName>NOAH32_GDAS_COMP</shortName>
+		</parameter>
+		<parameter id="NOAH32_NAM_COMP" name="NOAH32_NAM_COMP (NOAH32_NAM-CHPS SWE)">
+			<shortName>NOAH32_NAM_COMP</shortName>
+		</parameter>
+		<parameter id="SWE_CLM_GDAS_AVE" name="CLM_GDAS AVE SWE">
+			<shortName>SWE_CLM_GDAS_AVE</shortName>
+		</parameter>
+		<parameter id="SWE_CLM_GDAS_MAX" name="CLM_GDAS MAX SWE">
+			<shortName>SWE_CLM_GDAS_MAX</shortName>
+		</parameter>
+		<parameter id="SWE_CLM_GDAS_MIN" name="CLM_GDAS MIN SWE">
+			<shortName>SWE_CLM_GDAS_MIN</shortName>
+		</parameter>
+		<parameter id="SWE_NOAH32_GDAS_AVE" name="NOAH32_GDAS AVE SWE">
+			<shortName>SWE_NOAH32_GDAS_AVE</shortName>
+		</parameter>
+		<parameter id="SWE_NOAH32_GDAS_MAX" name="NOAH32_GDAS MAX SWE">
+			<shortName>SWE_NOAH32_GDAS_MAX</shortName>
+		</parameter>
+		<parameter id="SWE_NOAH32_GDAS_MIN" name="NOAH32_GDAS MIN SWE">
+			<shortName>SWE_NOAH32_GDAS_MIN</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Dimensionless_Percentage" name="Dimensionless">
+		<parameterType>instantaneous</parameterType>
+		<unit>PCT</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="SSM" name="SSM">
+			<shortName>SSM</shortName>
+		</parameter>
+		<parameter id="PBF" name="PERCENTAGE BANKFULL">
+			<shortName>PBF</shortName>
+		</parameter>
+		<parameter id="QPFpctMon24" name="QPF PCT Monthly Normal">
+			<shortName>QPFpctMon24</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Dimensionless_Fraction_Mean" name="Dimensionless">
+		<parameterType>mean</parameterType>
+		<unit>PCTD</unit>
+		<valueResolution>0.0001</valueResolution>
+		<parameter id="PTPS" name="Precipitation Snowfall (Fraction)">
+			<shortName>PTPS</shortName>
+		</parameter>
+		<parameter id="PSRO" name="RUNOFF SURFACE PERCENT">
+			<shortName>PSRO</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Dimensionless_Fraction" name="Dimensionless">
+		<parameterType>instantaneous</parameterType>
+		<unit>PCTD</unit>
+<!--		<valueResolution>0.0001</valueResolution>-->
+		<valueResolution>0.01</valueResolution>
+		<parameter id="SASC" name="Snow Cover Areal Extent (Simulated)">
+			<shortName>SASC</shortName>
+		</parameter>
+		
+		<parameter id="AESCNICX">
+			<shortName>AESCNICX</shortName>
+			<description>Aerial Extents of Snow Cover from the NIC IMS dataset</description>
+		</parameter>
+		<parameter id="SNWE-PON" name="SWE % NORM (NRCS, Observed)">
+			<shortName>SNWE-PON</shortName>
+		</parameter>
+		<parameter id="SWE-PON" name="PON OFS SWE (Simulated)">
+			<shortName>SWE-PON</shortName>
+		</parameter>
+		<parameter id="SWE-PONC" name="PON CHPS SWE (Simulated)">
+			<shortName>SWE-PONC</shortName>
+		</parameter>
+		<parameter id="NOHRSC-PON" name="PON NOHRSC SWE (Simulated)">
+			<shortName>NOHRSC-PON</shortName>
+		</parameter>
+		<parameter id="CLM_GDAS_PON" name="PON CLM_GDAS SWE (Simulated)">
+			<shortName>CLM_GDAS_PON</shortName>
+		</parameter>
+		<parameter id="CLM_NAM_PON" name="PON CLM_NAM SWE (Simulated)">
+			<shortName>CLM_NAM_PON</shortName>
+		</parameter>
+		<parameter id="NOAH32_GDAS_PON" name="PON NOAH32_GDAS SWE (Simulated)">
+			<shortName>NOAH32_GDAS_PON</shortName>
+		</parameter>
+		<parameter id="NOAH32_NAM_PON" name="PON NOAH32_NAM SWE (Simulated)">
+			<shortName>NOAH32_NAM_PON</shortName>
+		</parameter>
+		<parameter id="CLM_GDAS_PON_HIST" name="PON_HIST CLM_GDAS SWE">
+			<shortName>CLM_GDAS_PON_HIST</shortName>
+		</parameter>
+		<parameter id="NOAH32_GDAS_PON_HIST" name="PON_HIST NOAH32_GDAS SWE">
+			<shortName>NOAH32_GDAS_PON_HIST</shortName>
+		</parameter>
+		<parameter id="NOHRSC-CHPS_PON" name="NOHRSC-CHPS PON SWE (Simulated)">
+			<shortName>NOHRSC-CHPS_PON</shortName>
+		</parameter>
+		<parameter id="CLM_GDAS_COMP2" name="CLM_GDAS_COMP (CLM_GDAS/CHPS)">
+			<shortName>CLM_GDAS_COMP2</shortName>
+		</parameter>
+		<parameter id="CLM_NAM_COMP2" name="CLM_NAM_COMP (CLM_NAM/CHPS)">
+			<shortName>CLM_NAM_COMP2</shortName>
+		</parameter>
+		<parameter id="NOAH32_GDAS_COMP2" name="NOAH32_GDAS_COMP (NOAH32_GDAS/CHPS)">
+			<shortName>NOAH32_GDAS_COMP2</shortName>
+		</parameter>
+		<parameter id="NOAH32_NAM_COMP2" name="NOAH32_NAM_COMP (NOAH32_NAM/CHPS)">
+			<shortName>NOAH32_NAM_COMP2</shortName>
+		</parameter>
+		<parameter id="BFC" name="RECESSION COEFFICIENT BASEFLOW">
+			<shortName>BFC</shortName>
+		</parameter>
+		<parameter id="CVX" name="COEFFICIENT OF VARIATION INSTANTANEOUS">
+			<shortName>CVX</shortName>
+		</parameter>
+		<parameter id="FEIX" name="FROST EFFICIENCY INDEX SIMULATED">
+			<shortName>FEIX</shortName>
+		</parameter>
+		<parameter id="SSMP" name="SSMP">
+			<shortName>SSMP</shortName>
+		</parameter>
+		<parameter id="NFBD" name="FLASH BOARDS DOWN NUMBER OBSERVED+PROJECTED">
+			<shortName>NFBD</shortName>
+		</parameter>
+		<parameter id="OPKS" name="PEAK WITHIN FIXED WINDOW OBSERVED">
+			<shortName>OPKS</shortName>
+		</parameter>
+		<parameter id="PCFD" name="DIVERTED FLOW FROM CHANNEL PERCENT">
+			<shortName>PCFD</shortName>
+		</parameter>
+		<parameter id="PLDS" name="SIMULATED VALUE AT FIXED LEAD">
+			<shortName>PLDS</shortName>
+		</parameter>
+		<parameter id="SPKS" name="PEAK WITHIN FIXED WINDOW SIMULATED">
+			<shortName>SPKS</shortName>
+		</parameter>
+		<parameter id="ZRX" name="ZERO RAIN FRACTION INSTANTANEOUS">
+			<shortName>ZRX</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Dimensionless_Real" name="Dimensionless">
+		<parameterType>instantaneous</parameterType>
+		<unit>REAL</unit>
+		<valueResolution>0.0001</valueResolution>
+		<parameter id="DFAC" name="DIMENSIONLESS FACTOR SIMULATED INSTANTANEOUS">
+			<shortName>DFAC</shortName>
+		</parameter>
+		<parameter id="nSWE" name="SWE - Normalized Snow Cover Water Equivalent (Simulated)">
+			<shortName>nSWE</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Dimensionless_Real_Mean" name="Dimensionless">
+		<parameterType>mean</parameterType>
+		<unit>REAL</unit>
+		<valueResolution>0.0001</valueResolution>
+		<parameter id="KP" name="ASSIMILATOR PRECIPITATION MULTIPLIER">
+			<shortName>KP</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Dimensionless_Int" name="Dimensionless">
+		<parameterType>instantaneous</parameterType>
+		<unit>INT</unit>
+		<valueResolution>1</valueResolution>
+		<parameter id="GCS" name="Gate Control Switch">
+			<shortName>GCS</shortName>
+		</parameter>
+		<parameter id="GTCS" name="Gate Control Switch">
+			<shortName>GTCS</shortName>
+		</parameter>
+		<parameter id="AESCNIC">
+			<shortName>AESCNIC</shortName>
+			<description>Aerial Extents of Snow Cover from the NIC IMS dataset</description>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="FDD - Deg F" name="FDD">
+		<parameterType>instantaneous</parameterType>
+		<unit>INT</unit>
+		<valueResolution>1</valueResolution>
+		<parameter id = "FDD">
+			<shortName>FDD</shortName>
+			<description>Freezing degree day for frazil ice jam awareness</description>
+		</parameter>
+		<parameter id = "CFDD">
+			<shortName>CFDD</shortName>
+			<description>Extreme Cold Regime Freezing degree day for frazil ice jam awareness</description>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Reservoir Storage">
+		<parameterType>instantaneous</parameterType>
+		<unit>CMSD</unit>
+		<displayUnit>ACFT</displayUnit>
+		<valueResolution>0.03048</valueResolution>
+		<parameter id="CSTO" name="Reservoir Storage Change">
+			<shortName>CSTO</shortName>
+		</parameter>
+		<parameter id="RSTO" name="Reservoir Storage (Observed)">
+			<shortName>RSTO</shortName>
+		</parameter>
+		<parameter id="RSTE" name="Reservoir Storage (Adjusted)">
+			<shortName>RSTE</shortName>
+		</parameter>
+		<parameter id="SRSO" name="Reservoir Storage (Simulated)">
+			<shortName>SRSO</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Frost Depth">
+		<parameterType>instantaneous</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+		<valueResolution>0.000254</valueResolution>
+		<parameter id="ICET" name="ICE THICKNESS OBSERVED">
+			<shortName>ICET</shortName>
+		</parameter>
+		<parameter id="FRZD" name="FRZD">
+			<shortName>FRZD</shortName>
+		</parameter>
+		<parameter id="FGDP" name="FROST DEPTH OBSERVED">
+			<shortName>FGDP</shortName>
+		</parameter>
+		<parameter id="FGIX" name="FROST INDEX SIMULATED INSTANTANEOUS">
+			<shortName>FGIX</shortName>
+		</parameter>
+		<parameter id="SFGD" name="FROST INDEX SIMULATED INSTANTANEOUS">
+			<shortName>SFGD</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Elevation Mean">
+		<parameterType>mean</parameterType>
+		<unit>M</unit>
+		<displayUnit>FT</displayUnit>
+		<valueResolution>0.0003048</valueResolution>
+		<parameter id="RSEL" name="Rain-Snow Elevation">
+			<shortName>RSEL</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Elevation">
+		<parameterType>instantaneous</parameterType>
+		<unit>M</unit>
+		<displayUnit>FT</displayUnit>
+<!--		<valueResolution>0.0003048</valueResolution>-->
+		<valueResolution>1</valueResolution>
+		<parameter id="ZELV" name="Freezing Level (Observed)">
+			<shortName>ZELV</shortName>
+		</parameter>
+		<parameter id="ZELF" name="Freezing Level (Projected)">
+			<shortName>ZELF</shortName>
+		</parameter>
+		<parameter id="SELF" name="Snow Level (Projected)">
+			<shortName>SELF</shortName>
+		</parameter>
+		<parameter id="FLE" name="Freezing Level Estimate">
+			<shortName>FLE</shortName>
+		</parameter>
+		<parameter id="FLF" name="Freezing Level Forecast">
+			<shortName>FLF</shortName>
+		</parameter>
+                <parameter id="MAZX" name="MAZX - Gridded Freezing Level Areal Mean">
+                        <shortName>MAZX</shortName>
+                </parameter>
+                <parameter id="FMAZX" name="FMAZX - Gridded Freezing Level Areal Mean (Forecast)">
+                        <shortName>FMAZX</shortName>
+                </parameter>
+	</parameterGroup>
+	<parameterGroup id="Temp">
+		<parameterType>instantaneous</parameterType>
+		<unit>-</unit>
+		<parameter id="TMP" name="Temp parameter">
+			<shortName>TMP</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Index_Real" name="Index">
+		<parameterType>instantaneous</parameterType>
+		<unit>-</unit>
+		<parameter id="AIAI" name="ANTECEDENT INDEX">
+			<shortName>AIAI</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Index_Temp" name="Index">
+		<parameterType>instantaneous</parameterType>
+		<unit>-</unit>
+		<parameter id="ATI" name="ANTECEDENT TEMPERATURE INDEX">
+			<shortName>ATI</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Index_L" name="Index">
+		<parameterType>instantaneous</parameterType>
+		<unit>-</unit>
+		<parameter id="AEIS" name="ANTECEDENT EVAPORATION INDEX">
+			<shortName>AEIS</shortName>
+		</parameter>
+		<parameter id="APIC" name="API-CONT MODEL CONTENTS API,AI,SMI,BFSC,BFI">
+			<shortName>APIC</shortName>
+		</parameter>
+		<parameter id="APIS" name="ANTECEDENT PRECIPITATION INDEX">
+			<shortName>APIS</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SARREGModifiers_L" name="SSARREG">
+		<parameterType>instantaneous</parameterType>
+		<unit>M</unit>
+		<displayUnit>FT</displayUnit>
+		<valueResolution>0.0003048</valueResolution>
+		<parameter id="SETH" name="SET Level">
+			<shortName>SETH</shortName>
+		</parameter>
+		<parameter id="SETDH" name="SET Level change">
+			<shortName>SETDH</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="RESSNGLModifiers" name="RESSNGL">
+		<parameterType>mean</parameterType>
+		<unit>CMS</unit>
+		<displayUnit>CFS</displayUnit>
+		<valueResolution>0.0003048</valueResolution>
+		<parameter id="SETQMEAN" name="SETQMEAN">
+			<shortName>SETQMEAN</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SARREGModifiers_L3/T" name="SSARREG">
+		<parameterType>instantaneous</parameterType>
+		<unit>CMS</unit>
+		<displayUnit>CFS</displayUnit>
+		<valueResolution>0.0003048</valueResolution>
+		<parameter id="SETQ" name="SET Discharge">
+			<shortName>SETQ</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SARREGModifiers_L3" name="SSARREG">
+		<parameterType>accumulative</parameterType>
+		<unit>CMSD</unit>
+		<displayUnit>CFSD</displayUnit>
+		<valueResolution>0.0003048</valueResolution>
+		<parameter id="SETDQ" name="SET Discharge change">
+			<shortName>SETDQ</shortName>
+		</parameter>
+	</parameterGroup>
+	<!-- Made change from SARREGModifier_L3 to *instant due to build 2015.02 -->
+	<parameterGroup id="SARREGModifiers_L3_instant" name="SSARREG">
+		<parameterType>instantaneous</parameterType>
+		<unit>M3</unit>
+		<displayUnit>ACFT</displayUnit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="SETS" name="SET Storage">
+			<shortName>SETQ</shortName>
+		</parameter>
+		<parameter id="SETDS" name="SET Storage change">
+			<shortName>SETDS</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SARREGModifiers_Fraction" name="SSARREG">
+		<parameterType>instantaneous</parameterType>
+		<unit>INT</unit>
+		<valueResolution>1</valueResolution>
+		<parameter id="FREEFLOW" name="FREEFLOW">
+			<shortName>FREEFLOW</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SNOW17Modifiers_Int" name="SNOW17 Mods">
+		<parameterType>instantaneous</parameterType>
+		<unit>INT</unit>
+		<valueResolution>1</valueResolution>
+		<parameter id="RAINSNOW" name="Rain/Snow switch">
+			<shortName>RAINSNOW</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SNOW17Modifiers_Real" name="SNOW17 Mods">
+		<parameterType>instantaneous</parameterType>
+		<unit>REAL</unit>
+		<valueResolution>0.0001</valueResolution>
+		<parameter id="MFC" name="Melt factor coefficient">
+			<shortName>MFC</shortName>
+		</parameter>
+		<parameter id="UADJ" name="Average wind function adjustment">
+			<shortName>UADJ</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SNOW17Modifiers_L" name="SNOW17 Mods">
+		<parameterType>instantaneous</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+		<valueResolution>0.000254</valueResolution>
+		<parameter id="WE" name="Water Equivalent">
+			<shortName>WE</shortName>
+		</parameter>
+		<parameter id="WEADD" name="Water Equivalent Addition">
+			<shortName>WEADD</shortName>
+		</parameter>
+		<parameter id="WECHNG" name="Water Equivalent Change">
+			<shortName>WECHNG</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SNOW17Modifiers_Fraction" name="SNOW17 Mods">
+		<parameterType>instantaneous</parameterType>
+		<unit>PCTD</unit>
+		<valueResolution>0.001</valueResolution>
+		<parameter id="AESC" name="Areal extent of Snow Cover">
+			<shortName>AESC</shortName>
+		</parameter>
+		<parameter id="AESCCHNG" name="Areal extent of Snow Cover Change">
+			<shortName>AESCCHNG</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="NWM" name="LSM channel and overland flow states">
+		<parameterType>instantaneous</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+		<valueResolution>0.000254</valueResolution>
+		<parameter id="UZF" name="Upper Zone Free Water">
+			<shortName>UZF</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SAC-SMA Modifiers_L" name="SAC-SMA States">
+		<parameterType>instantaneous</parameterType>
+		<unit>MM</unit>
+		<displayUnit>IN</displayUnit>
+		<valueResolution>0.000254</valueResolution>
+		<parameter id="UZTWC" name="Upper Zone Tension Water Content">
+			<shortName>UZTWC</shortName>
+		</parameter>
+		<parameter id="UZFWC" name="Upper Zone Free Water Content">
+			<shortName>UZFWC</shortName>
+		</parameter>
+		<parameter id="LZTWC" name="Lower Zone Tension Water Content">
+			<shortName>LZTWC</shortName>
+		</parameter>
+		<parameter id="LZFSC" name="Lower Zone Free Supplemental Content">
+			<shortName>LZFSC</shortName>
+		</parameter>
+		<parameter id="LZFPC" name="Lower Zone Free Primary Content">
+			<shortName>LZFPC</shortName>
+		</parameter>
+		<parameter id="UZTDEF" name="Upper Zone Tension Water Deficit">
+			<shortName>UZTDEF</shortName>
+		</parameter>
+		<parameter id="LZTDEF" name="Lower Zone Tension Water Deficit">
+			<shortName>LZTDEF</shortName>
+		</parameter>
+		<parameter id="UZTWD" name="Upper Zone Tension Water Deficit">
+			<shortName>UZTWD</shortName>
+		</parameter>
+		<parameter id="LZTWD" name="Lower Zone Tension Water Deficit">
+			<shortName>LZTWD</shortName>
+		</parameter>
+		<parameter id="SMZC" name="SOIL MOISTURE STORAGES (SAC)">
+			<shortName>SMZC</shortName>
+		</parameter>
+		<parameter id="ADIMC" name="Additional Impervious Area">
+			<shortName>ADIMC</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SACSMA_Modifiers_Real" name="SAC-SMA Mods">
+		<parameterType>instantaneous</parameterType>
+		<unit>REAL</unit>
+		<valueResolution>0.0001</valueResolution>
+		<parameter id="SACBASEF" name="Baseflow correction coefficient	">
+			<shortName>SACBASEF</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="SACSMA_STATES_Fraction" name="SAC-SMA States Fractions">
+		<parameterType>instantaneous</parameterType>
+		<unit>PCTD</unit>
+		<valueResolution>0.001</valueResolution>
+		<parameter id="UZTWF" name="Upper Zone Tension Water Fraction">
+			<shortName>UZTWF</shortName>
+		</parameter>
+		<parameter id="UZFWF" name="Upper Zone Free Water Fraction">
+			<shortName>UZFWF</shortName>
+		</parameter>
+		<parameter id="LZTWF" name="Lower Zone Tension Water Fraction">
+			<shortName>LZTWF</shortName>
+		</parameter>
+		<parameter id="LZFSF" name="Lower Zone Free Supplemental Fraction">
+			<shortName>LZFSF</shortName>
+		</parameter>
+		<parameter id="LZFPF" name="Lower Zone Free Primary Fraction">
+			<shortName>LZFPF</shortName>
+		</parameter>
+		<parameter id="ADIMF" name="Additional Impervious Area Fraction">
+			<shortName>ADIMF</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="statistics">
+		<parameterType>instantaneous</parameterType>
+		<unit></unit>
+		<parameter id="RMSE">
+			<shortName>RMSE</shortName>
+		</parameter>
+		<parameter id="RMSF">
+			<shortName>RMSF</shortName>
+		</parameter>
+		<parameter id="bias">
+			<shortName>Bias</shortName>
+		</parameter>
+		<parameter id="MAE">
+			<shortName>MAE</shortName>
+		</parameter>
+		<parameter id="R2">
+			<shortName>R2</shortName>
+		</parameter>
+		<parameter id="MSE">
+			<shortName>MSE</shortName>
+		</parameter>
+		<parameter id="nashsutcliffeefficiency">
+			<shortName>nashsutcliffeefficiency</shortName>
+		</parameter>
+		<parameter id="PeakMSE">
+			<shortName>PeakMSE</shortName>
+		</parameter>		
+		<parameter id="CC" name="Correlation Coefficient">
+                        <shortName>CC</shortName>
+                </parameter>
+		<parameter id="volumeerror" name="volumeerror">
+                        <shortName>Volume Error</shortName>
+                </parameter>
+	</parameterGroup>
+</parameterGroups>

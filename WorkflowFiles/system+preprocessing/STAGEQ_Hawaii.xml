@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<!--activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>ImportIHFSDB</moduleInstanceId>
+	</activity-->
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>ImportSHEF</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>RRS_PreProcessing_Inst_Hawaii_STG</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>RRS_PreProcessing_Inst_Hawaii_PP01</moduleInstanceId>
+	</activity>	
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>STAGEQ_Hawaii_OB1</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>STAGEQ_RDHMHawaii_OB1</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>RDHMHawaii_SHEF_Export</moduleInstanceId>
+	</activity>
+
+</workflow>

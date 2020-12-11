@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>SHIA2_QIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_SHIA2_SHIA2OB6_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>SHIA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SHIA2_SQIN_6_SHIA2UPR_SHIA2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANLOSS_SHIA2_SHIA2_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>SHIA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SHIA2_QINE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADJUSTQ_SHIA2_SHIA2ADJ_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>SHIA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SHIA2ADJ">
+		<adjust>
+			<adjustQUsingObservedInstantaneousDischarge>
+				<observedDischarge>
+					<variableId>SHIA2_QIN_6</variableId>
+				</observedDischarge>
+				<simulatedInstantaneousDischarge>
+					<variableId>SHIA2_SQIN_6_SHIA2UPR_SHIA2</variableId>
+				</simulatedInstantaneousDischarge>
+				<moduleParameterFile>ADJUSTQ_SHIA2_SHIA2ADJ_UpdateStates</moduleParameterFile>
+				<adjustedForecastDischarge>
+					<variableId>SHIA2_QINE_6</variableId>
+				</adjustedForecastDischarge>
+			</adjustQUsingObservedInstantaneousDischarge>
+		</adjust>
+	</transformation>
+</transformationModule>

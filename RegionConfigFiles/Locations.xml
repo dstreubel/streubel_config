@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<locations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/locations.xsd" version="1.1" xmlns="http://www.wldelft.nl/fews">
+	<geoDatum>WGS 1984</geoDatum>
+	<!-- Locations - APRFC-->
+	<!--grid locations-->
+	<location id="LastObserved" name="LastObserved">
+		<shortName>LastObserved</shortName>
+		<x>0</x>
+		<y>0</y>
+	</location>
+	<location id="NWM" name="National Water Model">
+                <description>National Water Model Grids</description>
+                <shortName>NWM</shortName>
+                <x>0</x>
+                <y>0</y>
+        </location>
+	<location id="UWISQPE" name="UWISQPE">
+		<shortName>UWISQPE</shortName>
+		<x>-155.11</x>
+		<y>60.50</y>
+	</location>
+	<location id="AKNBM" name="AKNBM">
+		<shortName>AKNBM</shortName>
+		<x>-155.11</x>
+		<y>60.50</y>
+	</location>
+	<location id="HRAP" name="HRAP">
+		<shortName>HRAP</shortName>
+		<x>-148.11</x>
+		<y>46.05</y>
+	</location>
+	<location id="HRAP_QTR_KAUAI" name="HRAP_QTR_KAUAI">
+		<shortName>HRAP_QTR_KAUAI</shortName>
+		<x>-159.50</x>
+		<y>22.00</y>
+	</location>
+	<location id="HRAP_QTR_KAUAI_RDHM" name="HRAP_QTR_KAUAI_RDHM">
+		<shortName>HRAP_QTR_KAUAI_RDHM</shortName>
+		<x>-159.51</x>
+		<y>22.10</y>
+	</location>
+	<location id="HRAP_HFO" name="HRAP_HFO">
+		<shortName>HRAP_HFO</shortName>
+		<x>-159.50</x>
+		<y>22.00</y>
+	</location>
+	<location id="Hawaii_NAMNEST" name="Hawaii_NAMNEST">
+		<shortName>Hawaii_NAMNEST</shortName>
+		<x>-159.50</x>
+		<y>22.00</y>
+	</location>
+	<location id="Hawaii_WRF-ARW" name="Hawaii_WRF-ARW">
+		<shortName>Hawaii_WRFARW</shortName>
+		<x>-159.50</x>
+		<y>22.00</y>
+	</location>
+	        <location id="MRMS" name="Alaska_MRMS">
+		<shortName>ALaska_MRMS</shortName>
+                <x>-160.50</x>
+                <y>60.00</y>
+        </location>
+	<location id="HI_MRMS" name="Hawaii_MRMS">
+		<shortName>Hawaii_MRMS</shortName>
+		<x>-157.50</x>
+		<y>21.00</y>
+	</location>
+	<location id="NDFD_HFO" name="NDFD_HFO">
+		<shortName>NDFD_HFO</shortName>
+		<x>-157.00</x>
+		<y>20.50</y>
+	</location>
+	<location id="RTMA" name="RTMA">
+		<shortName>RTMA</shortName>
+		<x>-169.81</x>
+		<y>51.21</y>
+	</location>
+        <location id="HAS" name="HAS">
+                <shortName>HAS</shortName>
+                <x>-169.81</x>
+                <y>51.21</y>
+        </location>
+        <location id="HRRR" name="HAS">
+                <shortName>HRRR</shortName>
+                <x>-169.81</x>
+                <y>51.21</y>
+        </location>
+        <location id="RAP" name="HAS">
+                <shortName>HRRR</shortName>
+                <x>-169.81</x>
+                <y>51.21</y>
+        </location>
+        <location id="RQTF" name="RQTF">
+                <shortName>RQTF</shortName>
+                <x>-169.81</x>
+                <y>51.21</y>
+        </location>
+        <location id="NASA" name="NASA">
+                <shortName>NASA</shortName>
+                <x>-169.81</x>
+                <y>51.21</y>
+        </location>
+        <location id="NOHRSC" name="NOHRSC">
+                <shortName>NOHRSC</shortName>
+                <x>-169.81</x>
+                <y>51.21</y>
+        </location>
+        <location id="LIS_CLM_GDAS" name="LIS_CLM_GDAS">
+                <shortName>LIS_CLM_GDAS</shortName>
+                <x>-169.81</x>
+                <y>51.21</y>
+        </location>
+        <location id="LIS_CLM_NAM" name="LIS_CLM_NAM">
+                <shortName>LIS_CLM_NAM</shortName>
+                <x>-169.81</x>
+                <y>51.21</y>
+        </location>
+        <location id="LIS_NOAH32_GDAS" name="LIS_NOAH32_GDAS">
+                <shortName>LIS_NOAH32_GDAS</shortName>
+                <x>-169.81</x>
+                <y>51.21</y>
+        </location>
+        <location id="LIS_NOAH32_NAM" name="LIS_NOAH32_NAM">
+                <shortName>LIS_NOAH32_NAM</shortName>
+                <x>-169.81</x>
+                <y>51.21</y>
+        </location>
+	<location id="ArcInfoGrid" name="ArcInfoGrid">
+		<shortName>ArcInfoGrid for climatology data</shortName>
+		<x>0 </x>
+		<y>0</y>
+	</location>
+   <!-- ADDED FOR MEFP DATA INGEST =========================== -->
+    <!-- Import Grids for MEFP -->
+    <location id="HEFS_CFSv2" name="CFSv2 Location">
+        <description> HEFS_CFSv2</description>
+        <shortName> HEFS_CFSv2</shortName>
+        <x>0</x>
+        <y>0</y>
+    </location>
+    <location id="HEFS_CFSv2_USA" name="CFSv2_USA Location">
+        <description> HEFS_CFSv2_USA </description>
+        <shortName> HEFS_CFSv2_USA </shortName>
+        <x>0</x>
+        <y>0</y>
+    </location>
+    <location id="HEFS_GEFS" name="GEFS Location">
+        <description> HEFS_GEFS</description>
+        <shortName> HEFS_GEFS</shortName>
+        <x>0</x>
+        <y>0</y>
+    </location>
+    <location id="HEFS_GEFS_USA" name="GEFS_USA Location">
+        <description> HEFS_GEFS_USA </description>
+        <shortName> HEFS_GEFS_USA </shortName>
+        <x>0</x>
+        <y>0</y>
+    </location>
+    <location id="Hawaii_NAMNEST_Test" name="Hawaii_NAMNEST_Test">
+    <shortName>PCR</shortName>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+    </location>
+
+
+	
+<!--	<location id="QPF" name="QPF (APRFC)">
+		<description>QPF</description>
+		<shortName>QPF APRFC</shortName>
+		<x>0</x>
+		<y>0</y>
+	</location>
+        <location id="MPE" name="MPE">
+		<description>MPE</description>
+                <shortName>MPE</shortName>
+                <x>0</x>
+                <y>0</y>
+        </location>
+-->	
+
+
+</locations>

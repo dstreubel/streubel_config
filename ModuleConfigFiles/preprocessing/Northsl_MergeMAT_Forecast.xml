@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MATX_observed</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MATX_PreProcessing_QTE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MATX</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MATX_MPE_observed</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MATX_PreProcessing_QTE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MATX_MPE</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_observed</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MATX_forecast</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+<!--			<ensembleId>main</ensembleId>-->
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MATX_forecast_QTF</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>APRFC_QTF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+<!--			<ensembleId>QTF</ensembleId>-->
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MATX_forecast_QPF</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_forecast</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAT</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_MEFP</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAT</parameterId>
+			<locationSetId>Catchments_HEFS_Northsl</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_sampleESP</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Northsl_SampleESP_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_sampleESP_HS</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Northsl_MergeMAT_HS_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_cardfiles</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDataCard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-10" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_Climo</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_merged_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Northsl_MergeMAT_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Northsl_MergeMAT_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MergeMAT">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>MATX_observed</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MATX_MPE_observed</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAT_observed</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAT_MEFP</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MATX_forecast</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MATX_forecast_QTF</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MATX_forecast_QPF</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAT_forecast</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAT_sampleESP</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAT_cardfiles</variableId>
+				</inputVariable>				
+				<inputVariable>
+					<variableId>MAT_Climo</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAT_sampleESP_HS</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAT_merged_tmp</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	<transformation id="InterpolateMAT">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>MAT_merged_tmp</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAT_merged</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+</transformationModule>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fewsPiServiceConfig xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/fewsPiServiceConfig.xsd">
+    <general>
+        <exportIdMap>IdExportHEFSGraphGen</exportIdMap>
+    </general>
+
+    <!-- Most queries used by the HEFS Graphics Generator products are 
+         configured in this file.  The only queries not configured herein 
+         are contained within the standard PI-service configuration file 
+         delivered with Graphics Generator and used for the AHPS 
+         products: GraphGen.xml.-->
+         
+    <!-- =====================
+         DIAGNOSTICS PRODUCTS
+         ===================== -->
+
+    <!-- Returns the observed precipitation as a frame of reference for the output
+         from MEFP -->
+    <timeSeries>
+        <id>MEFP OBS PRECIP TS</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>RAIM</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>QPF</ensembleId>
+            <ensembleMemberIndex>1</ensembleMemberIndex>
+        </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the forecast precipitation that is input to the MEFP for
+         operational runs (the RFC QPF/QTF forecast source). -->
+    <timeSeries>
+        <id>MEFP QPF INPUT</id>
+        <timeSeriesSet>
+            <moduleInstanceId>MAP</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAP</parameterId>
+    <!--        <qualifierId>QPF12</qualifierId>     -->
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="240" endOverrulable="true"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the observed temperature as a frame of reference for the output
+         from MEFP -->
+    <timeSeries>
+        <id>MEFP Obs Temp TS</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>MAT</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <!--<locationSetId>Catchments_HEFS</locationSetId>-->
+            <locationSetId>Catchments_Anch</locationSetId>
+     <!--       <timeSeriesType>external historical</timeSeriesType>   -->
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="hour" start="-240" startOverrulable="false" end="240"/> 
+    <!--        <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>   -->
+            <readWriteMode>read only</readWriteMode>
+           <!-- <ensembleId>main</ensembleId>-->
+        </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the forecast temperature that is input to the MEFP for
+         operational runs (the RFC QPF/QTF forecast source). -->
+    <timeSeries>
+        <id>MEFP QTF INPUT</id>
+        <timeSeriesSet>
+            <moduleInstanceId>MAT</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="240" endOverrulable="true"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the precipitation ensemble output by the MEFP. -->
+    <timeSeries>
+        <id>MEFP MAP RAW OUTPUT</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>ALL_MEFP_Forecasts</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAP</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>MEFP</ensembleId>
+        </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the temperature ensemble output by the MEFP. -->
+    <timeSeries>
+        <id>MEFP MAT RAW OUTPUT</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>ALL_MEFP_Forecasts</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>MEFP</ensembleId>
+        </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the observed time series that 
+         corresponds to the OPERATIONAL FLOW TS specified 
+         below.  If no such observed time series exist,
+         leave this unchanged, but note that the observed
+         time series will not be displayed on streamflow
+         products and a warning message will be generated.-->
+    <timeSeries>
+        <id>OBSERVED FLOW</id> 
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QIN</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>main</ensembleId>
+         </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QIN</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="1"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>main</ensembleId>
+         </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QIN</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+         </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the operational (single-valued) forecast 
+         or simulated time series that corresponds to the 
+         FLOW RAW OUTPUT below.  This should use the same
+         timeSeriesSet as FLOW RAW OUTPUT, but with
+         ensembleId "main".-->
+    <timeSeries>
+        <id>OPERATIONAL FLOW FORECAST</id> 
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>main</ensembleId>
+         </timeSeriesSet>
+    </timeSeries>
+    <timeSeries>
+        <id>OPERATIONAL FLOW FORECAST SQIN</id> 
+        <timeSeriesSet>
+            <moduleInstanceSetId>SQIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SQIN</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>main</ensembleId>
+         </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the flow ensemble before ensemble post-processing.
+         If the post-processor is not applied, this can be any 
+         flow ensemble you wish to display in the product.  -->
+    <timeSeries>
+        <id>FLOW RAW OUTPUT</id> 
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>MEFP</ensembleId>
+         </timeSeriesSet>
+    </timeSeries>
+    <timeSeries>
+        <id>FLOW RAW OUTPUT SQIN</id> 
+        <timeSeriesSet>
+            <moduleInstanceSetId>SQIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SQIN</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>MEFP</ensembleId>
+         </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the HFES EnsPost post-processed flow ensemble. -->
+    <timeSeries>
+        <id>FLOW ENSPOST OUTPUT</id> 
+        <timeSeriesSet>
+            <moduleInstanceSetId>HEFS_EnsPost</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SQIN</parameterId>
+            <locationSetId>ENS_SQIN</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>HEFSENSPOST</ensembleId>
+        </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- =====================
+         SHORT-RANGE PRODUCT
+         ===================== -->
+    
+    <!--  Returns the observed flow time series. -->
+    <timeSeries>
+        <id>SHORT-RANGE OBS FLOW</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QIN</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="1"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>main</ensembleId>
+         </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QIN</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+         </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the ensemble to use to build the cone of uncertainty. -->
+    <timeSeries>
+        <id>SHORT-RANGE ENSEMBLE FLOW</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>MEFP</ensembleId>
+        </timeSeriesSet>
+    </timeSeries>
+    <timeSeries>
+        <id>SHORT-RANGE ENSEMBLE FLOW SQIN</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>SQIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SQIN</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>MEFP</ensembleId>
+        </timeSeriesSet>
+    </timeSeries>
+    
+</fewsPiServiceConfig>

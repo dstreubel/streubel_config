@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Bradley_PreProcessing_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BRUA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BRMA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BRDA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BRIA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BRTA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Bradley_Export</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Bradley_HEFS_Ensembles_Only</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>GraphGen_Create_HEFS_Products</workflowId>
+	</activity>
+
+</workflow>

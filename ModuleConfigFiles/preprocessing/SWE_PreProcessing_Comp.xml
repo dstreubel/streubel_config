@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>ofsswe_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE-OFS</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="12"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>aveswe_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE-AVE</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="12"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ponswe_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_Comp</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE-PON</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="12"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>swe_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ave6swe_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE-AVE6</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>poncswe_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_Comp</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE-PONC</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+
+	<transformation id="SWE-PON">
+		<user>
+			<simple>
+				<expression>+100*(ofsswe_scalar)/(aveswe_scalar)</expression>
+				<outputVariable>
+					<variableId>ponswe_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="SWE-PONC">
+		<user>
+			<simple>
+				<expression>+100*(swe_scalar)/(ave6swe_scalar)</expression>
+				<outputVariable>
+					<variableId>poncswe_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+
+</transformationModule>

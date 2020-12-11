@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>KLNQ9_QINE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADJUSTQ_KLNQ9_KLNQ9ADJ_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>KLNQ9</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>KLNQ9_STGE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_KLNQ9_KLNQ9ADJ_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STGE</parameterId>
+			<locationId>KLNQ9</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="KLNQ9ADJ">
+		<dischargeStage>
+		<ratingCurve>
+			<discharge>
+				<variableId>KLNQ9_QINE_6</variableId>
+			</discharge>
+			<stage>
+				<variableId>KLNQ9_STGE_6</variableId>
+			</stage>
+		</ratingCurve>
+		</dischargeStage>
+	</transformation>
+</transformationModule>

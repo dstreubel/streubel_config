@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>Merged_SWE_1d</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MergeSWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+<!--			<relativeViewPeriod unit="day" start="-30000" startOverrulable="true" end="0"/>-->
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Sim_swe_sampledDM_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>DayMonthSampleSWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-30000" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>	
+	<transformation id="Sim_swe_sampleDM">
+		<sample>
+			<dayMonthSample>
+				<inputVariable>
+					<variableId>Merged_SWE_1d</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>Sim_swe_sampledDM_ne</variableId>
+				</outputVariable>
+			</dayMonthSample>
+		</sample>	
+	</transformation>
+
+</transformationModule>

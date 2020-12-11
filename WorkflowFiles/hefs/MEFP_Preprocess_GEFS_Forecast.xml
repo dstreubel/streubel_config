@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+    
+    <!-- ============================================ -->
+    <!--                     GEFS                     -->
+    <!-- ============================================ -->
+  
+    <!-- Interpolate gridded data to locations for GEFS. -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_GEFS_Interpolate_Location_FMAP</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_GEFS_Interpolate_Location_TFMN</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_GEFS_Interpolate_Location_TFMX</moduleInstanceId>
+    </activity>
+    
+    <!-- Convert 6h temp data to 24h -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+    </activity>	
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_GEFS_TFMX_6to24</moduleInstanceId>
+    </activity>
+</workflow>

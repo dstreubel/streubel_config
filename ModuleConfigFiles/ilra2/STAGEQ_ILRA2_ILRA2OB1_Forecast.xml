@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>ILRA2_STG_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>ILRA2</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ILRA2_QIN_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_ILRA2_ILRA2OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>ILRA2</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="ILRA2OB1">
+		<stageDischarge>
+		<ratingCurve>
+			<stage>
+				<variableId>ILRA2_STG_1</variableId>
+			</stage>
+			<discharge>
+				<variableId>ILRA2_QIN_1</variableId>
+			</discharge>
+		</ratingCurve>
+		</stageDischarge>
+	</transformation>
+</transformationModule>

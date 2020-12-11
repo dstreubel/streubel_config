@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+<!-- EXAMPLES 
+	<map internalParameter="SQIN" internalLocation="CNNN6TIF" externalParameter="SQIN" externalLocation="CNNN6"/>
+	<map internalParameter="SQIN" internalLocation="WALN6TOT" externalParameter="QINE" externalLocation="WALN6"/>
+-->
+	<enableOneToOneMapping/>
+</idMap>

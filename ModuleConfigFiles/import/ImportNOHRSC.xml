@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>grib2</importType>
+			<folder>$IMPORT_FOLDER_GRIB2$/nohrsc/lis_clm_gdas</folder>
+			<idMapId>IdImportNOHRSC1</idMapId>
+			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNOHRSC</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>LIS_CLM_GDAS</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+		<externUnit unit="MM" parameterId="SWE"/>
+	</import>
+	<import>
+		<general>
+			<importType>grib2</importType>
+			<folder>$IMPORT_FOLDER_GRIB2$/nohrsc/lis_clm_nam</folder>
+			<idMapId>IdImportNOHRSC2</idMapId>
+			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNOHRSC</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>LIS_CLM_NAM</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+		<externUnit unit="MM" parameterId="SWE"/>
+	</import>
+	<import>
+		<general>
+			<importType>grib2</importType>
+			<folder>$IMPORT_FOLDER_GRIB2$/nohrsc/lis_noah32_gdas</folder>
+			<idMapId>IdImportNOHRSC3</idMapId>
+			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNOHRSC</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>LIS_NOAH32_GDAS</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+		<externUnit unit="MM" parameterId="SWE"/>
+	</import>
+	<import>
+		<general>
+			<importType>grib2</importType>
+			<folder>$IMPORT_FOLDER_GRIB2$/nohrsc/lis_noah32_nam</folder>
+			<idMapId>IdImportNOHRSC4</idMapId>
+			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNOHRSC</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>LIS_NOAH32_NAM</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+		<externUnit unit="MM" parameterId="SWE"/>
+	</import>
+</timeSeriesImportRun>

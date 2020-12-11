@@ -1,0 +1,101 @@
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/generalAdapterRun.xsd">
+    <general>
+        <description>EnsPost SHIA2</description>
+        <piVersion>1.5</piVersion>
+        <rootDir>%TEMP_DIR%</rootDir>
+        <workDir>%ROOT_DIR%/work</workDir>
+        <exportDir>%ROOT_DIR%/input</exportDir>
+        <exportDataSetDir>%ROOT_DIR%/work/parameters</exportDataSetDir>
+        <exportIdMap>IdExportENSPOST</exportIdMap>
+        <importDir>%ROOT_DIR%/output</importDir>
+        <importIdMap>IdImportENSPOST</importIdMap>
+        <dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+        <dumpDir>%ROOT_DIR%</dumpDir>
+        <diagnosticFile>%ROOT_DIR%/output/diag.xml</diagnosticFile>
+    </general>
+    <activities>
+
+        <startUpActivities>
+                <makeDir>
+                        <dir>%ROOT_DIR%/work</dir>
+                </makeDir>
+
+        </startUpActivities>
+
+        <exportActivities>
+
+            <exportTimeSeriesActivity>
+                <exportFile>inputs.xml</exportFile>
+                <timeSeriesSets>
+                    <timeSeriesSet>
+                        <moduleInstanceId>ADJUSTQ_SHIA2_SHIA2ADJ_Forecast</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>QINE</parameterId>
+                        <locationId>SHIA2</locationId>
+                        <timeSeriesType>simulated forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <relativeViewPeriod unit="hour" start="-120" startOverrulable="true" end="0"/>
+                        <readWriteMode>read only</readWriteMode>
+                    </timeSeriesSet>
+                    <timeSeriesSet>
+                        <moduleInstanceId>ADDSUB_SHIA2_SHIA2UPR_Forecast</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>SQIN</parameterId>
+                        <locationId>SHIA2</locationId>
+                        <timeSeriesType>simulated forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <relativeViewPeriod unit="hour" start="0" end="360" endOverrulable="true"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <ensembleId>MEFP</ensembleId>
+                        <ensembleMemberIndexRange start='1971' end='2005'/>
+                    </timeSeriesSet>
+                </timeSeriesSets>
+            </exportTimeSeriesActivity>
+
+            <exportRunFileActivity>
+                <exportFile>%ROOT_DIR%/run_info.xml</exportFile>
+                <properties>
+                    <string key="model" value="ohd.hseb.hefs.enspost.adapter.HEFSEnsPostModelAdapter"/>
+                    <int key="printDebugInfo" value="0"/>
+                    <string key="errorModel" value="ERS"/>
+                    <string key="parameterDir" value="$ENS_POST_ROOT_DIR$/ensPostParameters"/>  <!--  This variable is required -->
+                    <string key="parameterFile" value="SHIA2.QINE.enspost.parameters.tgz"/>     <!-- OPTIONAL.  Preferred method since it points directly to the params -->
+                </properties>
+            </exportRunFileActivity>
+
+        </exportActivities>
+
+        <executeActivities>
+            <executeActivity>
+                <command>
+                    <className>ohd.hseb.hefs.utils.adapter.HEFSModelAdapter</className>
+                    <binDir>$OHDBINDIR$</binDir>
+                </command>
+                <arguments>
+                    <argument>%ROOT_DIR%/run_info.xml</argument>
+                </arguments>
+                <timeOut>60000</timeOut>
+            </executeActivity>
+        </executeActivities>
+
+        <importActivities>
+            <importTimeSeriesActivity>
+                <importFile>outputs.xml</importFile>
+                <timeSeriesSets>
+                    <timeSeriesSet>
+                        <moduleInstanceId>SHIA2_ENSPOST_Forecast</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>SQIN</parameterId>
+                        <locationId>SHIA2</locationId>
+                        <timeSeriesType>simulated forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <ensembleId>HEFSENSPOST</ensembleId>
+                        <ensembleMemberIndexRange start='1971' end='2005'/>
+		    </timeSeriesSet>
+                </timeSeriesSets>
+            </importTimeSeriesActivity>
+        </importActivities>
+    </activities>
+</generalAdapterRun>
+                                                                                          

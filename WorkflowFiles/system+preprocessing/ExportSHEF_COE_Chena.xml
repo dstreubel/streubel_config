@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+        	<runIndependent>true</runIndependent>
+        	<workflowId>ImportGrids</workflowId>
+	</activity>
+    	<activity>
+		<runIndependent>true</runIndependent>
+		<workflowId>APRFC_MergeMAP</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>COE_Chena_SHEF_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>Copy_COE_Chena_2web</moduleInstanceId>
+	</activity>
+</workflow>

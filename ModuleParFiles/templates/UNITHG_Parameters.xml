@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+	<modifierType>UNITHG</modifierType>
+	<group id="default">
+		<model>UNITHG</model>
+		<parameter id="UHG_DURATION">
+			<intValue>@UHG_DURATION@</intValue>
+		</parameter>
+		<parameter id="UHG_INTERVAL">
+			<intValue>@UHG_INTERVAL@</intValue>
+		</parameter>
+		<parameter id="UNIT">
+			<stringValue>@UNIT@</stringValue>
+		</parameter>
+		<parameter id="DRAINAGE_AREA">
+			<dblValue>@DRAINAGE_AREA@</dblValue>
+		</parameter>
+		<parameter id="CONSTANT_BASE_FLOW">
+			<dblValue>@CONSTANT_BASE_FLOW@</dblValue>
+		</parameter>
+		<parameter id="UHG_ORDINATE_NUM">
+			<dblValue>@UHG_ORDINATE_NUM@</dblValue>
+		</parameter>
+		<parameter id="UHG_ORDINATES">
+			<table>
+				<columnTypes A="double"/>
+				<row A="@UHG_1@"/>
+				<row A="@UHG_2@"/>
+				<row A="@UHG_3@"/>
+				<row A="@UHG_4@"/>
+				<row A="@UHG_5@"/>
+				<row A="@UHG_6@"/>
+				<row A="@UHG_7@"/>
+				<row A="@UHG_8@"/>
+				<row A="@UHG_9@"/>
+				<row A="@UHG_10@"/>
+				<row A="@UHG_11@"/>
+				<row A="@UHG_12@"/>
+				<row A="@UHG_13@"/>
+				<row A="@UHG_14@"/>
+				<row A="@UHG_15@"/>
+				<row A="@UHG_16@"/>
+				<row A="@UHG_17@"/>
+				<row A="@UHG_18@"/>
+				<row A="@UHG_19@"/>
+				<row A="@UHG_20@"/>
+				<row A="@UHG_21@"/>
+				<row A="@UHG_22@"/>
+				<row A="@UHG_23@"/>
+				<row A="@UHG_24@"/>
+			</table>
+		</parameter>
+	</group>
+</parameters>

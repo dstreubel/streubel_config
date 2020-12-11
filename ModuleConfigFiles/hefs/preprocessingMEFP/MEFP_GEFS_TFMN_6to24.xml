@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+   <!-- Converts the 6h TFMN data to 24h.
+   
+        NOTE: This algorithm shifts the time series so that the four value in a TFMN time series to use for
+	the min 24h value line up on 18Z.  The 18Z times series is then resampled to yield a 12Z
+	time series. A four point minimum is computed (which is appropriate because the data coming
+	in is NOT instantaneous, but accumulative). 
+	
+	We may want to redo the algorithm to shift all time series valso so that the desired 24h min 
+	values are on 12Z at the end of the aggregation day.  That way no resampling is needed.
+    -->
+    
+   <!-- Input variable: 6h GEFS ensembles -->
+   <variable>
+        <variableId>gefs_tfmn_6</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_Interpolate_Location_TFMN</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <qualifierId>GEFS</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <!--readWriteMode>read complete forecast</readWriteMode-->
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Output variable: 24h (12-12Z) GEFS ensembles -->
+   <variable>
+        <variableId>gefs_tfmn_24</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+	    <qualifierId>GEFS</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep id="12Z"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Intermediary variabe: stores the 6, 12, and 18h shifted time series so that we can line up 
+        all values over which to calculate a minimum to be at 18Z. -->
+   <variable>
+        <variableId>gefs_tfmn_6_shift</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+	    <qualifierId>shift6</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>gefs_tfmn_12_shift</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+	    <qualifierId>shift12</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>gefs_tfmn_18_shift</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+	    <qualifierId>shift18</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Intermediary Variable: 24h (18Z) instantaneous aggregation.  All the values required for
+        computing the 24h minimum are timed for 18Z via the shifts above. -->
+   <variable>
+        <variableId>gefs_tfmn_24h_noshift_inst</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+	    <qualifierId>noshift inst</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>gefs_tfmn_24h_6shift_inst</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+	    <qualifierId>shift6 inst</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>gefs_tfmn_24h_12shift_inst</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+	    <qualifierId>shift12 inst</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>gefs_tfmn_24h_18shift_inst</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+	    <qualifierId>shift18 inst</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Intermdiary variable: 24h minimum time series at 18Z. -->
+   <variable>
+        <variableId>gefs_tfmn_24h_18Z</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="15" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+   </variable>
+   
+    <!-- Shift the input time series by 6, 12, and 18 hours.  The result is that the 4 values over which the 
+         daily maximum needs to be computed will be at hour 18Z of each day. -->
+    <transformation id="ta_shift_6">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>gefs_tfmn_6</variableId>
+                </inputVariable>
+		<!-- defaults to a backward shift directory -->
+                <numberOfTimeSteps>1</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>gefs_tfmn_6_shift</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    <transformation id="ta_shift_12">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>gefs_tfmn_6</variableId>
+                </inputVariable>
+		<!-- defaults to a backward shift directory -->
+                <numberOfTimeSteps>2</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>gefs_tfmn_12_shift</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    <transformation id="ta_shift_18">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>gefs_tfmn_6</variableId>
+                </inputVariable>
+		<!-- defaults to a backward shift directory -->
+                <numberOfTimeSteps>3</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>gefs_tfmn_18_shift</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    
+    
+    <!-- Cut out only the 18Z values via an instantaneous aggregation. -->
+    <transformation id="tfmn_noshift_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>gefs_tfmn_6</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>gefs_tfmn_24h_noshift_inst</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    <transformation id="tfmn_shift_6_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>gefs_tfmn_6_shift</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>gefs_tfmn_24h_6shift_inst</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    <transformation id="tfmn_shift_12_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>gefs_tfmn_12_shift</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>gefs_tfmn_24h_12shift_inst</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    <transformation id="tfmn_shift_18_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>gefs_tfmn_18_shift</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>gefs_tfmn_24h_18shift_inst</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    
+    <!-- Compute the 24h min at hour 18 via the *shift_inst variables above. -->
+    <transformation id="tfmn_daily_min_18Z">
+        <user>
+            <simple>
+                <expression>min(gefs_tfmn_24h_noshift_inst,gefs_tfmn_24h_6shift_inst,gefs_tfmn_24h_12shift_inst,gefs_tfmn_24h_18shift_inst)</expression>
+                <outputVariable>
+                    <variableId>gefs_tfmn_24h_18Z</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation>
+    
+    <!-- Shift the 24h min via an equidistant sampling at 12Z using the closest backward value. -->
+    <transformation id="tfmn_resampled_12Z">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>gefs_tfmn_24h_18Z</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>gefs_tfmn_24</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>gefs_tfmn_24</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    
+    
+</transformationModule>

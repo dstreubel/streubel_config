@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>YPSA2_SQIN_6_YPSA2LCL</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_YPSA2_YPSA2LCL_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>YPSA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>YPSA2_SSTG_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_YPSA2_YPSA2SIM_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>YPSA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="YPSA2SIM">
+		<dischargeStage>
+		<ratingCurve>
+			<discharge>
+				<variableId>YPSA2_SQIN_6_YPSA2LCL</variableId>
+			</discharge>
+			<stage>
+				<variableId>YPSA2_SSTG_6</variableId>
+			</stage>
+		</ratingCurve>
+		</dischargeStage>
+	</transformation>
+</transformationModule>

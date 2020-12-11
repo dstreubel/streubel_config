@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>BRUA2GL_SASC_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SNOW17_BRUA2_BRUA2GL_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SASC</parameterId>
+			<locationId>BRUA2GL</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>BRUA2GL_SASC_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_BRUA2_BRUA2GSC_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SASC</parameterId>
+			<locationId>BRUA2GL</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="BRUA2GSC">
+		<aggregation>
+			<instantaneous>
+				<inputVariable>
+					<variableId>BRUA2GL_SASC_6</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>BRUA2GL_SASC_24</variableId>
+				</outputVariable>
+			</instantaneous>
+		</aggregation>
+	</transformation>
+</transformationModule>

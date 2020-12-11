@@ -1,0 +1,135 @@
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+    <general>
+        <description>MEFP Ensemble Generator</description>
+        <piVersion>1.8</piVersion>
+        <rootDir>%TEMP_DIR%</rootDir>
+        <workDir>%ROOT_DIR%/work</workDir>
+        <exportDir>%ROOT_DIR%/input</exportDir>
+        <exportDataSetDir>%ROOT_DIR%</exportDataSetDir>
+        <exportIdMap>IdExportMEFPMAP</exportIdMap>
+        <importDir>%ROOT_DIR%/output</importDir>
+        <dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+        <dumpDir>%ROOT_DIR%</dumpDir>
+        <diagnosticFile>%ROOT_DIR%/output/diag.xml</diagnosticFile>
+    </general>
+    <activities>
+    
+        <startUpActivities>
+        </startUpActivities>
+    
+        <exportActivities>
+            <exportTimeSeriesActivity>
+                <exportFile>inputs.xml</exportFile>
+                <timeSeriesSets>
+                
+                    <!-- RFC FMAT (future MAT, in this case) time series;
+                         uncomment if used. -->
+<!--                         <timeSeriesSet>
+                        <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>TFMN</parameterId>
+                        <locationSetId>Catchments_HEFS_Copper</locationSetId>
+                        <timeSeriesType>simulated forecasting</timeSeriesType>
+                        <timeStep id="12Z"/>
+                        <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+                        <readWriteMode>read only</readWriteMode>
+                    </timeSeriesSet>
+-->
+                    <!--timeSeriesSet>
+                        <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>TFMX</parameterId>
+                        <locationSetId>Catchments_HEFS_Copper</locationSetId>
+                        <timeSeriesType>simulated forecasting</timeSeriesType>
+                        <timeStep id="12Z"/>
+                        <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+                        <readWriteMode>read only</readWriteMode>
+                    </timeSeriesSet-->
+                    <!-- GEFS TFMX/TFMN -->
+                    <timeSeriesSet>
+                        <moduleInstanceId>MEFP_GEFS_TFMN_6to24</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>TFMN</parameterId>
+                        <qualifierId>GEFS</qualifierId>
+                        <locationSetId>Catchments_HEFS_Copper</locationSetId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep times="12:00"/>
+                        <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="16" endOverrulable="true"/>
+                        <readWriteMode>read only</readWriteMode>
+                    </timeSeriesSet>
+                    <timeSeriesSet>
+                        <moduleInstanceId>MEFP_GEFS_TFMX_6to24</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>TFMX</parameterId>
+                        <qualifierId>GEFS</qualifierId>
+                        <locationSetId>Catchments_HEFS_Copper</locationSetId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep times="12:00"/>
+                        <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="16" endOverrulable="true"/>
+                        <readWriteMode>read only</readWriteMode>
+                    </timeSeriesSet>
+
+                    <!-- CFSv2 TFMN/TFMX Lagged Ensemble -->
+                </timeSeriesSets>
+            </exportTimeSeriesActivity>
+        
+            <exportRunFileActivity>
+                <exportFile>%ROOT_DIR%/run_info.xml</exportFile>
+                <properties>
+                    <int key="printDebugInfo" value="0"/>
+                    <!--string key="hindcasting" value="$MEFP_HINDCASTING$"/-->
+                    <string key="parameterDir" value="$MEFP_ROOT_DIR$/mefpParameters"/>
+                    <!--int key="rfcNumberOfForecastDays" value="0"/-->
+                    <int key="gefsNumberOfForecastDays" value="15"/>
+                    <!--int key="cfsv2NumberOfForecastDays" value="0"/-->
+                    <!--int key="climatologyNumberOfForecastDays" value="330"/-->
+                    <!--string key="useResampledClimatology" value="false"/-->
+                    <int key="initialEnsembleYear" value="1971"/>
+                    <int key="lastEnsembleYear" value="2005"/>
+                </properties>
+            </exportRunFileActivity>
+        </exportActivities>
+        
+        <executeActivities>
+            <executeActivity>
+                <command>
+                    <className>ohd.hseb.hefs.mefp.adapter.MEFPEnsembleGeneratorModelAdapter</className>
+                    <binDir>$OHDBINDIR$</binDir>
+                </command>
+                <arguments>
+                    <argument>%ROOT_DIR%/run_info.xml</argument>
+                </arguments>
+                <timeOut>300000</timeOut>
+            </executeActivity>
+        </executeActivities>
+
+        <importActivities>
+            <importTimeSeriesActivity>
+                <importFile>outputs.xml</importFile>
+                <timeSeriesSets>
+                    <timeSeriesSet>
+                        <moduleInstanceId>Copper_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>TFMN</parameterId>
+                        <locationSetId>Catchments_HEFS_Copper</locationSetId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep times="12:00"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <ensembleId>MEFP</ensembleId>
+                    </timeSeriesSet>
+                    <timeSeriesSet>
+                        <moduleInstanceId>Copper_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>TFMX</parameterId>
+                        <locationSetId>Catchments_HEFS_Copper</locationSetId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep times="12:00"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <ensembleId>MEFP</ensembleId>
+                    </timeSeriesSet>
+                </timeSeriesSets>
+            </importTimeSeriesActivity>
+        </importActivities>
+        
+    </activities>
+</generalAdapterRun>

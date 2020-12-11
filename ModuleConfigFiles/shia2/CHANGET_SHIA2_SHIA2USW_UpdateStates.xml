@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>SHIA2UPR_SWE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SNOW17_SHIA2_SHIA2UPR_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>SHIA2UPR</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SHIA2UPR_SWE_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_SHIA2_SHIA2USW_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>SHIA2UPR</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SHIA2USW">
+		<aggregation>
+			<instantaneous>
+				<inputVariable>
+					<variableId>SHIA2UPR_SWE_6</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>SHIA2UPR_SWE_24</variableId>
+				</outputVariable>
+			</instantaneous>
+		</aggregation>
+	</transformation>
+</transformationModule>

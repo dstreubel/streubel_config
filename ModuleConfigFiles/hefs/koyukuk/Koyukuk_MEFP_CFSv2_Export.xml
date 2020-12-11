@@ -1,0 +1,114 @@
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+    
+    <!-- This module can run at any time relative to the CFSv2 data's external forecast time.  The forecast time assumed in output time 
+         series is computed based on provided data, as discussed below (see t0ComputationAdjustmentFactorFromFirstDataValue
+	 run info property). -->
+    
+    <general>
+        <description>CFSv2 Interpolated Time Series Exporter</description>
+	<piVersion>1.8</piVersion>
+        <rootDir>%TEMP_DIR%</rootDir>
+        <workDir>%ROOT_DIR%/work</workDir>
+        <exportDir>%ROOT_DIR%/input</exportDir>
+        <exportDataSetDir>%ROOT_DIR%</exportDataSetDir>
+        <importDir>%ROOT_DIR%/output</importDir>
+        <dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+        <dumpDir>%ROOT_DIR%</dumpDir>
+        <diagnosticFile>%ROOT_DIR%/output/diag.xml</diagnosticFile>
+    </general>
+    <activities>
+    
+        <startUpActivities>
+            <!-- purgeActivity>
+                <filter>%ROOT_DIR%/work/*</filter>
+            </purgeActivity>
+            <purgeActivity>
+                <filter>%ROOT_DIR%/input/*</filter>
+            </purgeActivity>
+            <purgeActivity>
+                <filter>%ROOT_DIR%/output/*</filter>
+            </purgeActivity>-->
+            <purgeActivity>
+                <filter>%ROOT_DIR%/run_info.xml</filter>
+            </purgeActivity>
+        </startUpActivities>
+
+        <exportActivities>
+            <exportTimeSeriesActivity>
+                <exportFile>inputs.xml</exportFile>
+                <timeSeriesSets>
+                    <timeSeriesSet>
+                        <moduleInstanceId>MEFP_CFSv2_Interpolate_Location_FMAP</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>FMAP</parameterId>
+                        <qualifierId>CFSv2</qualifierId>
+                        <locationSetId>Catchments_HEFS_Koyukuk_Export</locationSetId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <readWriteMode>read complete forecast</readWriteMode>
+                        <ensembleId>main</ensembleId>
+                    </timeSeriesSet>
+                    <timeSeriesSet>
+                        <moduleInstanceId>MEFP_CFSv2_Interpolate_Location_TFMN</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>TFMN</parameterId>
+                        <qualifierId>CFSv2</qualifierId>
+                        <locationSetId>Catchments_HEFS_Koyukuk_Export</locationSetId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <readWriteMode>read complete forecast</readWriteMode>
+                        <ensembleId>main</ensembleId>
+                    </timeSeriesSet>
+                    <timeSeriesSet>
+                        <moduleInstanceId>MEFP_CFSv2_Interpolate_Location_TFMX</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>TFMX</parameterId>
+                        <qualifierId>CFSv2</qualifierId>
+                        <locationSetId>Catchments_HEFS_Koyukuk_Export</locationSetId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <readWriteMode>read complete forecast</readWriteMode>
+                        <ensembleId>main</ensembleId>
+                    </timeSeriesSet>
+                </timeSeriesSets>
+            </exportTimeSeriesActivity>
+        
+            <exportRunFileActivity>
+                <exportFile>%ROOT_DIR%/run_info.xml</exportFile>
+                <properties>
+		    <!-- Valid arguments to put within '@' symbols are locationId, parameterId, ensembleId, handbook5Id, and
+		         the forecastDateT0 argument function which takes two parameters: date format and time zone.  This
+			 uses standard Graphics Generator arguments syntax, so refer to its documentation for more information. -->
+		    <!-- NEVER CHANGE THE FILE NAME BELOW!  The CFSv2LaggedEnsembleModelAdapter model assumes it! --> 
+		    <string key="fileNamePattern" value="@locationId@/@locationId@.@parameterId@.@forecastDateT0(yyyyMMddHH;GMT)@.fi"/>
+                    
+		    <!-- The base directory for output files.  Subdirectories  based on the file names are created as needed. -->
+		    <string key="exportDir" value="$MEFP_ROOT_DIR$/cfsv2Interpolated/archive"/>
+		    
+            <!-- For CFSv2, the forecast time is part of the file name.  That time
+                 must be computed from the data, as the forecast time CHPS
+                 associates with the time series when imported may not match the
+                 required time.  This field instructs the TimeSeriesExportAdapter to
+                 compute the forecast time for a time series as being 6-hours BEFORE
+                 the time of the first data value, instead. -->
+            <!-- DO NOT CHANGE THE FIELD BELOW! -->
+		    <int key="t0ComputationAdjustmentFactorFromFirstDataValue" value="-6"/>
+                </properties>
+            </exportRunFileActivity>
+        </exportActivities>
+        
+        <executeActivities>
+            <executeActivity>
+                <command>
+                    <className>ohd.hseb.hefs.exporter.adapter.TimeSeriesExporterModelAdapter</className>
+                    <binDir>$OHDBINDIR$</binDir>
+                </command>
+                <arguments>
+                    <argument>%ROOT_DIR%/run_info.xml</argument>
+                </arguments>
+                <timeOut>300000</timeOut>
+            </executeActivity>
+        </executeActivities>
+	
+    </activities>
+</generalAdapterRun>

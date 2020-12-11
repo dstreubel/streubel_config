@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" version="1.5">
+	<group id="default">
+		<parameter id="USGSNUMBER_TO_LOCATIONID_MAPPING">
+            <table>
+                <columnIds A="usgsNumber" B="locationID"/>
+<!--Southeast-->
+			<row A="15129500" B="SRYA2"/>
+			<row A="DEZQ9" B="DEZQ9"/>
+			<row A="ALSQ9" B="ALSQ9"/>
+			<row A="TATQ9" B="TATQ9"/>
+			<row A="15129000" B="ALKA2"/>
+			<row A="15129120" B="ALEA2"/>
+			<row A="15056500" B="CKTA2"/>
+			<row A="15056210" B="TYAA2"/>
+			<row A="SKGA2" B="SKGA2"/>
+			<row A="MCAA2" B="MCAA2"/>
+			<row A="15052500" B="MNDA2"/>
+			<row A="MNBA2" B="MNBA2"/>
+			<row A="JDCA2" B="JDCA2"/>
+			<row A="JRDA2" B="JRDA2"/>
+			<row A="15041200" B="TKUA2"/>
+			<row A="STTQ2" B="STTQ2"/>		
+			<row A="ISKQ2" B="ISKQ2"/>
+			<row A="15024800" B="STKA2"/>
+			<row A="15081497" B="SCKA2"/>
+			<row A="15087700" B="IRVA2"/>
+<!--Tanana-->
+			<row A="HNRA2" B="HNRA2"/>
+			<row A="15493000" B="UCHA2"/>
+			<row A="15493400" B="CRHA2"/>
+			<row A="15493700" B="MCDA2"/>
+			<row A="15514000" B="CHFA2"/>
+			<row A="15511000" B="CHLA2"/>
+			<row A="15484000" B="SALA2"/>
+			<row A="CRNA2" B="CRNA2"/>
+			<row A="NEBA2" B="NEBA2"/>
+			<row A="NABA2" B="NABA2"/>
+			<row A="TLNA2" B="TLNA2"/>
+			<row A="TSGA2" B="TSGA2"/>
+			<row A="15477740" B="GBDA2"/>
+			<row A="BGDA2" B="BGDA2"/>
+			<row A="15485500" B="TAFA2"/>
+			<row A="15515500" B="ENNA2"/>
+			<row A="CRSA2" B="CRSA2"/>
+			<row A="CHAA2" B="CHAA2"/>
+			<row A="MHSA2" B="MHSA2"/>
+			<row A="15478040" B="PHLA2"/>
+<!--Canadian Yukon-->
+			<row A="KLNQ9" B="KLNQ9"/>
+			<row A="SRFQ9" B="SRFQ9"/>
+			<row A="SRMQ9" B="SRMQ9"/>
+			<row A="PRXQ9" B="PRXQ9"/>
+			<row A="YWRQ9" B="YWRQ9"/>
+			<row A="NIRQ9" B="NIRQ9"/>
+			<row A="WHRQ9" B="WHRQ9"/>
+			<row A="YDAQ9" B="YDAQ9"/>
+<!--FortyMile-->
+			<row A="FMMA2" B="FMMA2"/>
+			<row A="FMKA2" B="FMKA2"/>
+			<row A="FMWA2" B="FMWA2"/>
+			<row A="15348000" B="FMRA2"/>
+<!--Porcupine-->
+			<row A="OCRQ9" B="OCRQ9"/>
+			<row A="PROQ9" B="PROQ9"/>
+			<row A="PRBQ9" B="PRBQ9"/>
+			<row A="PRCA2" B="PRCA2"/>
+			<row A="BRCA2" B="BRCA2"/>
+			<row A="15389100" B="PFYA2"/>
+<!--Koyukuk-->
+			<row A="15564879" B="SLAA2"/>
+			<row A="MFKA2" B="MFKA2"/>
+			<row A="BTTA2" B="BTTA2"/>
+			<row A="KBJA2" B="KBJA2"/>
+			<row A="ALLA2" B="ALLA2"/>
+			<row A="KRHA2" B="KRHA2"/>
+<!--North Slope-->
+			<row A="15896000" B="KUPA2"/>
+			<row A="15908000" B="SGRA2"/>
+			<row A="15875000" B="CRUA2"/>
+<!--Yukon-->
+			<row A="15356000" B="YEAA2"/>
+			<row A="CIRA2" B="CIRA2"/>
+			<row A="YFYA2" B="YFYA2"/>
+			<row A="BVRA2" B="BVRA2"/>
+			<row A="15453500" B="YRBA2"/>
+			<row A="TALA2" B="TALA2"/>
+			<row A="RBYA2" B="RBYA2"/>
+			<row A="GYRA2" B="GYRA2"/>
+			<row A="NULA2" B="NULA2"/>
+			<row A="YANA2" B="YANA2"/>
+			<row A="RSHA2" B="RSHA2"/>
+			<row A="15565447" B="YPSA2"/>
+<!--Matsu-->
+			<row A="SUDA2" B="SUDA2"/>
+			<row A="MACA2" B="MACA2"/>
+			<row A="15292000" B="GCSA2"/>
+			<row A="15292400" B="CLTA2"/> <!--discontinued fall 2014-->
+			<row A="CLTA2" B="CLTA2"/>
+			<row A="15292700" B="TRTA2"/>
+			<row A="TKTA2" B="TKTA2"/>
+			<row A="15292780" B="SUNA2"/>
+			<row A="15292800" B="MONA2"/>
+			<row A="15294005" B="WLWA2"/>
+			<row A="WILA2" B="WILA2"/>
+			<row A="15290000" B="LSUA2"/>
+			<row A="LSOA2" B="LSOA2"/>
+			<row A="LSHA2" B="LSHA2"/>
+			<row A="15284000" B="MATA2"/>
+			<row A="SKWA2" B="SKWA2"/>
+			<row A="YLKA2" B="YLKA2"/>
+			<row A="15294345" B="YSSA2"/>
+<!--Copper-->
+			<row A="GAKA2" B="GAKA2"/>
+			<row A="GPOA2" B="GPOA2"/>
+			<row A="15200280" B="GRSA2"/>
+			<row A="GULA2" B="GULA2"/>
+			<row A="TAZA2" B="TAZA2"/>
+			<row A="KLUA2" B="KLUA2"/>
+			<row A="TONA2" B="TONA2"/>
+			<row A="EYAA2" B="EYAA2"/>
+<!--Anchorage-->
+			<row A="15275100" B="CHRA2"/>
+			<row A="CSRA2" B="CSRA2"/>
+			<row A="15276000" B="SHIA2"/>
+			<row A="ERBA2" B="ERBA2"/>
+			<row A="TRPA2" B="TRPA2"/>
+<!--Kenai-->
+			<row A="15243900" B="SNOA2"/>
+			<row A="MPTA2" B="MPTA2"/>
+			<row A="15258000" B="COOA2"/>
+			<row A="15266110" B="SKLA2"/>
+			<row A="KEYA2" B="KEYA2"/>
+			<row A="KRKA2" B="KRKA2"/>
+			<row A="15266300" B="SXRA2"/>
+			<row A="RESA2" B="RESA2"/>
+			<row A="15271000" B="SIXA2"/>
+			<row A="NINA2" B="NINA2"/>
+			<row A="15239900" B="APTA2"/>
+			<row A="APBA2" B="APBA2"/>
+<!--Southwest-->
+			<row A="15300300" B="ILRA2"/>
+			<row A="15302000" B="NRDA2"/>
+			<row A="15302300" B="MULA2"/> <!--2009-2013-->
+			<row A="MULA2" B="MULA2"/>
+			<row A="MLCA2" B="MLCA2"/>
+			<row A="NSHA2" B="NSHA2"/>
+			<row A="NRKA2" B="NRKA2"/>
+<!--Bradley-->
+			<row A="15238990" B="BRUA2"/>
+			<row A="15239050" B="BRMA2"/>
+			<row A="15239070" B="BRTA2"/>
+			<row A="BRRA2" B="BRRA2"/>
+<!--Hawaii-->
+			<row A="16227500" B="MOSH1"/> 
+			<row A="16244000" B="PKSH1"/> 
+			<row A="16071500" B="OLBH1"/> 
+			<row A="16518000" B="WWKH1"/> 
+			<row A="16720000" B="KWSH1"/> 
+			<row A="16240500" B="WKGH1"/> 
+			<row A="16725000" B="ALKH1"/> 
+			<row A="16770500" B="PAGH1"/> 
+			<row A="16275000" B="HUSH1"/> 
+			<row A="16330000" B="KNNH1"/> 
+			<row A="16304200" B="KLSH1"/> 
+			<row A="16508000" B="HNWH1"/> 
+			<row A="16200000" B="KNFH1"/> 
+			<row A="16212480" B="HOUH1"/> 
+			<row A="16229000" B="KHSH1"/> 
+			<row A="16620000" B="HKSH1"/> 
+			<row A="16238500" B="WISH1"/> 
+			<row A="16345000" B="OPAH1"/> 
+			<row A="16501200" B="OHGH1"/> 
+			<row A="16238000" B="MKSH1"/> 
+			<row A="16254000" B="MWSH1"/> 
+			<row A="16097500" B="HLAH1"/> 
+			<row A="16241600" B="MNWH1"/> 
+			<row A="16211600" B="MKHH1"/> 
+			<row A="16284200" B="WESH1"/> 
+			<row A="16414200" B="KKGH1"/> 
+			<row A="16614000" B="WHRH1"/> 
+			<row A="16759600" B="WAAH1"/> 
+			<row A="16226400" B="NHSH1"/> 
+			<row A="16618000" B="KKLH1"/> 
+			<row A="16019000" B="WIEH1"/> 
+			<row A="16552800" B="WMSH1"/> 
+			<row A="16068000" B="WEBH1"/> 
+			<row A="16400000" B="HLWH1"/> 
+			<row A="16301050" B="PNSH1"/> 
+			<row A="16296500" B="KNAH1"/> 
+			<row A="16249000" B="WLSH1"/> 
+			<row A="16294900" B="WKNH1"/> 
+			<row A="16060000" B="WSFH1"/> 
+			<row A="16587000" B="HPOH1"/> 
+			<row A="16010000" B="KWKH1"/> 
+			<row A="16294100" B="WHSH1"/> 
+			<row A="16208000" B="KSFH1"/> 
+			<row A="16210200" B="KOSH1"/> 
+			<row A="16108000" B="WNIH1"/> 
+			<row A="16103000" B="HLEH1"/> 
+			<row A="16717000" B="NLIH1"/> 
+			<row A="AEPH1" B="AEPH1"/> 
+			<row A="APHH1" B="APHH1"/> 
+			<row A="ELUH1" B="ELUH1"/> 
+			<row A="ELUH1" B="ELUH1"/> 
+			<row A="HNRH1" B="HNRH1"/> 
+			<row A="HUNH1" B="HUNH1"/> 
+			<row A="KLWH1" B="KLWH1"/> 
+			<row A="KRSH1" B="KRSH1"/> 
+			<row A="MKUH1" B="MKUH1"/> 
+			<row A="MKLH1" B="MKLH1"/> 
+			<row A="OKNH1" B="OKNH1"/> 
+			<row A="KWKH1" B="KWKH1"/> 
+			<row A="KLKH1" B="KLKH1"/> 
+			<row A="WLRH1" B="WLRH1"/> 
+			<row A="WTRH1" B="WTRH1"/> 
+            </table>
+        </parameter>
+	</group>
+</parameters>

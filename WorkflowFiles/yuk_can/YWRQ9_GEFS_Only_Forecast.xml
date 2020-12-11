@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Yuk_Can_PreProcessing_HEFS_GEFS_Only_Forecast</workflowId>
+	</activity>
+        <activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>YWRQ9_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1980' end='2002'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>        
+<!--    Produces 10-25-50-75-90 percentile exceedances  -->
+	<activity>
+		<runIndependent>true</runIndependent>
+		<workflowId>Yuk_Can_HEFS_Stats</workflowId>
+	</activity>     
+<!--        <activity>
+                <runIndependent>true</runIndependent>
+		<workflowId>Anch_ENSPOST_Forecast</workflowId>
+        </activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<workflowId>Anch_ESPADP_InputGenerator_HEFS</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<workflowId>Anch_CSV_HEFS_Export</workflowId>
+	</activity> -->
+</workflow>

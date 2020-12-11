@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MCDSPIL0_QIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_MCDSPILL_MCDSPIL0_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>MCDSPIL0</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MCDSPIL0_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NOMSNG_MCDSPILL_MCDSPIL0_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>MCDSPIL0</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MCDSPIL0_Interpolate">
+		<interpolationSerial>
+			<linear>
+				<inputVariable>
+					<variableId>MCDSPIL0_QIN_6</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MCDSPIL0_SQIN_6</variableId>
+				</outputVariable>
+			</linear>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="MCDSPIL0_Extrapolate">
+		<interpolationSerial>
+			<extrapolateExponential>
+				<inputVariable>
+					<variableId>MCDSPIL0_SQIN_6</variableId>
+				</inputVariable>
+				<extrapolateDirection>both</extrapolateDirection>
+				<baseValue>0.0</baseValue>
+				<recessionConstant>1.0</recessionConstant>
+				<outputVariable>
+					<variableId>MCDSPIL0_SQIN_6</variableId>
+				</outputVariable>
+			</extrapolateExponential>
+		</interpolationSerial>
+	</transformation>
+	<transformation id="MCDSPIL0_Default">
+		<interpolationSerial>
+			<default>
+				<inputVariable>
+					<variableId>MCDSPIL0_SQIN_6</variableId>
+				</inputVariable>
+				<defaultValue>0.00</defaultValue>
+				<outputVariable>
+					<variableId>MCDSPIL0_SQIN_6</variableId>
+				</outputVariable>
+			</default>
+		</interpolationSerial>
+	</transformation>
+</transformationModule>

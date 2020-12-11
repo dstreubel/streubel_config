@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+	<general>
+		<description>LAGK Operation TALA2</description>
+		<piVersion>1.5</piVersion>		
+		<rootDir>%TEMP_DIR%</rootDir>
+		<workDir>%ROOT_DIR%/work</workDir>
+		<exportDir>%ROOT_DIR%/input</exportDir>
+		<exportDataSetDir>%ROOT_DIR%</exportDataSetDir>
+		<exportIdMap>IdExportLAGK</exportIdMap>
+		<importDir>%ROOT_DIR%/output</importDir>
+		<importIdMap>IdImportLAGK</importIdMap>
+		<dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+		<dumpDir>%ROOT_DIR%</dumpDir>
+		<diagnosticFile>%ROOT_DIR%/output/diag.fi</diagnosticFile>
+		<missVal>-999</missVal>
+		<modelTimeStep unit="hour" multiplier="6"/>
+	</general>
+	<activities>
+		<startUpActivities>
+			<makeDir>
+				<dir>%TEMP_DIR%/work</dir>
+			</makeDir>
+		</startUpActivities>
+		<exportActivities>
+			<exportStateActivity>
+				<moduleInstanceId>LAGK_RBYA2_TALA2_UpdateStates</moduleInstanceId>
+				<stateExportDir>%ROOT_DIR%/states</stateExportDir>
+				<stateConfigFile>%ROOT_DIR%/states/states.fi</stateConfigFile>
+				<stateLocations type="file">
+					<stateLocation>
+						<readLocation>statesI.txt</readLocation>
+						<writeLocation>statesO.txt</writeLocation>
+					</stateLocation>
+					<stateLocation>
+						<readLocation>params_previous.xml</readLocation>
+						<writeLocation>params_current.xml</writeLocation>
+					</stateLocation>
+				</stateLocations>
+				<loopTimeStep id="12Z"/>
+			</exportStateActivity>
+			<exportTimeSeriesActivity>
+				<exportFile>inputs.fi</exportFile>
+				<exportBinFile>true</exportBinFile>				
+				<timeSeriesSets>
+					<timeSeriesSet>
+						<moduleInstanceId>MERGETS_TALA2_TALA2MRG_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>SQIN</parameterId>
+						<locationId>TALA2MRG</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<relativeViewPeriod unit="hour" end="0"/>
+						<readWriteMode>read only</readWriteMode>
+					</timeSeriesSet>
+				</timeSeriesSets>
+				<checkMissing>true</checkMissing>
+			</exportTimeSeriesActivity>
+			<exportParameterActivity>
+				<fileName>params.xml</fileName>
+				<moduleInstanceId>LAGK_RBYA2_TALA2_UpdateStates</moduleInstanceId>
+			</exportParameterActivity>
+			<exportRunFileActivity>
+                                <exportFile>%ROOT_DIR%/run_info.fi</exportFile>
+                                <properties>
+				        <string key="model" value="ohd.hseb.ohdmodels.lagkj.LagKJModelDriver"/>										
+                                        <string key="legacyLocation" value="$OHDBINDIR$"/>															
+                                        <int key="printDebugInfo" value="0"/>
+                                        <string key="outputLocationId" value="TALA2RTD"/>
+                                </properties>
+                        </exportRunFileActivity>
+		</exportActivities>
+		<executeActivities>
+			<executeActivity>
+				<command>
+					<className>ohd.hseb.ohdfewsadapter.OHDFewsAdapter</className>
+					<binDir>$OHDBINDIR$</binDir>
+				</command>
+				<arguments>
+					<argument>%ROOT_DIR%/run_info.fi</argument>
+				</arguments>
+				<timeOut>300000</timeOut>
+			</executeActivity>
+		</executeActivities>
+		<importActivities>
+			<importStateActivity>
+				<stateConfigFile>%ROOT_DIR%/states/states.fi</stateConfigFile>
+				<synchLevel>20</synchLevel>
+			</importStateActivity>
+			<importTimeSeriesActivity>
+				<importFile>outputs.fi</importFile>
+				<timeSeriesSets>
+					<timeSeriesSet>
+						<moduleInstanceId>LAGK_RBYA2_TALA2_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>SQIN</parameterId>
+						<locationId>TALA2RTD</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>add originals</readWriteMode>
+					</timeSeriesSet>
+				</timeSeriesSets>
+			</importTimeSeriesActivity>
+		</importActivities>
+	</activities>
+</generalAdapterRun>

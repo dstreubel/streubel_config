@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interpolationSets version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/interpolationSets.xsd">
+    
+    <!-- Interpolation is done via three interpolation sets, one for each data type.-->
+    
+    <!-- FMAP interpolated to the USA -->
+    <interpolationSet interpolationId="PrecipV2">
+        <spatialInterpolation>
+            <interpolationOption>closestdistance</interpolationOption>
+            <interpolationType>seriesgeneration</interpolationType>
+        </spatialInterpolation>
+        <timeSeriesInputSet>
+            <moduleInstanceId>ImportMEFP_CFSv2_FMAP</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>FMAP</parameterId>
+            <locationId>HEFS_CFSv2</locationId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6" />
+            <relativeViewPeriod end="6840" endOverrulable="true" start="0" startOverrulable="true" unit="hour"/>
+            <readWriteMode>read complete forecast</readWriteMode>
+        </timeSeriesInputSet>
+        <timeSeriesOutputSet>
+            <moduleInstanceId>MEFP_CFSv2_Interpolate_USA</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>FMAP</parameterId>
+            <locationId>HEFS_CFSv2_USA</locationId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod end="6840" endOverrulable="true" start="0" startOverrulable="true" unit="hour"/>
+            <readWriteMode>add originals</readWriteMode>
+            <synchLevel>6</synchLevel>
+        </timeSeriesOutputSet>
+    </interpolationSet>
+    
+    <!-- TFMX interpolated to the USA -->
+    <interpolationSet interpolationId="TmaxV2">
+        <spatialInterpolation>
+            <interpolationOption>closestdistance</interpolationOption>
+            <interpolationType>seriesgeneration</interpolationType>
+        </spatialInterpolation>
+        <timeSeriesInputSet>
+            <moduleInstanceId>ImportMEFP_CFSv2_TMAX</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>TFMX</parameterId>
+            <locationId>HEFS_CFSv2</locationId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod end="6840" endOverrulable="true" start="0" startOverrulable="true" unit="hour"/>
+            <readWriteMode>read complete forecast</readWriteMode>
+        </timeSeriesInputSet>
+        <timeSeriesOutputSet>
+            <moduleInstanceId>MEFP_CFSv2_Interpolate_USA</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>TFMX</parameterId>
+            <locationId>HEFS_CFSv2_USA</locationId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod end="6840" endOverrulable="true" start="0" startOverrulable="true" unit="hour"/>
+            <readWriteMode>add originals</readWriteMode>
+            <synchLevel>6</synchLevel>
+        </timeSeriesOutputSet>
+    </interpolationSet>
+    
+    <!-- TFMN interpolated to the USA -->
+    <interpolationSet interpolationId="TminV2">
+        <spatialInterpolation>
+            <interpolationOption>closestdistance</interpolationOption>
+            <interpolationType>seriesgeneration</interpolationType>
+        </spatialInterpolation>
+        <timeSeriesInputSet>
+            <moduleInstanceId>ImportMEFP_CFSv2_TMIN</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>TFMN</parameterId>
+            <locationId>HEFS_CFSv2</locationId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod end="6840" endOverrulable="true" start="0" startOverrulable="true" unit="hour"/>
+            <readWriteMode>read complete forecast</readWriteMode>
+        </timeSeriesInputSet>
+        <timeSeriesOutputSet>
+            <moduleInstanceId>MEFP_CFSv2_Interpolate_USA</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>TFMN</parameterId>
+            <locationId>HEFS_CFSv2_USA</locationId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod end="6840" endOverrulable="true" start="0" startOverrulable="true" unit="hour"/>
+            <readWriteMode>add originals</readWriteMode>
+            <synchLevel>6</synchLevel>
+        </timeSeriesOutputSet>
+    </interpolationSet>
+    
+</interpolationSets>

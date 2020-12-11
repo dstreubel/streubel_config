@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Copper_PreProcessing_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>GAKA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>GPOA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>GRSA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>GULA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>TAZA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>KLUA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>TONA2_Flow_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<workflowId>POWA2_Flow_Forecast</workflowId>
+	</activity> 
+	<activity>
+		<runIndependent>true</runIndependent>
+		<workflowId>EYAA2_Flow_Forecast</workflowId>
+	</activity>	
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Copper_Export</workflowId>
+	</activity>
+</workflow>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationCoefficientSets version="1.0" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationCoefficientSets.xsd">
+
+    <coefficientSet id="TAMN">
+        <user>
+            <simple>
+                <coefficient id="COEFF_12Z_START" value="0.0"/>
+                <coefficient id="COEFF_18Z"       value="9.652"/>
+                <coefficient id="COEFF_0Z"        value="-6.432"/>
+                <coefficient id="COEFF_6Z"        value="0.480"/>
+                <coefficient id="COEFF_12Z_END"   value="0.0"/>
+                <coefficient id="DIVIDER"         value="3.70"/>
+            </simple>
+        </user>
+    </coefficientSet>
+    <coefficientSet id="TAMX">
+        <user>
+            <simple>
+                <coefficient id="COEFF_12Z_START" value="0.0"/>
+                <coefficient id="COEFF_18Z"       value="-0.670"/>
+                <coefficient id="COEFF_0Z"        value="10.72"/>
+                <coefficient id="COEFF_6Z"        value="-0.800"/>
+                <coefficient id="COEFF_12Z_END"   value="0.0"/>
+                <coefficient id="DIVIDER"         value="9.25"/>
+            </simple>
+        </user>
+    </coefficientSet>
+</transformationCoefficientSets>

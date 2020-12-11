@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Upyukon_PreProcessing_HEFS_GEFS_Only_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>YEAA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1981' end='2002'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity> 
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>CIRA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1981' end='2002'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>YFYA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1981' end='2002'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity> 
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>VENA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1981' end='2002'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+        <activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BVRA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1981' end='2002'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity> 
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>YRBA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1981' end='2002'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>         
+    	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>TALA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1981' end='1998'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+          
+<!--    Produces 10-25-50-75-90 percentile exceedances  -->
+	<!--activity>
+                <runIndependent>false</runIndependent>
+		<workflowId>Upyukon_ENSPOST_Forecast</workflowId>
+        </activity-->
+	<!--activity>
+                <runIndependent>false</runIndependent>
+		<workflowId>Upyukon_HEFS_Stats</workflowId>
+        </activity-->
+
+</workflow>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+<!--basin definition parameters-->
+    <parameter id="ELEV">
+      <dblValue>873.0</dblValue>
+    </parameter>   
+    <parameter id="ALAT">
+      <dblValue>60.7</dblValue>
+    </parameter>
+    <parameter id="TAELEV">
+      <dblValue>873.0</dblValue>
+    </parameter>
+    <!--major parameters-->   
+    <parameter id="PXADJ">
+      <dblValue>1.3</dblValue>
+    </parameter>    
+    <parameter id="SCF">
+      <dblValue>0.6</dblValue>
+    </parameter>
+    <parameter id="MFMAX">
+      <dblValue>1.0</dblValue>
+    </parameter>
+    <parameter id="MFMIN">
+      <dblValue>0.2</dblValue>
+    </parameter>
+    <parameter id="UADJ">
+      <dblValue>0.15</dblValue>
+    </parameter>
+    <parameter id="SI">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <!--minor parameters-->
+    <parameter id="NMF">
+      <dblValue>0.15</dblValue>
+    </parameter>
+    <parameter id="TIPM">
+      <dblValue>0.1</dblValue>
+    </parameter>
+    <parameter id="MBASE">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="PXTEMP">
+      <dblValue>-5.0</dblValue>
+    </parameter>   
+    <parameter id="PLWHC">
+      <dblValue>0.1</dblValue>
+    </parameter>
+    <parameter id="DAYGM">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="AREA_DEPLETION_CURVE">
+      <table>
+        <columnTypes A="double"/>
+        <row A="0.05"/>
+        <row A="0.28"/>
+        <row A="0.40"/>
+        <row A="0.45"/>
+        <row A="0.48"/>
+        <row A="0.50"/>
+        <row A="0.52"/>
+        <row A="0.55"/>
+        <row A="0.60"/>
+        <row A="0.72"/>
+        <row A="1.0"/>
+      </table>
+    </parameter>   
+    <parameter id="AREA_ELEV_CURVE(METR)">
+      <table>
+        <columnTypes A="double" B="double"/>
+        <row A="500" B="0.0"/>
+        <row A="600" B="0.1"/>
+        <row A="1100" B="0.9"/>
+        <row A="1260" B="1.0"/>
+      </table>
+    </parameter>
+    <!--snow cover conditions-->
+    <parameter id="WETOL[0., 1.0]">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="TALMAX">
+      <dblValue>1.0</dblValue>
+    </parameter>   
+    <parameter id="TALMIN">
+      <dblValue>0.2</dblValue>
+    </parameter>
+    <parameter id="MV">
+      <intValue>0</intValue>
+    </parameter>
+    <parameter id="SCTOL[0., 1.0]">
+      <dblValue>0.0</dblValue>
+    </parameter>  
+    <!--inputs/outputs-->
+    <parameter id="SASC_OUTPUT_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>    
+    <parameter id="SWE_OUTPUT_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="SNSG_OUTPUT_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>   
+    <parameter id="RAIN_SNOW_ELEV_INPUT_OPTION">
+      <boolValue>true</boolValue>
+    </parameter>
+  </group>
+</parameters>

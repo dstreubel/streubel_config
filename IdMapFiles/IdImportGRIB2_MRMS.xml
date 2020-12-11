@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+	
+	<map internalLocation="HI_MRMS" internalParameter="QPE" externalLocation="none" externalQualifier="0.0" externalEnsembleMemberIndex="0" externalParameter="GaugeCorrQPE01H_altitude_above_msl"/>
+	<map internalLocation="HI_MRMS" internalParameter="QPE" externalLocation="none" externalQualifier="0.0" externalEnsembleMemberIndex="0" externalParameter="PrecipRate_altitude_above_msl"/>
+</idMap>

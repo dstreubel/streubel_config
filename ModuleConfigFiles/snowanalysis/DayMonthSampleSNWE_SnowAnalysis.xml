@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>Obs_snowcourses_1m</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MergeSNWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snowcourses</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="month" multiplier="1"/>
+<!--			<relativeViewPeriod unit="day" start="-20000" startOverrulable="true" end="0"/>-->
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Obs_snowcourses_sampledDM_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>DayMonthSampleSNWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snowcourses</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>	
+	<transformation id="Obs_snowcourses_sampleDM">
+		<sample>
+			<dayMonthSample>
+				<inputVariable>
+					<variableId>Obs_snowcourses_1m</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>Obs_snowcourses_sampledDM_ne</variableId>
+				</outputVariable>
+			</dayMonthSample>
+		</sample>	
+	</transformation>
+
+</transformationModule>

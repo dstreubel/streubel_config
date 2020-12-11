@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+   <general>
+      <description>SHIA2 HEFS RAW SQIN Hindcast Export</description>
+      <piVersion>1.5</piVersion>
+      <rootDir>%REGION_HOME%/Export</rootDir>
+      <workDir>%ROOT_DIR%/Export</workDir>
+      <exportDir>%REGION_HOME%/Export/hefs</exportDir>
+      <exportDataSetDir>REGION_HOME%/Export</exportDataSetDir>
+      <exportIdMap>IdExportLAGK</exportIdMap>
+      <importDir>%ROOT_DIR%/output</importDir>
+      <importIdMap>IdImportLAGK</importIdMap>
+      <dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+      <dumpDir>%ROOT_DIR%</dumpDir>
+      <diagnosticFile>%ROOT_DIR%/output/diag.fi</diagnosticFile>
+      <missVal>-999</missVal>
+      <modelTimeStep unit="hour" multiplier="6"/>
+   </general>
+   <activities>
+      <exportActivities>
+         <exportTimeSeriesActivity>
+
+            <!--exportFile>%TIME0%_SHIA2_RAW_SQIN.fi</exportFile>
+            <exportBinFile>true</exportBinFile-->
+
+            <exportFile>%TIME0%_SHIA2_RAW_SQIN.xml</exportFile>
+            <exportBinFile>false</exportBinFile>
+
+            <timeSeriesSets>
+
+<!-- MEPF Streamflow Export -->
+
+ 
+
+               <timeSeriesSet>
+                  <moduleInstanceId>ADDSUB_SHIA2_SHIA2UPR_Forecast</moduleInstanceId>
+                  <valueType>scalar</valueType>
+                  <parameterId>SQIN</parameterId>
+                  <locationId>SHIA2</locationId>
+                  <timeSeriesType>simulated forecasting</timeSeriesType>
+                  <timeStep unit="hour" multiplier="6"/>
+                  <relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="7920" endOverrulable="false"/>
+                  <readWriteMode>read only</readWriteMode>
+                  <ensembleId>MEFP</ensembleId>
+                  <ensembleMemberIndexRange start='1971' end='2005'/>
+               </timeSeriesSet>
+
+           </timeSeriesSets>
+
+
+         </exportTimeSeriesActivity>
+      </exportActivities>
+
+      <executeActivities>
+      </executeActivities>
+
+      <importActivities>
+      </importActivities>
+
+   </activities>
+</generalAdapterRun>

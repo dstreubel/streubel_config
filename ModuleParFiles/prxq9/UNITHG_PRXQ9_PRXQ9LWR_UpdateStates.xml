@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <modifierType>BASEFLOW</modifierType>
+  <modifierType>UNITHG</modifierType>
+  <group id= "default">
+    <parameter id="UHG_DURATION">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="UNIT">
+      <stringValue>ENGLISH</stringValue>
+    </parameter>
+    <parameter id="UHG_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="DRAINAGE_AREA">
+      <dblValue>5301.1</dblValue>
+    </parameter>
+    <parameter id="CONSTANT_BASE_FLOW">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="UHG_ORDINATES">
+      <table>
+        <columnTypes A="double"/>
+        <row A="3244.0"/>
+        <row A="8110.0"/>
+        <row A="16219.0"/>
+        <row A="25951.0"/>
+        <row A="34872.0"/>
+        <row A="43792.0"/>
+        <row A="50280.0"/>
+        <row A="55146.0"/>
+        <row A="60823.0"/>
+        <row A="58390.0"/>
+        <row A="51902.0"/>
+        <row A="42982.0"/>
+        <row A="36007.0"/>
+        <row A="28708.0"/>
+        <row A="21896.0"/>
+        <row A="14597.0"/>
+        <row A="9083.0"/>
+        <row A="5839.0"/>
+        <row A="2919.0"/>
+        <row A="1622.0"/>
+        <row A="973.0"/>
+        <row A="487.0"/>
+        <row A="162.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+      </table>
+    </parameter>
+  </group>
+</parameters>

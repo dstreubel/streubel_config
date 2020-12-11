@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<performanceIndicatorSets version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/performanceIndicatorSets.xsd">
+	<performanceIndicatorSet performanceIndicatorId="LeadTime_History">
+		<inputVariable variableId="observed">
+			<timeSeriesSet>
+				<moduleInstanceId>STAGEQ_SRYA2_SRYA2OB6_Forecast</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>QIN</parameterId>
+				<locationId>SRYA2</locationId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="6"/>
+				<relativeViewPeriod unit="hour" start="-24" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</inputVariable>
+		<inputVariable variableId="simulated">
+			<timeSeriesSet>
+				<moduleInstanceId>ADDSUB_SRYA2_SRYUPR_Forecast</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>SQIN</parameterId>
+				<locationId>SRYA2</locationId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="6"/>
+				<!--<timeStep unit="nonequidistant"/>-->
+				<relativeViewPeriod unit="hour" start="-24" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</inputVariable>
+		
+		
+		<forecastSelectionPeriod unit="hour" start="-24" end="0"/>
+				
+		<!--forecastSelectionPeriod (FSP) notes below... -->
+		<!--The FSP is required when input variables use forecasting timeSeriesTypes (i.e. external/simulated forecasting)-->
+		<!--Determines what forecast to grab from the LDS for the input variables that are using forecasting timeSeriesType-->
+		<!--If multiple forecast timeseries are selected, calculations are performed on every forecast timeseries within the RVP when data is available-->
+		<!--Hint: Use debug mode to view Log and confirm what forecast TimeSeries are selected for the forecast input variable-->
+		
+		<!--*******************************************************************************************************************-->
+		<thresholdTimingIndicator indicatorType="bias" calculatedVariableId="simulated" observedVariableId="observed"></thresholdTimingIndicator>
+
+		<!--<modulePerformanceIndicator indicatorType="meanabsoluteerror" calculatedVariableId="simulated" observedVariableId="observed" outputVariableId="MAE_Q"></modulePerformanceIndicator>
+		<modulePerformanceIndicator indicatorType="bias" calculatedVariableId="simulated" observedVariableId="observed" outputVariableId="Bias_Q"></modulePerformanceIndicator>
+		<modulePerformanceIndicator indicatorType="meansquareerror" calculatedVariableId="simulated" observedVariableId="observed" outputVariableId="MSE_Q"></modulePerformanceIndicator>
+		<modulePerformanceIndicator indicatorType="nashsutcliffeefficiency" calculatedVariableId="simulated" observedVariableId="observed" outputVariableId="NS_Q"></modulePerformanceIndicator>-->
+				<!--<modulePerformanceIndicator indicatorType="PeakMSE" calculatedVariableId="simulated" observedVariableId="observed" outputVariableId="PeakMSE_Q"></modulePerformanceIndicator>-->
+		
+		<!--Explanation of how module works: -->
+		<!--If RVP is set to -72 to 0, the analysis window is the past 72 hours.-->
+		<!--If the FSP is set to -72 to -6, all external forecast in the past 72 hrs in the LDS are used for the anaysis.-->
+		<!--If leadTime is set to 12 hours, then the 6-12 hr period of each external forecast is compared to the 6-12 hr observation for the cooresponding period-->
+		<!--If data is not available for a forecast, the calculation for that period is skipped and indicator moves on to the next forecast period-->
+		<!--*******************************************************************************************************************-->
+
+		<outputVariable variableId="MSE_Q">
+			<timeSeriesSet>
+				<moduleInstanceId>Perf_Indicator</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>bias</parameterId>	
+				<!--<qualifierId>bias.FMAPX.12</qualifierId>-->
+				<locationId>SRYA2</locationId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+				<relativeViewPeriod unit="hour" start="0" end="0"/>
+				<readWriteMode>add originals</readWriteMode>
+				<synchLevel>8</synchLevel>
+				<expiryTime unit="year"/>
+			</timeSeriesSet>
+		</outputVariable>
+		
+	<!--	<outputVariable variableId="MAE_Q">
+			<timeSeriesSet>
+				<moduleInstanceId>Perf_Indicator</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>MAE</parameterId>
+				<qualifierId>MAE.FMAPX.12</qualifierId>
+				<locationId>SRYA2</locationId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+		      	<relativeViewPeriod unit="hour" start="0" end="0"/>
+				<readWriteMode>add originals</readWriteMode>
+				<synchLevel>8</synchLevel>
+				<expiryTime unit="year"/>
+			</timeSeriesSet>
+		</outputVariable>
+		<outputVariable variableId="Bias_Q">
+			<timeSeriesSet>
+				<moduleInstanceId>Perf_Indicator</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>bias</parameterId>				
+				<qualifierId>bias.FMAPX.12</qualifierId>
+				<locationId>SRYA2</locationId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+				<relativeViewPeriod unit="hour" start="0" end="0"/>
+				<readWriteMode>add originals</readWriteMode>
+				<synchLevel>8</synchLevel>
+				<expiryTime unit="year"/>
+			</timeSeriesSet>
+		</outputVariable>
+		<outputVariable variableId="MSE_Q">
+			<timeSeriesSet>
+				<moduleInstanceId>Perf_Indicator</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>MSE</parameterId>	
+				<!-\-<qualifierId>bias.FMAPX.12</qualifierId>-\->
+				<locationId>SRYA2</locationId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+				<relativeViewPeriod unit="hour" start="0" end="0"/>
+				<readWriteMode>add originals</readWriteMode>
+				<synchLevel>8</synchLevel>
+				<expiryTime unit="year"/>
+			</timeSeriesSet>
+		</outputVariable>
+		<outputVariable variableId="NS_Q">
+			<timeSeriesSet>
+				<moduleInstanceId>Perf_Indicator</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>nashsutcliffeefficiency</parameterId>	
+				<!-\-<qualifierId>bias.FMAPX.12</qualifierId>-\->
+				<locationId>SRYA2</locationId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+				<relativeViewPeriod unit="hour" start="0" end="0"/>
+				<readWriteMode>add originals</readWriteMode>
+				<synchLevel>8</synchLevel>
+				<expiryTime unit="year"/>
+			</timeSeriesSet>
+		</outputVariable>
+<!-\-		<outputVariable variableId="PeakMSE_Q">
+			<timeSeriesSet>
+				<moduleInstanceId>Perf_Indicator</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>PeakMSE</parameterId>	
+				<!-\-<qualifierId>bias.FMAPX.12</qualifierId>-\->
+				<locationId>SRYA2</locationId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+				<relativeViewPeriod unit="hour" start="0" end="0"/>
+				<readWriteMode>add originals</readWriteMode>
+				<synchLevel>8</synchLevel>
+				<expiryTime unit="year"/>
+			</timeSeriesSet>
+		</outputVariable>	-\->-->	
+	</performanceIndicatorSet>
+</performanceIndicatorSets>
+
+	
+	

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+	    <properties>
+	    	<string key="FGROUP_ID" value="Kenai"/>
+	    	<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+        </properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Anch"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Bradley"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Copper"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Fortym"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Koyukuk"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Matsu"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Midyukon"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Northsl"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Porcupine"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Southeast"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="S_West"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Tanana"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Upyukon"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP_ID" value="Yuk_Can"/>
+			<string key="SET_OF_MODULES_PRODUCING_QINE" value="QINE"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>APRFC_NFIE_Fcst_Export</moduleInstanceId>
+	</activity>
+	<activity>
+	     <moduleInstanceId>APRFC_NFIE_Fcst_ExportHawaii</moduleInstanceId>
+	</activity>
+
+</workflow>

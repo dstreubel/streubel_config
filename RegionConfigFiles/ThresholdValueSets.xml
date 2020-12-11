@@ -1,0 +1,3657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thresholdValueSets xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/thresholdValueSets.xsd">
+	<!--Thresholds in CSV  thresholds.csv  -->
+	<thresholdValueSet id="thresholds">
+		<unit>FT</unit>
+		<!--levelThresholdValue>
+			<levelThresholdId>GAGEMIN</levelThresholdId>
+			<valueFunction>@GAGEMIN@</valueFunction>
+		</levelThresholdValue-->
+		<levelThresholdValue>
+			<levelThresholdId>ACTION</levelThresholdId>
+			<valueFunction>@ACTION@</valueFunction>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId>
+			<valueFunction>@FS@</valueFunction>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MOD</levelThresholdId>
+			<valueFunction>@MOD@</valueFunction>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<valueFunction>@MAJOR@</valueFunction>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>RECORD</levelThresholdId>
+			<valueFunction>@RECORD@</valueFunction>
+		</levelThresholdValue>
+		<!--levelThresholdValue>
+			<levelThresholdId>GAGELIMIT</levelThresholdId>
+			<valueFunction>@GAGELIMIT@</valueFunction>
+		</levelThresholdValue-->
+		<timeSeriesSet>
+			<moduleInstanceSetId>SSTG</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceSetId>QINE</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceSetId>QINE</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>QPF</ensembleId>
+			<ensembleMemberIndex>0</ensembleMemberIndex>
+		</timeSeriesSet>
+		<stageDischargeConversion>
+			<dischargeParameterId>QINE</dischargeParameterId>
+		</stageDischargeConversion>
+	</thresholdValueSet>
+	
+		
+		
+		
+		
+		
+	<thresholdValueSet id="ALAA2_FrzLvl" name="ALAA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3350.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1160.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>ALAA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="ALKA2_FrzLvl" name="ALKA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4170.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1920.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>LG_elev</levelThresholdId> 
+			<value> 2850.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 5060.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>ALKA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="ALEA2_FrzLvl" name="ALEA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4170.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1920.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>LG_elev</levelThresholdId> 
+			<value> 2850.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 5060.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>ALEA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="ALLA2_FrzLvl" name="ALLA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 990.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>ALLA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="ALSQ9_FrzLvl" name="ALSQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4630.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2440.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 6330.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>ALSQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	<thresholdValueSet id="ANKA2_FrzLvl" name="ANKA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 1607.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 570.0</value>
+		</levelThresholdValue>				
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>ANKA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="APBA2_FrzLvl" name="APBA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 1290.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 490.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>APBA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="APTA2_FrzLvl" name="APTA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 1370.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 710.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>APTA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+
+	
+	<thresholdValueSet id="BGDA2_FrzLvl" name="BGDA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 6620.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4330.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2040.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>BGDA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="BRCA2_FrzLvl" name="BRCA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 920.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 920.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>BRCA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="BRDA2_FrzLvl" name="BRDA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 3350.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3210.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1370.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>BRDA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="BRMA2_FrzLvl" name="BRMA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 4190.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>NG_elev</levelThresholdId> 
+			<value> 3670.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>BRMA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="BRTA2_FrzLvl" name="BRTA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 9210.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2000.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>MID_elev</levelThresholdId> 
+			<value> 5120.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>BRTA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="BRUA2_FrzLvl" name="BRUA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 3670.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>NG_elev</levelThresholdId> 
+			<value> 2800.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>BRUA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="BTTA2_FrzLvl" name="BTTA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3050.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1280.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>BTTA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="BVRA2_FrzLvl" name="BVRA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 1080.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>BVRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+
+	<thresholdValueSet id="CHAA2_FrzLvl" name="Chatanika_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 1460.0</value>
+		</levelThresholdValue>			
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CHAA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+
+	<thresholdValueSet id="CHFA2_FrzLvl" name="CHFA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 580.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CHFA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	
+	<thresholdValueSet id="CHRA2_FrzLvl" name="CHR_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 620.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CHRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	
+	<thresholdValueSet id="CJXA2_FrzLvl" name="CJXA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5456.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 1548.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 593.830</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CJXA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="CIRA2_FrzLvl" name="CIRA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 2510.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CIRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	
+	
+
+	
+
+	<thresholdValueSet id="CLNA2_FrzLvl" name="CLNA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2920.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1420.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CLNA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+
+
+	<thresholdValueSet id="CRHA2_FrzLvl" name="CRHA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2320.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1230.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CRHA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="CRNA2_FrzLvl" name="CRNA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 5540.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2370.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 7990.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LG_elev</levelThresholdId> 
+			<value> 5470.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CRNA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="CRSA2_FrzLvl" name="CRSA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2590.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1590.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CRSA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="CRUA2_FrzLvl" name="CRUA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4020.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 640.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>MID_elev</levelThresholdId> 
+			<value> 1730.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CRUA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="CSRA2_FrzLvl" name="CSRA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3560.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1870.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CSRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="CTSA2_FrzLvl" name="CTSA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2970.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1110.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>CTSA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="DBRA2_FrzLvl" name="DBRA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3930.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2840.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5780.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>DBRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	<thresholdValueSet id="DEZQ9_FrzLvl" name="DEZQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4920.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2250.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>DEZQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	
+	<thresholdValueSet id="ENNA2_FrzLvl" name="ENNA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4030.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1540.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>ENNA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	
+	<thresholdValueSet id="ERBA2_FrzLvl" name="EagleRiver_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 4990.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4190.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1740.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>ERBA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="EYAA2_FrzLvl" name="Eyak_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 234.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>EYAA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	
+
+	
+	<thresholdValueSet id="FMKA2_FrzLvl" name="FMKA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3290.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2690.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>FMKA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="FMMA2_FrzLvl" name="FMMA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3490.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2490.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>FMMA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	
+	<thresholdValueSet id="FMWA2_FrzLvl" name="FMWA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3190.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2460.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>FMWA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="GAKA2_FrzLvl" name="Gakona_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5510.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3730.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2430.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>GAKA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="GBDA2_FrzLvl" name="GBDA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3820.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2440.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>GBDA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="GCSA2_FrzLvl" name="GCSA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3990.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2340.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>GCSA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="GPOA2_FrzLvl" name="Gakona_FrzLvl">
+	<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3650.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2740.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>GPOA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="GRSA2_FrzLvl" name="GRSA2_FrzLvl">
+	<unit>FT</unit>		
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3650.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2740.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>GRSA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="GULA2_FrzLvl" name="Gulkana_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 1930.0</value>
+		</levelThresholdValue>			
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>GULA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+
+
+	
+	<thresholdValueSet id="HNRA2_FrzLvl" name="HNRA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4010.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2590.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5970.0</value>
+		</levelThresholdValue>			
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>HNRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="ILRA2_FrzLvl" name="Iliamna_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2660.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1090.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>ILRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="ISKQ2_FrzLvl" name="ISKQ2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4930.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2630.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 4690.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>ISKQ2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="JDCA2_FrzLvl" name="JDCA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 680.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>JDCA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="JIRA2_FrzLvl" name="JIRA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2870.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1500.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>JIRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="JONA2_FrzLvl" name="JONA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3310.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1400.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>JONA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+
+	
+	<thresholdValueSet id="KIYA2_FrzLvl" name="KIYA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3530.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1130.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 3980.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>KIYA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	
+	<thresholdValueSet id="KLCA2_FrzLvl" name="KLCA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 1270.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 590.0</value>
+		</levelThresholdValue>				
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>KLCA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="KLNQ9_FrzLvl" name="KLNQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4860.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1980.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>KLNQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="KLUA2_FrzLvl" name="Klutina_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 4790.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4160.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2200.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>KLUA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="KNFA2_FrzLvl" name="KNFA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3500.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1470.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>KNFA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="KNRA2_FrzLvl" name="KNRA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2610.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1040.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>KNRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="KRHA2_FrzLvl" name="KRHA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 850.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>KRHA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="KRKA2_FrzLvl" name="KRKA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+		<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 270.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>KRKA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="KUPA2_FrzLvl" name="KUPA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 1690.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 490.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>KUPA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="LSHA2_FrzLvl" name="LSHA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2980.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 660.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>LSHA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+
+	<thresholdValueSet id="LSUA2_FrzLvl" name="LSUA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4000.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2190.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5410.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>LSUA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="MACA2_FrzLvl" name="MACA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 5140.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 3440.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5500.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MACA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="MATA2_FrzLvl" name="MATA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4590.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2140.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 6590.0</value>
+			</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>LG_elev</levelThresholdId> 
+			<value> 4390.0</value>
+		</levelThresholdValue>	
+		<!--<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MATA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>-->
+		<timeSeriesSet>
+				<moduleInstanceId>MergeMAZX_Forecast</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>MAZX</parameterId>
+				<locationId>MATA2</locationId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="6"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="MCAA2_FrzLvl" name="MCAA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2670.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 700.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MCAA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="MCDA2_FrzLvl" name="MCDA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 760.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MCDA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	
+
+		
+	<thresholdValueSet id="MCGA2_FrzLvl" name="MCGA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3219.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 781.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5715.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MCGA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	
+
+	<thresholdValueSet id="MFKA2_FrzLvl" name="MFKA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3540.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1730.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MFKA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="MHSA2_FrzLvl" name="MHSA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4920.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1030.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MHSA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+
+
+	<thresholdValueSet id="MNDA2_FrzLvl" name="MNDA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>NG_elev</levelThresholdId> 
+			<value> 2400.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 4660.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MNDA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="MONA2_FrzLvl" name="MONA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3640.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1660.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MONA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="MPTA2_FrzLvl" name="MPTA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3330.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 910.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 3890.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MPTA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="MULA2_FrzLvl" name="Mulchatna_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3800.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1490.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>MULA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+
+	
+	<thresholdValueSet id="NEBA2_FrzLvl" name="NEBA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 5560.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2780.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 8390.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>LG_elev</levelThresholdId> 
+			<value> 5850.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>NEBA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="NINA2_FrzLvl" name="NINA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 1510.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 440.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>NINA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+
+	
+	<thresholdValueSet id="NSHA2_FrzLvl" name="NSHA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value>1290.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 500.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>NSHA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="OCRQ9_FrzLvl" name="OCRQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2340.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1080.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>OCRQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="PFYA2_FrzLvl" name="PFYA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 730.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>PFYA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="PHLA2_FrzLvl" name="PHLA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 6000.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>NG_elev</levelThresholdId> 
+			<value> 5290.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>PHLA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="POWA2_FrzLvl" name="PowerCk_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 2864.17</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2257.22</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 895.669</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>POWA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="PRBQ9_FrzLvl" name="PRBQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2010.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1210.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>PRBQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="PRCA2_FrzLvl" name="PRCA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 1520.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>PRCA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="PROQ9_FrzLvl" name="PROQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2790.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1450.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>PROQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="PRXQ9_FrzLvl" name="PRXQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 5460.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2620.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>PRXQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SALA2_FrzLvl" name="SALA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3030.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1410.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SALA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SBFQ2_FrzLvl" name="SBFQ2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4960.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2540.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5750.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SBFQ2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SCKA2_FrzLvl" name="SCKA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 1790.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 670.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SCKA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SFKA2_FrzLvl" name="SFKA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2900.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1120.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SFKA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SGCQ2_FrzLvl" name="SGCQ2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 5090.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 3490.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SGCQ2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SGRA2_FrzLvl" name="SGRA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4590.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2590.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SGRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="SHIA2_FrzLvl" name="ShipCk_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3750.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2170.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SHIA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SHJA2_FrzLvl" name="SHJA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3840.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1450.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SHJA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SIXA2_FrzLvl" name="SIXA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2920.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1020.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SIXA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="SKGA2_FrzLvl" name="SKGA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 5640.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1830.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5740.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SKGA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	<thresholdValueSet id="SKIA2_FrzLvl" name="SKIA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LG_elev</levelThresholdId> 
+			<value> 3320.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>NG_elev</levelThresholdId> 
+			<value> 2540.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 4300.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SKIA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="SKLA2_FrzLvl" name="SKLA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2780.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 460.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SKLA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+
+	<thresholdValueSet id="SLAA2_FrzLvl" name="SLAA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2770.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1700.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SLAA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SNOA2_FrzLvl" name="SNOA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3150.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1050.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 3610.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SNOA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SRFQ9_FrzLvl" name="SRFQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 5000.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2540.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SRFQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="SRMQ9_FrzLvl" name="SRMQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4430.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2400.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SRMQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="SRYA2_FrzLvl" name="Situk_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2357.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 390.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SRYA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	
+	<thresholdValueSet id="STKA2_FrzLvl" name="STKA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4300.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1920.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 4540.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>STKA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="STTQ2_FrzLvl" name="STTQ2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4620.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 3030.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5780.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>STTQ2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="SUCA2_FrzLvl" name="SUCA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3930.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2650.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SUCA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="SUDA2_FrzLvl" name="SUDA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4810.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 3070.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 6660.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>LG_elev</levelThresholdId> 
+			<value> 4480.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SUDA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="SUNA2_FrzLvl" name="SUNA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 1050.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SUNA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="SXRA2_FrzLvl" name="SXRA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3000.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 760.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 280.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>SXRA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="TAFA2_FrzLvl" name="TAFA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4030.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1540.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 6490.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>TAFA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="TALA2_FrzLvl" name="TALA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 340.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>TALA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="TAZA2_FrzLvl" name="Tazlina_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5250.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4180.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2250.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>TAZA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	<thresholdValueSet id="TRAA2_FrzLvl" name="TRAA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4920.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2260.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>TRAA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+
+	<thresholdValueSet id="TKUA2_FrzLvl" name="TKUA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4710.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2930.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 5180.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>TKUA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="TLNA2_FrzLvl" name="TLNA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 2420.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>TLNA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="TONA2_FrzLvl" name="Tonsina_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 1503.0</value>
+		</levelThresholdValue>		
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 1286.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 704.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>TONA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+
+
+	
+	<thresholdValueSet id="TRTA2_FrzLvl" name="TRTA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4510.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1980.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 6620.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>TRTA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="TSGA2_FrzLvl" name="TSGA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 720.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>TSGA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="TYAA2_FrzLvl" name="TYAA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4140.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 960.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>LG_elev</levelThresholdId> 
+			<value> 3290.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 5770.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>TYAA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="UCHA2_FrzLvl" name="Chena River nr Two Rivers">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 2630.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1560.0</value>
+		</levelThresholdValue>		
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>UCHA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>	
+
+	<thresholdValueSet id="VENA2_FrzLvl" name="VENA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3520.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1620.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>VENA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="WHRQ9_FrzLvl" name="WHRQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>GL_elev</levelThresholdId> 
+			<value> 7900.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>NG_elev</levelThresholdId> 
+			<value> 4750.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>WHRQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="WILA2_FrzLvl" name="WILA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 1290.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>WILA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+
+	<thresholdValueSet id="WLWA2_FrzLvl" name="WLWA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 3540.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1960.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>WLWA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="YDAQ9_FrzLvl" name="YDAQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 5910.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value>1410.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>YDAQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="YEAA2_FrzLvl" name="YEAA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 2940.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>YEAA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="YLKA2_FrzLvl" name="YLKA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4030.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1150.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 5740.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>LG_elev</levelThresholdId> 
+			<value> 2960.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>YLKA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="YRBA2_FrzLvl" name="YRBA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>LOC_elev</levelThresholdId> 
+			<value> 1020.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>YRBA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	<thresholdValueSet id="YSSA2_FrzLvl" name="YSSA2_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 4620.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 1030.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>UG_elev</levelThresholdId> 
+			<value> 7410.0</value>
+		</levelThresholdValue>	
+		<levelThresholdValue>
+			<levelThresholdId>LG_elev</levelThresholdId> 
+			<value> 2370.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>YSSA2RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+	
+	<thresholdValueSet id="YWRQ9_FrzLvl" name="YWRQ9_FrzLvl">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>UPR_elev</levelThresholdId> 
+			<value> 5200.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>LWR_elev</levelThresholdId> 
+			<value> 2570.0</value>
+		</levelThresholdValue>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RSEL</parameterId>
+			<locationId>YWRQ9RSN</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+<!--Hawaii Flood-Frequency Thresholds; using USGS weighted values-->
+	<thresholdValueSet id="HLAH1" name="Halaulani Stream nr Kilauea">
+	<unit>CMS</unit>
+		<levelThresholdValue> 
+			<levelThresholdId>MIDLEVEL</levelThresholdId>
+<!--			<value> 570cfs</value>-->
+			<value> 16</value>
+		</levelThresholdValue>
+		<levelThresholdValue> 
+			<levelThresholdId>2YR</levelThresholdId>
+<!--			<value> 1140cfs</value>-->
+			<value> 32</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>10YR</levelThresholdId> 
+<!--			<value> 2270cfs</value>-->
+			<value> 64</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>25YR</levelThresholdId>
+<!--			<value> 2920cfs</value>-->
+			<value> 83</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>50YR</levelThresholdId>
+<!--			<value> 3430cfs</value>-->
+			<value> 97</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>100YR</levelThresholdId>
+<!--			<value> 3990cfs</value>-->
+			<value> 113</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>HLAH1</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_Hawaii_OB1</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>HLAH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="24" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+<!--		<ratingCurve>
+			<id>HLAH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>SQIN</parameterId>
+		</ratingCurve>-->
+	</thresholdValueSet>
+
+	<thresholdValueSet id="HLEH1" name="Hanalei River">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId> 
+			<value> 8.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<value> 18.500</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_HLEH1_HLEH1SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>HLEH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="84" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_HLEH1_HLEH1OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>HLEH1</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<ratingCurve>
+			<id>HLEH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>QINE</parameterId>
+		</ratingCurve>
+	</thresholdValueSet>
+	<thresholdValueSet id="NLIH1" name="Honolii Str. Nr Papaikou">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId> 
+			<value> 15.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<value> 20.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_NLIH1_NLIH1SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>NLIH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="84" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_NLIH1_NLIH1OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>NLIH1</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<ratingCurve>
+			<id>NLIH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>QINE</parameterId>
+		</ratingCurve>
+	</thresholdValueSet>
+	<thresholdValueSet id="WLUH1" name="Wailuku River ">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId> 
+			<value> 15.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<value> 20.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WLUH1_WLUH1SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>WLUH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="84" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WLUH1_WLUH1OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>WLUH1</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<ratingCurve>
+			<id>WLUH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>QINE</parameterId>
+		</ratingCurve>
+	</thresholdValueSet>
+	<thresholdValueSet id="WWKH1" name="West Wailuaki Stream ">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId> 
+			<value> 10.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<value> 13.5</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WWKH1_WWKH1SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>WWKH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="84" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WWKH1_WWKH1OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>WWKH1</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<ratingCurve>
+			<id>WWKH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>QINE</parameterId>
+		</ratingCurve>
+	</thresholdValueSet>
+	<thresholdValueSet id="WHRH1" name="Waiee River abv Waihee Ditch">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId> 
+			<value> 6.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<value> 8.95</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WHRH1_WHRH1SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>WHRH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="84" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WHRH1_WHRH1OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>WHRH1</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<ratingCurve>
+			<id>WHRH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>QINE</parameterId>
+		</ratingCurve>
+	</thresholdValueSet>
+	<thresholdValueSet id="MNWH1" name="Manoa Stream - Woodlawn">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId> 
+			<value> 8.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<value> 8.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_MNWH1_MNWH1SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>MNWH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="84" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_MNWH1_MNWH1OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>MNWH1</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<ratingCurve>
+			<id>MNWH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>QINE</parameterId>
+		</ratingCurve>
+	</thresholdValueSet>
+	<thresholdValueSet id="WHSH1" name="Waiahole Stream">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId> 
+			<value> 11.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<value> 16.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WHSH1_WHSH1SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>WHSH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="84" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WHSH1_WHSH1OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>WHSH1</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<ratingCurve>
+			<id>WHSH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>QINE</parameterId>
+		</ratingCurve>
+	</thresholdValueSet>
+	<thresholdValueSet id="OPAH1" name="Opaeula Stream">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId> 
+			<value> 12.5</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<value> 14.5</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_OPAH1_OPAH1SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>OPAH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="84" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_OPAH1_OPAH1OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>OPAH1</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<ratingCurve>
+			<id>OPAH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>QINE</parameterId>
+		</ratingCurve>
+	</thresholdValueSet>
+	<thresholdValueSet id="WRVH1" name="Waimea River">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId> 
+			<value> 10.</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<value> 10.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WRVH1_WRVH1SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>WRVH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="84" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WRVH1_WRVH1OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>WRVH1</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<ratingCurve>
+			<id>WRVH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>QINE</parameterId>
+		</ratingCurve>
+	</thresholdValueSet>
+
+
+
+
+	<thresholdValueSet id="KWKH1" name="Kawaikoi Stream nr Waimea">
+	<unit>CMS</unit>
+		<levelThresholdValue> 
+			<levelThresholdId>MIDLEVEL</levelThresholdId>
+<!--			<value> 1650cfs</value>-->
+			<value> 47</value>
+		</levelThresholdValue>
+		<levelThresholdValue> 
+			<levelThresholdId>2YR</levelThresholdId>
+<!--			<value> 3310cfs</value>-->
+			<value> 94</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>10YR</levelThresholdId> 
+<!--			<value> 6780cfs</value>-->
+			<value> 192</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>25YR</levelThresholdId>
+<!--			<value> 8680cfs</value>-->
+			<value> 246</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>50YR</levelThresholdId>
+<!--			<value> 10100cfs</value>-->
+			<value> 286</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>100YR</levelThresholdId>
+<!--			<value> 11500cfs</value>-->
+			<value> 326</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>KWKH1</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_Hawaii_OB1</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>KWKH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="24" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+<!--		<ratingCurve>
+			<id>KWKH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>SQIN</parameterId>
+		</ratingCurve>-->
+	</thresholdValueSet>
+
+	<thresholdValueSet id="WIEH1" name="Waialae Stream nr Waimea">
+	<unit>CMS</unit>
+		<levelThresholdValue> 
+			<levelThresholdId>MIDLEVEL</levelThresholdId>
+<!--			<value> 1000cfs</value>-->
+			<value> 28</value>
+		</levelThresholdValue>
+		<levelThresholdValue> 
+			<levelThresholdId>2YR</levelThresholdId>
+<!--			<value> 1990cfs</value>-->
+			<value> 56</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>10YR</levelThresholdId> 
+<!--			<value> 3600cfs</value>-->
+			<value> 102</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>25YR</levelThresholdId>
+<!--			<value> 4360cfs</value>-->
+			<value> 123</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>50YR</levelThresholdId>
+<!--			<value> 4890cfs</value>-->
+			<value> 138</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>100YR</levelThresholdId>
+<!--			<value> 5410cfs</value>-->
+			<value> 153</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>WIEH1</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_Hawaii_OB1</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>WIEH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="24" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+<!--		<ratingCurve>
+			<id>WIEH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>SQIN</parameterId>
+		</ratingCurve>-->
+	</thresholdValueSet>
+
+	<thresholdValueSet id="WNIH1" name="Wainiha River nr Hanalei">
+	<unit>CMS</unit>
+		<levelThresholdValue> 
+			<levelThresholdId>MIDLEVEL</levelThresholdId>
+<!--			<value> 2580cfs</value>-->
+			<value> 73</value>
+		</levelThresholdValue>
+		<levelThresholdValue> 
+			<levelThresholdId>2YR</levelThresholdId>
+<!--			<value> 5170cfs</value>-->
+			<value> 146</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>10YR</levelThresholdId> 
+<!--			<value> 11900cfs</value>-->
+			<value> 337</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>25YR</levelThresholdId>
+<!--			<value> 16200cfs</value>-->
+			<value> 459</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>50YR</levelThresholdId>
+<!--			<value> 19700cfs</value>-->
+			<value> 558</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>100YR</levelThresholdId>
+<!--			<value> 23400cfs</value>-->
+			<value> 663</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>WNIH1</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_Hawaii_OB1</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>WNIH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="24" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+<!--		<ratingCurve>
+			<id>WNIH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>SQIN</parameterId>
+		</ratingCurve>-->
+	</thresholdValueSet>
+
+	<thresholdValueSet id="WSFH1" name="SF Wailua River">
+		<unit>FT</unit>
+		<levelThresholdValue>
+			<levelThresholdId>FS</levelThresholdId> 
+			<value> 15.0</value>
+		</levelThresholdValue>
+		<levelThresholdValue>
+			<levelThresholdId>MAJOR</levelThresholdId>
+			<value> 23.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WSFH1_WSFH1SIM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>WSFH1</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="84" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>QSTAGE_WSFH1_WSFH1OB1_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationId>WSFH1</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<ratingCurve>
+			<id>WSFH1</id>
+			<ratingCurveType>LevelToFlow</ratingCurveType>
+			<parameterId>QINE</parameterId>
+		</ratingCurve>
+	</thresholdValueSet>
+
+
+	<thresholdValueSet id="Stage differences" name="SSTG-STGE Threshold">
+        	<levelThresholdValue>
+            		<levelThresholdId>SSTG-STGE</levelThresholdId>
+            		<value>0.3048</value>
+        	</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>SSTG_PreProcessing_Diff_STGE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG-STGE</parameterId>
+			<locationSetId>QIN</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	<thresholdValueSet id="0">
+		<levelThresholdValue>
+			<levelThresholdId>0.0</levelThresholdId>
+			<value>0.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>Perf_Indicator</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>bias</parameterId>				
+			<qualifierId>bias.24</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="0" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>8</synchLevel>
+			<expiryTime unit="year"/>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>Perf_Indicator</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAE</parameterId>
+			<qualifierId>MAE.24</qualifierId>
+			<!--<locationSetId>Gages_AK</locationSetId>-->
+			<locationId>SRYA2</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="0" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>8</synchLevel>
+			<expiryTime unit="year"/>
+		</timeSeriesSet>		
+	</thresholdValueSet>
+	<thresholdValueSet id="1">
+		<levelThresholdValue>
+			<levelThresholdId>1.0</levelThresholdId>
+			<value>1.0</value>
+		</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceId>Perf_Indicator</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>nashsutcliffeefficiency</parameterId>	
+			<qualifierId>NS.24</qualifierId>
+			<!--<locationSetId>Gages</locationSetId>-->
+			<locationId>SRYA2</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="0" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>8</synchLevel>
+			<expiryTime unit="year"/>
+		</timeSeriesSet>
+	</thresholdValueSet>
+	
+
+	<thresholdValueSet id="Temperatures" name="Freezing Threshold">
+        	<levelThresholdValue>
+            		<levelThresholdId>Freezing</levelThresholdId>
+            		<value>0.60</value>
+        	</levelThresholdValue>
+		<timeSeriesSet>
+			<moduleInstanceSetId>MAT</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>MATX_PreProcessing_QTE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MATX</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>FMATX_PreProcessing_QTF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</thresholdValueSet>
+
+</thresholdValueSets>

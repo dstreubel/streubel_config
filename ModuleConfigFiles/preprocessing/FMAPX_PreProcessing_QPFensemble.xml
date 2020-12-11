@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>gfsqpf_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>GFSQPF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>gfsx_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAPX_PreProcessing_QPFensemble</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAPX</parameterId>
+			<qualifierId>GFSX</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>namqpf_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>NAMQPF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>namx_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAPX_PreProcessing_QPFensemble</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAPX</parameterId>
+			<qualifierId>NAMX</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ecmqpf_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>ECMQPF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>ecmx_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAPX_PreProcessing_QPFensemble</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAPX</parameterId>
+			<qualifierId>ECMX</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>nbmqpf_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE</parameterId>
+			<locationId>AKNBM</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>nbmx_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAPX_PreProcessing_QPFensemble</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAPX</parameterId>
+			<qualifierId>NBMX</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+
+	<transformation id="SampleGFSX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>gfsqpf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>gfsx_scalar</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="SampleNAMX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>namqpf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>namx_scalar</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="SampleECMX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>ecmqpf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>ecmx_scalar</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="SampleNBMX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>nbmqpf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>nbmx_scalar</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+</transformationModule>

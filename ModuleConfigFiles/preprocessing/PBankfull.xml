@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>FLOW</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>QINE</moduleInstanceSetId>
+		        <valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>Gages_PBankfull</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PBank</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>PBankfull</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PBF</parameterId>
+			<locationSetId>Gages_PBankfull</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="PBank">
+		<user>
+			<simple>
+				<expression>(FLOW/QBANK)*35.31466672149</expression>
+			<coefficientSetId>QBANK</coefficientSetId>
+			<coefficientSetFile>Bankfull_Coefficients</coefficientSetFile>
+				<outputVariable>
+					<variableId>PBank</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>	
+</transformationModule>
+
+<!-- <transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0"> -->

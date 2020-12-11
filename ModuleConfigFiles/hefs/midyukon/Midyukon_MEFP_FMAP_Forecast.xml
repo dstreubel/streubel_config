@@ -1,0 +1,107 @@
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+    <general>
+        <description>MEFP Ensemble Generator</description>
+        <piVersion>1.8</piVersion>
+        <rootDir>%TEMP_DIR%</rootDir>
+        <workDir>%ROOT_DIR%/work</workDir>
+        <exportDir>%ROOT_DIR%/input</exportDir>
+        <exportDataSetDir>%ROOT_DIR%</exportDataSetDir>
+        <exportIdMap>IdExportMEFPMAP</exportIdMap>
+        <importDir>%ROOT_DIR%/output</importDir>
+        <dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+        <dumpDir>%ROOT_DIR%</dumpDir>
+        <diagnosticFile>%ROOT_DIR%/output/diag.xml</diagnosticFile>
+    </general>
+    <activities>
+    
+        <startUpActivities>
+        </startUpActivities>
+    
+        <exportActivities>
+            <exportTimeSeriesActivity>
+                <exportFile>inputs.xml</exportFile>
+                <timeSeriesSets>
+                
+                    <!-- RFC QPF FMAP (future MAP, in this case) time series; 
+                         uncomment if used. -->
+<!--                    <timeSeriesSet>
+                        <moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>MAPX</parameterId>
+                        <locationSetId>Catchments_HEFS_Midyukon</locationSetId>
+                        <timeSeriesType>simulated forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+                        <readWriteMode>read only</readWriteMode>
+                    </timeSeriesSet>
+-->                    
+                    <!-- GEFS FMAP Ensemble Mean -->
+                    <timeSeriesSet>
+                        <moduleInstanceId>MEFP_GEFS_Interpolate_Location_FMAP</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>FMAP</parameterId>
+                        <qualifierId>GEFS</qualifierId>
+                        <locationSetId>Catchments_HEFS_Midyukon</locationSetId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="16" endOverrulable="true"/>
+                        <readWriteMode>read only</readWriteMode>
+                    </timeSeriesSet>
+                    
+                    <!-- CFSv2 entire lagged ensemble -->
+                    
+                </timeSeriesSets>
+            </exportTimeSeriesActivity>
+        
+            <exportRunFileActivity>
+                <exportFile>%ROOT_DIR%/run_info.xml</exportFile>
+                <properties>
+                    <int key="printDebugInfo" value="0"/>
+                    <string key="hindcasting" value="$MEFP_HINDCASTING$"/>
+                    <string key="parameterDir" value="$MEFP_ROOT_DIR$/mefpParameters"/>
+                    <!--int key="rfcNumberOfForecastDays" value="0"/-->  
+                    <int key="gefsNumberOfForecastDays" value="16"/>
+                    <!--int key="cfsv2NumberOfForecastDays" value="0"/-->  
+                    <!--int key="climatologyNumberOfForecastDays" value="330"/-->   
+                    <string key="rfcUseEPT" value="true"/>
+                    <!--string key="useResampledClimatology" value="false"/-->
+                    <int key="initialEnsembleYear" value="1970"/>
+                    <int key="lastEnsembleYear" value="2000"/>
+                    <string key="eptUseStratifiedSampling" value="true"/>
+                </properties>
+            </exportRunFileActivity>
+        </exportActivities>
+        
+        <executeActivities>
+            <executeActivity>
+                <command>
+                    <className>ohd.hseb.hefs.mefp.adapter.MEFPEnsembleGeneratorModelAdapter</className>
+                    <binDir>$OHDBINDIR$</binDir>
+                </command>
+                <arguments>
+                    <argument>%ROOT_DIR%/run_info.xml</argument>
+                </arguments>
+                <timeOut>300000</timeOut>
+            </executeActivity>
+        </executeActivities>
+
+        <importActivities>
+            <importTimeSeriesActivity>
+                <importFile>outputs.xml</importFile>
+                <timeSeriesSets>
+                    <timeSeriesSet>
+                        <moduleInstanceId>Midyukon_MEFP_FMAP_Forecast</moduleInstanceId>
+                        <valueType>scalar</valueType>
+                        <parameterId>FMAP</parameterId>
+                        <locationSetId>Catchments_HEFS_Midyukon</locationSetId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <ensembleId>MEFP</ensembleId>
+                    </timeSeriesSet>
+                </timeSeriesSets>
+            </importTimeSeriesActivity>
+        </importActivities>
+        
+    </activities>
+</generalAdapterRun>

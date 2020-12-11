@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+        <variable>
+                <variableId>HRRR_grid</variableId>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportQPF</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>QPF</parameterId>
+                        <locationId>HRRR</locationId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="1"/>
+                        <relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="48" endOverrulable="true"/>
+                        <readWriteMode>read only</readWriteMode>
+                </timeSeriesSet>
+        </variable>
+        <variable>
+                <variableId>RAP_grid</variableId>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportQPF</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>QPF</parameterId>
+                        <locationId>RAP</locationId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="1"/>
+                        <relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="18" endOverrulable="true"/>
+                        <readWriteMode>read only</readWriteMode>
+                </timeSeriesSet>
+        </variable>
+	<variable>
+		<variableId>HRRR_TS</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Onehr_MergeMAP_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-30" startOverrulable="true" end="48" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>RAP_TS</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Onehr_MergeMAP_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-30" startOverrulable="true" end="18"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAPX_OBS</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-360" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAPX_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Onehr_MergeMAP_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-360" startOverrulable="true" end="48" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAPX_merged_TMP</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Onehr_MergeMAP_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-360" startOverrulable="true" end="48" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+        <transformation id="SampleHRRR">
+                <interpolationSpatial>
+                        <average>
+                                <inputVariable>
+                                        <variableId>HRRR_grid</variableId>
+                                </inputVariable>
+                                <outputVariable>
+                                        <variableId>HRRR_TS</variableId>
+                                </outputVariable>
+                        </average>
+                </interpolationSpatial>
+        </transformation>
+        <transformation id="SampleRAP">
+                <interpolationSpatial>
+                        <average>
+                                <inputVariable>
+                                        <variableId>RAP_grid</variableId>
+                                </inputVariable>
+                                <outputVariable>
+                                        <variableId>RAP_TS</variableId>
+                                </outputVariable>
+                        </average>
+                </interpolationSpatial>
+        </transformation>
+	<transformation id="MergeMAPX">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>MAPX_OBS</variableId>
+				</inputVariable>  
+				<inputVariable>
+					<variableId>HRRR_TS</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>RAP_TS</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAPX_merged_TMP</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+        <transformation id="InterpolateMAP">
+	                <interpolationSerial>
+		        	<default>
+			        	<inputVariable>
+					        <variableId>MAPX_merged_TMP</variableId>
+				        </inputVariable>
+					<defaultValue>0.00</defaultValue>
+		                        <outputVariable>
+		                                <variableId>MAPX_merged</variableId>
+		                        </outputVariable>
+		               </default>
+		         </interpolationSerial>
+       </transformation>
+</transformationModule>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_RSHA2_RSHA2OB6_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SETTS_RSHA2_YANA2RTD_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>LAGK_RSHA2_YANA2RTD_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_RSHA2_YANA2RTD_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SETTS_RSHA2_RSHA2LCL_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>WEIGHTS_RSHA2_RSHA2LCL_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_RSHA2_RSHA2LCL_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_RSHA2_RSHA2SIM_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SETTS_RSHA2_RSHA2QN_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_RSHA2_RSHA2ADJ_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_RSHA2_RSHA2ADJ_UpdateStates</moduleInstanceId>
+	</activity>
+</workflow>

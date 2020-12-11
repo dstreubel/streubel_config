@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+	<export>
+		<general>
+			<exportType>SHEF</exportType>
+			<folder>$EXPORT_FOLDER$/SNOW</folder>
+			<exportFileName>
+				<name>_SNOW_chps_shef_export.</name>
+				<prefix>
+					<timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+				</prefix>
+				<suffix>
+					<currentTimeFormattingString>yyyyMMddHHmmss</currentTimeFormattingString>
+				</suffix>
+			</exportFileName>
+			<idMapId>IdExportSHEF_SNOW</idMapId>
+			<unitConversionsId>exportEnglishUnits</unitConversionsId>
+			<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>true</omitMissingValues>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGE_PCA_ndiff_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>nSWE</parameterId>
+			<qualifierId>diff</qualifierId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="0" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGE_PCA_diff_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<qualifierId>diff</qualifierId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="0" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGE_PCA_rmse_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<qualifierId>rmse</qualifierId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="0" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>NORMALIZE_ERRORSWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<qualifierId>sim</qualifierId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGE_PCA_swe_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<qualifierId>pca</qualifierId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="0" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</export>
+</timeSeriesExportRun>

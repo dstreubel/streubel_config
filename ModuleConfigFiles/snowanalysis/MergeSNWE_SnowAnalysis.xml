@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>Obs_hist_snowcourses_1m</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RRS_SampleSNWE_historical</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snowcourses</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="month" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-20000" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Obs_current_snowcourses_1m</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RRS_SampleSNWE_nrcs</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snowcourses</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="month" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-120" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Obs_merged_snowcourses_1m</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MergeSNWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snowcourses</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="month" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-20000" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+			<synchLevel>4</synchLevel>
+			<expiryTime unit="year" multiplier="100"/>
+		</timeSeriesSet>
+	</variable>
+	
+	<transformation id="Obs_merge_snowcourses"> <!-- take existing record and expand-->
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>Obs_current_snowcourses_1m</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>Obs_hist_snowcourses_1m</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>Obs_merged_snowcourses_1m</variableId>
+				</outputVariable>
+			</simple>
+		</merge>	
+	</transformation>
+
+
+</transformationModule>

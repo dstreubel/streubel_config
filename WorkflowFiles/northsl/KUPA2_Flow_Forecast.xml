@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="FGROUP" value="Northsl"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_KUPA2_KUPA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2UPR"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_KUPA2_KUPA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2LWR"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_KUPA2_KUPA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_KUPA2_KUPA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_KUPA2_KUPA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_KUPA2_KUPA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_KUPA2_KUPA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_KUPA2_KUPA2_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADDSUB_KUPA2_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KUPA2_KUPA2OB6_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KUPA2_KUPA2OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB1_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_KUPA2_KUPA2_Forecast"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KUPA2_KUPA2SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_KUPA2_KUPA2_Forecast"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_KUPA2_KUPA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KUPA2_KUPA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2USW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2LSW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>			
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2USC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2LSC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Northsl"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2MAT_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_Forecast_template</moduleConfigFileName>
+	</activity>			
+</workflow>

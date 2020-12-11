@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>NETCDF-CF_TIMESERIES</importType>
+            		<folder>$IMPORT_FOLDER_NWM$/channel_rt/assim</folder>
+			<fileNamePatternFilter>*assim*.aprfc.nc</fileNamePatternFilter>
+			<fileNameForecastCreationDateTimePattern>'nwm.t'yyyyMMddHH</fileNameForecastCreationDateTimePattern>
+			<logWarningsForUnmappableLocations>true</logWarningsForUnmappableLocations>
+            		<idMapId>IdImportNetCDF_NWMAssimFlows</idMapId>
+            		<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+            		<importTimeZone>
+                		<timeZoneOffset>+00:00</timeZoneOffset>
+            		</importTimeZone> 
+            		<dataFeedId>NWM</dataFeedId>
+		</general>
+		<timeSeriesSet>
+            		<moduleInstanceId>ImportNetCDF_NWMAssimHrly</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<qualifierId>Assimilated</qualifierId>
+			<locationSetId>Gages_HI</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+            		<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+	    		<expiryTime unit="day" multiplier="100"/>
+		</timeSeriesSet>
+	</import>
+	<import>
+		<general>
+			<importType>NETCDF-CF_TIMESERIES</importType>
+            		<folder>$IMPORT_FOLDER_NWM$/channel_rt/test/assim</folder>
+			<fileNamePatternFilter>*assim*.aprfc.nc</fileNamePatternFilter>
+			<fileNameForecastCreationDateTimePattern>'nwm.t'yyyyMMddHH</fileNameForecastCreationDateTimePattern>
+			<logWarningsForUnmappableLocations>true</logWarningsForUnmappableLocations>
+            		<idMapId>IdImportNetCDF_NWMAssimFlows</idMapId>
+            		<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+            		<importTimeZone>
+                		<timeZoneOffset>+00:00</timeZoneOffset>
+            		</importTimeZone> 
+            		<dataFeedId>NWM_TEST</dataFeedId>
+		</general>
+		<timeSeriesSet>
+            		<moduleInstanceId>ImportNetCDF_NWMAssimHrly</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<qualifierId>Assimilated</qualifierId>
+			<locationSetId>Gages_HI</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+            		<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+	    		<expiryTime unit="day" multiplier="12"/>
+		</timeSeriesSet>
+	</import>
+	
+	<!--import>
+    		<general>
+      			<importType>NETCDF-CF_GRID</importType>
+     			<folder>$IMPORT_FOLDER_NETCDF$/nwm/forcing/assim</folder>
+      			<fileNamePatternFilter>*assim*.aprfc.nc</fileNamePatternFilter>
+      			<fileNameForecastCreationDateTimePattern>'nwm.t'yyyyMMddHH</fileNameForecastCreationDateTimePattern>
+      			<idMapId>IdImportNetCDF_NWMAssimGrids</idMapId>
+      			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+      			<missingValue>-9999.0</missingValue>                        
+      			<importTimeZone>
+        			<timeZoneOffset>+00:00</timeZoneOffset>
+      			</importTimeZone>
+    		</general>
+    		<timeSeriesSet>
+      			<moduleInstanceId>ImportNetCDF_NWMAssimHrly</moduleInstanceId>
+      			<valueType>grid</valueType>
+      			<parameterId>QPE</parameterId>
+      			<qualifierId>Assimilated</qualifierId>
+      			<locationId>NWM</locationId>
+      			<timeSeriesType>external historical</timeSeriesType>
+      			<timeStep unit="hour" multiplier="1"/>
+      			<readWriteMode>add originals</readWriteMode>
+      			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+    		</timeSeriesSet>
+    		<timeSeriesSet>
+      			<moduleInstanceId>ImportNetCDF_NWMAssimHrly</moduleInstanceId>
+      			<valueType>grid</valueType>
+      			<parameterId>QTE</parameterId>
+      			<qualifierId>Assimilated</qualifierId>
+      			<locationId>NWM</locationId>
+      			<timeSeriesType>external historical</timeSeriesType>
+      			<timeStep unit="hour" multiplier="1"/>
+      			<readWriteMode>add originals</readWriteMode>
+      			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+    		</timeSeriesSet>
+  	</import-->
+  	<!--<import>
+    		<general>
+      			<importType>NETCDF-CF_GRID</importType>
+     			<folder>$IMPORT_FOLDER_NETCDF$/nwm/land/assim</folder>
+      			<fileNamePatternFilter>*assim*.aprfc.nc</fileNamePatternFilter>
+      			<fileNameForecastCreationDateTimePattern>'nwm.t'yyyyMMddHH</fileNameForecastCreationDateTimePattern>
+      			<idMapId>IdImportNetCDF_NWMAssimGrids</idMapId>
+      			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+      			<missingValue>-9999.0</missingValue>                        
+      			<importTimeZone>
+        			<timeZoneOffset>+00:00</timeZoneOffset>
+      			</importTimeZone>
+    		</general>
+    		<timeSeriesSet>
+      			<moduleInstanceId>ImportNetCDF_NWMAssimHrly</moduleInstanceId>
+      			<valueType>grid</valueType>
+      			<parameterId>UZF</parameterId>
+      			<qualifierId>Assimilated</qualifierId>
+      			<locationId>NWM</locationId>
+      			<timeSeriesType>external historical</timeSeriesType>
+      			<timeStep unit="hour" multiplier="1"/>
+      			<readWriteMode>add originals</readWriteMode>
+      			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+    		</timeSeriesSet>
+  	</import>
+  	<import>
+    		<general>
+      			<importType>NETCDF-CF_GRID</importType>
+     			<folder>$IMPORT_FOLDER_NETCDF$/nwm/land/assim</folder>
+      			<fileNamePatternFilter>*assim*.aprfc.nc</fileNamePatternFilter>
+      			<fileNameForecastCreationDateTimePattern>'nwm.t'yyyyMMddHH</fileNameForecastCreationDateTimePattern>
+      			<idMapId>IdImportNetCDF_NWMAssimGrids</idMapId>
+      			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+      			<missingValue>-9999.0</missingValue>                        
+      			<importTimeZone>
+        			<timeZoneOffset>+00:00</timeZoneOffset>
+      			</importTimeZone>
+    		</general>
+    		<timeSeriesSet>
+      			<moduleInstanceId>ImportNetCDF_NWMAssimHrly</moduleInstanceId>
+      			<valueType>grid</valueType>
+      			<parameterId>SWE</parameterId>
+      			<qualifierId>Assimilated</qualifierId>
+      			<locationId>NWM</locationId>
+      			<timeSeriesType>external historical</timeSeriesType>
+      			<timeStep unit="hour" multiplier="1"/>
+      			<readWriteMode>add originals</readWriteMode>
+      			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+    		</timeSeriesSet>
+  	</import>-->
+    
+</timeSeriesImportRun>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thresholdGroups xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/thresholds.xsd">
+<thresholdGroup id="Flooding">
+	<defaultThreshold shortName="default"></defaultThreshold>
+	<levelThreshold id="ACTION" name="Action Stage">
+		<upWarningLevelId>ACTION</upWarningLevelId>
+		<upIntId>1</upIntId>
+		<downIntId>2</downIntId>
+	</levelThreshold>
+	<levelThreshold id="BF" name="Bankfull Stage">
+<!--		<upWarningLevelId>BF</upWarningLevelId>
+-->		<upIntId>3</upIntId>
+		<downIntId>4</downIntId>
+	</levelThreshold>
+	<levelThreshold id="FS" name="Flood Stage">
+<!--		<upWarningLevelId>FS</upWarningLevelId>
+-->		<upIntId>5</upIntId>
+		<downIntId>6</downIntId>
+	</levelThreshold>
+	
+	<levelThreshold id="MINOR" name="Minor Stage">
+		<upWarningLevelId>MINOR</upWarningLevelId>
+		<upIntId>7</upIntId>
+		<downIntId>8</downIntId>
+	</levelThreshold>
+	<levelThreshold id="MOD" name="Moderate Stage">
+		<upWarningLevelId>MOD</upWarningLevelId>
+		<upIntId>9</upIntId>
+		<downIntId>10</downIntId>
+	</levelThreshold>
+	<levelThreshold id="MAJOR" name="Major Stage">
+		<upWarningLevelId>MAJOR</upWarningLevelId>
+		<upIntId>11</upIntId>
+		<downIntId>12</downIntId>
+	</levelThreshold>
+	<levelThreshold id="MIDLEVEL" name=".">
+		<upWarningLevelId>MIDLEVEL</upWarningLevelId>
+		<upIntId>13</upIntId>
+		<downIntId>14</downIntId>
+	</levelThreshold>
+	<levelThreshold id="2YR" name="2-yr Flow">
+		<upWarningLevelId>2YR</upWarningLevelId>
+		<upIntId>15</upIntId>
+		<downIntId>16</downIntId>
+	</levelThreshold>
+	<levelThreshold id="10YR" name="10-yr Flow">
+		<upWarningLevelId>10YR</upWarningLevelId>
+		<upIntId>17</upIntId>
+		<downIntId>18</downIntId>
+	</levelThreshold>
+	<levelThreshold id="25YR" name="25-yr Flow">
+		<upWarningLevelId>25YR</upWarningLevelId>
+		<upIntId>19</upIntId>
+		<downIntId>20</downIntId>
+	</levelThreshold>
+	<levelThreshold id="50YR" name="50-yr Flow">
+		<upWarningLevelId>50YR</upWarningLevelId>
+		<upIntId>21</upIntId>
+		<downIntId>22</downIntId>
+	</levelThreshold>
+	<levelThreshold id="100YR" name="100-yr Flow">
+		<upWarningLevelId>100YR</upWarningLevelId>
+		<upIntId>23</upIntId>
+		<downIntId>24</downIntId>
+	</levelThreshold>
+	<levelThreshold id="RECORD" name="                          Record Stage">
+		<upWarningLevelId>RECORD</upWarningLevelId>
+		<upIntId>25</upIntId>
+		<downIntId>26</downIntId>
+	</levelThreshold>
+	<!--levelThreshold id="GAGELIMIT" name="MAX MEASURED STG">
+		<upWarningLevelId>GAGELIMIT</upWarningLevelId>
+		<upIntId>26</upIntId>
+		<downIntId>27</downIntId>
+	</levelThreshold>
+	<levelThreshold id="GAGEMIN" name="STG WITH ZERO Q">
+		<upWarningLevelId>GAGEMIN</upWarningLevelId>
+		<upIntId>27</upIntId>
+		<downIntId>28</downIntId>
+	</levelThreshold-->
+	<levelThreshold id="Freezing" name="Freezing">
+		<upIntId>104</upIntId>
+		<downIntId>105</downIntId>
+	</levelThreshold>
+	<levelThreshold id="0.0" name="0"></levelThreshold>
+	<levelThreshold id="1.0" name="1"></levelThreshold>
+	<levelThreshold id="SSTG-STGE" name="SSTG-STGE Threshold">
+		<upIntId>106</upIntId>
+		<downIntId>107</downIntId>
+	</levelThreshold>
+	<levelThreshold id="UPR_elev" name="Upper Elevation">
+		<upIntId>106</upIntId>
+		<downIntId>107</downIntId>
+	</levelThreshold>
+	<levelThreshold id="LWR_elev" name="Lower Elevation">
+		<upIntId>106</upIntId>
+		<downIntId>107</downIntId>
+	</levelThreshold>	
+	<levelThreshold id="GL_elev" name="Glacier Elevation">
+		<upIntId>106</upIntId>
+		<downIntId>107</downIntId>
+	</levelThreshold>
+	<levelThreshold id="LOC_elev" name="Local Elevation">
+		<upIntId>106</upIntId>
+		<downIntId>107</downIntId>
+	</levelThreshold>
+	<levelThreshold id="UG_elev" name="Upper Glacier Elevation">
+		<upIntId>106</upIntId>
+		<downIntId>107</downIntId>
+	</levelThreshold>
+	<levelThreshold id="LG_elev" name="Lower Glacier Elevation">
+		<upIntId>106</upIntId>
+		<downIntId>107</downIntId>
+	</levelThreshold>
+	<levelThreshold id="NG_elev" name="Non Glacier Elevation">
+		<upIntId>106</upIntId>
+		<downIntId>107</downIntId>
+	</levelThreshold>
+	<levelThreshold id="MID_elev" name="Mid Elevation">
+		<upIntId>106</upIntId>
+		<downIntId>107</downIntId>
+	</levelThreshold>
+
+</thresholdGroup>	
+<!--<thresholdGroup id="Pool Elevation">
+	<defaultThreshold shortName="default"></defaultThreshold>
+
+	<levelThreshold id="MINPOOL" name="Minimum Pool Elevation">
+		<upWarningLevelId>MINPOOL</upWarningLevelId>
+		<upIntId>100</upIntId>
+		<downIntId>101</downIntId>
+	</levelThreshold>
+	<levelThreshold id="MAXPOOL" name="Maximum Pool Elevation">
+		<upWarningLevelId>MAXPOOL</upWarningLevelId>
+		<upIntId>102</upIntId>
+		<downIntId>103</downIntId>
+	</levelThreshold>
+</thresholdGroup>	
+-->
+</thresholdGroups>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<!-- Forecast ensembles-->
+	<variable>
+		<variableId>Ensemble</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>ESP_QINE_Forecast_Yuk_Can</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESP_QINE_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		        <relativeViewPeriod unit="hour" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1980' end='2002'/>
+		</timeSeriesSet>
+	</variable>
+	<!--variable>
+		<variableId>ENS_Ensemble</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>ENS_SQIN_Forecast_Yuk_Can</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationSetId>ENS_SQIN_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		        <relativeViewPeriod unit="hour" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>HEFSENSPOST</ensembleId>
+			<ensembleMemberIndexRange start='1980' end='2002'/>
+		</timeSeriesSet>
+	</variable-->
+	<!-- Exceedance values -->
+	<variable>
+		<variableId>Median</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Yuk_Can_HEFS_Stats</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<qualifierId>median</qualifierId>
+			<locationSetId>ESP_QINE_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" startOverrulable="true" start="0" end="365"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="hour" multiplier="12"/>
+		</timeSeriesSet>
+	</variable>
+	<!--variable>
+		<variableId>ENS_Median</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Yuk_Can_HEFS_Stats</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<qualifierId>ENS_median</qualifierId>
+			<locationSetId>ENS_SQIN_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" startOverrulable="true" start="0" end="365"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="hour" multiplier="12"/>
+		</timeSeriesSet>
+	</variable-->
+	<variable>
+		<variableId>Min</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Yuk_Can_HEFS_Stats</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<qualifierId>min</qualifierId>
+			<locationSetId>ESP_QINE_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" startOverrulable="true" start="0" end="365"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="hour" multiplier="12"/>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Max</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Yuk_Can_HEFS_Stats</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<qualifierId>max</qualifierId>
+			<locationSetId>ESP_QINE_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" startOverrulable="true" start="0" end="365"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="hour" multiplier="12"/>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>90%Exc</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Yuk_Can_HEFS_Stats</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<qualifierId>90</qualifierId>
+			<locationSetId>ESP_QINE_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" startOverrulable="true" start="0" end="365"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="hour" multiplier="12"/>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>75%Exc</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Yuk_Can_HEFS_Stats</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<qualifierId>75</qualifierId>
+			<locationSetId>ESP_QINE_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" startOverrulable="true" start="0" end="365"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="hour" multiplier="12"/>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>50%Exc</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Yuk_Can_HEFS_Stats</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<qualifierId>50</qualifierId>
+			<locationSetId>ESP_QINE_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" startOverrulable="true" start="0" end="365"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="hour" multiplier="12"/>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>25%Exc</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Yuk_Can_HEFS_Stats</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<qualifierId>25</qualifierId>
+			<locationSetId>ESP_QINE_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" startOverrulable="true" start="0" end="365"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="hour" multiplier="12"/>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>10%Exc</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Yuk_Can_HEFS_Stats</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<qualifierId>10</qualifierId>
+			<locationSetId>ESP_QINE_Yuk_Can</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" startOverrulable="true" start="0" end="365"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="hour" multiplier="12"/>
+		</timeSeriesSet>
+	</variable>
+	<!--transformation id="ToMedian">
+		<statisticsEnsemble>
+			<median>
+				<inputVariable>
+					<variableId>ENS_Ensemble</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>ENS_Median</variableId>
+				</outputVariable>
+			</median>
+		</statisticsEnsemble>
+	</transformation-->
+	<transformation id="ToMedian">
+		<statisticsEnsemble>
+			<median>
+				<inputVariable>
+					<variableId>Ensemble</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>Median</variableId>
+				</outputVariable>
+			</median>
+		</statisticsEnsemble>
+	</transformation>
+	<transformation id="ToMin">
+		<statisticsEnsemble>
+			<min>
+				<inputVariable>
+					<variableId>Ensemble</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>Min</variableId>
+				</outputVariable>
+			</min>
+		</statisticsEnsemble>
+	</transformation>
+	<transformation id="ToMax">
+		<statisticsEnsemble>
+			<max>
+				<inputVariable>
+					<variableId>Ensemble</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>Max</variableId>
+				</outputVariable>
+			</max>
+		</statisticsEnsemble>
+	</transformation>
+	<transformation id="90%Exc">
+		<statisticsEnsemble>
+			<percentileExceedence>
+				<inputVariable>
+					<variableId>Ensemble</variableId>
+				</inputVariable>
+				<value>10</value>
+				<outputVariable>
+					<variableId>90%Exc</variableId>
+				</outputVariable>
+			</percentileExceedence>	
+		</statisticsEnsemble>
+	</transformation>
+	<transformation id="75%Exc">
+		<statisticsEnsemble>
+			<percentileExceedence>
+				<inputVariable>
+					<variableId>Ensemble</variableId>
+				</inputVariable>
+				<value>25</value>
+				<outputVariable>
+					<variableId>75%Exc</variableId>
+				</outputVariable>
+			</percentileExceedence>
+		</statisticsEnsemble>
+	</transformation>
+	<transformation id="50%Exc">
+		<statisticsEnsemble>
+			<percentileExceedence>
+				<inputVariable>
+					<variableId>Ensemble</variableId>
+				</inputVariable>
+				<value>50</value>
+				<outputVariable>
+					<variableId>50%Exc</variableId>
+				</outputVariable>
+			</percentileExceedence>
+		</statisticsEnsemble>
+	</transformation>
+	<transformation id="25%Exc">
+		<statisticsEnsemble>
+			<percentileExceedence>
+				<inputVariable>
+					<variableId>Ensemble</variableId>
+				</inputVariable>
+				<value>75</value>
+				<outputVariable>
+					<variableId>25%Exc</variableId>
+				</outputVariable>
+			</percentileExceedence>
+		</statisticsEnsemble>
+	</transformation>
+	<transformation id="10%Exc">
+		<statisticsEnsemble>
+			<percentileExceedence>
+				<inputVariable>
+					<variableId>Ensemble</variableId>
+				</inputVariable>
+				<value>90</value>
+				<outputVariable>
+					<variableId>10%Exc</variableId>
+				</outputVariable>
+			</percentileExceedence>
+		</statisticsEnsemble>
+	</transformation>
+
+</transformationModule>

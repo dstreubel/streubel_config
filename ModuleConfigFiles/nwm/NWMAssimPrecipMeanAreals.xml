@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+
+<!-- Imported NWM assimilated precip grid -->
+	<variable>
+		<variableId>Grid_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNetCDF_NWMAssimHrly</moduleInstanceId>
+      			<valueType>grid</valueType>
+      			<parameterId>QPE</parameterId>
+      			<qualifierId>Assimilated</qualifierId>
+      			<locationId>NWM</locationId>
+      			<timeSeriesType>external historical</timeSeriesType>
+      			<timeStep unit="hour" multiplier="1"/>
+      			<relativeViewPeriod unit="hour" start="-12" end="6"/>
+      			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+<!--  NON-WEIGHTED MEAN AREALS -->
+<!--  6-hr grids  -->
+	<variable>
+		<variableId>Grid_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NWMAssimPrecipMeanAreals</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE</parameterId>
+			<qualifierId>Assimilated</qualifierId>
+			<qualifierId>6hr</qualifierId>	
+			<locationId>NWM</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-12" end="6"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="10"/>
+		</timeSeriesSet>
+	</variable>
+	
+<!--  Mean areals  -->
+	<variable>
+		<variableId>NWM_MAPX</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NWMAssimPrecipMeanAreals</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<qualifierId>6hr</qualifierId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-12" end="6"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<expiryTime unit="day" multiplier="10"/>
+		</timeSeriesSet>
+	</variable>	
+
+<!-- NON-WEIGHTED MEAN AREALS -->
+<!--  6-hr grids  -->	
+	<transformation id="Aggregate_Grid">
+		<aggregation>
+			<accumulative>
+				<inputVariable>
+					<variableId>Grid_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>Grid_6hr</variableId>
+				</outputVariable>
+			</accumulative>
+		</aggregation>
+	</transformation>
+	
+<!--  Mean areals  -->
+	<transformation id="Calculate_MAPX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>Grid_6hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>NWM_MAPX</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+
+</transformationModule>

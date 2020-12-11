@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>SSTG_Historic</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>ImportHS</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>Catchments_Matsu</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<!--<timeSeriesType>simulated external</timeSeriesType>-->
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-36500" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+			<!--<ensembleId>HS</ensembleId>-->
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SSTG_HS</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Matsu_SampleHS_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>Catchments_Matsu</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>HS</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>QINE_Historic</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>ImportHS</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>Catchments_Matsu</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<!--<timeSeriesType>simulated forecasting</timeSeriesType>-->
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-36500" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+			<!--<ensembleId>HS</ensembleId>-->
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>QINE_HS</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Matsu_SampleHS_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>Catchments_Matsu</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>HS</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="Matsu_SampleHS_SSTG">
+		<sample>
+			<historical>
+				<inputVariable>
+					<variableId>SSTG_Historic</variableId>
+				</inputVariable>
+				<moduleParameterFile>Matsu_SampleHS_Forecast</moduleParameterFile>
+				<outputVariable>
+					<variableId>SSTG_HS</variableId>
+				</outputVariable>
+			</historical>
+		</sample>
+	</transformation>
+	<transformation id="Matsu_SampleHS_QINE">
+		<sample>
+			<historical>
+				<inputVariable>
+					<variableId>QINE_Historic</variableId>
+				</inputVariable>
+				<moduleParameterFile>Matsu_SampleHS_Forecast</moduleParameterFile>
+				<outputVariable>
+					<variableId>QINE_HS</variableId>
+				</outputVariable>
+			</historical>
+		</sample>
+	</transformation>
+</transformationModule>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">-->

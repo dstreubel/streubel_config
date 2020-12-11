@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+	<export>
+		<general>
+			<exportType>SHEF</exportType>
+			<folder>$EXPORT_FOLDER$/STGE_FE</folder>
+			<exportFileName>
+				<name>_STGE_FAK_chps_shef_export.</name>
+				<prefix>
+					<timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+				</prefix>
+				<suffix>
+					<currentTimeFormattingString>yyyyMMddHHmmss</currentTimeFormattingString>
+				</suffix>
+			</exportFileName>
+			<idMapId>IdExportSHEF_FE</idMapId>
+			<unitConversionsId>exportEnglishUnits</unitConversionsId>
+			<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>true</omitMissingValues>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceSetId>QIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>STGE</parameterId>
+			<locationSetId>Gages_Tanana</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="60" endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</export>
+</timeSeriesExportRun>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MAPX_observed</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAPX_sampleESP</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Northsl_SampleESP_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAPX_forecast</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAPX_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAPX</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAPX_merged_tmp</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Northsl_MergeMAPX_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAPX_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Northsl_MergeMAPX_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationSetId>Catchments_Northsl</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MergeMAPX">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>MAPX_observed</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAPX_forecast</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAPX_sampleESP</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAPX_merged_tmp</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	<transformation id="InterpolateMAPX">
+		<interpolationSerial>
+			<default>
+				<inputVariable>
+					<variableId>MAPX_merged_tmp</variableId>
+				</inputVariable>
+				<defaultValue>0.00</defaultValue>
+				<outputVariable>
+					<variableId>MAPX_merged</variableId>
+				</outputVariable>
+			</default>
+		</interpolationSerial>
+	</transformation>
+</transformationModule>

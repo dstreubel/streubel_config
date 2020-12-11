@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+	<export>
+		<general>
+			<exportType>CSV</exportType>
+			<folder>$EXPORT_FOLDER$/Forcings</folder>
+			<exportFileName>
+				<name>_NAMNEST_QPF_SHEFexport.xml</name>
+				<prefix>
+					<timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+				</prefix>
+			</exportFileName>
+			<idMapId>IdExportPIXML</idMapId> 
+			<unitConversionsId>exportEnglishUnits</unitConversionsId>
+			<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>true</omitMissingValues>
+		</general>
+   		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_NAMNEST</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Hawaii_Export_QPF</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="1" startOverrulable="true" end="36" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+   		</timeSeriesSet>
+		<!--
+   		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_NAMNEST</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R06</parameterId>
+			<locationSetId>Hawaii_Export_QPF</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="36" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+   		</timeSeriesSet>
+		-->
+	</export>
+</timeSeriesExportRun>

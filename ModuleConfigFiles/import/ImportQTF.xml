@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qtf/has/ta01</folder>
+			<idMapId>IdImportGRIB1_Forecast</idMapId>
+			<unitConversionsId>ImportGRIB</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QTF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+		</timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="QTF"/>
+	</import>
+
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qtf/gfs/qtf06</folder>
+			<idMapId>IdImportGRIB1_Forecast</idMapId>
+			<unitConversionsId>ImportGRIB</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>GFST</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+		</timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="GFST"/>
+	</import>
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qtf/nam/qtf06</folder>
+			<idMapId>IdImportGRIB1_Forecast</idMapId>
+			<unitConversionsId>ImportGRIB</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>NAMT</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+		</timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="NAMT"/>
+	</import>
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qtf/ecmwf/qtf06</folder>
+			<idMapId>IdImportGRIB1_Forecast</idMapId>
+			<unitConversionsId>ImportGRIB</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>ECMT</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+		</timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="ECMT"/>
+	</import>
+
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qtf/has/tx24</folder>
+			<idMapId>IdImportGRIB1_TFMX_Forecast</idMapId>
+			<unitConversionsId>ImportGRIB</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>TFMX</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+		</timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="TFMX"/>
+	</import>	        
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qtf/has/tn24</folder>
+			<idMapId>IdImportGRIB1_TFMN_Forecast</idMapId>
+			<unitConversionsId>ImportGRIB</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>TFMN</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+		</timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="TFMN"/>
+	</import>
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qtf/has/mxdf24</folder>
+			<idMapId>IdImportGRIB1_MXDF_Forecast</idMapId>
+			<unitConversionsId>ImportGRIB</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>MXDF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+		</timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="MXDF"/>
+	</import>
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qtf/has/mndf24</folder>
+			<idMapId>IdImportGRIB1_MNDF_Forecast</idMapId>
+			<unitConversionsId>ImportGRIB</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>MNDF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="2"/>
+		</timeSeriesSet>
+        <externUnit unit="DEGK" parameterId="MNDF"/>
+	</import>
+	
+</timeSeriesImportRun>

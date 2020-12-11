@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+    <import>
+        <general>
+            <importType>PI</importType>
+            <folder>$IMPORT_FOLDER_ROOT$/hs_pixml</folder>
+            <idMapId>IdImportHSPIXML</idMapId>
+            <unitConversionsId>ImportEnglishUnits</unitConversionsId>
+            <missingValue>-999.0</missingValue>
+            <importTimeZone>
+                <timeZoneOffset>+00:00</timeZoneOffset>
+            </importTimeZone>
+        </general>         
+        <timeSeriesSet>
+            <moduleInstanceId>ImportHSFlowsFromCHPSInGMT</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>add originals</readWriteMode>    
+        </timeSeriesSet>
+    </import>
+</timeSeriesImportRun>

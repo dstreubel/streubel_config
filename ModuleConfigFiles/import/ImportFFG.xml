@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+        <import>
+                <general>
+                        <importType>grib</importType>
+                        <folder>$IMPORT_FOLDER_GRIB1$/ffg/qpfpct/mon24</folder>
+                        <idMapId>IdImportGRIB1_FFG_Forecast</idMapId>
+                        <unitConversionsId>ImportGRIB</unitConversionsId>
+                        <importTimeZone>
+                                <timeZoneOffset>+00:00</timeZoneOffset>
+                        </importTimeZone>
+                        <gridStartPoint>SW</gridStartPoint>
+                </general>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportFFG</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>QPFpctMon24</parameterId>
+                        <locationId>HAS</locationId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <synchLevel>6</synchLevel>
+                        <expiryTime unit="day" multiplier="2"/>
+                </timeSeriesSet>
+        </import>
+
+</timeSeriesImportRun>

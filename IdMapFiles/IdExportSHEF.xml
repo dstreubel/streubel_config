@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+	<parameter external="TAQPM" internal="MAT"/>
+	<parameter external="PPQPM" internal="MAP"/>
+	<parameter external="TAQFL" internal="FMAT"/>
+	<parameter external="PPQFL" internal="FMAP"/>
+        <parameter external="TAQPD" internal="MAT-MATX"/>
+        <parameter external="TAQPC" internal="MAT-MATX_MPE"/>
+	<parameter external="TAQPB" internal="MATX_MPE"/>
+	<parameter external="TAQPA" internal="MATX"/>
+        <parameter external="PPQPD" internal="MAP-MAPX"/>
+        <parameter external="PPQPB" internal="MAPX_R06"/>
+        <parameter external="PPQPA" internal="MAPX"/>
+	<parameter external="PPQFA" internal="FMAPX"/>
+	<parameter external="TAQFA" internal="FMATX"/>
+	
+	<parameter external="EADFL" internal="MAPE"/>
+	<parameter external="QRQPZ" internal="QINE"/>
+	<parameter external="QRQFA" internal="QINE"/>
+	<parameter external="QTQPZ" internal="SQIN"/>
+	<parameter external="QTQFA" internal="SQIN"/>
+	<parameter external="QIIFE" internal="SQIN"/>
+	<parameter external="HGIFZ" internal="STGE"/>
+	<!--parameter external="QIDFZ" internal="SQME"/-->
+	<parameter external="QIDFE" internal="SQME"/>
+
+<!--        <parameter external="SWIPA" internal="SWE-NOHRSC"/>-->
+	<parameter external="SWIPB" internal="SWE"/>
+<!--        <parameter external="SWIPC" internal="NOHRSC_COMP"/>
+        <parameter external="SWIPD" internal="NOHRSC_COMP2"/>-->
+	<enableOneToOneMapping/>
+</idMap>

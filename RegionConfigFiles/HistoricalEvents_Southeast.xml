@@ -1,0 +1,1900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<historicalEvents xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/historicalEvents.xsd" version="1.0">
+	<historicalEvent locationId="SRYA2" parameterId="QIN" name="1999/10/18 maxQ=3840">
+		<eventData>
+			<data dateTime="1999-10-10T00:00:00" value="609"/>
+			<data dateTime="1999-10-11T00:00:00" value="585"/>
+			<data dateTime="1999-10-12T00:00:00" value="804"/>
+			<data dateTime="1999-10-13T00:00:00" value="725"/>
+			<data dateTime="1999-10-14T00:00:00" value="654"/>
+			<data dateTime="1999-10-15T00:00:00" value="555"/>
+			<data dateTime="1999-10-16T00:00:00" value="1080"/>
+			<data dateTime="1999-10-17T00:00:00" value="914"/>
+			<data dateTime="1999-10-18T00:00:00" value="1920"/>
+			<data dateTime="1999-10-19T00:00:00" value="2770"/>
+			<data dateTime="1999-10-20T00:00:00" value="2150"/>
+			<data dateTime="1999-10-21T00:00:00" value="1590"/>
+			<data dateTime="1999-10-22T00:00:00" value="1510"/>
+			<data dateTime="1999-10-23T00:00:00" value="1070"/>
+			<data dateTime="1999-10-24T00:00:00" value="801"/>
+			<data dateTime="1999-10-25T00:00:00" value="642"/>
+			<data dateTime="1999-10-26T00:00:00" value="675"/>
+			<data dateTime="1999-10-27T00:00:00" value="552"/>
+			<data dateTime="1999-10-28T00:00:00" value="490"/>
+			<data dateTime="1999-10-29T00:00:00" value="426"/>
+			<data dateTime="1999-10-30T00:00:00" value="380"/>
+			<data dateTime="1999-10-31T00:00:00" value="558"/>
+			<data dateTime="1999-11-01T00:00:00" value="1880"/>
+			<data dateTime="1999-11-02T00:00:00" value="1160"/>
+			<data dateTime="1999-11-03T00:00:00" value="845"/>
+			<data dateTime="1999-11-04T00:00:00" value="655"/>
+			<data dateTime="1999-11-05T00:00:00" value="613"/>
+			<data dateTime="1999-11-06T00:00:00" value="498"/>
+			<data dateTime="1999-11-07T00:00:00" value="462"/>
+			<data dateTime="1999-11-08T00:00:00" value="407"/>
+			<data dateTime="1999-11-09T00:00:00" value="360"/>
+			<data dateTime="1999-11-10T00:00:00" value="358"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="SRYA2" parameterId="QIN" name="2004/12/23 maxQ=3340">
+		<eventData>
+			<data dateTime="2004-12-15T00:00:00" value="446"/>
+			<data dateTime="2004-12-16T00:00:00" value="544"/>
+			<data dateTime="2004-12-17T00:00:00" value="578"/>
+			<data dateTime="2004-12-18T00:00:00" value="695"/>
+			<data dateTime="2004-12-19T00:00:00" value="606"/>
+			<data dateTime="2004-12-20T00:00:00" value="544"/>
+			<data dateTime="2004-12-21T00:00:00" value="450"/>
+			<data dateTime="2004-12-22T00:00:00" value="864"/>
+			<data dateTime="2004-12-23T00:00:00" value="2910"/>
+			<data dateTime="2004-12-24T00:00:00" value="2640"/>
+			<data dateTime="2004-12-25T00:00:00" value="1740"/>
+			<data dateTime="2004-12-26T00:00:00" value="1070"/>
+			<data dateTime="2004-12-27T00:00:00" value="782"/>
+			<data dateTime="2004-12-28T00:00:00" value="644"/>
+			<data dateTime="2004-12-29T00:00:00" value="480"/>
+			<data dateTime="2004-12-30T00:00:00" value="420"/>
+			<data dateTime="2004-12-31T00:00:00" value="366"/>
+			<data dateTime="2005-01-01T00:00:00" value="325"/>
+			<data dateTime="2005-01-02T00:00:00" value="295"/>
+			<data dateTime="2005-01-03T00:00:00" value="275"/>
+			<data dateTime="2005-01-04T00:00:00" value="301"/>
+			<data dateTime="2005-01-05T00:00:00" value="374"/>
+			<data dateTime="2005-01-06T00:00:00" value="351"/>
+			<data dateTime="2005-01-07T00:00:00" value="317"/>
+			<data dateTime="2005-01-08T00:00:00" value="288"/>
+			<data dateTime="2005-01-09T00:00:00" value="264"/>
+			<data dateTime="2005-01-10T00:00:00" value="244"/>
+			<data dateTime="2005-01-11T00:00:00" value="225"/>
+			<data dateTime="2005-01-12T00:00:00" value="211"/>
+			<data dateTime="2005-01-13T00:00:00" value="200"/>
+			<data dateTime="2005-01-14T00:00:00" value="188"/>
+			<data dateTime="2005-01-15T00:00:00" value="178"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="SRYA2" parameterId="QIN" name="1988/12/15 maxQ=3250">
+		<eventData>
+			<data dateTime="1988-12-06T00:00:00" value="394"/>      
+			<data dateTime="1988-12-07T00:00:00" value="326"/>      
+			<data dateTime="1988-12-08T00:00:00" value="476"/>      
+			<data dateTime="1988-12-09T00:00:00" value="657"/>      
+			<data dateTime="1988-12-10T00:00:00" value="721"/>      
+			<data dateTime="1988-12-11T00:00:00" value="880"/>      
+			<data dateTime="1988-12-12T00:00:00" value="872"/>      
+			<data dateTime="1988-12-13T00:00:00" value="700"/>      
+			<data dateTime="1988-12-14T00:00:00" value="644"/>      
+			<data dateTime="1988-12-15T00:00:00" value="2650"/>      
+			<data dateTime="1988-12-16T00:00:00" value="2680"/>      
+			<data dateTime="1988-12-17T00:00:00" value="1850"/>      
+			<data dateTime="1988-12-18T00:00:00" value="1180"/>      
+			<data dateTime="1988-12-19T00:00:00" value="859"/>      
+			<data dateTime="1988-12-20T00:00:00" value="700"/>      
+			<data dateTime="1988-12-21T00:00:00" value="581"/>      
+			<data dateTime="1988-12-22T00:00:00" value="461"/>      
+			<data dateTime="1988-12-23T00:00:00" value="380"/>      
+			<data dateTime="1988-12-24T00:00:00" value="320"/>      
+			<data dateTime="1988-12-25T00:00:00" value="298"/>      
+			<data dateTime="1988-12-26T00:00:00" value="271"/>      
+			<data dateTime="1988-12-27T00:00:00" value="261"/>      
+			<data dateTime="1988-12-28T00:00:00" value="279"/> 
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="SRYA2" parameterId="QIN" name="2009/01/18 maxQ=3390">
+		<eventData>
+			<data dateTime="2009-01-03T00:00:00" value="92"/>
+			<data dateTime="2009-01-04T00:00:00" value="89"/>
+			<data dateTime="2009-01-05T00:00:00" value="87"/>
+			<data dateTime="2009-01-06T00:00:00" value="85"/>
+			<data dateTime="2009-01-07T00:00:00" value="84"/>
+			<data dateTime="2009-01-08T00:00:00" value="83"/>
+			<data dateTime="2009-01-09T00:00:00" value="81"/>
+			<data dateTime="2009-01-10T00:00:00" value="80"/>
+			<data dateTime="2009-01-11T00:00:00" value="88"/>
+			<data dateTime="2009-01-12T00:00:00" value="117"/>
+			<data dateTime="2009-01-13T00:00:00" value="137"/>
+			<data dateTime="2009-01-14T00:00:00" value="175"/>
+			<data dateTime="2009-01-15T00:00:00" value="208"/>
+			<data dateTime="2009-01-16T00:00:00" value="241"/>
+			<data dateTime="2009-01-17T00:00:00" value="690"/>
+			<data dateTime="2009-01-18T00:00:00" value="2630"/>
+			<data dateTime="2009-01-19T00:00:00" value="2680"/>
+			<data dateTime="2009-01-20T00:00:00" value="1890"/>
+			<data dateTime="2009-01-21T00:00:00" value="1120"/>
+			<data dateTime="2009-01-22T00:00:00" value="740"/>
+			<data dateTime="2009-01-23T00:00:00" value="546"/>
+			<data dateTime="2009-01-24T00:00:00" value="423"/>
+			<data dateTime="2009-01-25T00:00:00" value="347"/>
+			<data dateTime="2009-01-26T00:00:00" value="302"/>
+			<data dateTime="2009-01-27T00:00:00" value="262"/>
+			<data dateTime="2009-01-28T00:00:00" value="243"/>
+			<data dateTime="2009-01-29T00:00:00" value="241"/>
+			<data dateTime="2009-01-30T00:00:00" value="249"/>
+			<data dateTime="2009-01-31T00:00:00" value="234"/>
+			<data dateTime="2009-02-01T00:00:00" value="225"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="DEZQ9" parameterId="QIN" name="1982/06/08 maxQ=24717">
+		<eventData>
+			<data dateTime="1982-05-22T00:00:00" value="2330"/>
+			<data dateTime="1982-05-23T00:00:00" value="2610"/>
+			<data dateTime="1982-05-24T00:00:00" value="3000"/>
+			<data dateTime="1982-05-25T00:00:00" value="3530"/>
+			<data dateTime="1982-05-26T00:00:00" value="4060"/>
+			<data dateTime="1982-05-27T00:00:00" value="4590"/>
+			<data dateTime="1982-05-28T00:00:00" value="5300"/>
+			<data dateTime="1982-05-29T00:00:00" value="6000"/>
+			<data dateTime="1982-05-30T00:00:00" value="6890"/>
+			<data dateTime="1982-05-31T00:00:00" value="7770"/>
+			<data dateTime="1982-06-01T00:00:00" value="9180"/>
+			<data dateTime="1982-06-02T00:00:00" value="10900"/>
+			<data dateTime="1982-06-03T00:00:00" value="13100"/>
+			<data dateTime="1982-06-04T00:00:00" value="15500"/>
+			<data dateTime="1982-06-05T00:00:00" value="17300"/>
+			<data dateTime="1982-06-06T00:00:00" value="19100"/>
+			<data dateTime="1982-06-07T00:00:00" value="21500"/>
+			<data dateTime="1982-06-08T00:00:00" value="24700"/>
+			<data dateTime="1982-06-09T00:00:00" value="21400"/>
+			<data dateTime="1982-06-10T00:00:00" value="17300"/>
+			<data dateTime="1982-06-11T00:00:00" value="13800"/>
+			<data dateTime="1982-06-12T00:00:00" value="11300"/>
+			<data dateTime="1982-06-13T00:00:00" value="9530"/>
+			<data dateTime="1982-06-14T00:00:00" value="8120"/>
+			<data dateTime="1982-06-15T00:00:00" value="6890"/>
+			<data dateTime="1982-06-16T00:00:00" value="5650"/>
+			<data dateTime="1982-06-17T00:00:00" value="4940"/>
+			<data dateTime="1982-06-18T00:00:00" value="5830"/>
+			<data dateTime="1982-06-19T00:00:00" value="6530"/>
+			<data dateTime="1982-06-20T00:00:00" value="7590"/>
+			<data dateTime="1982-06-21T00:00:00" value="5650"/>
+			<data dateTime="1982-06-22T00:00:00" value="4590"/>
+			<data dateTime="1982-06-23T00:00:00" value="3530"/>
+			<data dateTime="1982-06-24T00:00:00" value="3100"/>
+			<data dateTime="1982-06-25T00:00:00" value="3120"/>
+			<data dateTime="1982-06-26T00:00:00" value="3190"/>
+			<data dateTime="1982-06-27T00:00:00" value="3270"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="DEZQ9" parameterId="QIN" name="1961/06/28 maxQ=10099">
+		<eventData>
+			<data dateTime="1961-06-17T00:00:00" value="3110"/>
+			<data dateTime="1961-06-18T00:00:00" value="3920"/>
+			<data dateTime="1961-06-19T00:00:00" value="4660"/>
+			<data dateTime="1961-06-20T00:00:00" value="3920"/>
+			<data dateTime="1961-06-21T00:00:00" value="3880"/>
+			<data dateTime="1961-06-22T00:00:00" value="3570"/>
+			<data dateTime="1961-06-23T00:00:00" value="3300"/>
+			<data dateTime="1961-06-24T00:00:00" value="3230"/>
+			<data dateTime="1961-06-25T00:00:00" value="3250"/>
+			<data dateTime="1961-06-26T00:00:00" value="4480"/>
+			<data dateTime="1961-06-27T00:00:00" value="9500"/>
+			<data dateTime="1961-06-28T00:00:00" value="10100"/>
+			<data dateTime="1961-06-29T00:00:00" value="7270"/>
+			<data dateTime="1961-06-30T00:00:00" value="6710"/>
+			<data dateTime="1961-07-01T00:00:00" value="6640"/>
+			<data dateTime="1961-07-02T00:00:00" value="6360"/>
+			<data dateTime="1961-07-03T00:00:00" value="5900"/>
+			<data dateTime="1961-07-04T00:00:00" value="5330"/>
+			<data dateTime="1961-07-05T00:00:00" value="5050"/>
+			<data dateTime="1961-07-06T00:00:00" value="4800"/>
+			<data dateTime="1961-07-07T00:00:00" value="4590"/>
+			<data dateTime="1961-07-08T00:00:00" value="4340"/>
+			<data dateTime="1961-07-09T00:00:00" value="4270"/>
+			<data dateTime="1961-07-10T00:00:00" value="4130"/>
+			<data dateTime="1961-07-11T00:00:00" value="4030"/>
+			<data dateTime="1961-07-12T00:00:00" value="4100"/>
+			<data dateTime="1961-07-13T00:00:00" value="4200"/>
+			<data dateTime="1961-07-14T00:00:00" value="4340"/>
+			<data dateTime="1961-07-15T00:00:00" value="4450"/>
+			<data dateTime="1961-07-16T00:00:00" value="4100"/>
+			<data dateTime="1961-07-17T00:00:00" value="3920"/>
+			<data dateTime="1961-07-18T00:00:00" value="3880"/>
+			<data dateTime="1961-07-19T00:00:00" value="3880"/>
+			<data dateTime="1961-07-20T00:00:00" value="3810"/>
+			<data dateTime="1961-07-21T00:00:00" value="3710"/>
+			<data dateTime="1961-07-22T00:00:00" value="3600"/>
+			<data dateTime="1961-07-23T00:00:00" value="3450"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="DEZQ9" parameterId="QIN" name="1988/07/17 maxQ=12535">
+		<eventData>
+			<data dateTime="1988-07-08T00:00:00" value="4910"/>
+			<data dateTime="1988-07-09T00:00:00" value="4620"/>
+			<data dateTime="1988-07-10T00:00:00" value="4660"/>
+			<data dateTime="1988-07-11T00:00:00" value="4770"/>
+			<data dateTime="1988-07-12T00:00:00" value="4770"/>
+			<data dateTime="1988-07-13T00:00:00" value="5680"/>
+			<data dateTime="1988-07-14T00:00:00" value="7410"/>
+			<data dateTime="1988-07-15T00:00:00" value="8580"/>
+			<data dateTime="1988-07-16T00:00:00" value="9740"/>
+			<data dateTime="1988-07-17T00:00:00" value="11900"/>
+			<data dateTime="1988-07-18T00:00:00" value="9880"/>
+			<data dateTime="1988-07-19T00:00:00" value="7590"/>
+			<data dateTime="1988-07-20T00:00:00" value="6920"/>
+			<data dateTime="1988-07-21T00:00:00" value="6780"/>
+			<data dateTime="1988-07-22T00:00:00" value="6670"/>
+			<data dateTime="1988-07-23T00:00:00" value="6420"/>
+			<data dateTime="1988-07-24T00:00:00" value="6070"/>
+			<data dateTime="1988-07-25T00:00:00" value="5790"/>
+			<data dateTime="1988-07-26T00:00:00" value="5610"/>
+			<data dateTime="1988-07-27T00:00:00" value="5510"/>
+			<data dateTime="1988-07-28T00:00:00" value="5440"/>
+			<data dateTime="1988-07-29T00:00:00" value="5260"/>
+			<data dateTime="1988-07-30T00:00:00" value="5120"/>
+			<data dateTime="1988-07-31T00:00:00" value="4980"/>
+			<data dateTime="1988-08-01T00:00:00" value="4840"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALSQ9" parameterId="QIN" name="1989/07/12 maxQ=56100">
+		<eventData>
+			<data dateTime="1989-07-01T00:00:00" value="32000"/>
+			<data dateTime="1989-07-02T00:00:00" value="33600"/>
+			<data dateTime="1989-07-03T00:00:00" value="32800"/>
+			<data dateTime="1989-07-04T00:00:00" value="32300"/>
+			<data dateTime="1989-07-05T00:00:00" value="32900"/>
+			<data dateTime="1989-07-06T00:00:00" value="34200"/>
+			<data dateTime="1989-07-07T00:00:00" value="36700"/>
+			<data dateTime="1989-07-08T00:00:00" value="40600"/>
+			<data dateTime="1989-07-09T00:00:00" value="43400"/>
+			<data dateTime="1989-07-10T00:00:00" value="45500"/>
+			<data dateTime="1989-07-11T00:00:00" value="50500"/>
+			<data dateTime="1989-07-12T00:00:00" value="54000"/>
+			<data dateTime="1989-07-13T00:00:00" value="54700"/>
+			<data dateTime="1989-07-14T00:00:00" value="54000"/>
+			<data dateTime="1989-07-15T00:00:00" value="50800"/>
+			<data dateTime="1989-07-16T00:00:00" value="44800"/>
+			<data dateTime="1989-07-17T00:00:00" value="41700"/>
+			<data dateTime="1989-07-18T00:00:00" value="40600"/>
+			<data dateTime="1989-07-19T00:00:00" value="41300"/>
+			<data dateTime="1989-07-20T00:00:00" value="42400"/>
+			<data dateTime="1989-07-21T00:00:00" value="41700"/>
+			<data dateTime="1989-07-22T00:00:00" value="39200"/>
+			<data dateTime="1989-07-23T00:00:00" value="37400"/>
+			<data dateTime="1989-07-24T00:00:00" value="36000"/>
+			<data dateTime="1989-07-25T00:00:00" value="34100"/>
+			<data dateTime="1989-07-26T00:00:00" value="32300"/>
+			<data dateTime="1989-07-27T00:00:00" value="32200"/>
+			<data dateTime="1989-07-28T00:00:00" value="34000"/>
+			<data dateTime="1989-07-29T00:00:00" value="36000"/>
+			<data dateTime="1989-07-30T00:00:00" value="38500"/>
+			<data dateTime="1989-07-31T00:00:00" value="39500"/>
+			<data dateTime="1989-08-01T00:00:00" value="40200"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALSQ9" parameterId="QIN" name="1988/07/18 maxQ=49800">
+		<eventData>
+			<data dateTime="1988-07-04T00:00:00" value="28900"/>
+			<data dateTime="1988-07-05T00:00:00" value="29100"/>
+			<data dateTime="1988-07-06T00:00:00" value="28800"/>
+			<data dateTime="1988-07-07T00:00:00" value="28100"/>
+			<data dateTime="1988-07-08T00:00:00" value="27200"/>
+			<data dateTime="1988-07-09T00:00:00" value="26200"/>
+			<data dateTime="1988-07-10T00:00:00" value="26900"/>
+			<data dateTime="1988-07-11T00:00:00" value="27200"/>
+			<data dateTime="1988-07-12T00:00:00" value="26200"/>
+			<data dateTime="1988-07-13T00:00:00" value="28300"/>
+			<data dateTime="1988-07-14T00:00:00" value="31000"/>
+			<data dateTime="1988-07-15T00:00:00" value="36000"/>
+			<data dateTime="1988-07-16T00:00:00" value="42400"/>
+			<data dateTime="1988-07-17T00:00:00" value="43100"/>
+			<data dateTime="1988-07-18T00:00:00" value="47700"/>
+			<data dateTime="1988-07-19T00:00:00" value="46900"/>
+			<data dateTime="1988-07-20T00:00:00" value="43800"/>
+			<data dateTime="1988-07-21T00:00:00" value="40200"/>
+			<data dateTime="1988-07-22T00:00:00" value="37100"/>
+			<data dateTime="1988-07-23T00:00:00" value="34500"/>
+			<data dateTime="1988-07-24T00:00:00" value="32600"/>
+			<data dateTime="1988-07-25T00:00:00" value="30600"/>
+			<data dateTime="1988-07-26T00:00:00" value="30100"/>
+			<data dateTime="1988-07-27T00:00:00" value="30100"/>
+			<data dateTime="1988-07-28T00:00:00" value="29100"/>
+			<data dateTime="1988-07-29T00:00:00" value="27900"/>
+			<data dateTime="1988-07-30T00:00:00" value="27000"/>
+			<data dateTime="1988-07-31T00:00:00" value="26100"/>
+			<data dateTime="1988-08-01T00:00:00" value="25700"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALSQ9" parameterId="QIN" name="1997/08/14 maxQ=47300">
+		<eventData>
+			<data dateTime="1997-08-01T00:00:00" value="25100"/>
+			<data dateTime="1997-08-02T00:00:00" value="25600"/>
+			<data dateTime="1997-08-03T00:00:00" value="27000"/>
+			<data dateTime="1997-08-04T00:00:00" value="28900"/>
+			<data dateTime="1997-08-05T00:00:00" value="31000"/>
+			<data dateTime="1997-08-06T00:00:00" value="31800"/>
+			<data dateTime="1997-08-07T00:00:00" value="29700"/>
+			<data dateTime="1997-08-08T00:00:00" value="28300"/>
+			<data dateTime="1997-08-09T00:00:00" value="28900"/>
+			<data dateTime="1997-08-10T00:00:00" value="31000"/>
+			<data dateTime="1997-08-11T00:00:00" value="33700"/>
+			<data dateTime="1997-08-12T00:00:00" value="37100"/>
+			<data dateTime="1997-08-13T00:00:00" value="45200"/>
+			<data dateTime="1997-08-14T00:00:00" value="44800"/>
+			<data dateTime="1997-08-15T00:00:00" value="37800"/>
+			<data dateTime="1997-08-16T00:00:00" value="33200"/>
+			<data dateTime="1997-08-17T00:00:00" value="30500"/>
+			<data dateTime="1997-08-18T00:00:00" value="27600"/>
+			<data dateTime="1997-08-19T00:00:00" value="24800"/>
+			<data dateTime="1997-08-20T00:00:00" value="23800"/>
+			<data dateTime="1997-08-21T00:00:00" value="23200"/>
+			<data dateTime="1997-08-22T00:00:00" value="23000"/>
+			<data dateTime="1997-08-23T00:00:00" value="22600"/>
+			<data dateTime="1997-08-24T00:00:00" value="21700"/>
+			<data dateTime="1997-08-25T00:00:00" value="22300"/>
+			<data dateTime="1997-08-26T00:00:00" value="22100"/>
+			<data dateTime="1997-08-27T00:00:00" value="21300"/>
+			<data dateTime="1997-08-28T00:00:00" value="20200"/>
+			<data dateTime="1997-08-29T00:00:00" value="19400"/>
+			<data dateTime="1997-08-30T00:00:00" value="18900"/>
+			<data dateTime="1997-08-31T00:00:00" value="18600"/>
+			<data dateTime="1997-09-01T00:00:00" value="20300"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALKA2" parameterId="QIN" name="2002/08/13 maxQ=178000">
+		<eventData>
+			<data dateTime="2002-08-04T00:00:00" value="82100"/>
+			<data dateTime="2002-08-05T00:00:00" value="83700"/>
+			<data dateTime="2002-08-06T00:00:00" value="85100"/>
+			<data dateTime="2002-08-07T00:00:00" value="81700"/>
+			<data dateTime="2002-08-08T00:00:00" value="82700"/>
+			<data dateTime="2002-08-09T00:00:00" value="86500"/>
+			<data dateTime="2002-08-10T00:00:00" value="84000"/>
+			<data dateTime="2002-08-11T00:00:00" value="78000"/>
+			<data dateTime="2002-08-12T00:00:00" value="114000"/>
+			<data dateTime="2002-08-13T00:00:00" value="175000"/>
+			<data dateTime="2002-08-14T00:00:00" value="161000"/>
+			<data dateTime="2002-08-15T00:00:00" value="132000"/>
+			<data dateTime="2002-08-16T00:00:00" value="101000"/>
+			<data dateTime="2002-08-17T00:00:00" value="81100"/>
+			<data dateTime="2002-08-18T00:00:00" value="68900"/>
+			<data dateTime="2002-08-19T00:00:00" value="62100"/>
+			<data dateTime="2002-08-20T00:00:00" value="60600"/>
+			<data dateTime="2002-08-21T00:00:00" value="73800"/>
+			<data dateTime="2002-08-22T00:00:00" value="86900"/>
+			<data dateTime="2002-08-23T00:00:00" value="93500"/>
+			<data dateTime="2002-08-24T00:00:00" value="89000"/>
+			<data dateTime="2002-08-25T00:00:00" value="74400"/>
+			<data dateTime="2002-08-26T00:00:00" value="61400"/>
+			<data dateTime="2002-08-27T00:00:00" value="54500"/>
+			<data dateTime="2002-08-28T00:00:00" value="65100"/>
+			<data dateTime="2002-08-29T00:00:00" value="71700"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALKA2" parameterId="QIN" name="1997/08/14 maxQ=175000">
+		<eventData>
+			<data dateTime="1997-08-08T00:00:00" value="75700"/>
+			<data dateTime="1997-08-09T00:00:00" value="77800"/>
+			<data dateTime="1997-08-10T00:00:00" value="86600"/>
+			<data dateTime="1997-08-11T00:00:00" value="93000"/>
+			<data dateTime="1997-08-12T00:00:00" value="114000"/>
+			<data dateTime="1997-08-13T00:00:00" value="149000"/>
+			<data dateTime="1997-08-14T00:00:00" value="164000"/>
+			<data dateTime="1997-08-15T00:00:00" value="139000"/>
+			<data dateTime="1997-08-16T00:00:00" value="107000"/>
+			<data dateTime="1997-08-17T00:00:00" value="93700"/>
+			<data dateTime="1997-08-18T00:00:00" value="82400"/>
+			<data dateTime="1997-08-19T00:00:00" value="71500"/>
+			<data dateTime="1997-08-20T00:00:00" value="65700"/>
+			<data dateTime="1997-08-21T00:00:00" value="64100"/>
+			<data dateTime="1997-08-22T00:00:00" value="67500"/>
+			<data dateTime="1997-08-23T00:00:00" value="70700"/>
+			<data dateTime="1997-08-24T00:00:00" value="71800"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALKA2" parameterId="QIN" name="2007/09/11 maxQ=199000">
+		<eventData>
+			<data dateTime="2007-09-05T00:00:00" value="54700"/>
+			<data dateTime="2007-09-06T00:00:00" value="51600"/>
+			<data dateTime="2007-09-07T00:00:00" value="46200"/>
+			<data dateTime="2007-09-08T00:00:00" value="42900"/>
+			<data dateTime="2007-09-09T00:00:00" value="56800"/>
+			<data dateTime="2007-09-10T00:00:00" value="116000"/>
+			<data dateTime="2007-09-11T00:00:00" value="182000"/>
+			<data dateTime="2007-09-12T00:00:00" value="157000"/>
+			<data dateTime="2007-09-13T00:00:00" value="117000"/>
+			<data dateTime="2007-09-14T00:00:00" value="97900"/>
+			<data dateTime="2007-09-15T00:00:00" value="86900"/>
+			<data dateTime="2007-09-16T00:00:00" value="83000"/>
+			<data dateTime="2007-09-17T00:00:00" value="68200"/>
+			<data dateTime="2007-09-18T00:00:00" value="52900"/>
+			<data dateTime="2007-09-19T00:00:00" value="42800"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALKA2" parameterId="QIN" name="2009/08/18 maxQ=195000">
+		<eventData>
+			<data dateTime="2009-08-12T00:00:00" value="86600"/>
+			<data dateTime="2009-08-13T00:00:00" value="76400"/>
+			<data dateTime="2009-08-14T00:00:00" value="76300"/>
+			<data dateTime="2009-08-15T00:00:00" value="79700"/>
+			<data dateTime="2009-08-16T00:00:00" value="113000"/>
+			<data dateTime="2009-08-17T00:00:00" value="173000"/>
+			<data dateTime="2009-08-18T00:00:00" value="180000"/>
+			<data dateTime="2009-08-19T00:00:00" value="149000"/>
+			<data dateTime="2009-08-20T00:00:00" value="127000"/>
+			<data dateTime="2009-08-21T00:00:00" value="115000"/>
+			<data dateTime="2009-08-22T00:00:00" value="102000"/>
+			<data dateTime="2009-08-23T00:00:00" value="92800"/>
+			<data dateTime="2009-08-24T00:00:00" value="80400"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALEA2" parameterId="QIN" name="2002/08/13 maxQ=178000">
+		<eventData>
+			<data dateTime="2002-08-04T00:00:00" value="82100"/>
+			<data dateTime="2002-08-05T00:00:00" value="83700"/>
+			<data dateTime="2002-08-06T00:00:00" value="85100"/>
+			<data dateTime="2002-08-07T00:00:00" value="81700"/>
+			<data dateTime="2002-08-08T00:00:00" value="82700"/>
+			<data dateTime="2002-08-09T00:00:00" value="86500"/>
+			<data dateTime="2002-08-10T00:00:00" value="84000"/>
+			<data dateTime="2002-08-11T00:00:00" value="78000"/>
+			<data dateTime="2002-08-12T00:00:00" value="114000"/>
+			<data dateTime="2002-08-13T00:00:00" value="175000"/>
+			<data dateTime="2002-08-14T00:00:00" value="161000"/>
+			<data dateTime="2002-08-15T00:00:00" value="132000"/>
+			<data dateTime="2002-08-16T00:00:00" value="101000"/>
+			<data dateTime="2002-08-17T00:00:00" value="81100"/>
+			<data dateTime="2002-08-18T00:00:00" value="68900"/>
+			<data dateTime="2002-08-19T00:00:00" value="62100"/>
+			<data dateTime="2002-08-20T00:00:00" value="60600"/>
+			<data dateTime="2002-08-21T00:00:00" value="73800"/>
+			<data dateTime="2002-08-22T00:00:00" value="86900"/>
+			<data dateTime="2002-08-23T00:00:00" value="93500"/>
+			<data dateTime="2002-08-24T00:00:00" value="89000"/>
+			<data dateTime="2002-08-25T00:00:00" value="74400"/>
+			<data dateTime="2002-08-26T00:00:00" value="61400"/>
+			<data dateTime="2002-08-27T00:00:00" value="54500"/>
+			<data dateTime="2002-08-28T00:00:00" value="65100"/>
+			<data dateTime="2002-08-29T00:00:00" value="71700"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALEA2" parameterId="QIN" name="1997/08/14 maxQ=175000">
+		<eventData>
+			<data dateTime="1997-08-08T00:00:00" value="75700"/>
+			<data dateTime="1997-08-09T00:00:00" value="77800"/>
+			<data dateTime="1997-08-10T00:00:00" value="86600"/>
+			<data dateTime="1997-08-11T00:00:00" value="93000"/>
+			<data dateTime="1997-08-12T00:00:00" value="114000"/>
+			<data dateTime="1997-08-13T00:00:00" value="149000"/>
+			<data dateTime="1997-08-14T00:00:00" value="164000"/>
+			<data dateTime="1997-08-15T00:00:00" value="139000"/>
+			<data dateTime="1997-08-16T00:00:00" value="107000"/>
+			<data dateTime="1997-08-17T00:00:00" value="93700"/>
+			<data dateTime="1997-08-18T00:00:00" value="82400"/>
+			<data dateTime="1997-08-19T00:00:00" value="71500"/>
+			<data dateTime="1997-08-20T00:00:00" value="65700"/>
+			<data dateTime="1997-08-21T00:00:00" value="64100"/>
+			<data dateTime="1997-08-22T00:00:00" value="67500"/>
+			<data dateTime="1997-08-23T00:00:00" value="70700"/>
+			<data dateTime="1997-08-24T00:00:00" value="71800"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALEA2" parameterId="QIN" name="2007/09/11 maxQ=199000">
+		<eventData>
+			<data dateTime="2007-09-05T00:00:00" value="54700"/>
+			<data dateTime="2007-09-06T00:00:00" value="51600"/>
+			<data dateTime="2007-09-07T00:00:00" value="46200"/>
+			<data dateTime="2007-09-08T00:00:00" value="42900"/>
+			<data dateTime="2007-09-09T00:00:00" value="56800"/>
+			<data dateTime="2007-09-10T00:00:00" value="116000"/>
+			<data dateTime="2007-09-11T00:00:00" value="182000"/>
+			<data dateTime="2007-09-12T00:00:00" value="157000"/>
+			<data dateTime="2007-09-13T00:00:00" value="117000"/>
+			<data dateTime="2007-09-14T00:00:00" value="97900"/>
+			<data dateTime="2007-09-15T00:00:00" value="86900"/>
+			<data dateTime="2007-09-16T00:00:00" value="83000"/>
+			<data dateTime="2007-09-17T00:00:00" value="68200"/>
+			<data dateTime="2007-09-18T00:00:00" value="52900"/>
+			<data dateTime="2007-09-19T00:00:00" value="42800"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ALEA2" parameterId="QIN" name="2009/08/18 maxQ=195000">
+		<eventData>
+			<data dateTime="2009-08-12T00:00:00" value="86600"/>
+			<data dateTime="2009-08-13T00:00:00" value="76400"/>
+			<data dateTime="2009-08-14T00:00:00" value="76300"/>
+			<data dateTime="2009-08-15T00:00:00" value="79700"/>
+			<data dateTime="2009-08-16T00:00:00" value="113000"/>
+			<data dateTime="2009-08-17T00:00:00" value="173000"/>
+			<data dateTime="2009-08-18T00:00:00" value="180000"/>
+			<data dateTime="2009-08-19T00:00:00" value="149000"/>
+			<data dateTime="2009-08-20T00:00:00" value="127000"/>
+			<data dateTime="2009-08-21T00:00:00" value="115000"/>
+			<data dateTime="2009-08-22T00:00:00" value="102000"/>
+			<data dateTime="2009-08-23T00:00:00" value="92800"/>
+			<data dateTime="2009-08-24T00:00:00" value="80400"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TYAA2" parameterId="QIN" name="1976/09/27 maxQ=11500">
+		<eventData>
+			<data dateTime="1976-09-21T00:00:00" value="3300"/>
+			<data dateTime="1976-09-22T00:00:00" value="3700"/>
+			<data dateTime="1976-09-23T00:00:00" value="3200"/>
+			<data dateTime="1976-09-24T00:00:00" value="2800"/>
+			<data dateTime="1976-09-25T00:00:00" value="4000"/>
+			<data dateTime="1976-09-26T00:00:00" value="6600"/>
+			<data dateTime="1976-09-27T00:00:00" value="8600"/>
+			<data dateTime="1976-09-28T00:00:00" value="6000"/>
+			<data dateTime="1976-09-29T00:00:00" value="3150"/>
+			<data dateTime="1976-09-30T00:00:00" value="2000"/>
+			<data dateTime="1976-10-01T00:00:00" value="1490"/>
+			<data dateTime="1976-10-02T00:00:00" value="1180"/>
+			<data dateTime="1976-10-03T00:00:00" value="972"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TYAA2" parameterId="QIN" name="1975/09/13 maxQ=11200">
+		<eventData>
+			<data dateTime="1975-09-06T00:00:00" value="2800"/>
+			<data dateTime="1975-09-07T00:00:00" value="4130"/>
+			<data dateTime="1975-09-08T00:00:00" value="2960"/>
+			<data dateTime="1975-09-09T00:00:00" value="2910"/>
+			<data dateTime="1975-09-10T00:00:00" value="2120"/>
+			<data dateTime="1975-09-11T00:00:00" value="2000"/>
+			<data dateTime="1975-09-12T00:00:00" value="5130"/>
+			<data dateTime="1975-09-13T00:00:00" value="9620"/>
+			<data dateTime="1975-09-14T00:00:00" value="7030"/>
+			<data dateTime="1975-09-15T00:00:00" value="4750"/>
+			<data dateTime="1975-09-16T00:00:00" value="2880"/>
+			<data dateTime="1975-09-17T00:00:00" value="2110"/>
+			<data dateTime="1975-09-18T00:00:00" value="2100"/>
+			<data dateTime="1975-09-19T00:00:00" value="4130"/>
+			<data dateTime="1975-09-20T00:00:00" value="3060"/>
+			<data dateTime="1975-09-21T00:00:00" value="3120"/>
+			<data dateTime="1975-09-22T00:00:00" value="3030"/>
+			<data dateTime="1975-09-23T00:00:00" value="2490"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TYAA2" parameterId="QIN" name="1972/08/06 maxQ=10100">
+		<eventData>
+			<data dateTime="1972-07-28T00:00:00" value="2560"/>
+			<data dateTime="1972-07-29T00:00:00" value="2540"/>
+			<data dateTime="1972-07-30T00:00:00" value="2300"/>
+			<data dateTime="1972-07-31T00:00:00" value="2500"/>
+			<data dateTime="1972-08-01T00:00:00" value="3300"/>
+			<data dateTime="1972-08-02T00:00:00" value="3020"/>
+			<data dateTime="1972-08-03T00:00:00" value="3300"/>
+			<data dateTime="1972-08-04T00:00:00" value="4930"/>
+			<data dateTime="1972-08-05T00:00:00" value="5710"/>
+			<data dateTime="1972-08-06T00:00:00" value="7580"/>
+			<data dateTime="1972-08-07T00:00:00" value="5070"/>
+			<data dateTime="1972-08-08T00:00:00" value="6070"/>
+			<data dateTime="1972-08-09T00:00:00" value="4900"/>
+			<data dateTime="1972-08-10T00:00:00" value="3970"/>
+			<data dateTime="1972-08-11T00:00:00" value="4090"/>
+			<data dateTime="1972-08-12T00:00:00" value="3520"/>
+			<data dateTime="1972-08-13T00:00:00" value="3080"/>
+			<data dateTime="1972-08-14T00:00:00" value="3220"/>
+			<data dateTime="1972-08-15T00:00:00" value="3910"/>
+			<data dateTime="1972-08-16T00:00:00" value="4300"/>
+			<data dateTime="1972-08-17T00:00:00" value="4340"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MCAA2" parameterId="QIN" name="2005/11/19 maxQ=2610">
+		<eventData>
+			<data dateTime="2005-11-16T00:00:00" value="269"/>
+			<data dateTime="2005-11-17T00:00:00" value="673"/>
+			<data dateTime="2005-11-18T00:00:00" value="709"/>
+			<data dateTime="2005-11-19T00:00:00" value="727"/>
+			<data dateTime="2005-11-20T00:00:00" value="183"/>
+			<data dateTime="2005-11-21T00:00:00" value="949"/>
+			<data dateTime="2005-11-22T00:00:00" value="1170"/>
+			<data dateTime="2005-11-23T00:00:00" value="777"/>
+			<data dateTime="2005-11-24T00:00:00" value="342"/>
+			<data dateTime="2005-11-25T00:00:00" value="209"/>
+			<data dateTime="2005-11-26T00:00:00" value="123"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MCAA2" parameterId="QIN" name="1966/08/23 maxQ=1920">
+		<eventData>
+			<data dateTime="1966-08-19T00:00:00" value="142"/>
+			<data dateTime="1966-08-20T00:00:00" value="254"/>
+			<data dateTime="1966-08-21T00:00:00" value="171"/>
+			<data dateTime="1966-08-22T00:00:00" value="118"/>
+			<data dateTime="1966-08-23T00:00:00" value="902"/>
+			<data dateTime="1966-08-24T00:00:00" value="542"/>
+			<data dateTime="1966-08-25T00:00:00" value="220"/>
+			<data dateTime="1966-08-26T00:00:00" value="159"/>
+			<data dateTime="1966-08-27T00:00:00" value="128"/>
+			<data dateTime="1966-08-28T00:00:00" value="109"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MNDA2" parameterId="QIN" name="2019/07/15_Jokul maxQ= 8420">
+		<eventData>
+			<data dateTime="2019-07-13T10:15:00" value="0"/>
+			<data dateTime="2019-07-13T11:00:00" value="-1"/>
+			<data dateTime="2019-07-13T12:00:00" value="25"/>
+			<data dateTime="2019-07-13T13:00:00" value="52"/>
+			<data dateTime="2019-07-13T14:00:00" value="80"/>
+			<data dateTime="2019-07-13T15:00:00" value="107"/>
+			<data dateTime="2019-07-13T16:00:00" value="145"/>
+			<data dateTime="2019-07-13T17:00:00" value="202"/>
+			<data dateTime="2019-07-13T18:00:00" value="240"/>
+			<data dateTime="2019-07-13T19:00:00" value="297"/>
+			<data dateTime="2019-07-13T20:00:00" value="365"/>
+			<data dateTime="2019-07-13T21:00:00" value="442"/>
+			<data dateTime="2019-07-13T22:00:00" value="520"/>
+			<data dateTime="2019-07-13T23:00:00" value="607"/>
+			<data dateTime="2019-07-14T00:00:00" value="694"/>
+			<data dateTime="2019-07-14T01:00:00" value="812"/>
+			<data dateTime="2019-07-14T02:00:00" value="899"/>
+			<data dateTime="2019-07-14T03:00:00" value="1017"/>
+			<data dateTime="2019-07-14T04:00:00" value="1124"/>
+			<data dateTime="2019-07-14T05:00:00" value="1241"/>
+			<data dateTime="2019-07-14T06:00:00" value="1369"/>
+			<data dateTime="2019-07-14T07:00:00" value="1496"/>
+			<data dateTime="2019-07-14T08:00:00" value="1633"/>
+			<data dateTime="2019-07-14T09:00:00" value="1781"/>
+			<data dateTime="2019-07-14T10:00:00" value="1928"/>
+			<data dateTime="2019-07-14T11:00:00" value="2096"/>
+			<data dateTime="2019-07-14T12:00:00" value="2273"/>
+			<data dateTime="2019-07-14T13:00:00" value="2450"/>
+			<data dateTime="2019-07-14T14:00:00" value="2648"/>
+			<data dateTime="2019-07-14T15:00:00" value="2865"/>
+			<data dateTime="2019-07-14T16:00:00" value="3072"/>
+			<data dateTime="2019-07-14T17:00:00" value="3300"/>
+			<data dateTime="2019-07-14T18:00:00" value="3537"/>
+			<data dateTime="2019-07-14T19:00:00" value="3795"/>
+			<data dateTime="2019-07-14T20:00:00" value="4082"/>
+			<data dateTime="2019-07-14T21:00:00" value="4369"/>
+			<data dateTime="2019-07-14T22:00:00" value="4607"/>
+			<data dateTime="2019-07-14T23:00:00" value="4824"/>
+			<data dateTime="2019-07-15T00:00:00" value="5002"/>
+			<data dateTime="2019-07-15T01:00:00" value="5129"/>
+			<data dateTime="2019-07-15T02:00:00" value="5206"/>
+			<data dateTime="2019-07-15T03:00:00" value="5244"/>
+			<data dateTime="2019-07-15T04:00:00" value="5241"/>
+			<data dateTime="2019-07-15T05:00:00" value="5238"/>
+			<data dateTime="2019-07-15T06:00:00" value="5216"/>
+			<data dateTime="2019-07-15T07:00:00" value="5173"/>
+			<data dateTime="2019-07-15T08:00:00" value="5091"/>
+			<data dateTime="2019-07-15T09:00:00" value="4998"/>
+			<data dateTime="2019-07-15T10:00:00" value="4856"/>
+			<data dateTime="2019-07-15T11:00:00" value="4683"/>
+			<data dateTime="2019-07-15T12:00:00" value="4511"/>
+			<data dateTime="2019-07-15T13:00:00" value="4268"/>
+			<data dateTime="2019-07-15T14:00:00" value="4035"/>
+			<data dateTime="2019-07-15T15:00:00" value="3803"/>
+			<data dateTime="2019-07-15T16:00:00" value="3570"/>
+			<data dateTime="2019-07-15T17:00:00" value="3328"/>
+			<data dateTime="2019-07-15T18:00:00" value="3105"/>
+			<data dateTime="2019-07-15T19:00:00" value="2873"/>
+			<data dateTime="2019-07-15T20:00:00" value="2650"/>
+			<data dateTime="2019-07-15T21:00:00" value="2427"/>
+			<data dateTime="2019-07-15T22:00:00" value="2185"/>
+			<data dateTime="2019-07-15T23:00:00" value="1992"/>
+			<data dateTime="2019-07-16T00:00:00" value="1830"/>
+			<data dateTime="2019-07-16T01:00:00" value="1687"/>
+			<data dateTime="2019-07-16T02:00:00" value="1504"/>
+			<data dateTime="2019-07-16T03:00:00" value="1352"/>
+			<data dateTime="2019-07-16T04:00:00" value="1229"/>
+			<data dateTime="2019-07-16T05:00:00" value="1116"/>
+			<data dateTime="2019-07-16T06:00:00" value="1014"/>
+			<data dateTime="2019-07-16T07:00:00" value="931"/>
+			<data dateTime="2019-07-16T08:00:00" value="879"/>
+			<data dateTime="2019-07-16T09:00:00" value="826"/>
+			<data dateTime="2019-07-16T10:00:00" value="813"/>
+			<data dateTime="2019-07-16T11:00:00" value="801"/>
+			<data dateTime="2019-07-16T12:00:00" value="808"/>
+			<data dateTime="2019-07-16T13:00:00" value="836"/>
+			<data dateTime="2019-07-16T14:00:00" value="863"/>
+			<data dateTime="2019-07-16T15:00:00" value="930"/>
+			<data dateTime="2019-07-16T16:00:00" value="988"/>
+			<data dateTime="2019-07-16T17:00:00" value="1085"/>
+			<data dateTime="2019-07-16T18:00:00" value="1182"/>
+			<data dateTime="2019-07-16T19:00:00" value="1310"/>
+			<data dateTime="2019-07-16T20:00:00" value="1477"/>
+			<data dateTime="2019-07-16T21:00:00" value="1655"/>
+			<data dateTime="2019-07-16T22:00:00" value="1832"/>
+			<data dateTime="2019-07-16T23:00:00" value="1979"/>
+			<data dateTime="2019-07-17T00:00:00" value="2067"/>
+			<data dateTime="2019-07-17T01:00:00" value="2114"/>
+			<data dateTime="2019-07-17T02:00:00" value="2132"/>
+			<data dateTime="2019-07-17T03:00:00" value="2129"/>
+			<data dateTime="2019-07-17T04:00:00" value="2127"/>
+			<data dateTime="2019-07-17T05:00:00" value="2124"/>
+			<data dateTime="2019-07-17T06:00:00" value="2121"/>
+			<data dateTime="2019-07-17T07:00:00" value="2129"/>
+			<data dateTime="2019-07-17T08:00:00" value="2126"/>
+			<data dateTime="2019-07-17T09:00:00" value="2124"/>
+			<data dateTime="2019-07-17T10:00:00" value="2121"/>
+			<data dateTime="2019-07-17T11:00:00" value="2069"/>
+			<data dateTime="2019-07-17T12:00:00" value="1926"/>
+			<data dateTime="2019-07-17T13:00:00" value="1784"/>
+			<data dateTime="2019-07-17T14:00:00" value="1641"/>
+			<data dateTime="2019-07-17T15:00:00" value="1498"/>
+			<data dateTime="2019-07-17T16:00:00" value="1366"/>
+			<data dateTime="2019-07-17T17:00:00" value="1223"/>
+			<data dateTime="2019-07-17T18:00:00" value="1100"/>
+			<data dateTime="2019-07-17T19:00:00" value="988"/>
+			<data dateTime="2019-07-17T20:00:00" value="885"/>
+			<data dateTime="2019-07-17T21:00:00" value="783"/>
+			<data dateTime="2019-07-17T22:00:00" value="710"/>
+			<data dateTime="2019-07-17T23:00:00" value="637"/>
+			<data dateTime="2019-07-18T00:00:00" value="575"/>
+			<data dateTime="2019-07-18T01:00:00" value="522"/>
+			<data dateTime="2019-07-18T02:00:00" value="469"/>
+			<data dateTime="2019-07-18T03:00:00" value="437"/>
+			<data dateTime="2019-07-18T04:00:00" value="404"/>
+			<data dateTime="2019-07-18T05:00:00" value="382"/>
+			<data dateTime="2019-07-18T06:00:00" value="349"/>
+			<data dateTime="2019-07-18T07:00:00" value="316"/>
+			<data dateTime="2019-07-18T08:00:00" value="284"/>
+			<data dateTime="2019-07-18T09:00:00" value="271"/>
+			<data dateTime="2019-07-18T10:00:00" value="229"/>
+			<data dateTime="2019-07-18T11:00:00" value="196"/>
+			<data dateTime="2019-07-18T12:00:00" value="163"/>
+			<data dateTime="2019-07-18T13:00:00" value="121"/>
+			<data dateTime="2019-07-18T14:00:00" value="88"/>
+			<data dateTime="2019-07-18T15:00:00" value="55"/>
+			<data dateTime="2019-07-18T16:00:00" value="33"/>
+			<data dateTime="2019-07-18T17:00:00" value="20"/>
+			<data dateTime="2019-07-18T17:15:00" value="0"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MNDA2" parameterId="QIN" name="2018/07/20_Jokul maxQ=13600">
+		<eventData>
+			<data dateTime="2018-07-18T07:45:00" value="0"/>
+			<data dateTime="2018-07-18T08:00:00" value="0"/>
+			<data dateTime="2018-07-18T09:00:00" value="32"/>
+			<data dateTime="2018-07-18T10:00:00" value="64"/>
+			<data dateTime="2018-07-18T11:00:00" value="97"/>
+			<data dateTime="2018-07-18T12:00:00" value="149"/>
+			<data dateTime="2018-07-18T13:00:00" value="201"/>
+			<data dateTime="2018-07-18T14:00:00" value="263"/>
+			<data dateTime="2018-07-18T15:00:00" value="335"/>
+			<data dateTime="2018-07-18T16:00:00" value="408"/>
+			<data dateTime="2018-07-18T17:00:00" value="480"/>
+			<data dateTime="2018-07-18T18:00:00" value="582"/>
+			<data dateTime="2018-07-18T19:00:00" value="684"/>
+			<data dateTime="2018-07-18T20:00:00" value="796"/>
+			<data dateTime="2018-07-18T21:00:00" value="909"/>
+			<data dateTime="2018-07-18T22:00:00" value="1061"/>
+			<data dateTime="2018-07-18T23:00:00" value="1213"/>
+			<data dateTime="2018-07-19T00:00:00" value="1385"/>
+			<data dateTime="2018-07-19T01:00:00" value="1557"/>
+			<data dateTime="2018-07-19T02:00:00" value="1750"/>
+			<data dateTime="2018-07-19T03:00:00" value="1952"/>
+			<data dateTime="2018-07-19T04:00:00" value="2164"/>
+			<data dateTime="2018-07-19T05:00:00" value="2406"/>
+			<data dateTime="2018-07-19T06:00:00" value="2638"/>
+			<data dateTime="2018-07-19T07:00:00" value="2891"/>
+			<data dateTime="2018-07-19T08:00:00" value="3153"/>
+			<data dateTime="2018-07-19T09:00:00" value="3435"/>
+			<data dateTime="2018-07-19T10:00:00" value="3737"/>
+			<data dateTime="2018-07-19T11:00:00" value="4069"/>
+			<data dateTime="2018-07-19T12:00:00" value="4422"/>
+			<data dateTime="2018-07-19T13:00:00" value="4784"/>
+			<data dateTime="2018-07-19T14:00:00" value="5176"/>
+			<data dateTime="2018-07-19T15:00:00" value="5598"/>
+			<data dateTime="2018-07-19T16:00:00" value="6010"/>
+			<data dateTime="2018-07-19T17:00:00" value="6423"/>
+			<data dateTime="2018-07-19T18:00:00" value="6925"/>
+			<data dateTime="2018-07-19T19:00:00" value="7427"/>
+			<data dateTime="2018-07-19T20:00:00" value="7929"/>
+			<data dateTime="2018-07-19T21:00:00" value="8431"/>
+			<data dateTime="2018-07-19T22:00:00" value="9034"/>
+			<data dateTime="2018-07-19T23:00:00" value="9536"/>
+			<data dateTime="2018-07-20T00:00:00" value="9938"/>
+			<data dateTime="2018-07-20T01:00:00" value="9940"/>
+			<data dateTime="2018-07-20T02:00:00" value="9542"/>
+			<data dateTime="2018-07-20T03:00:00" value="8845"/>
+			<data dateTime="2018-07-20T04:00:00" value="8147"/>
+			<data dateTime="2018-07-20T05:00:00" value="7449"/>
+			<data dateTime="2018-07-20T06:00:00" value="6851"/>
+			<data dateTime="2018-07-20T07:00:00" value="6163"/>
+			<data dateTime="2018-07-20T08:00:00" value="5556"/>
+			<data dateTime="2018-07-20T09:00:00" value="4968"/>
+			<data dateTime="2018-07-20T10:00:00" value="4430"/>
+			<data dateTime="2018-07-20T11:00:00" value="3952"/>
+			<data dateTime="2018-07-20T12:00:00" value="3504"/>
+			<data dateTime="2018-07-20T13:00:00" value="3107"/>
+			<data dateTime="2018-07-20T14:00:00" value="2739"/>
+			<data dateTime="2018-07-20T15:00:00" value="2391"/>
+			<data dateTime="2018-07-20T16:00:00" value="2083"/>
+			<data dateTime="2018-07-20T17:00:00" value="1785"/>
+			<data dateTime="2018-07-20T18:00:00" value="1538"/>
+			<data dateTime="2018-07-20T19:00:00" value="1310"/>
+			<data dateTime="2018-07-20T20:00:00" value="1122"/>
+			<data dateTime="2018-07-20T21:00:00" value="954"/>
+			<data dateTime="2018-07-20T22:00:00" value="826"/>
+			<data dateTime="2018-07-20T23:00:00" value="719"/>
+			<data dateTime="2018-07-21T00:00:00" value="621"/>
+			<data dateTime="2018-07-21T01:00:00" value="533"/>
+			<data dateTime="2018-07-21T02:00:00" value="465"/>
+			<data dateTime="2018-07-21T03:00:00" value="427"/>
+			<data dateTime="2018-07-21T04:00:00" value="370"/>
+			<data dateTime="2018-07-21T05:00:00" value="302"/>
+			<data dateTime="2018-07-21T06:00:00" value="264"/>
+			<data dateTime="2018-07-21T07:00:00" value="226"/>
+			<data dateTime="2018-07-21T08:00:00" value="188"/>
+			<data dateTime="2018-07-21T09:00:00" value="140"/>
+			<data dateTime="2018-07-21T10:00:00" value="112"/>
+			<data dateTime="2018-07-21T11:00:00" value="64"/>
+			<data dateTime="2018-07-21T12:00:00" value="36"/>
+			<data dateTime="2018-07-21T13:00:00" value="8"/>
+			<data dateTime="2018-07-21T13:30:00" value="0"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MNDA2" parameterId="QIN" name="2011/07/21_Jokul maxQ=16490">
+		<eventData>
+         <data dateTime="2011-07-18T00:00:00" value="0"/>
+         <data dateTime="2011-07-18T01:00:00" value="0"/>
+         <data dateTime="2011-07-18T02:00:00" value="0"/>
+         <data dateTime="2011-07-18T03:00:00" value="0"/>
+         <data dateTime="2011-07-18T04:00:00" value="0"/>
+         <data dateTime="2011-07-18T05:00:00" value="0"/>
+         <data dateTime="2011-07-18T06:00:00" value="0"/>
+         <data dateTime="2011-07-18T07:00:00" value="0"/>
+         <data dateTime="2011-07-18T08:00:00" value="0"/>
+         <data dateTime="2011-07-18T09:00:00" value="0"/>
+         <data dateTime="2011-07-18T10:00:00" value="0"/>
+         <data dateTime="2011-07-18T11:00:00" value="0"/>
+         <data dateTime="2011-07-18T12:00:00" value="0"/>
+         <data dateTime="2011-07-18T13:00:00" value="0"/>
+         <data dateTime="2011-07-18T14:00:00" value="0"/>
+         <data dateTime="2011-07-18T15:00:00" value="0"/>
+         <data dateTime="2011-07-18T16:00:00" value="0"/>
+         <data dateTime="2011-07-18T17:00:00" value="0"/>
+         <data dateTime="2011-07-18T18:00:00" value="0"/>
+         <data dateTime="2011-07-18T19:00:00" value="24"/>
+         <data dateTime="2011-07-18T20:00:00" value="49"/>
+         <data dateTime="2011-07-18T21:00:00" value="74"/>
+         <data dateTime="2011-07-18T22:00:00" value="98"/>
+         <data dateTime="2011-07-18T23:00:00" value="121"/>
+         <data dateTime="2011-07-19T00:00:00" value="145"/>
+         <data dateTime="2011-07-19T01:00:00" value="168"/>
+         <data dateTime="2011-07-19T02:00:00" value="203"/>
+         <data dateTime="2011-07-19T03:00:00" value="227"/>
+         <data dateTime="2011-07-19T04:00:00" value="251"/>
+         <data dateTime="2011-07-19T05:00:00" value="261"/>
+         <data dateTime="2011-07-19T06:00:00" value="282"/>
+         <data dateTime="2011-07-19T07:00:00" value="292"/>
+         <data dateTime="2011-07-19T08:00:00" value="290"/>
+         <data dateTime="2011-07-19T09:00:00" value="300"/>
+         <data dateTime="2011-07-19T10:00:00" value="310"/>
+         <data dateTime="2011-07-19T11:00:00" value="322"/>
+         <data dateTime="2011-07-19T12:00:00" value="333"/>
+         <data dateTime="2011-07-19T13:00:00" value="358"/>
+         <data dateTime="2011-07-19T14:00:00" value="370"/>
+         <data dateTime="2011-07-19T15:00:00" value="422"/>
+         <data dateTime="2011-07-19T16:00:00" value="446"/>
+         <data dateTime="2011-07-19T17:00:00" value="481"/>
+         <data dateTime="2011-07-19T18:00:00" value="517"/>
+         <data dateTime="2011-07-19T19:00:00" value="552"/>
+         <data dateTime="2011-07-19T20:00:00" value="607"/>
+         <data dateTime="2011-07-19T21:00:00" value="662"/>
+         <data dateTime="2011-07-19T22:00:00" value="701"/>
+         <data dateTime="2011-07-19T23:00:00" value="765"/>
+         <data dateTime="2011-07-20T00:00:00" value="828"/>
+         <data dateTime="2011-07-20T01:00:00" value="893"/>
+         <data dateTime="2011-07-20T02:00:00" value="954"/>
+         <data dateTime="2011-07-20T03:00:00" value="1023"/>
+         <data dateTime="2011-07-20T04:00:00" value="1101"/>
+         <data dateTime="2011-07-20T05:00:00" value="1148"/>
+         <data dateTime="2011-07-20T06:00:00" value="1236"/>
+         <data dateTime="2011-07-20T07:00:00" value="1310"/>
+         <data dateTime="2011-07-20T08:00:00" value="1384"/>
+         <data dateTime="2011-07-20T09:00:00" value="1461"/>
+         <data dateTime="2011-07-20T10:00:00" value="1555"/>
+         <data dateTime="2011-07-20T11:00:00" value="1651"/>
+         <data dateTime="2011-07-20T12:00:00" value="1749"/>
+         <data dateTime="2011-07-20T13:00:00" value="1847"/>
+         <data dateTime="2011-07-20T14:00:00" value="1967"/>
+         <data dateTime="2011-07-20T15:00:00" value="2107"/>
+         <data dateTime="2011-07-20T16:00:00" value="2251"/>
+         <data dateTime="2011-07-20T17:00:00" value="2416"/>
+         <data dateTime="2011-07-20T18:00:00" value="2586"/>
+         <data dateTime="2011-07-20T19:00:00" value="2778"/>
+         <data dateTime="2011-07-20T20:00:00" value="2976"/>
+         <data dateTime="2011-07-20T21:00:00" value="3199"/>
+         <data dateTime="2011-07-20T22:00:00" value="3450"/>
+         <data dateTime="2011-07-20T23:00:00" value="3728"/>
+         <data dateTime="2011-07-21T00:00:00" value="3992"/>
+         <data dateTime="2011-07-21T01:00:00" value="4308"/>
+         <data dateTime="2011-07-21T02:00:00" value="4657"/>
+         <data dateTime="2011-07-21T03:00:00" value="5016"/>
+         <data dateTime="2011-07-21T04:00:00" value="5362"/>
+         <data dateTime="2011-07-21T05:00:00" value="5767"/>
+         <data dateTime="2011-07-21T06:00:00" value="6158"/>
+         <data dateTime="2011-07-21T07:00:00" value="6587"/>
+         <data dateTime="2011-07-21T08:00:00" value="6997"/>
+         <data dateTime="2011-07-21T09:00:00" value="7478"/>
+         <data dateTime="2011-07-21T10:00:00" value="7947"/>
+         <data dateTime="2011-07-21T11:00:00" value="8450"/>
+         <data dateTime="2011-07-21T12:00:00" value="8979"/>
+         <data dateTime="2011-07-21T13:00:00" value="9513"/>
+         <data dateTime="2011-07-21T14:00:00" value="10031"/>
+         <data dateTime="2011-07-21T15:00:00" value="10526"/>
+         <data dateTime="2011-07-21T16:00:00" value="11074"/>
+         <data dateTime="2011-07-21T17:00:00" value="11626"/>
+         <data dateTime="2011-07-21T18:00:00" value="12128"/>
+         <data dateTime="2011-07-21T19:00:00" value="12595"/>
+         <data dateTime="2011-07-21T20:00:00" value="12786"/>
+         <data dateTime="2011-07-21T21:00:00" value="12339"/>
+         <data dateTime="2011-07-21T22:00:00" value="11406"/>
+         <data dateTime="2011-07-21T23:00:00" value="10147"/>
+         <data dateTime="2011-07-22T00:00:00" value="8888"/>
+         <data dateTime="2011-07-22T01:00:00" value="7760"/>
+         <data dateTime="2011-07-22T02:00:00" value="6752"/>
+         <data dateTime="2011-07-22T03:00:00" value="5907"/>
+         <data dateTime="2011-07-22T04:00:00" value="5129"/>
+         <data dateTime="2011-07-22T05:00:00" value="4463"/>
+         <data dateTime="2011-07-22T06:00:00" value="3875"/>
+         <data dateTime="2011-07-22T07:00:00" value="3334"/>
+         <data dateTime="2011-07-22T08:00:00" value="2881"/>
+         <data dateTime="2011-07-22T09:00:00" value="2489"/>
+         <data dateTime="2011-07-22T10:00:00" value="2132"/>
+         <data dateTime="2011-07-22T11:00:00" value="1806"/>
+         <data dateTime="2011-07-22T12:00:00" value="1512"/>
+         <data dateTime="2011-07-22T13:00:00" value="1245"/>
+         <data dateTime="2011-07-22T14:00:00" value="1024"/>
+         <data dateTime="2011-07-22T15:00:00" value="808"/>
+         <data dateTime="2011-07-22T16:00:00" value="632"/>
+         <data dateTime="2011-07-22T17:00:00" value="479"/>
+         <data dateTime="2011-07-22T18:00:00" value="400"/>
+         <data dateTime="2011-07-22T19:00:00" value="286"/>
+         <data dateTime="2011-07-22T20:00:00" value="205"/>
+         <data dateTime="2011-07-22T21:00:00" value="132"/>
+         <data dateTime="2011-07-22T22:00:00" value="86"/>
+         <data dateTime="2011-07-22T23:00:00" value="67"/>
+         <data dateTime="2011-07-23T00:00:00" value="59"/>
+         <data dateTime="2011-07-23T01:00:00" value="22"/>
+         <data dateTime="2011-07-23T02:00:00" value="14"/>
+         <data dateTime="2011-07-23T03:00:00" value="10"/>
+         <data dateTime="2011-07-23T04:00:00" value="7"/>
+         <data dateTime="2011-07-23T05:00:00" value="2"/>
+         <data dateTime="2011-07-23T06:00:00" value="0"/>
+         <data dateTime="2011-07-23T07:00:00" value="0"/>
+         <data dateTime="2011-07-23T08:00:00" value="0"/>
+         <data dateTime="2011-07-23T09:00:00" value="0"/>
+         <data dateTime="2011-07-23T10:00:00" value="0"/>
+         <data dateTime="2011-07-23T11:00:00" value="0"/>
+         <data dateTime="2011-07-23T12:00:00" value="0"/>
+         <data dateTime="2011-07-23T13:00:00" value="0"/>
+         <data dateTime="2011-07-23T14:00:00" value="0"/>
+         <data dateTime="2011-07-23T15:00:00" value="0"/>
+         <data dateTime="2011-07-23T16:00:00" value="0"/>
+         <data dateTime="2011-07-23T17:00:00" value="0"/>
+         <data dateTime="2011-07-23T18:00:00" value="0"/>
+         <data dateTime="2011-07-23T19:00:00" value="0"/>
+         <data dateTime="2011-07-23T20:00:00" value="0"/>
+         <data dateTime="2011-07-23T21:00:00" value="0"/>
+         <data dateTime="2011-07-23T22:00:00" value="0"/>
+         <data dateTime="2011-07-23T23:00:00" value="0"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MNDA2" parameterId="QIN" name="2011/08/19_Jokul maxQ=14100">
+		<eventData>
+			<data dateTime="2011-08-20T00:00:00" value="0"/>
+			<data dateTime="2011-08-20T01:00:00" value="120"/>
+			<data dateTime="2011-08-20T02:00:00" value="220"/>
+			<data dateTime="2011-08-20T03:00:00" value="370"/>
+			<data dateTime="2011-08-20T04:00:00" value="480"/>
+			<data dateTime="2011-08-20T05:00:00" value="610"/>
+			<data dateTime="2011-08-20T06:00:00" value="790"/>
+			<data dateTime="2011-08-20T07:00:00" value="930"/>
+			<data dateTime="2011-08-20T08:00:00" value="1110"/>
+			<data dateTime="2011-08-20T09:00:00" value="1310"/>
+			<data dateTime="2011-08-20T10:00:00" value="1520"/>
+			<data dateTime="2011-08-20T11:00:00" value="1760"/>
+			<data dateTime="2011-08-20T12:00:00" value="1950"/>
+			<data dateTime="2011-08-20T13:00:00" value="2110"/>
+			<data dateTime="2011-08-20T14:00:00" value="2240"/>
+			<data dateTime="2011-08-20T15:00:00" value="2390"/>
+			<data dateTime="2011-08-20T16:00:00" value="2550"/>
+			<data dateTime="2011-08-20T17:00:00" value="2750"/>
+			<data dateTime="2011-08-20T18:00:00" value="2980"/>
+			<data dateTime="2011-08-20T19:00:00" value="3260"/>
+			<data dateTime="2011-08-20T20:00:00" value="3610"/>
+			<data dateTime="2011-08-20T21:00:00" value="3970"/>
+			<data dateTime="2011-08-20T22:00:00" value="4350"/>
+			<data dateTime="2011-08-20T23:00:00" value="4750"/>
+			<data dateTime="2011-08-21T00:00:00" value="5150"/>
+			<data dateTime="2011-08-21T01:00:00" value="5490"/>
+			<data dateTime="2011-08-21T02:00:00" value="5860"/>
+			<data dateTime="2011-08-21T03:00:00" value="6230"/>
+			<data dateTime="2011-08-21T04:00:00" value="6540"/>
+			<data dateTime="2011-08-21T05:00:00" value="6800"/>
+			<data dateTime="2011-08-21T06:00:00" value="6990"/>
+			<data dateTime="2011-08-21T07:00:00" value="7110"/>
+			<data dateTime="2011-08-21T08:00:00" value="7210"/>
+			<data dateTime="2011-08-21T09:00:00" value="7210"/>
+			<data dateTime="2011-08-21T10:00:00" value="7310"/>
+			<data dateTime="2011-08-21T11:00:00" value="7310"/>
+			<data dateTime="2011-08-21T12:00:00" value="7310"/>
+			<data dateTime="2011-08-21T13:00:00" value="7310"/>
+			<data dateTime="2011-08-21T14:00:00" value="7410"/>
+			<data dateTime="2011-08-21T15:00:00" value="7510"/>
+			<data dateTime="2011-08-21T16:00:00" value="7510"/>
+			<data dateTime="2011-08-21T17:00:00" value="7610"/>
+			<data dateTime="2011-08-21T18:00:00" value="7710"/>
+			<data dateTime="2011-08-21T19:00:00" value="7710"/>
+			<data dateTime="2011-08-21T20:00:00" value="7910"/>
+			<data dateTime="2011-08-21T21:00:00" value="8010"/>
+			<data dateTime="2011-08-21T22:00:00" value="8210"/>
+			<data dateTime="2011-08-21T23:00:00" value="8310"/>
+			<data dateTime="2011-08-22T00:00:00" value="8510"/>
+			<data dateTime="2011-08-22T01:00:00" value="8610"/>
+			<data dateTime="2011-08-22T02:00:00" value="8710"/>
+			<data dateTime="2011-08-22T03:00:00" value="8810"/>
+			<data dateTime="2011-08-22T04:00:00" value="8910"/>
+			<data dateTime="2011-08-22T05:00:00" value="8910"/>
+			<data dateTime="2011-08-22T06:00:00" value="9010"/>
+			<data dateTime="2011-08-22T07:00:00" value="9010"/>
+			<data dateTime="2011-08-22T08:00:00" value="9110"/>
+			<data dateTime="2011-08-22T09:00:00" value="9310"/>
+			<data dateTime="2011-08-22T10:00:00" value="9410"/>
+			<data dateTime="2011-08-22T11:00:00" value="9610"/>
+			<data dateTime="2011-08-22T12:00:00" value="9710"/>
+			<data dateTime="2011-08-22T13:00:00" value="10010"/>
+			<data dateTime="2011-08-22T14:00:00" value="10210"/>
+			<data dateTime="2011-08-22T15:00:00" value="10510"/>
+			<data dateTime="2011-08-22T16:00:00" value="10810"/>
+			<data dateTime="2011-08-22T17:00:00" value="11110"/>
+			<data dateTime="2011-08-22T18:00:00" value="11210"/>
+			<data dateTime="2011-08-22T19:00:00" value="10710"/>
+			<data dateTime="2011-08-22T20:00:00" value="10010"/>
+			<data dateTime="2011-08-22T21:00:00" value="9410"/>
+			<data dateTime="2011-08-22T22:00:00" value="8710"/>
+			<data dateTime="2011-08-22T23:00:00" value="8110"/>
+			<data dateTime="2011-08-23T00:00:00" value="7610"/>
+			<data dateTime="2011-08-23T01:00:00" value="7100"/>
+			<data dateTime="2011-08-23T02:00:00" value="6670"/>
+			<data dateTime="2011-08-23T03:00:00" value="6340"/>
+			<data dateTime="2011-08-23T04:00:00" value="6080"/>
+			<data dateTime="2011-08-23T05:00:00" value="5830"/>
+			<data dateTime="2011-08-23T06:00:00" value="5580"/>
+			<data dateTime="2011-08-23T07:00:00" value="5370"/>
+			<data dateTime="2011-08-23T08:00:00" value="5150"/>
+			<data dateTime="2011-08-23T09:00:00" value="5010"/>
+			<data dateTime="2011-08-23T10:00:00" value="4820"/>
+			<data dateTime="2011-08-23T11:00:00" value="4660"/>
+			<data dateTime="2011-08-23T12:00:00" value="4550"/>
+			<data dateTime="2011-08-23T13:00:00" value="4460"/>
+			<data dateTime="2011-08-23T14:00:00" value="4370"/>
+			<data dateTime="2011-08-23T15:00:00" value="4300"/>
+			<data dateTime="2011-08-23T16:00:00" value="4240"/>
+			<data dateTime="2011-08-23T17:00:00" value="4150"/>
+			<data dateTime="2011-08-23T18:00:00" value="4060"/>
+			<data dateTime="2011-08-23T19:00:00" value="3950"/>
+			<data dateTime="2011-08-23T20:00:00" value="3840"/>
+			<data dateTime="2011-08-23T21:00:00" value="3740"/>
+			<data dateTime="2011-08-23T22:00:00" value="3590"/>
+			<data dateTime="2011-08-23T23:00:00" value="3460"/>
+			<data dateTime="2011-08-24T00:00:00" value="3320"/>
+			<data dateTime="2011-08-24T01:00:00" value="3160"/>
+			<data dateTime="2011-08-24T02:00:00" value="3020"/>
+			<data dateTime="2011-08-24T03:00:00" value="2880"/>
+			<data dateTime="2011-08-24T04:00:00" value="2750"/>
+			<data dateTime="2011-08-24T05:00:00" value="2610"/>
+			<data dateTime="2011-08-24T06:00:00" value="2500"/>
+			<data dateTime="2011-08-24T07:00:00" value="2400"/>
+			<data dateTime="2011-08-24T08:00:00" value="2350"/>
+			<data dateTime="2011-08-24T09:00:00" value="2330"/>
+			<data dateTime="2011-08-24T10:00:00" value="2290"/>
+			<data dateTime="2011-08-24T11:00:00" value="2260"/>
+			<data dateTime="2011-08-24T12:00:00" value="2220"/>
+			<data dateTime="2011-08-24T13:00:00" value="2220"/>
+			<data dateTime="2011-08-24T14:00:00" value="2220"/>
+			<data dateTime="2011-08-24T15:00:00" value="2240"/>
+			<data dateTime="2011-08-24T16:00:00" value="2280"/>
+			<data dateTime="2011-08-24T17:00:00" value="2290"/>
+			<data dateTime="2011-08-24T18:00:00" value="2310"/>
+			<data dateTime="2011-08-24T19:00:00" value="2310"/>
+			<data dateTime="2011-08-24T20:00:00" value="2310"/>
+			<data dateTime="2011-08-24T21:00:00" value="2310"/>
+			<data dateTime="2011-08-24T22:00:00" value="2290"/>
+			<data dateTime="2011-08-24T23:00:00" value="2260"/>
+			<data dateTime="2011-08-25T00:00:00" value="2240"/>
+			<data dateTime="2011-08-25T01:00:00" value="2200"/>
+			<data dateTime="2011-08-25T02:00:00" value="2150"/>
+			<data dateTime="2011-08-25T03:00:00" value="2090"/>
+			<data dateTime="2011-08-25T04:00:00" value="2020"/>
+			<data dateTime="2011-08-25T05:00:00" value="1970"/>
+			<data dateTime="2011-08-25T06:00:00" value="1880"/>
+			<data dateTime="2011-08-25T07:00:00" value="1810"/>
+			<data dateTime="2011-08-25T08:00:00" value="1690"/>
+			<data dateTime="2011-08-25T09:00:00" value="1610"/>
+			<data dateTime="2011-08-25T10:00:00" value="1500"/>
+			<data dateTime="2011-08-25T11:00:00" value="1420"/>
+			<data dateTime="2011-08-25T12:00:00" value="1340"/>
+			<data dateTime="2011-08-25T13:00:00" value="1240"/>
+			<data dateTime="2011-08-25T14:00:00" value="1180"/>
+			<data dateTime="2011-08-25T15:00:00" value="1130"/>
+			<data dateTime="2011-08-25T16:00:00" value="1050"/>
+			<data dateTime="2011-08-25T17:00:00" value="1000"/>
+			<data dateTime="2011-08-25T18:00:00" value="960"/>
+			<data dateTime="2011-08-25T19:00:00" value="900"/>
+			<data dateTime="2011-08-25T20:00:00" value="840"/>
+			<data dateTime="2011-08-25T21:00:00" value="790"/>
+			<data dateTime="2011-08-25T22:00:00" value="740"/>
+			<data dateTime="2011-08-25T23:00:00" value="710"/>
+			<data dateTime="2011-08-26T00:00:00" value="690"/>
+			<data dateTime="2011-08-26T01:00:00" value="640"/>
+			<data dateTime="2011-08-26T02:00:00" value="630"/>
+			<data dateTime="2011-08-26T03:00:00" value="630"/>
+			<data dateTime="2011-08-26T04:00:00" value="630"/>
+			<data dateTime="2011-08-26T05:00:00" value="630"/>
+			<data dateTime="2011-08-26T06:00:00" value="640"/>
+			<data dateTime="2011-08-26T07:00:00" value="690"/>
+			<data dateTime="2011-08-26T08:00:00" value="730"/>
+			<data dateTime="2011-08-26T09:00:00" value="770"/>
+			<data dateTime="2011-08-26T10:00:00" value="840"/>
+			<data dateTime="2011-08-26T11:00:00" value="900"/>
+			<data dateTime="2011-08-26T12:00:00" value="940"/>
+			<data dateTime="2011-08-26T13:00:00" value="970"/>
+			<data dateTime="2011-08-26T14:00:00" value="1020"/>
+			<data dateTime="2011-08-26T15:00:00" value="1070"/>
+			<data dateTime="2011-08-26T16:00:00" value="1130"/>
+			<data dateTime="2011-08-26T17:00:00" value="1160"/>
+			<data dateTime="2011-08-26T18:00:00" value="1190"/>
+			<data dateTime="2011-08-26T19:00:00" value="1190"/>
+			<data dateTime="2011-08-26T20:00:00" value="1210"/>
+			<data dateTime="2011-08-26T21:00:00" value="1190"/>
+			<data dateTime="2011-08-26T22:00:00" value="1180"/>
+			<data dateTime="2011-08-26T23:00:00" value="1150"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MNDA2" parameterId="QIN" name="2012/07/02_Jokul maxQ=8726">
+		<eventData>
+         <data dateTime="2012-07-02T15:00:00" value="0"/>
+         <data dateTime="2012-07-02T16:00:00" value="0"/>
+         <data dateTime="2012-07-02T17:00:00" value="0"/>
+         <data dateTime="2012-07-02T18:00:00" value="0"/>
+         <data dateTime="2012-07-02T19:00:00" value="0"/>
+         <data dateTime="2012-07-02T20:00:00" value="0"/>
+         <data dateTime="2012-07-02T21:00:00" value="0"/>
+         <data dateTime="2012-07-02T22:00:00" value="0"/>
+         <data dateTime="2012-07-02T23:00:00" value="0"/>
+         <data dateTime="2012-07-03T00:00:00" value="0"/>
+         <data dateTime="2012-07-03T01:00:00" value="0"/>
+         <data dateTime="2012-07-03T02:00:00" value="0"/>
+         <data dateTime="2012-07-03T03:00:00" value="0"/>
+         <data dateTime="2012-07-03T04:00:00" value="0"/>
+         <data dateTime="2012-07-03T05:00:00" value="0"/>
+         <data dateTime="2012-07-03T06:00:00" value="0"/>
+         <data dateTime="2012-07-03T07:00:00" value="7"/>
+         <data dateTime="2012-07-03T08:00:00" value="7"/>
+         <data dateTime="2012-07-03T09:00:00" value="7"/>
+         <data dateTime="2012-07-03T10:00:00" value="16"/>
+         <data dateTime="2012-07-03T11:00:00" value="16"/>
+         <data dateTime="2012-07-03T12:00:00" value="16"/>
+         <data dateTime="2012-07-03T13:00:00" value="16"/>
+         <data dateTime="2012-07-03T14:00:00" value="31"/>
+         <data dateTime="2012-07-03T15:00:00" value="31"/>
+         <data dateTime="2012-07-03T16:00:00" value="31"/>
+         <data dateTime="2012-07-03T17:00:00" value="42"/>
+         <data dateTime="2012-07-03T18:00:00" value="42"/>
+         <data dateTime="2012-07-03T19:00:00" value="50"/>
+         <data dateTime="2012-07-03T20:00:00" value="57"/>
+         <data dateTime="2012-07-03T21:00:00" value="65"/>
+         <data dateTime="2012-07-03T22:00:00" value="73"/>
+         <data dateTime="2012-07-03T23:00:00" value="90"/>
+         <data dateTime="2012-07-04T00:00:00" value="97"/>
+         <data dateTime="2012-07-04T01:00:00" value="114"/>
+         <data dateTime="2012-07-04T02:00:00" value="131"/>
+         <data dateTime="2012-07-04T03:00:00" value="147"/>
+         <data dateTime="2012-07-04T04:00:00" value="164"/>
+         <data dateTime="2012-07-04T05:00:00" value="181"/>
+         <data dateTime="2012-07-04T06:00:00" value="199"/>
+         <data dateTime="2012-07-04T07:00:00" value="216"/>
+         <data dateTime="2012-07-04T08:00:00" value="243"/>
+         <data dateTime="2012-07-04T09:00:00" value="260"/>
+         <data dateTime="2012-07-04T10:00:00" value="292"/>
+         <data dateTime="2012-07-04T11:00:00" value="324"/>
+         <data dateTime="2012-07-04T12:00:00" value="356"/>
+         <data dateTime="2012-07-04T13:00:00" value="387"/>
+         <data dateTime="2012-07-04T14:00:00" value="428"/>
+         <data dateTime="2012-07-04T15:00:00" value="458"/>
+         <data dateTime="2012-07-04T16:00:00" value="500"/>
+         <data dateTime="2012-07-04T17:00:00" value="543"/>
+         <data dateTime="2012-07-04T18:00:00" value="598"/>
+         <data dateTime="2012-07-04T19:00:00" value="646"/>
+         <data dateTime="2012-07-04T20:00:00" value="706"/>
+         <data dateTime="2012-07-04T21:00:00" value="762"/>
+         <data dateTime="2012-07-04T22:00:00" value="819"/>
+         <data dateTime="2012-07-04T23:00:00" value="876"/>
+         <data dateTime="2012-07-05T00:00:00" value="949"/>
+         <data dateTime="2012-07-05T01:00:00" value="1028"/>
+         <data dateTime="2012-07-05T02:00:00" value="1103"/>
+         <data dateTime="2012-07-05T03:00:00" value="1176"/>
+         <data dateTime="2012-07-05T04:00:00" value="1273"/>
+         <data dateTime="2012-07-05T05:00:00" value="1353"/>
+         <data dateTime="2012-07-05T06:00:00" value="1456"/>
+         <data dateTime="2012-07-05T07:00:00" value="1547"/>
+         <data dateTime="2012-07-05T08:00:00" value="1648"/>
+         <data dateTime="2012-07-05T09:00:00" value="1764"/>
+         <data dateTime="2012-07-05T10:00:00" value="1877"/>
+         <data dateTime="2012-07-05T11:00:00" value="2002"/>
+         <data dateTime="2012-07-05T12:00:00" value="2129"/>
+         <data dateTime="2012-07-05T13:00:00" value="2276"/>
+         <data dateTime="2012-07-05T14:00:00" value="2426"/>
+         <data dateTime="2012-07-05T15:00:00" value="2596"/>
+         <data dateTime="2012-07-05T16:00:00" value="2733"/>
+         <data dateTime="2012-07-05T17:00:00" value="2928"/>
+         <data dateTime="2012-07-05T18:00:00" value="3091"/>
+         <data dateTime="2012-07-05T19:00:00" value="3293"/>
+         <data dateTime="2012-07-05T20:00:00" value="3501"/>
+         <data dateTime="2012-07-05T21:00:00" value="3713"/>
+         <data dateTime="2012-07-05T22:00:00" value="3930"/>
+         <data dateTime="2012-07-05T23:00:00" value="4172"/>
+         <data dateTime="2012-07-06T00:00:00" value="4419"/>
+         <data dateTime="2012-07-06T01:00:00" value="4695"/>
+         <data dateTime="2012-07-06T02:00:00" value="4955"/>
+         <data dateTime="2012-07-06T03:00:00" value="5220"/>
+         <data dateTime="2012-07-06T04:00:00" value="5514"/>
+         <data dateTime="2012-07-06T05:00:00" value="5792"/>
+         <data dateTime="2012-07-06T06:00:00" value="6075"/>
+         <data dateTime="2012-07-06T07:00:00" value="6364"/>
+         <data dateTime="2012-07-06T08:00:00" value="6584"/>
+         <data dateTime="2012-07-06T09:00:00" value="6532"/>
+         <data dateTime="2012-07-06T10:00:00" value="6284"/>
+         <data dateTime="2012-07-06T11:00:00" value="5732"/>
+         <data dateTime="2012-07-06T12:00:00" value="4978"/>
+         <data dateTime="2012-07-06T13:00:00" value="4308"/>
+         <data dateTime="2012-07-06T14:00:00" value="3734"/>
+         <data dateTime="2012-07-06T15:00:00" value="3231"/>
+         <data dateTime="2012-07-06T16:00:00" value="2787"/>
+         <data dateTime="2012-07-06T17:00:00" value="2434"/>
+         <data dateTime="2012-07-06T18:00:00" value="2095"/>
+         <data dateTime="2012-07-06T19:00:00" value="1820"/>
+         <data dateTime="2012-07-06T20:00:00" value="1598"/>
+         <data dateTime="2012-07-06T21:00:00" value="1395"/>
+         <data dateTime="2012-07-06T22:00:00" value="1221"/>
+         <data dateTime="2012-07-06T23:00:00" value="1064"/>
+         <data dateTime="2012-07-07T00:00:00" value="936"/>
+         <data dateTime="2012-07-07T01:00:00" value="811"/>
+         <data dateTime="2012-07-07T02:00:00" value="713"/>
+         <data dateTime="2012-07-07T03:00:00" value="604"/>
+         <data dateTime="2012-07-07T04:00:00" value="530"/>
+         <data dateTime="2012-07-07T05:00:00" value="439"/>
+         <data dateTime="2012-07-07T06:00:00" value="369"/>
+         <data dateTime="2012-07-07T07:00:00" value="308"/>
+         <data dateTime="2012-07-07T08:00:00" value="249"/>
+         <data dateTime="2012-07-07T09:00:00" value="200"/>
+         <data dateTime="2012-07-07T10:00:00" value="147"/>
+         <data dateTime="2012-07-07T11:00:00" value="106"/>
+         <data dateTime="2012-07-07T12:00:00" value="55"/>
+         <data dateTime="2012-07-07T13:00:00" value="8"/>
+         <data dateTime="2012-07-07T14:00:00" value="0"/>
+         <data dateTime="2012-07-07T15:00:00" value="0"/>
+         <data dateTime="2012-07-07T16:00:00" value="0"/>
+         <data dateTime="2012-07-07T17:00:00" value="0"/>
+         <data dateTime="2012-07-07T18:00:00" value="0"/>
+         <data dateTime="2012-07-07T19:00:00" value="0"/>
+         <data dateTime="2012-07-07T20:00:00" value="0"/>
+         <data dateTime="2012-07-07T21:00:00" value="0"/>
+         <data dateTime="2012-07-07T22:00:00" value="0"/>
+         <data dateTime="2012-07-07T23:00:00" value="0"/>
+         <data dateTime="2012-07-08T00:00:00" value="0"/>
+         <data dateTime="2012-07-08T01:00:00" value="0"/>
+         <data dateTime="2012-07-08T02:00:00" value="0"/>
+         <data dateTime="2012-07-08T03:00:00" value="0"/>
+         <data dateTime="2012-07-08T04:00:00" value="0"/>
+         <data dateTime="2012-07-08T05:00:00" value="0"/>
+         <data dateTime="2012-07-08T06:00:00" value="0"/>
+         <data dateTime="2012-07-08T07:00:00" value="0"/>
+         <data dateTime="2012-07-08T08:00:00" value="0"/>
+         <data dateTime="2012-07-08T09:00:00" value="0"/>
+         <data dateTime="2012-07-08T10:00:00" value="0"/>
+         <data dateTime="2012-07-08T11:00:00" value="0"/>
+         <data dateTime="2012-07-08T12:00:00" value="0"/>
+         <data dateTime="2012-07-08T13:00:00" value="0"/>
+         <data dateTime="2012-07-08T14:00:00" value="0"/>
+         <data dateTime="2012-07-08T15:00:00" value="0"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MNDA2" parameterId="QIN" name="2016/06/29_Jokul maxQ=13223">
+		<eventData>
+		<data dateTime="2018-06-29T13:30:00" value="0"/>
+			<data dateTime="2018-06-29T14:00:00" value="19"/>
+			<data dateTime="2018-06-29T15:00:00" value="58"/>
+			<data dateTime="2018-06-29T16:00:00" value="97"/>
+			<data dateTime="2018-06-29T17:00:00" value="136"/>
+			<data dateTime="2018-06-29T18:00:00" value="196"/>
+			<data dateTime="2018-06-29T19:00:00" value="255"/>
+			<data dateTime="2018-06-29T20:00:00" value="294"/>
+			<data dateTime="2018-06-29T21:00:00" value="333"/>
+			<data dateTime="2018-06-29T22:00:00" value="392"/>
+			<data dateTime="2018-06-29T23:00:00" value="431"/>
+			<data dateTime="2018-06-30T00:00:00" value="480"/>
+			<data dateTime="2018-06-30T01:00:00" value="540"/>
+			<data dateTime="2018-06-30T02:00:00" value="629"/>
+			<data dateTime="2018-06-30T03:00:00" value="688"/>
+			<data dateTime="2018-06-30T04:00:00" value="767"/>
+			<data dateTime="2018-06-30T05:00:00" value="856"/>
+			<data dateTime="2018-06-30T06:00:00" value="955"/>
+			<data dateTime="2018-06-30T07:00:00" value="1074"/>
+			<data dateTime="2018-06-30T08:00:00" value="1184"/>
+			<data dateTime="2018-06-30T09:00:00" value="1283"/>
+			<data dateTime="2018-06-30T10:00:00" value="1392"/>
+			<data dateTime="2018-06-30T11:00:00" value="1501"/>
+			<data dateTime="2018-06-30T12:00:00" value="1610"/>
+			<data dateTime="2018-06-30T13:00:00" value="1729"/>
+			<data dateTime="2018-06-30T14:00:00" value="1868"/>
+			<data dateTime="2018-06-30T15:00:00" value="1998"/>
+			<data dateTime="2018-06-30T16:00:00" value="2137"/>
+			<data dateTime="2018-06-30T17:00:00" value="2316"/>
+			<data dateTime="2018-06-30T18:00:00" value="2475"/>
+			<data dateTime="2018-06-30T19:00:00" value="2664"/>
+			<data dateTime="2018-06-30T20:00:00" value="2863"/>
+			<data dateTime="2018-06-30T21:00:00" value="3062"/>
+			<data dateTime="2018-06-30T22:00:00" value="3282"/>
+			<data dateTime="2018-06-30T23:00:00" value="3491"/>
+			<data dateTime="2018-07-01T00:00:00" value="3750"/>
+			<data dateTime="2018-07-01T01:00:00" value="3999"/>
+			<data dateTime="2018-07-01T02:00:00" value="4258"/>
+			<data dateTime="2018-07-01T03:00:00" value="4567"/>
+			<data dateTime="2018-07-01T04:00:00" value="4856"/>
+			<data dateTime="2018-07-01T05:00:00" value="5196"/>
+			<data dateTime="2018-07-01T06:00:00" value="5565"/>
+			<data dateTime="2018-07-01T07:00:00" value="5914"/>
+			<data dateTime="2018-07-01T08:00:00" value="6333"/>
+			<data dateTime="2018-07-01T09:00:00" value="6762"/>
+			<data dateTime="2018-07-01T10:00:00" value="7231"/>
+			<data dateTime="2018-07-01T11:00:00" value="7730"/>
+			<data dateTime="2018-07-01T12:00:00" value="8329"/>
+			<data dateTime="2018-07-01T13:00:00" value="8829"/>
+			<data dateTime="2018-07-01T14:00:00" value="9428"/>
+			<data dateTime="2018-07-01T15:00:00" value="10027"/>
+			<data dateTime="2018-07-01T16:00:00" value="10726"/>
+			<data dateTime="2018-07-01T17:00:00" value="11325"/>
+			<data dateTime="2018-07-01T18:00:00" value="11924"/>
+			<data dateTime="2018-07-01T19:00:00" value="12623"/>
+			<data dateTime="2018-07-01T20:00:00" value="13223"/>
+			<data dateTime="2018-07-01T21:00:00" value="12622"/>
+			<data dateTime="2018-07-01T22:00:00" value="11221"/>
+			<data dateTime="2018-07-01T23:00:00" value="9920"/>
+			<data dateTime="2018-07-02T00:00:00" value="8819"/>
+			<data dateTime="2018-07-02T01:00:00" value="7918"/>
+			<data dateTime="2018-07-02T02:00:00" value="7117"/>
+			<data dateTime="2018-07-02T03:00:00" value="6417"/>
+			<data dateTime="2018-07-02T04:00:00" value="5856"/>
+			<data dateTime="2018-07-02T05:00:00" value="5365"/>
+			<data dateTime="2018-07-02T06:00:00" value="4934"/>
+			<data dateTime="2018-07-02T07:00:00" value="4543"/>
+			<data dateTime="2018-07-02T08:00:00" value="4202"/>
+			<data dateTime="2018-07-02T09:00:00" value="3881"/>
+			<data dateTime="2018-07-02T10:00:00" value="3601"/>
+			<data dateTime="2018-07-02T11:00:00" value="3350"/>
+			<data dateTime="2018-07-02T12:00:00" value="3129"/>
+			<data dateTime="2018-07-02T13:00:00" value="2928"/>
+			<data dateTime="2018-07-02T14:00:00" value="2747"/>
+			<data dateTime="2018-07-02T15:00:00" value="2596"/>
+			<data dateTime="2018-07-02T16:00:00" value="2445"/>
+			<data dateTime="2018-07-02T17:00:00" value="2315"/>
+			<data dateTime="2018-07-02T18:00:00" value="2204"/>
+			<data dateTime="2018-07-02T19:00:00" value="2113"/>
+			<data dateTime="2018-07-02T20:00:00" value="2032"/>
+			<data dateTime="2018-07-02T21:00:00" value="1941"/>
+			<data dateTime="2018-07-02T22:00:00" value="1850"/>
+			<data dateTime="2018-07-02T23:00:00" value="1769"/>
+			<data dateTime="2018-07-03T00:00:00" value="1698"/>
+			<data dateTime="2018-07-03T01:00:00" value="1618"/>
+			<data dateTime="2018-07-03T02:00:00" value="1547"/>
+			<data dateTime="2018-07-03T03:00:00" value="1486"/>
+			<data dateTime="2018-07-03T04:00:00" value="1415"/>
+			<data dateTime="2018-07-03T05:00:00" value="1334"/>
+			<data dateTime="2018-07-03T06:00:00" value="1263"/>
+			<data dateTime="2018-07-03T07:00:00" value="1202"/>
+			<data dateTime="2018-07-03T08:00:00" value="1132"/>
+			<data dateTime="2018-07-03T09:00:00" value="1081"/>
+			<data dateTime="2018-07-03T10:00:00" value="1030"/>
+			<data dateTime="2018-07-03T11:00:00" value="989"/>
+			<data dateTime="2018-07-03T12:00:00" value="938"/>
+			<data dateTime="2018-07-03T13:00:00" value="887"/>
+			<data dateTime="2018-07-03T14:00:00" value="856"/>
+			<data dateTime="2018-07-03T15:00:00" value="806"/>
+			<data dateTime="2018-07-03T16:00:00" value="755"/>
+			<data dateTime="2018-07-03T17:00:00" value="744"/>
+			<data dateTime="2018-07-03T18:00:00" value="693"/>
+			<data dateTime="2018-07-03T19:00:00" value="662"/>
+			<data dateTime="2018-07-03T20:00:00" value="611"/>
+			<data dateTime="2018-07-03T21:00:00" value="570"/>
+			<data dateTime="2018-07-03T22:00:00" value="519"/>
+			<data dateTime="2018-07-03T23:00:00" value="468"/>
+			<data dateTime="2018-07-04T00:00:00" value="427"/>
+			<data dateTime="2018-07-04T01:00:00" value="377"/>
+			<data dateTime="2018-07-04T02:00:00" value="326"/>
+			<data dateTime="2018-07-04T03:00:00" value="275"/>
+			<data dateTime="2018-07-04T04:00:00" value="214"/>
+			<data dateTime="2018-07-04T05:00:00" value="173"/>
+			<data dateTime="2018-07-04T06:00:00" value="112"/>
+			<data dateTime="2018-07-04T07:00:00" value="71"/>
+			<data dateTime="2018-07-04T08:00:00" value="10"/>
+			<data dateTime="2018-07-04T08:30:00" value="0"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MNDA2" parameterId="QIN" name="1991/09/08 maxQ=15500">
+		<eventData>
+			<data dateTime="1991-08-26T00:00:00" value="4620"/>
+			<data dateTime="1991-08-27T00:00:00" value="3840"/>
+			<data dateTime="1991-08-28T00:00:00" value="2740"/>
+			<data dateTime="1991-08-29T00:00:00" value="2460"/>
+			<data dateTime="1991-08-30T00:00:00" value="2590"/>
+			<data dateTime="1991-08-31T00:00:00" value="2720"/>
+			<data dateTime="1991-09-01T00:00:00" value="2240"/>
+			<data dateTime="1991-09-02T00:00:00" value="1750"/>
+			<data dateTime="1991-09-03T00:00:00" value="1860"/>
+			<data dateTime="1991-09-04T00:00:00" value="2950"/>
+			<data dateTime="1991-09-05T00:00:00" value="6030"/>
+			<data dateTime="1991-09-06T00:00:00" value="8470"/>
+			<data dateTime="1991-09-07T00:00:00" value="7490"/>
+			<data dateTime="1991-09-08T00:00:00" value="4840"/>
+			<data dateTime="1991-09-09T00:00:00" value="4760"/>
+			<data dateTime="1991-09-10T00:00:00" value="4900"/>
+			<data dateTime="1991-09-11T00:00:00" value="6270"/>
+			<data dateTime="1991-09-12T00:00:00" value="3980"/>
+			<data dateTime="1991-09-13T00:00:00" value="2690"/>
+			<data dateTime="1991-09-14T00:00:00" value="2160"/>
+			<data dateTime="1991-09-15T00:00:00" value="2470"/>
+			<data dateTime="1991-09-16T00:00:00" value="2800"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MNDA2" parameterId="QIN" name="2009/08/18 maxQ=14400">
+		<eventData>
+			<data dateTime="2009-08-08T00:00:00" value="3010"/>
+			<data dateTime="2009-08-09T00:00:00" value="3170"/>
+			<data dateTime="2009-08-10T00:00:00" value="2870"/>
+			<data dateTime="2009-08-11T00:00:00" value="2580"/>
+			<data dateTime="2009-08-12T00:00:00" value="2330"/>
+			<data dateTime="2009-08-13T00:00:00" value="2140"/>
+			<data dateTime="2009-08-14T00:00:00" value="2110"/>
+			<data dateTime="2009-08-15T00:00:00" value="2870"/>
+			<data dateTime="2009-08-16T00:00:00" value="5020"/>
+			<data dateTime="2009-08-17T00:00:00" value="10900"/>
+			<data dateTime="2009-08-18T00:00:00" value="11800"/>
+			<data dateTime="2009-08-19T00:00:00" value="6040"/>
+			<data dateTime="2009-08-20T00:00:00" value="4410"/>
+			<data dateTime="2009-08-21T00:00:00" value="4290"/>
+			<data dateTime="2009-08-22T00:00:00" value="3530"/>
+		</eventData>	 
+	</historicalEvent>
+	<historicalEvent locationId="MNDA2" parameterId="QIN" name="1993/09/22 maxQ=13000">
+		<eventData>
+			<data dateTime="1993-09-17T00:00:00" value="2260"/>
+			<data dateTime="1993-09-18T00:00:00" value="2470"/>
+			<data dateTime="1993-09-19T00:00:00" value="1620"/>
+			<data dateTime="1993-09-20T00:00:00" value="1350"/>
+			<data dateTime="1993-09-21T00:00:00" value="2210"/>
+			<data dateTime="1993-09-22T00:00:00" value="9340"/>
+			<data dateTime="1993-09-23T00:00:00" value="10100"/>
+			<data dateTime="1993-09-24T00:00:00" value="5860"/>
+			<data dateTime="1993-09-25T00:00:00" value="3760"/>
+			<data dateTime="1993-09-26T00:00:00" value="4340"/>
+			<data dateTime="1993-09-27T00:00:00" value="4190"/>
+			<data dateTime="1993-09-28T00:00:00" value="3140"/>
+			<data dateTime="1993-09-29T00:00:00" value="4310"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="JDCA2" parameterId="QIN" name="1999/12/28 maxQ=149">
+		<eventData>
+			<data dateTime="1999-12-25T00:00:00" value="54"/>
+			<data dateTime="1999-12-26T00:00:00" value="40"/>
+			<data dateTime="1999-12-27T00:00:00" value="101"/>
+			<data dateTime="1999-12-28T00:00:00" value="129"/>
+			<data dateTime="1999-12-29T00:00:00" value="61"/>
+			<data dateTime="1999-12-30T00:00:00" value="37"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TKUA2" parameterId="QIN" name="2004/06/25 maxQ=128000">
+		<eventData>
+			<data dateTime="2004-06-21T00:00:00" value="49200"/>
+			<data dateTime="2004-06-22T00:00:00" value="48200"/>
+			<data dateTime="2004-06-23T00:00:00" value="48000"/>
+			<data dateTime="2004-06-24T00:00:00" value="64100"/>
+			<data dateTime="2004-06-25T00:00:00" value="113000"/>
+			<data dateTime="2004-06-26T00:00:00" value="76800"/>
+			<data dateTime="2004-06-27T00:00:00" value="48800"/>
+			<data dateTime="2004-06-28T00:00:00" value="48100"/>
+			<data dateTime="2004-06-29T00:00:00" value="47000"/>
+			<data dateTime="2004-06-30T00:00:00" value="49100"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TKUA2" parameterId="QIN" name="2007/07/22 maxQ=113000">
+		<eventData>
+			<data dateTime="2007-07-16T00:00:00" value="59200"/>
+			<data dateTime="2007-07-17T00:00:00" value="64900"/>
+			<data dateTime="2007-07-18T00:00:00" value="53700"/>
+			<data dateTime="2007-07-19T00:00:00" value="51500"/>
+			<data dateTime="2007-07-20T00:00:00" value="60700"/>
+			<data dateTime="2007-07-21T00:00:00" value="91000"/>
+			<data dateTime="2007-07-22T00:00:00" value="77800"/>
+			<data dateTime="2007-07-23T00:00:00" value="46400"/>
+			<data dateTime="2007-07-24T00:00:00" value="43600"/>
+			<data dateTime="2007-07-25T00:00:00" value="40800"/>
+			<data dateTime="2007-07-26T00:00:00" value="37700"/>
+			<data dateTime="2007-07-27T00:00:00" value="34700"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TKUA2" parameterId="QIN" name="1989/08/17 maxQ=110000">
+		<eventData>
+			<data dateTime="1989-08-11T00:00:00" value="28800"/>
+			<data dateTime="1989-08-12T00:00:00" value="33500"/>
+			<data dateTime="1989-08-13T00:00:00" value="37000"/>
+			<data dateTime="1989-08-14T00:00:00" value="41100"/>
+			<data dateTime="1989-08-15T00:00:00" value="51500"/>
+			<data dateTime="1989-08-16T00:00:00" value="74800"/>
+			<data dateTime="1989-08-17T00:00:00" value="77000"/>
+			<data dateTime="1989-08-18T00:00:00" value="34500"/>
+			<data dateTime="1989-08-19T00:00:00" value="30800"/>
+			<data dateTime="1989-08-20T00:00:00" value="29500"/>
+			<data dateTime="1989-08-21T00:00:00" value="27100"/>
+			<data dateTime="1989-08-22T00:00:00" value="27300"/>
+			<data dateTime="1989-08-23T00:00:00" value="27400"/>			
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TKUA2" parameterId="QIN" name="1994/07/30 maxQ=106000">
+		<eventData>
+			<data dateTime="1994-07-25T00:00:00" value="28400"/>
+			<data dateTime="1994-07-26T00:00:00" value="30900"/>
+			<data dateTime="1994-07-27T00:00:00" value="32700"/>
+			<data dateTime="1994-07-28T00:00:00" value="38500"/>
+			<data dateTime="1994-07-29T00:00:00" value="56300"/>
+			<data dateTime="1994-07-30T00:00:00" value="85500"/>
+			<data dateTime="1994-07-31T00:00:00" value="51800"/>
+			<data dateTime="1994-08-01T00:00:00" value="30400"/>
+			<data dateTime="1994-08-02T00:00:00" value="28600"/>
+			<data dateTime="1994-08-03T00:00:00" value="30900"/>
+			<data dateTime="1994-08-04T00:00:00" value="34400"/>
+			<data dateTime="1994-08-05T00:00:00" value="36100"/>
+			<data dateTime="1994-08-06T00:00:00" value="36200"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TKUA2" parameterId="QIN" name="2000/07/26 maxQ=104000">
+		<eventData>
+			<data dateTime="2000-07-17T00:00:00" value="27700"/>
+			<data dateTime="2000-07-18T00:00:00" value="29500"/>
+			<data dateTime="2000-07-19T00:00:00" value="31700"/>
+			<data dateTime="2000-07-20T00:00:00" value="34000"/>
+			<data dateTime="2000-07-21T00:00:00" value="33100"/>
+			<data dateTime="2000-07-22T00:00:00" value="30500"/>
+			<data dateTime="2000-07-23T00:00:00" value="36200"/>
+			<data dateTime="2000-07-24T00:00:00" value="50900"/>
+			<data dateTime="2000-07-25T00:00:00" value="74600"/>
+			<data dateTime="2000-07-26T00:00:00" value="93100"/>
+			<data dateTime="2000-07-27T00:00:00" value="46100"/>
+			<data dateTime="2000-07-28T00:00:00" value="36800"/>
+			<data dateTime="2000-07-29T00:00:00" value="35900"/>
+			<data dateTime="2000-07-30T00:00:00" value="34900"/>
+			<data dateTime="2000-07-31T00:00:00" value="32000"/>
+			<data dateTime="2000-08-01T00:00:00" value="31000"/>
+			<data dateTime="2000-08-02T00:00:00" value="30000"/>
+			<data dateTime="2000-08-03T00:00:00" value="28600"/>
+			<data dateTime="2000-08-04T00:00:00" value="31000"/>
+			<data dateTime="2000-08-05T00:00:00" value="35500"/>
+			<data dateTime="2000-08-06T00:00:00" value="36500"/>
+			<data dateTime="2000-08-07T00:00:00" value="32100"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TKUA2" parameterId="SQIN" name="2005/08/11 jokul">
+		<eventData>
+			<data dateTime="2005-08-11T00:00:00" value="0"/>
+			<data dateTime="2005-08-11T06:00:00" value="557"/>
+			<data dateTime="2005-08-11T12:00:00" value="1534"/>
+			<data dateTime="2005-08-11T18:00:00" value="2601"/>
+			<data dateTime="2005-08-12T00:00:00" value="3988"/>
+			<data dateTime="2005-08-12T06:00:00" value="6385"/>
+			<data dateTime="2005-08-12T12:00:00" value="9682"/>
+			<data dateTime="2005-08-12T18:00:00" value="15559"/>
+			<data dateTime="2005-08-13T00:00:00" value="22436"/>
+			<data dateTime="2005-08-13T06:00:00" value="28773"/>
+			<data dateTime="2005-08-13T12:00:00" value="35670"/>
+			<data dateTime="2005-08-13T18:00:00" value="38418"/>
+			<data dateTime="2005-08-14T00:00:00" value="41167"/>
+			<data dateTime="2005-08-14T06:00:00" value="45644"/>
+			<data dateTime="2005-08-14T12:00:00" value="26291"/>
+			<data dateTime="2005-08-14T18:00:00" value="9698"/>
+			<data dateTime="2005-08-15T00:00:00" value="2875"/>
+			<data dateTime="2005-08-15T06:00:00" value="0"/>
+			<data dateTime="2005-08-15T12:00:00" value="0"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TKUA2" parameterId="SQIN" name="2006/06/29 jokul">
+		<eventData>
+			<data dateTime="2006-06-29T18:00:00" value="0"/>
+			<data dateTime="2006-06-30T00:00:00" value="767"/>
+			<data dateTime="2006-06-30T06:00:00" value="1734"/>
+			<data dateTime="2006-06-30T12:00:00" value="2861"/>
+			<data dateTime="2006-06-30T18:00:00" value="4508"/>
+			<data dateTime="2006-07-01T00:00:00" value="6585"/>
+			<data dateTime="2006-07-01T06:00:00" value="9802"/>
+			<data dateTime="2006-07-01T12:00:00" value="13289"/>
+			<data dateTime="2006-07-01T18:00:00" value="17876"/>
+			<data dateTime="2006-07-02T00:00:00" value="22303"/>
+			<data dateTime="2006-07-02T06:00:00" value="26630"/>
+			<data dateTime="2006-07-02T12:00:00" value="28668"/>
+			<data dateTime="2006-07-02T18:00:00" value="30707"/>
+			<data dateTime="2006-07-03T00:00:00" value="22284"/>
+			<data dateTime="2006-07-03T06:00:00" value="8241"/>
+			<data dateTime="2006-07-03T12:00:00" value="3108"/>
+			<data dateTime="2006-07-03T18:00:00" value="845"/>
+			<data dateTime="2006-07-04T00:00:00" value="0"/>
+			<data dateTime="2006-07-04T06:00:00" value="0"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TKUA2" parameterId="SQIN" name="2007/07/19 jokul">
+		<eventData>
+			<data dateTime="2007-07-19T18:00:00" value="0"/>
+			<data dateTime="2007-07-20T00:00:00" value="779"/>
+			<data dateTime="2007-07-20T06:00:00" value="1708"/>
+			<data dateTime="2007-07-20T12:00:00" value="3847"/>
+			<data dateTime="2007-07-20T18:00:00" value="7536"/>
+			<data dateTime="2007-07-21T00:00:00" value="12955"/>
+			<data dateTime="2007-07-21T06:00:00" value="19924"/>
+			<data dateTime="2007-07-21T12:00:00" value="26873"/>
+			<data dateTime="2007-07-21T18:00:00" value="36822"/>
+			<data dateTime="2007-07-22T00:00:00" value="46891"/>
+			<data dateTime="2007-07-22T06:00:00" value="59780"/>
+			<data dateTime="2007-07-22T12:00:00" value="62389"/>
+			<data dateTime="2007-07-22T18:00:00" value="56828"/>
+			<data dateTime="2007-07-23T00:00:00" value="29767"/>
+			<data dateTime="2007-07-23T06:00:00" value="13656"/>
+			<data dateTime="2007-07-23T12:00:00" value="4535"/>
+			<data dateTime="2007-07-23T18:00:00" value="0"/>
+			<data dateTime="2007-07-24T00:00:00" value="0"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TKUA2" parameterId="SQIN" name="2011/07/05 jokul-NoLake">
+		<eventData>
+			<data dateTime="2011-07-05T18:00:00" value="0"/>
+			<data dateTime="2011-07-06T00:00:00" value="650"/>
+			<data dateTime="2011-07-06T06:00:00" value="1800"/>
+			<data dateTime="2011-07-06T12:00:00" value="2800"/>
+			<data dateTime="2011-07-06T18:00:00" value="4200"/>
+			<data dateTime="2011-07-07T00:00:00" value="6900"/>
+			<data dateTime="2011-07-07T06:00:00" value="10600"/>
+			<data dateTime="2011-07-07T12:00:00" value="16000"/>
+			<data dateTime="2011-07-07T18:00:00" value="22600"/>
+			<data dateTime="2011-07-08T00:00:00" value="29000"/>
+			<data dateTime="2011-07-08T06:00:00" value="34200"/>
+			<data dateTime="2011-07-08T12:00:00" value="35700"/>
+			<data dateTime="2011-07-08T18:00:00" value="17000"/>
+			<data dateTime="2011-07-09T00:00:00" value="5000"/>
+			<data dateTime="2011-07-09T06:00:00" value="1500"/>
+			<data dateTime="2011-07-09T12:00:00" value="0"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="STTQ2" parameterId="QIN" name="1990/06/02 maxQ=126800">
+		<eventData>
+			<data dateTime="1990-05-25T00:00:00" value="55100"/>
+			<data dateTime="1990-05-26T00:00:00" value="54000"/>
+			<data dateTime="1990-05-27T00:00:00" value="58200"/>
+			<data dateTime="1990-05-28T00:00:00" value="67800"/>
+			<data dateTime="1990-05-29T00:00:00" value="80500"/>
+			<data dateTime="1990-05-30T00:00:00" value="92500"/>
+			<data dateTime="1990-05-31T00:00:00" value="104000"/>
+			<data dateTime="1990-06-01T00:00:00" value="120000"/>
+			<data dateTime="1990-06-02T00:00:00" value="126000"/>
+			<data dateTime="1990-06-03T00:00:00" value="119000"/>
+			<data dateTime="1990-06-04T00:00:00" value="108000"/>
+			<data dateTime="1990-06-05T00:00:00" value="101000"/>
+			<data dateTime="1990-06-06T00:00:00" value="94300"/>
+			<data dateTime="1990-06-07T00:00:00" value="89700"/>
+			<data dateTime="1990-06-08T00:00:00" value="85800"/>
+			<data dateTime="1990-06-09T00:00:00" value="79400"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="STTQ2" parameterId="QIN" name="1959/06/23 maxQ=120100">
+		<eventData>
+			<data dateTime="1959-06-17T00:00:00" value="93600"/>
+			<data dateTime="1959-06-18T00:00:00" value="96000"/>
+			<data dateTime="1959-06-19T00:00:00" value="81900"/>
+			<data dateTime="1959-06-20T00:00:00" value="75900"/>
+			<data dateTime="1959-06-21T00:00:00" value="85800"/>
+			<data dateTime="1959-06-22T00:00:00" value="97500"/>
+			<data dateTime="1959-06-23T00:00:00" value="120000"/>
+			<data dateTime="1959-06-24T00:00:00" value="118000"/>
+			<data dateTime="1959-06-25T00:00:00" value="106000"/>
+			<data dateTime="1959-06-26T00:00:00" value="99900"/>
+			<data dateTime="1959-06-27T00:00:00" value="91100"/>
+			<data dateTime="1959-06-28T00:00:00" value="83000"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="STTQ2" parameterId="QIN" name="1955/06/26 maxQ=120100">
+		<eventData>
+			<data dateTime="1955-06-20T00:00:00" value="38500"/>
+			<data dateTime="1955-06-21T00:00:00" value="44500"/>
+			<data dateTime="1955-06-22T00:00:00" value="47700"/>
+			<data dateTime="1955-06-23T00:00:00" value="62100"/>
+			<data dateTime="1955-06-24T00:00:00" value="74500"/>
+			<data dateTime="1955-06-25T00:00:00" value="101000"/>
+			<data dateTime="1955-06-26T00:00:00" value="120000"/>
+			<data dateTime="1955-06-27T00:00:00" value="115000"/>
+			<data dateTime="1955-06-28T00:00:00" value="103000"/>
+			<data dateTime="1955-06-29T00:00:00" value="95700"/>
+			<data dateTime="1955-06-30T00:00:00" value="84700"/>
+			<data dateTime="1955-07-01T00:00:00" value="50800"/>
+			<data dateTime="1955-07-02T00:00:00" value="53300"/>
+			<data dateTime="1955-07-03T00:00:00" value="63900"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ISKQ2" parameterId="QIN" name="1961/10/15 280000">
+		<eventData>
+			<data dateTime="1961-10-09T00:00:00" value="18600"/>
+			<data dateTime="1961-10-10T00:00:00" value="16200"/>
+			<data dateTime="1961-10-11T00:00:00" value="14400"/>
+			<data dateTime="1961-10-12T00:00:00" value="13200"/>
+			<data dateTime="1961-10-13T00:00:00" value="13700"/>
+			<data dateTime="1961-10-14T00:00:00" value="69900"/>
+			<data dateTime="1961-10-15T00:00:00" value="243000"/>
+			<data dateTime="1961-10-16T00:00:00" value="190000"/>
+			<data dateTime="1961-10-17T00:00:00" value="101000"/>
+			<data dateTime="1961-10-18T00:00:00" value="74200"/>
+			<data dateTime="1961-10-19T00:00:00" value="50100"/>
+			<data dateTime="1961-10-20T00:00:00" value="35000"/>
+			<data dateTime="1961-10-21T00:00:00" value="25000"/>
+			<data dateTime="1961-10-22T00:00:00" value="20000"/>
+			<data dateTime="1961-10-23T00:00:00" value="17000"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ISKQ2" parameterId="QIN" name="1993/10/27 maxQ=235500">
+		<eventData>
+			<data dateTime="1993-10-22T00:00:00" value="10600"/>
+			<data dateTime="1993-10-23T00:00:00" value="15000"/>
+			<data dateTime="1993-10-24T00:00:00" value="11600"/>
+			<data dateTime="1993-10-25T00:00:00" value="8860"/>
+			<data dateTime="1993-10-26T00:00:00" value="57200"/>
+			<data dateTime="1993-10-27T00:00:00" value="192000"/>
+			<data dateTime="1993-10-28T00:00:00" value="61400"/>
+			<data dateTime="1993-10-29T00:00:00" value="41700"/>
+			<data dateTime="1993-10-30T00:00:00" value="37100"/>
+			<data dateTime="1993-10-31T00:00:00" value="28900"/>
+			<data dateTime="1993-11-01T00:00:00" value="23400"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ISKQ2" parameterId="QIN" name="1994/09/22 maxQ=222500">
+		<eventData>
+			<data dateTime="1994-09-16T00:00:00" value="51200"/>
+			<data dateTime="1994-09-17T00:00:00" value="60700"/>
+			<data dateTime="1994-09-18T00:00:00" value="54700"/>
+			<data dateTime="1994-09-19T00:00:00" value="45200"/>
+			<data dateTime="1994-09-20T00:00:00" value="28800"/>
+			<data dateTime="1994-09-21T00:00:00" value="50800"/>
+			<data dateTime="1994-09-22T00:00:00" value="182000"/>
+			<data dateTime="1994-09-23T00:00:00" value="113000"/>
+			<data dateTime="1994-09-24T00:00:00" value="54400"/>
+			<data dateTime="1994-09-25T00:00:00" value="65300"/>
+			<data dateTime="1994-09-26T00:00:00" value="45500"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ISKQ2" parameterId="QIN" name="1974/10/9 maxQ=181900">
+		<eventData>
+			<data dateTime="1974-10-03T00:00:00" value="30100"/>
+			<data dateTime="1974-10-04T00:00:00" value="21500"/>
+			<data dateTime="1974-10-05T00:00:00" value="17300"/>
+			<data dateTime="1974-10-06T00:00:00" value="27600"/>
+			<data dateTime="1974-10-07T00:00:00" value="50100"/>
+			<data dateTime="1974-10-08T00:00:00" value="85500"/>
+			<data dateTime="1974-10-09T00:00:00" value="161000"/>
+			<data dateTime="1974-10-10T00:00:00" value="66700"/>
+			<data dateTime="1974-10-11T00:00:00" value="41000"/>
+			<data dateTime="1974-10-12T00:00:00" value="33400"/>
+			<data dateTime="1974-10-13T00:00:00" value="27400"/>
+			<data dateTime="1974-10-14T00:00:00" value="24600"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="STKA2" parameterId="QIN" name="1994/09/23 maxQ=351000">
+		<eventData>
+			<data dateTime="1994-09-17T00:00:00" value="166000"/>
+			<data dateTime="1994-09-18T00:00:00" value="154000"/>
+			<data dateTime="1994-09-19T00:00:00" value="134000"/>
+			<data dateTime="1994-09-20T00:00:00" value="97200"/>
+			<data dateTime="1994-09-21T00:00:00" value="133000"/>
+			<data dateTime="1994-09-22T00:00:00" value="262000"/>
+			<data dateTime="1994-09-23T00:00:00" value="324000"/>
+			<data dateTime="1994-09-24T00:00:00" value="273000"/>
+			<data dateTime="1994-09-25T00:00:00" value="215000"/>
+			<data dateTime="1994-09-26T00:00:00" value="170000"/>
+			<data dateTime="1994-09-27T00:00:00" value="136000"/>
+			<data dateTime="1994-09-28T00:00:00" value="113000"/>
+			<data dateTime="1994-09-29T00:00:00" value="91900"/>
+			<data dateTime="1994-09-30T00:00:00" value="78300"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="STKA2" parameterId="QIN" name="1981/09/11 maxQ=199600">
+		<eventData>
+			<data dateTime="1981-09-04T00:00:00" value="64000"/>
+			<data dateTime="1981-09-05T00:00:00" value="68500"/>
+			<data dateTime="1981-09-06T00:00:00" value="115000"/>
+			<data dateTime="1981-09-07T00:00:00" value="178000"/>
+			<data dateTime="1981-09-08T00:00:00" value="205000"/>
+			<data dateTime="1981-09-09T00:00:00" value="257000"/>
+			<data dateTime="1981-09-10T00:00:00" value="284000"/>
+			<data dateTime="1981-09-11T00:00:00" value="298000"/>
+			<data dateTime="1981-09-12T00:00:00" value="264000"/>
+			<data dateTime="1981-09-13T00:00:00" value="156000"/>
+			<data dateTime="1981-09-14T00:00:00" value="115000"/>
+			<data dateTime="1981-09-15T00:00:00" value="182000"/>
+			<data dateTime="1981-09-16T00:00:00" value="233000"/>
+			<data dateTime="1981-09-17T00:00:00" value="171000"/>
+			<data dateTime="1981-09-18T00:00:00" value="151000"/>
+			<data dateTime="1981-09-19T00:00:00" value="151000"/>
+			<data dateTime="1981-09-20T00:00:00" value="119000"/>
+			<data dateTime="1981-09-21T00:00:00" value="94300"/>
+			<data dateTime="1981-09-22T00:00:00" value="82900"/>			
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="STKA2" parameterId="QIN" name="2007/06/09 maxQ=273000">
+		<eventData>
+			<data dateTime="2007-06-01T00:00:00" value="140000"/>
+			<data dateTime="2007-06-02T00:00:00" value="143000"/>
+			<data dateTime="2007-06-03T00:00:00" value="150000"/>
+			<data dateTime="2007-06-04T00:00:00" value="179000"/>
+			<data dateTime="2007-06-05T00:00:00" value="220000"/>
+			<data dateTime="2007-06-06T00:00:00" value="240000"/>
+			<data dateTime="2007-06-07T00:00:00" value="260000"/>
+			<data dateTime="2007-06-08T00:00:00" value="273000"/>
+			<data dateTime="2007-06-09T00:00:00" value="270000"/>
+			<data dateTime="2007-06-10T00:00:00" value="247000"/>
+			<data dateTime="2007-06-11T00:00:00" value="222000"/>
+			<data dateTime="2007-06-12T00:00:00" value="213000"/>
+			<data dateTime="2007-06-13T00:00:00" value="214000"/>
+			<data dateTime="2007-06-14T00:00:00" value="199000"/>
+			<data dateTime="2007-06-15T00:00:00" value="185000"/>
+			<data dateTime="2007-06-16T00:00:00" value="176000"/>
+			<data dateTime="2007-06-17T00:00:00" value="185000"/>
+			<data dateTime="2007-06-18T00:00:00" value="191000"/>
+			<data dateTime="2007-06-19T00:00:00" value="185000"/>
+			<data dateTime="2007-06-20T00:00:00" value="176000"/>
+			<data dateTime="2007-06-21T00:00:00" value="170000"/>
+			<data dateTime="2007-06-22T00:00:00" value="163000"/>
+			<data dateTime="2007-06-23T00:00:00" value="153000"/>
+			<data dateTime="2007-06-24T00:00:00" value="145000"/>
+			<data dateTime="2007-06-25T00:00:00" value="138000"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="SCKA2" parameterId="QIN" name="1993/10/26 maxQ=19800">
+		<eventData>
+			<data dateTime="1993-10-20T00:00:00" value="743"/>
+			<data dateTime="1993-10-21T00:00:00" value="1270"/>
+			<data dateTime="1993-10-22T00:00:00" value="2560"/>
+			<data dateTime="1993-10-23T00:00:00" value="1800"/>
+			<data dateTime="1993-10-24T00:00:00" value="355"/>
+			<data dateTime="1993-10-25T00:00:00" value="928"/>
+			<data dateTime="1993-10-26T00:00:00" value="14900"/>
+			<data dateTime="1993-10-27T00:00:00" value="1300"/>
+			<data dateTime="1993-10-28T00:00:00" value="288"/>
+			<data dateTime="1993-10-29T00:00:00" value="415"/>
+			<data dateTime="1993-10-30T00:00:00" value="562"/>
+			<data dateTime="1993-10-31T00:00:00" value="499"/>
+			<data dateTime="1993-11-01T00:00:00" value="479"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="SCKA2" parameterId="QIN" name="1990/12/06 maxQ=18000">
+		<eventData>
+			<data dateTime="1990-11-29T00:00:00" value="322"/>
+			<data dateTime="1990-11-30T00:00:00" value="110"/>
+			<data dateTime="1990-12-01T00:00:00" value="96"/>
+			<data dateTime="1990-12-02T00:00:00" value="94"/>
+			<data dateTime="1990-12-03T00:00:00" value="100"/>
+			<data dateTime="1990-12-04T00:00:00" value="790"/>
+			<data dateTime="1990-12-05T00:00:00" value="2780"/>
+			<data dateTime="1990-12-06T00:00:00" value="14200"/>
+			<data dateTime="1990-12-07T00:00:00" value="3220"/>
+			<data dateTime="1990-12-08T00:00:00" value="792"/>
+			<data dateTime="1990-12-09T00:00:00" value="699"/>
+			<data dateTime="1990-12-10T00:00:00" value="297"/>
+			<data dateTime="1990-12-11T00:00:00" value="188"/>
+		</eventData>
+	</historicalEvent>
+</historicalEvents>	
+	

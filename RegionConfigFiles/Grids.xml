@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grids xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/grids.xsd" xmlns="http://www.wldelft.nl/fews">
+		<regular locationId="HRAP">
+			<rows>530</rows>
+			<columns>460</columns>
+			<polarStereographic>
+				<originLatitude>90.0</originLatitude>
+				<originLongitude>-105.0</originLongitude>
+				<scaleAtOrigin>0.933</scaleAtOrigin>
+				<equatorRadius>6367470.0</equatorRadius>
+				<poleRadius>6367470.0</poleRadius>
+			</polarStereographic>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<upperLeft>
+					<x>-177.99733293649518</x>
+					<y>57.672766061537345</y>
+					<z>0.0</z>
+				</upperLeft>
+				<lowerRight>
+					<x>-122.33488155263495</x>
+					<y>55.41144998323437</y>
+					<z>0.0</z>
+				</lowerRight>
+			</gridCorners>
+		</regular>
+		<regular locationId="RTMA">
+			<rows>415</rows>
+			<columns>565</columns>
+			<polarStereographic>
+				<originLatitude>90.0</originLatitude>
+				<originLongitude>-150.0</originLongitude>
+				<scaleAtOrigin>0.933</scaleAtOrigin>
+				<equatorRadius>6367470.0</equatorRadius>
+				<poleRadius>6367470.0</poleRadius>
+			</polarStereographic>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<upperLeft>
+					<x>172.3483091682432</x>
+					<y>67.68923967782428</y>
+					<z>0.0</z>
+				</upperLeft>
+				<lowerRight>
+					<x>-130.11020971335606</x>
+					<y>51.0106322101386</y>
+					<z>0.0</z>
+				</lowerRight>
+			</gridCorners>
+		</regular>
+		<regular locationId="HAS">
+			<rows>415</rows>
+			<columns>565</columns>
+			<polarStereographic>
+				<originLatitude>90.0</originLatitude>
+				<originLongitude>-150.0</originLongitude>
+				<scaleAtOrigin>0.933</scaleAtOrigin>
+				<equatorRadius>6367470.0</equatorRadius>
+				<poleRadius>6367470.0</poleRadius>
+			</polarStereographic>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<upperLeft>
+					<x>172.3483091682432</x>
+					<y>67.68923967782428</y>
+					<z>0.0</z>
+				</upperLeft>
+				<lowerRight>
+					<x>-130.11020971335606</x>
+					<y>51.0106322101386</y>
+					<z>0.0</z>
+				</lowerRight>
+			</gridCorners>
+		</regular>
+		<regular locationId="AKNBM">
+			<rows>1105</rows>
+			<columns>1649</columns>
+			<polarStereographic>
+				<originLatitude>90.0</originLatitude>
+				<originLongitude>210.0</originLongitude>
+				<scaleAtOrigin>0.933</scaleAtOrigin>
+				<equatorRadius>6367470.0</equatorRadius>
+				<poleRadius>6367470.0</poleRadius>
+			</polarStereographic>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<upperLeft>
+					<x>150.1900869</x>
+					<y>61.3997576</y>
+					<z>0.0</z>
+				</upperLeft>
+				<lowerRight>
+					<x>235.419362</x>
+					<y>41.739537</y>
+					<z>0.0</z>
+				</lowerRight>
+			</gridCorners>
+		</regular>
+		<regular locationId="HRRR">
+			<rows>919</rows>
+			<columns>1299</columns>
+			<polarStereographic>
+				<originLatitude>90.00</originLatitude>
+				<originLongitude>-135.</originLongitude>
+				<scaleAtOrigin>1.000</scaleAtOrigin>
+				<equatorRadius>6371229.0</equatorRadius>
+				<poleRadius>6371229.0</poleRadius>
+			</polarStereographic>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<upperLeft>
+					<x>156.41</x>
+					<y>56.60</y>
+					<z>0.0</z>
+				</upperLeft>
+				<lowerRight>
+					<x>-128.615700</x>
+					<y>51.805000</y>
+					<z>0.0</z>
+				</lowerRight>
+			</gridCorners>
+		</regular>
+		<regular locationId="UWISQPE">
+			<rows>230</rows>
+			<columns>325</columns>
+			<polarStereographic>
+				<originLatitude>90.00</originLatitude>
+				<originLongitude>-135.</originLongitude>
+				<scaleAtOrigin>1.000</scaleAtOrigin>
+				<equatorRadius>6371229.0</equatorRadius>
+				<poleRadius>6371229.0</poleRadius>
+			</polarStereographic>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<upperLeft>
+					<x>156.41</x>
+					<y>56.60</y>
+					<z>0.0</z>
+				</upperLeft>
+				<lowerRight>
+					<x>-128.615700</x>
+					<y>51.805000</y>
+					<z>0.0</z>
+				</lowerRight>
+			</gridCorners>
+		</regular>
+		<!--regular locationId="HRRR">
+			<rows>849</rows>
+			<columns>909</columns>
+			<rows>919</rows>
+			<columns>1299</columns>
+		        <geoDatum>WGS 1984</geoDatum>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<upperLeft>
+					<x>169.892000</x>
+					<y>74.859000</y>
+					<z>0.0</z>
+				</upperLeft>
+				<lowerRight>
+					<x>241.260800</x>
+					<y>46.875000</y>
+					<z>0.0</z>
+				</lowerRight>
+			</gridCorners>
+		</regular-->
+		<regular locationId="RAP">
+			<rows>425</rows>
+			<columns>553</columns>
+			<geoDatum>WGS 1984</geoDatum>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<upperLeft>
+					<x>-173.000</x>
+					<y>83.838</y>
+					<z>0.0</z>
+				</upperLeft>
+				<lowerRight>
+					<x>-115.04</x>
+					<y>30.00</y>
+					<z>0.0</z>
+				</lowerRight>
+			</gridCorners>
+		</regular>
+		<regular locationId="RQTF">
+			<rows>425</rows>
+			<columns>553</columns>
+			<geoDatum>WGS 1984</geoDatum>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<upperLeft>
+					<x>-173.000</x>
+					<y>83.838</y>
+					<z>0.0</z>
+				</upperLeft>
+				<lowerRight>
+					<x>-115.04</x>
+					<y>30.00</y>
+					<z>0.0</z>
+				</lowerRight>
+			</gridCorners>
+		</regular>
+	        <regular locationId="NOHRSC">
+		        <rows>2400</rows>
+		        <columns>4200</columns>
+		        <geoDatum>WGS 1984</geoDatum>
+		        <firstCellCenter>
+		            <x>-167.99501037597656</x>
+		            <y>71.99500053189695</y>
+		            <z>0.0</z>
+		        </firstCellCenter>
+		        <xCellSize>0.009999999776482582</xCellSize>
+		        <yCellSize>0.009999999776482582</yCellSize>
+	        </regular>
+	        <regular locationId="DPA">
+		        <rows>2193</rows>
+		        <columns>505</columns>
+		        <geoDatum>WGS 1984</geoDatum>
+		        <firstCellCenter>
+		            <x>-143.596375</x>
+		            <y>59.493291</y>
+		            <z>0.0</z>
+		        </firstCellCenter>
+		        <xCellSize>0.033224</xCellSize>
+		        <yCellSize>0.002482</yCellSize>
+	        </regular>
+	        <regular locationId="HI_MRMS">
+		        <rows>2200</rows>
+		        <columns>2600</columns>
+		        <geoDatum>WGS 1984</geoDatum>
+		        <firstCellCenter>
+		            <x>-164.000</x>
+		            <y>26.0001</y>
+		            <z>0.0</z>
+		        </firstCellCenter>
+		        <xCellSize>0.005</xCellSize>
+		        <yCellSize>0.005</yCellSize>
+	        </regular>
+	        <regular locationId="MRMS">
+		        <rows>2200</rows>
+		        <columns>5000</columns>
+		        <geoDatum>WGS 1984</geoDatum>
+		        <firstCellCenter>
+		            <x>-175.995</x>
+		            <y>71.9950</y>
+		            <z>0.0</z>
+		        </firstCellCenter>
+		        <xCellSize>0.01</xCellSize>
+		        <yCellSize>0.01</yCellSize>
+	        </regular>
+		<regular locationId="HRAP_QTR_KAUAI">
+			<rows>88</rows>
+			<columns>92</columns>
+			<polarStereographic>
+				<originLatitude>90.0</originLatitude>
+				<originLongitude>-105.0</originLongitude>
+				<scaleAtOrigin>0.933</scaleAtOrigin>
+				<equatorRadius>6367470.0</equatorRadius>
+				<poleRadius>6367470.0</poleRadius>
+			</polarStereographic>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<lowerLeft>
+					<x>-159.419</x>
+					<y>21.552</y>
+					<z>0.0</z>
+				</lowerLeft>
+				<upperRight>
+					<x>-159.574</x>
+					<y>22.546</y>
+					<z>0.0</z>
+				</upperRight>
+			</gridCorners>
+		</regular>
+		<regular locationId="HRAP_QTR_KAUAI_RDHM">
+			<rows>55</rows>
+			<columns>55</columns>
+			<polarStereographic>
+				<originLatitude>90.0</originLatitude>
+				<originLongitude>-105.0</originLongitude>
+				<scaleAtOrigin>0.933</scaleAtOrigin>
+				<equatorRadius>6367470.0</equatorRadius>
+				<poleRadius>6367470.0</poleRadius>
+			</polarStereographic>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<lowerLeft>
+					<x>-159.462</x>
+					<y>21.793</y>
+					<z>0.0</z>
+				</lowerLeft>
+				<upperRight>
+					<x>-159.569</x>
+					<y>22.388</y>
+					<z>0.0</z>
+				</upperRight>
+			</gridCorners>
+		</regular>
+	<regular locationId="Hawaii_NAMNEST_Test">
+		<rows>225</rows>
+		<columns>321</columns>
+		<mercator>
+			<originLongitude>0</originLongitude>
+			<standardParallelLatitude>20.0</standardParallelLatitude>
+		</mercator>
+		<gridCorners>
+			<geoDatum>WGS 1984</geoDatum>
+			<lowerLeft>
+				<x>-161.525</x>
+				<y>18.073</y>
+				<z>0.0</z>
+			</lowerLeft>
+			<upperRight>
+				<x>-153.869</x>
+				<y>23.088</y>
+				<z>0.0</z>
+			</upperRight>
+		</gridCorners>
+	</regular>
+	<regular locationId="Hawaii_NAMNEST">
+		<rows>225</rows>
+		<columns>321</columns>
+		<mercator>
+			<originLongitude>0</originLongitude>
+			<standardParallelLatitude>20.0</standardParallelLatitude>
+		</mercator>
+		<gridCorners>
+			<geoDatum>WGS 1984</geoDatum>
+			<lowerLeft>
+				<x>-161.525</x>
+				<y>18.073</y>
+				<z>0.0</z>
+			</lowerLeft>
+			<upperRight>
+				<x>-153.869</x>
+				<y>23.088</y>
+				<z>0.0</z>
+			</upperRight>
+		</gridCorners>
+	</regular>	
+	<regular locationId="Hawaii_WRF-ARW">
+		<rows>225</rows>
+		<columns>321</columns>
+		<mercator>
+			<originLongitude>0</originLongitude>
+			<standardParallelLatitude>20.0</standardParallelLatitude>
+		</mercator>
+		<gridCorners>
+			<geoDatum>WGS 1984</geoDatum>
+			<lowerLeft>
+				<x>-161.525</x>
+				<y>18.073</y>
+				<z>0.0</z>
+			</lowerLeft>
+			<upperRight>
+				<x>-153.869</x>
+				<y>23.088</y>
+				<z>0.0</z>
+			</upperRight>
+		</gridCorners>
+	</regular>	
+		<regular locationId="HRAP_HFO">
+			<rows>222</rows>
+			<columns>212</columns>
+			<polarStereographic>
+				<originLatitude>90.0</originLatitude>
+				<originLongitude>-105.0</originLongitude>
+				<scaleAtOrigin>0.933</scaleAtOrigin>
+				<equatorRadius>6367470.0</equatorRadius>
+				<poleRadius>6367470.0</poleRadius>
+			</polarStereographic>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+<!--				<lowerLeft>
+					<x>-159.419</x>
+					<y>21.552</y>
+					<z>0.0</z>
+				</lowerLeft>
+				<upperRight>
+					<x>-159.574</x>
+					<y>22.546</y>
+					<z>0.0</z>
+				</upperRight>-->
+				<lowerLeft>
+					<x>-106.456</x>
+					<y>33.603</y>
+					<z>0.0</z>
+				</lowerLeft>
+				<upperRight>
+					<x>-90.678</x>
+					<y>38.027</y>
+					<z>0.0</z>
+				</upperRight>
+			</gridCorners>
+		</regular>
+		<regular locationId="NDFD_HFO">
+			<rows>225</rows>
+			<columns>321</columns>
+			<mercator>
+				<originLongitude>0.0</originLongitude>
+				<standardParallelLatitude>20.0</standardParallelLatitude>
+			</mercator>
+			<gridCorners>
+				<geoDatum>WGS 1984</geoDatum>
+				<lowerLeft>
+					<x>-161.525</x>
+					<y>18.073</y>
+					<z>0.0</z>
+				</lowerLeft>
+				<upperRight>
+					<x>-153.869</x>
+					<y>23.088</y>
+					<z>0.0</z>
+				</upperRight>
+			</gridCorners>
+		</regular>
+
+    <!-- ADDED FOR MEFP DATA INGEST =========================== -->
+    <!-- Added for MEFP CFSv2 grid importing -->
+    <!-- CFSv2: This is an approximate Gaussian grid.  CHPS does not offer a gaussian grid. -->
+    <regular locationId="HEFS_CFSv2">
+        <description>grid def. for imported CFSv2 data</description>
+        <rows>190</rows>
+        <columns>384</columns>
+        <geoDatum>WGS 1984</geoDatum>
+        <firstCellCenter>
+            <x>0.0</x>
+            <y>89.290860</y>
+            <z>0</z>
+        </firstCellCenter>
+        <xCellSize>0.9375</xCellSize>
+        <yCellSize>0.944877</yCellSize>
+    </regular>
+    <regular locationId="HEFS_CFSv2_USA">
+        <description>grid def. for imported CFSv2 data</description>
+        <rows>38</rows>
+        <columns>92</columns>
+        <geoDatum>WGS 1984</geoDatum>
+        <firstCellCenter>
+            <x>-130.3125</x>
+            <y>55.275311</y>
+            <z>0</z>
+        </firstCellCenter>
+        <xCellSize>0.9375</xCellSize>
+        <yCellSize>0.944877</yCellSize>
+    </regular>
+
+     <!-- HEFS: Added for GEFS grid importing.  Note that these are the operational 1 deg. grid -->
+     <regular locationId="HEFS_GEFS">
+        <description>grid def. for imported HEFS GEFS data</description>
+        <rows>181</rows>
+        <columns>360</columns>
+        <geoDatum>WGS 1984</geoDatum>
+        <firstCellCenter>
+            <x>0</x>
+            <y>90.0</y>
+            <z>0</z>
+        </firstCellCenter>
+        <xCellSize>1.0</xCellSize>
+        <yCellSize>1.0</yCellSize>
+    </regular>
+     <regular locationId="HEFS_GEFS_USA">
+        <description>grid def. for imported HEFS GEFS data</description>
+        <rows>181</rows>
+        <columns>360</columns>
+        <geoDatum>WGS 1984</geoDatum>
+        <firstCellCenter>
+            <x>0</x>
+            <y>90.0</y>
+            <z>0</z>
+        </firstCellCenter>
+        <xCellSize>1.0</xCellSize>
+        <yCellSize>1.0</yCellSize>
+    </regular>
+    <!-- ADDED FOR NWM NEEDS TO BE CHANGED FOR HI DOMAIN ============================== -->
+    	<regular locationId="NWM">
+    		<rows>390</rows>
+    		<columns>590</columns>
+    		<lambertConformalConic>
+      			<originLatitude>20.6</originLatitude>
+      			<originLongitude>-157.42</originLongitude>
+      			<firstStandardParallelLatitude>10.</firstStandardParallelLatitude>
+      			<secondStandardParallelLatitude>30.</secondStandardParallelLatitude>
+    		</lambertConformalConic>
+    		<firstCellCenter>
+    			<x>-294500.0625</x>
+    			<y>194498.953</y>
+    		</firstCellCenter>
+    		<xCellSize>1000.</xCellSize>
+    		<yCellSize>1000</yCellSize>
+        	<!--gridCorners>
+            		<geoDatum>WGS 1984</geoDatum>
+            		<upperLeft>
+                		<x>-160.249</x>
+                		<y>22.361</y>
+                		<z>0.0</z>
+            		</upperLeft>
+            		<lowerRight>
+                		<x>-154.590</x>
+                		<y>18.838</y>
+                		<z>0.0</z>
+            		</lowerRight>
+        	</gridCorners-->
+  	</regular>
+  	<!--<regular locationId="NWM">
+        	<rows>3840</rows>
+        	<columns>4608</columns>
+        	<lambertConformalConic>
+            		<originLatitude>40.0000076294</originLatitude>
+            		<originLongitude>-97.0</originLongitude>
+            		<firstStandardParallelLatitude>30.0</firstStandardParallelLatitude>
+            		<secondStandardParallelLatitude>60.0</secondStandardParallelLatitude>
+        	</lambertConformalConic>
+        	<gridCorners>
+            		<geoDatum>WGS 1984</geoDatum>
+            		<upperLeft>
+                		<x>81.73350585209181</x>
+                		<y>-89.95222372251949</y>
+                		<z>0.0</z>
+            		</upperLeft>
+            		<lowerRight>
+                		<x>-26.989174131044184</x>
+                		<y>-89.95241195529779</y>
+                		<z>0.0</z>
+            		</lowerRight>
+        	</gridCorners>
+    	</regular>-->
+
+     <!-- END MEFP DATA INGEST ======================= -->
+
+</grids>
+		

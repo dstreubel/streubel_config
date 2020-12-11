@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MAP_Historic</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDataCard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments_HEFS_Tanana</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAP_MEFP</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Tanana_MEFP_SampleAndMerge_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments_HEFS_Tanana</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+			<ensembleId>MEFP</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAP_sampled</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Tanana_MEFP_SampleAndMerge_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<qualifierId>sample</qualifierId>
+			<locationSetId>Catchments_HEFS_Tanana</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>MEFP</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAP_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Tanana_MEFP_SampleAndMerge_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<qualifierId>historicalmerge</qualifierId>
+			<locationSetId>Catchments_HEFS_Tanana</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>MEFP</ensembleId>
+		</timeSeriesSet>
+	</variable>
+
+	<variable>
+		<variableId>MAT_Historic</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDataCard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments_HEFS_Tanana</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_MEFP</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Tanana_MEFP_SampleAndMerge_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAT</parameterId>
+			<locationSetId>Catchments_HEFS_Tanana</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+			<ensembleId>MEFP</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_sampled</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Tanana_MEFP_SampleAndMerge_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAT</parameterId>
+			<qualifierId>sample</qualifierId>
+			<locationSetId>Catchments_HEFS_Tanana</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>MEFP</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Tanana_MEFP_SampleAndMerge_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAT</parameterId>
+			<qualifierId>historicalmerge</qualifierId>
+			<locationSetId>Catchments_HEFS_Tanana</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>MEFP</ensembleId>
+		</timeSeriesSet>
+	</variable>
+
+	<transformation id="SampleESP_MAP">
+		<sample>
+			<historical>
+				<inputVariable>
+					<variableId>MAP_Historic</variableId>
+				</inputVariable>
+				<startYear>1975</startYear>
+				<firstEnsembleMemberIndex>1975</firstEnsembleMemberIndex>
+				<ensembleMemberCount>36</ensembleMemberCount>
+				<startWaterYear>--10-01</startWaterYear>
+				<outputVariable>
+					<variableId>MAP_sampled</variableId>
+				</outputVariable>
+			</historical>
+		</sample>
+	</transformation>
+	<transformation id="MergeMEFP_MAP">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>MAP_MEFP</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAP_sampled</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAP_merged</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	<transformation id="SampleESP_MAT">
+		<sample>
+			<historical>
+				<inputVariable>
+					<variableId>MAT_Historic</variableId>
+				</inputVariable>
+				<startYear>1975</startYear>
+				<firstEnsembleMemberIndex>1975</firstEnsembleMemberIndex>
+				<ensembleMemberCount>36</ensembleMemberCount>
+				<startWaterYear>--10-01</startWaterYear>
+				<outputVariable>
+					<variableId>MAT_sampled</variableId>
+				</outputVariable>
+			</historical>
+		</sample>
+	</transformation>
+	<transformation id="MergeMEFP_MAT">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>MAT_MEFP</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>MAT_sampled</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MAT_merged</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+</transformationModule>

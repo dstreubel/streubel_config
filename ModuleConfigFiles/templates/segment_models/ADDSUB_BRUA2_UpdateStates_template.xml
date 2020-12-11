@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>GL_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_BRUA2_BRUA2GL_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<!--locationRelationId>GL</locationRelationId-->
+			<locationId>$SEGMENT$GL</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>NG_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_BRUA2_BRUA2NG_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<!--locationRelationId>NG</locationRelationId-->
+			<locationId>$SEGMENT$NG</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>UPR_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>Unit_Hydrograph_UpdateStates</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<!--locationRelationId>UPR</locationRelationId-->
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>LWR_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>Unit_Hydrograph_UpdateStates</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<!--locationRelationId>LWR</locationRelationId-->
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>RTD_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>Routed_Flows_UpdateStates</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<!--locationRelationId>RTD_UP1</locationRelationId-->
+		        <locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_$SEGMENT$_$SEGMENT$_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SQME</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_$SEGMENT$_$SEGMENT$_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>QME</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDataCard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QME</parameterId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>QME_offset</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_$SEGMENT$_$SEGMENT$_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>AQME</parameterId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SQME_offset</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_$SEGMENT$_$SEGMENT$_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>AQME</parameterId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<!--timeStep unit="day" multiplier="1"/-->
+			<timeStep id="06Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="$SEGMENT$_SUM">
+        <merge>
+            <relations>
+                <relation>
+                    <expression>GL_SQIN_6 + UPR_SQIN_6 + LWR_SQIN_6 + RTD_SQIN_6</expression>
+                    <outputComment>GL+RTD</outputComment>
+                </relation>
+                <relation>
+                    <expression>UPR_SQIN_6 + LWR_SQIN_6 + RTD_SQIN_6</expression>
+                    <outputComment>UPR+RTD</outputComment>
+                </relation>
+                <relation>
+                    <expression>GL_SQIN_6 + UPR_SQIN_6 + LWR_SQIN_6</expression>
+                    <outputComment>GL</outputComment>
+                </relation>
+                <relation>
+                    <expression>GL_SQIN_6 + NG_SQIN_6</expression>
+                    <outputComment>GL</outputComment>
+                </relation>
+                <relation>
+                    <expression>UPR_SQIN_6 + LWR_SQIN_6</expression>
+                    <outputComment>UPR</outputComment>
+                </relation>
+                <outputVariable>
+                    <variableId>SQIN_6</variableId>
+                </outputVariable>
+            </relations>          
+        </merge> 
+    </transformation>
+    <transformation id="SQME_24">
+    	<aggregation>
+        	<instantaneousToMean>
+                	<inputVariable>
+                        	<variableId>SQIN_6</variableId>
+                        </inputVariable>
+                        <outputVariable>
+                                <variableId>SQME</variableId>
+                        </outputVariable>
+                </instantaneousToMean>
+        </aggregation>
+    </transformation>
+    <transformation id="Simple constant">
+     	<user>
+		<simple>
+			<expression>QME*0.0283</expression>
+			<outputVariable>
+				<variableId>QME_offset</variableId>
+			</outputVariable>
+		</simple>
+ 	</user>	
+
+    </transformation>
+
+    <!--transformation id="Simple constant SQME">
+     	<user>
+		<simple>
+			<expression>SQME*35.31</expression>
+			<outputVariable>
+				<variableId>SQME_offset</variableId>
+			</outputVariable>
+		</simple>
+ 	</user>	
+
+    </transformation-->
+</transformationModule>

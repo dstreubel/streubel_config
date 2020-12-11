@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+
+
+	<map internalLocation="CHFA2REZ" externalLocation="MCDA2" internalParameter="QINE" externalParameter="QINE" externalQualifier="CHFA2REZ"/>
+	<map internalLocation="MCDSPILL" externalLocation="MCDA2" internalParameter="QINE" externalParameter="QINE" externalQualifier="MCDSPILL"/>
+	<map internalLocation="MCDA2" externalLocation="MCDA2" internalParameter="SPEL" externalParameter="SPEL"/>
+	<map internalLocation="MCDA2REZ" externalLocation="MCDA2" internalParameter="SQIN" externalParameter="SQIN" externalQualifier="MCDA2REZ"/>	
+
+
+ <enableOneToOneMapping/>
+
+</idMap>

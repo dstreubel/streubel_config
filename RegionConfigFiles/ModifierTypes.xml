@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modifierTypes xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/modifierTypes.xsd">
+	<missingValueModifier id="setmsng" name="setmsng">
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+		</timeSeries>
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>	
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN_USGS</parameterId>
+			<locationId>SNOA2</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>		
+		<timeSeries>
+			<moduleInstanceSetId>QIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+		</timeSeries>	
+		<timeSeries>
+			<moduleInstanceSetId>QIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>	
+		
+	
+<!--  Older		
+	<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<!-\-<timeStep unit="nonequidistant"/>-\->
+		</timeSeries>
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<!-\-<timeStep unit="nonequidistant"/>-\->
+			<timeStep unit="hour" multiplier="1"/>				
+		</timeSeries>
+		<timeSeries>
+			<moduleInstanceSetId>QIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+		</timeSeries>	
+		<timeSeries>
+			<moduleInstanceSetId>QIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>			-->
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<resolveInWorkflow>false</resolveInWorkflow>
+		<resolveInPlots>true</resolveInPlots>
+	</missingValueModifier>
+	<timeSeriesModifier id="setqmean" name="setqmean">
+		<timeSeries>
+			<parameterId>SETQMEAN</parameterId>
+		</timeSeries>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValidTime/>
+		<resolveInWorkflow>true</resolveInWorkflow>
+		<resolveInPlots>false</resolveInPlots>
+	</timeSeriesModifier>
+<!--	<timeSeriesModifier id="rochng" name="rochng">
+		<timeSeries>
+			<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>INFW</parameterId>
+			<locationSetId>Gages_Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValidTime/>
+		<resolveInWorkflow>true</resolveInWorkflow>
+		<resolveInPlots>false</resolveInPlots>
+	</timeSeriesModifier>-->
+	<timeSeriesModifier id="rrichng" name="rrichng">
+		<timeSeries>
+			<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>RAIM</parameterId>
+			<locationSetId>Gages_Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValidTime/>
+		<resolveInWorkflow>true</resolveInWorkflow>
+		<resolveInPlots>false</resolveInPlots>
+	</timeSeriesModifier>
+	<timeSeriesModifier id="tschng" name="tschng_SQIN">
+<!--		<timeSeries>
+			<moduleInstanceSetId>MAT</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>
+		<timeSeries>
+			<moduleInstanceSetId>MAP</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			</timeSeries>-->
+		<timeSeries>
+			<moduleInstanceSetId>GLAKONLY</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationSetId>GLAKONLY</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>
+		<timeSeries>
+			<moduleInstanceSetId>SQIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationSetId>SQIN</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValidTime/>
+		<resolveInWorkflow>false</resolveInWorkflow>
+		<resolveInPlots>true</resolveInPlots>
+		<createContinuousModifiers>true</createContinuousModifiers>
+	</timeSeriesModifier>
+	<timeSeriesModifier id="tschng_STG" name="tschng_STG">
+		<timeSeries>
+			<moduleInstanceSetId>QIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValidTime/>
+		<resolveInWorkflow>false</resolveInWorkflow>
+		<resolveInPlots>true</resolveInPlots>
+		<createContinuousModifiers>true</createContinuousModifiers>
+	</timeSeriesModifier>
+	<timeSeriesModifier id="tschng_MAT" name="MAT">
+		<timeSeries>
+			<moduleInstanceSetId>MAT</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValidTime/>
+		<resolveInWorkflow>false</resolveInWorkflow>
+		<resolveInPlots>true</resolveInPlots>
+		<createContinuousModifiers>true</createContinuousModifiers>
+	</timeSeriesModifier>
+	<timeSeriesModifier id="tschng_MAT_1hr" name="MAT_1hr">
+		<timeSeries>
+			<moduleInstanceSetId>MAT_1hr</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+		</timeSeries>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValidTime/>
+		<resolveInWorkflow>false</resolveInWorkflow>
+		<resolveInPlots>true</resolveInPlots>
+		<createContinuousModifiers>true</createContinuousModifiers>
+	</timeSeriesModifier>
+	<timeSeriesModifier id="tschng_MAP" name="MAP">
+		<timeSeries>
+			<moduleInstanceSetId>MAP</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValidTime/>
+		<resolveInWorkflow>false</resolveInWorkflow>
+		<resolveInPlots>true</resolveInPlots>
+		<createContinuousModifiers>true</createContinuousModifiers>
+	</timeSeriesModifier>
+	<timeSeriesModifier id="tschng_MAP_1hr" name="MAP_1hr">
+		<timeSeries>
+			<moduleInstanceSetId>MAP_1hr</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+		</timeSeries>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValidTime/>
+		<resolveInWorkflow>false</resolveInWorkflow>
+		<resolveInPlots>true</resolveInPlots>
+		<createContinuousModifiers>true</createContinuousModifiers>
+	</timeSeriesModifier>
+	<constantValueModifier id="mfc" name="mfc">
+		<timeSeries>
+			<parameterId>MFC</parameterId>
+		</timeSeries>
+		<softLimits>
+			<maximumValue>3</maximumValue>
+			<minimumValue>0</minimumValue>
+		</softLimits>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValue>1</defaultValue>
+	</constantValueModifier>
+	<constantValueModifier id="uadj" name="uadj">
+		<timeSeries>
+			<parameterId>UADJ</parameterId>
+		</timeSeries>
+		<softLimits>
+			<maximumValue>10</maximumValue>
+			<minimumValue>0</minimumValue>
+		</softLimits>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+		<defaultValue>1</defaultValue>
+	</constantValueModifier>
+	<singleValueModifier id="sacbasef" name="sacbasef">
+		<timeSeries>
+			<parameterId>SACBASEF</parameterId>
+		</timeSeries>
+		<softLimits>
+			<maximumValue>3</maximumValue>
+			<minimumValue>0</minimumValue>
+		</softLimits>
+		<hardLimits>
+			<minimumValue>0</minimumValue>
+		</hardLimits>
+		<defaultTime>start run</defaultTime>
+		<offsetDefaultTime unit="day" multiplier="1"/>
+		<defaultValue>1</defaultValue>
+	</singleValueModifier>
+	<singleValueModifier id="aescchng" name="aescchng">
+		<timeSeries>
+			<parameterId>AESCCHNG</parameterId>
+		</timeSeries>
+		<softLimits>
+			<maximumValue>1</maximumValue>
+			<minimumValue>0</minimumValue>
+		</softLimits>
+		<hardLimits>
+			<maximumValue>1</maximumValue>
+			<minimumValue>0</minimumValue>
+		</hardLimits>
+		<defaultTime>start run</defaultTime>
+<!--		<offsetDefaultTime unit="day" multiplier="1"/>
+		<defaultValue>0</defaultValue>-->
+		<defaultValueTimeSeries>
+			<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+			<parameterId>SASC</parameterId>
+		</defaultValueTimeSeries>
+	</singleValueModifier>
+	<singleValueModifier id="weadd" name="weadd">
+		<timeSeries>
+			<parameterId>WEADD</parameterId>
+		</timeSeries>
+		<softLimits>
+			<maximumValue>5</maximumValue>
+			<minimumValue>-5</minimumValue>
+		</softLimits>
+		<defaultTime>start run</defaultTime>
+<!--		<offsetDefaultTime unit="hour" multiplier="1"/>   -->
+		<defaultValue>0</defaultValue>
+	</singleValueModifier>
+	<singleValueModifier id="wechng" name="wechng">
+		<timeSeries>
+			<parameterId>WECHNG</parameterId>
+		</timeSeries>
+		<softLimits>
+			<maximumValue>25</maximumValue>
+			<minimumValue>0</minimumValue>
+		</softLimits>
+		<hardLimits>
+			<minimumValue>0</minimumValue>
+		</hardLimits>
+		<defaultTime>start run</defaultTime>
+<!--		<offsetDefaultTime unit="day" multiplier="1"/>
+		<defaultValue>0</defaultValue>-->
+		<statisticalFunctionDefaultValue>principalcomponentanalysis</statisticalFunctionDefaultValue>
+	</singleValueModifier>
+	<enumerationModifier id="rainsnow" name="rainsnow">
+		<timeSeries>
+			<parameterId>RAINSNOW</parameterId>
+		</timeSeries>
+		<descriptionEnumeration>choose precipitation:</descriptionEnumeration>
+		<enumeration>
+			<item text="rain" value="1"/>
+			<item text="snow" value="2"/>
+		</enumeration>
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+	</enumerationModifier>
+	<markUnreliableModifier id="ignorets" name="ignorets">
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+		</timeSeries>
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>			
+		<timeSeries>
+			<moduleInstanceSetId>QIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+		</timeSeries>	
+		<timeSeries>
+			<moduleInstanceSetId>QIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>			
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QME</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep id="12Z"/>
+		</timeSeries>
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>RQOT</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>RQSW</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="2"/>
+		</timeSeries>
+<!--	<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+		</timeSeries>
+		<timeSeries>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_AK</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</timeSeries>-->
+		<defaultStartTime>start run</defaultStartTime>
+		<defaultEndTime>end run</defaultEndTime>
+	</markUnreliableModifier>
+	<adjustQModifiers>
+		<blendingStepsModifier id="chgblend" name="chgblend"/>
+	</adjustQModifiers>
+	<sampleHistoricalModifiers>
+		<sampleYearsModifier id="historicwateryears" name="historicwateryears"></sampleYearsModifier>
+	</sampleHistoricalModifiers>
+	<mergeSimpleModifiers>
+		<reverseOrderModifiers id="switchts" name="switchts">
+			<defaultStartTime>start run</defaultStartTime>
+			<defaultEndTime>end run</defaultEndTime>
+		</reverseOrderModifiers>
+	</mergeSimpleModifiers>
+	<compoundModifier id="sacco" name="sacco">
+		<slider>
+			<currentTimeSeries>
+				<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+				<valueType>scalar</valueType>
+				<parameterId>UZTWC</parameterId>
+				<locationSetId>Gages_Catchments</locationSetId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="6"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries>
+				<moduleInstanceId>ExportMODS</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>UZTWC</parameterId>
+				<locationSetId>Gages_Catchments</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+			</modifiedTimeSeries>
+			<maximumAllowedValueParameterId>UZTWM</maximumAllowedValueParameterId>
+		</slider>
+		<slider>
+			<currentTimeSeries>
+				<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+				<valueType>scalar</valueType>
+				<parameterId>UZFWC</parameterId>
+				<locationSetId>Gages_Catchments</locationSetId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="6"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries>
+				<moduleInstanceId>ExportMODS</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>UZFWC</parameterId>
+				<locationSetId>Gages_Catchments</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+			</modifiedTimeSeries>
+			<maximumAllowedValueParameterId>UZFWM</maximumAllowedValueParameterId>
+		</slider>
+		<slider>
+			<currentTimeSeries>
+				<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+				<valueType>scalar</valueType>
+				<parameterId>LZTWC</parameterId>
+				<locationSetId>Gages_Catchments</locationSetId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="6"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries>
+				<moduleInstanceId>ExportMODS</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>LZTWC</parameterId>
+				<locationSetId>Gages_Catchments</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+			</modifiedTimeSeries>
+			<maximumAllowedValueParameterId>LZTWM</maximumAllowedValueParameterId>
+		</slider>
+		<slider>
+			<currentTimeSeries>
+				<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+				<valueType>scalar</valueType>
+				<parameterId>LZFSC</parameterId>
+				<locationSetId>Gages_Catchments</locationSetId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="6"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries>
+				<moduleInstanceId>ExportMODS</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>LZFSC</parameterId>
+				<locationSetId>Gages_Catchments</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+			</modifiedTimeSeries>
+			<maximumAllowedValueParameterId>LZFSM</maximumAllowedValueParameterId>
+		</slider>
+		<slider>
+			<currentTimeSeries>
+				<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+				<valueType>scalar</valueType>
+				<parameterId>LZFPC</parameterId>
+				<locationSetId>Gages_Catchments</locationSetId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="6"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries>
+				<moduleInstanceId>ExportMODS</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>LZFPC</parameterId>
+				<locationSetId>Gages_Catchments</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+			</modifiedTimeSeries>
+			<maximumAllowedValueParameterId>LZFPM</maximumAllowedValueParameterId>
+		</slider>
+		<slider>
+			<currentTimeSeries><moduleInstanceId>ExportMODS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ADIMC</parameterId>
+			<locationSetId>Gages_Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries><moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>ADIMC</parameterId>
+			<locationSetId>Gages_Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/></modifiedTimeSeries>
+			<maximumAllowedValueParameterId>UZTWM+LZTWM</maximumAllowedValueParameterId>
+		</slider>
+		<defaultTime>start run</defaultTime>
+		<offsetDefaultTime unit="day" multiplier="1"/>
+	</compoundModifier>
+	<compoundModifier id="sacco_1hr" name="sacco_1hr">
+		<slider>
+			<currentTimeSeries>
+				<moduleInstanceSetId>SACSMA_Forecast_1hr</moduleInstanceSetId>
+				<valueType>scalar</valueType>
+				<parameterId>UZTWC</parameterId>
+				<locationSetId>Catchments_Onehr</locationSetId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="1"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries>
+				<moduleInstanceId>ExportMODS</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>UZTWC</parameterId>
+				<locationSetId>Catchments_Onehr</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+			</modifiedTimeSeries>
+			<maximumAllowedValueParameterId>UZTWM</maximumAllowedValueParameterId>
+		</slider>
+		<slider>
+			<currentTimeSeries>
+				<moduleInstanceSetId>SACSMA_Forecast_1hr</moduleInstanceSetId>
+				<valueType>scalar</valueType>
+				<parameterId>UZFWC</parameterId>
+				<locationSetId>Catchments_Onehr</locationSetId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="1"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries>
+				<moduleInstanceId>ExportMODS</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>UZFWC</parameterId>
+				<locationSetId>Catchments_Onehr</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+			</modifiedTimeSeries>
+			<maximumAllowedValueParameterId>UZFWM</maximumAllowedValueParameterId>
+		</slider>
+		<slider>
+			<currentTimeSeries>
+				<moduleInstanceSetId>SACSMA_Forecast_1hr</moduleInstanceSetId>
+				<valueType>scalar</valueType>
+				<parameterId>LZTWC</parameterId>
+				<locationSetId>Catchments_Onehr</locationSetId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="1"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries>
+				<moduleInstanceId>ExportMODS</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>LZTWC</parameterId>
+				<locationSetId>Catchments_Onehr</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+			</modifiedTimeSeries>
+			<maximumAllowedValueParameterId>LZTWM</maximumAllowedValueParameterId>
+		</slider>
+		<slider>
+			<currentTimeSeries>
+				<moduleInstanceSetId>SACSMA_Forecast_1hr</moduleInstanceSetId>
+				<valueType>scalar</valueType>
+				<parameterId>LZFSC</parameterId>
+				<locationSetId>Catchments_Onehr</locationSetId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="1"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries>
+				<moduleInstanceId>ExportMODS</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>LZFSC</parameterId>
+				<locationSetId>Catchments_Onehr</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+			</modifiedTimeSeries>
+			<maximumAllowedValueParameterId>LZFSM</maximumAllowedValueParameterId>
+		</slider>
+		<slider>
+			<currentTimeSeries>
+				<moduleInstanceSetId>SACSMA_Forecast_1hr</moduleInstanceSetId>
+				<valueType>scalar</valueType>
+				<parameterId>LZFPC</parameterId>
+				<locationSetId>Catchments_Onehr</locationSetId>
+				<timeSeriesType>simulated forecasting</timeSeriesType>
+				<timeStep unit="hour" multiplier="1"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries>
+				<moduleInstanceId>ExportMODS</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>LZFPC</parameterId>
+				<locationSetId>Catchments_Onehr</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="nonequidistant"/>
+			</modifiedTimeSeries>
+			<maximumAllowedValueParameterId>LZFPM</maximumAllowedValueParameterId>
+		</slider>
+		<slider>
+			<currentTimeSeries><moduleInstanceId>ExportMODS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ADIMC</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			</currentTimeSeries>
+			<modifiedTimeSeries><moduleInstanceSetId>SACSMA_Forecast_1hr</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>ADIMC</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/></modifiedTimeSeries>
+			<maximumAllowedValueParameterId>UZTWM+LZTWM</maximumAllowedValueParameterId>
+		</slider>
+		<defaultTime>start run</defaultTime>
+		<offsetDefaultTime unit="day" multiplier="1"/>
+	</compoundModifier>
+	<optionModifier id="Temperature_Switch" name="Temperature Switch">
+		<booleanTimeSeries>
+			<moduleInstanceId>Anch_MergeMAT_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<qualifierId>observed</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</booleanTimeSeries>
+		<booleanTimeSeries>
+			<moduleInstanceId>Anch_MergeMAT_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MATX</parameterId>
+			<qualifierId>observed</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</booleanTimeSeries>
+		<booleanTimeSeries>
+			<moduleInstanceId>Anch_MergeMAT_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MATX_MPE</parameterId>
+			<qualifierId>observed</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</booleanTimeSeries>
+		<booleanTimeSeries>
+			<moduleInstanceId>Anch_MergeMAT_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAT</parameterId>
+			<qualifierId>forecast</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</booleanTimeSeries>
+		<booleanTimeSeries>
+			<moduleInstanceId>Anch_MergeMAT_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMATX</parameterId>
+			<qualifierId>forecast</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+		</booleanTimeSeries>
+	</optionModifier>
+	<moduleParameterModifier id="baseflow" name="baseflow">
+		<filter>
+			<moduleParameterId>CONSTANT_BASE_FLOW</moduleParameterId>
+		</filter>
+		<defaultValidTime/>
+	</moduleParameterModifier>
+	<unitHydrographModifiers>
+		<changeOrdinatesModifier id="unithg" name="unithg">
+			<defaultStartTime>start run</defaultStartTime>
+			<defaultEndTime>end run</defaultEndTime>
+<!--			<offsetDefaultEndTime unit="day" multiplier="100"/>-->
+			<defaultValidTime/>
+		</changeOrdinatesModifier>
+	</unitHydrographModifiers>
+	<ratingCurveModifiers>
+		<shiftMultiplyRatingCurveModifier id="qpcshift" name="qpcshift">
+			<defaultStartTime>start run</defaultStartTime>
+			<defaultEndTime>end run</defaultEndTime>
+			<offsetDefaultEndTime unit="day" multiplier="3"/>
+		</shiftMultiplyRatingCurveModifier>
+	</ratingCurveModifiers>
+	<modifiersGroup id="ensembles">
+		<modifierId>setqmean</modifierId>
+		<modifierId>sacco</modifierId>
+		<modifierId>sacbasef</modifierId>
+		<modifierId>tschng</modifierId>
+		<modifierId>tschng_MAT</modifierId>
+		<modifierId>tschng_MAP</modifierId>
+		<modifierId>chgblend</modifierId>
+		<modifierId>rrichng</modifierId>
+		<modifierId>mfc</modifierId>
+		<modifierId>uadj</modifierId>
+		<modifierId>rainsnow</modifierId>
+		<modifierId>ignorets</modifierId>
+		<modifierId>setmsng</modifierId>
+		<modifierId>switchts</modifierId>
+	</modifiersGroup>
+</modifierTypes>

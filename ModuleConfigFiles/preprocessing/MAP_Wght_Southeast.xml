@@ -1,0 +1,3063 @@
+<transformationModule version="1.0" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd">
+  <variable>
+    <variableId>GALK1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GALK1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GALS1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GALS1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GDEZ1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GDEZ1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GDEZ2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GDEZ2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>  
+  <variable>
+    <variableId>GALS3</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GALS3</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GALS2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GALS2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GALK4</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GALK4</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>PAYA</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>PAYA</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GALK5</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GALK5</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GALK3</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GALK3</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GALK2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GALK2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>HCSA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>HCSA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GTAT1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GTAT1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GDEZ3</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GDEZ3</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GCKT1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GCKT1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>PAHN</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>PAHN</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>HHWA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>HHWA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>HHKA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>HHKA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GTYA1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GTYA1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>PAGY</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>PAGY</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>TYAA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>TYAA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>PAJN</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>PAJN</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>AUKA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>AUKA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>PAJK</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>PAJK</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GTKU1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GTKU1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GTKU2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GTKU2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GTKU3</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GTKU3</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GTKU4</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GTKU4</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GTKU5</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GTKU5</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GTKU6</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GTKU6</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GTKU7</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GTKU7</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GTKU8</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GTKU8</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>LLKA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>LLKA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSGC1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSGC1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSGC2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSGC2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSGC3</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSGC3</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSGC4</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSGC4</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSGC5</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSGC5</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSGC6</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSGC6</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>PPLQ2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>PPLQ2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSTK1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSTK1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSTK2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSTK2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>KKEA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>KKEA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>ZMBA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>ZMBA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>SOUA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>SOUA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSTT1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSTT1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSTT2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSTT2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSTT3</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSTT3</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSTT4</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSTT4</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSTT5</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSTT5</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSBF1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSBF1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSBF2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSBF2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GSBF3</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GSBF3</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GISK1</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GISK1</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GISK2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GISK2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GISK3</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GISK3</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>GISK4</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>GISK4</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>PAKW</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>PAKW</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>THOA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>THOA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>MCAA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>MCAA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <variable>
+    <variableId>SRYA2</variableId>
+    <timeSeriesSet>
+      <moduleInstanceId>ImportSHEF</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>PP06</parameterId>
+      <locationId>SRYA2</locationId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep multiplier="6" unit="hour"/>
+      <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </variable>
+  <transformation id="SRYA2LWR_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(SRYA2*1.26)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SRYA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SRYA2LWR_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(SRYA2*1.26)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SRYA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SRYA2UPR_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(SRYA2*1.41)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SRYA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SRYA2UPR_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(SRYA2*1.41)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SRYA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>  <transformation id="DEZQ9UPR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GALK1*0.14)+(GALS1*0.21)+(GDEZ1*0.07)+(GDEZ2*0.21)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>DEZQ9UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="DEZQ9LWR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GALK1*0.11)+(GALS1*0.16)+(GDEZ1*0.05)+(GDEZ2*0.16)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>DEZQ9LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALSQ9GL_WEIGHTED_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GALS3*0.39)+(GALS2*0.13)+(GALK4*0.13)+(GALK1*0.39)+(GALS1*0.26)+(GDEZ2*0.13)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALSQ9GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALSQ9UPR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GALS3*0.14)+(GALS2*0.07)+(GALK4*0.07)+(GALK1*0.27)+(GALS1*0.13)+(GDEZ2*0.07)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALSQ9UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALSQ9LWR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GALS3*0.09)+(GALS2*0.05)+(GALK4*0.05)+(GALK1*0.19)+(GALS1*0.10)+(GDEZ2*0.05)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALSQ9LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TATQ2LWR_WEIGHTED__MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GALK1*0.21)+(GALS1*0.14)+(GTAT1*0.28)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TATQ9LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TATQ9UPR_WEIGHTED_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GALK1*0.25)+(GALS1*0.23)+(GTAT1*0.47)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TATQ9UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALKA2LG_WEIGHTED_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAYA*0.49)+(GALK5*0.14)+(GALK3*0.14)+(GALK2*0.06)+(HCSA2*0.1)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALKA2LG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALKA2LWR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAYA*0.18)+(GALK5*0.08)+(GALK3*0.08)+(GALK2*0.04)+(HCSA2*0.12)+(GTAT1*0.06)+(GDEZ3*0.06)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALKA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALKA2UG_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAYA*0.59)+(GALK5*0.16)+(GALK3*0.16)+(GALK2*0.07)+(HCSA2*0.12)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALKA2UG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALKA2UPR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAYA*0.22)+(GALK5*0.10)+(GALK3*0.08)+(GALK2*0.05)+(HCSA2*0.14)+(GTAT1*0.07)+(GDEZ3*0.07)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALKA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALEA2LG_WEIGHTED_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAYA*0.49)+(GALK5*0.14)+(GALK3*0.14)+(GALK2*0.06)+(HCSA2*0.1)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALEA2LG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALEA2LWR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAYA*0.18)+(GALK5*0.08)+(GALK3*0.08)+(GALK2*0.04)+(HCSA2*0.12)+(GTAT1*0.06)+(GDEZ3*0.06)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALEA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALEA2UG_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAYA*0.59)+(GALK5*0.16)+(GALK3*0.16)+(GALK2*0.07)+(HCSA2*0.12)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALEA2UG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ALEA2UPR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAYA*0.22)+(GALK5*0.10)+(GALK3*0.08)+(GALK2*0.05)+(HCSA2*0.14)+(GTAT1*0.07)+(GDEZ3*0.07)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ALEA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="CKTA2GL_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GCKT1*0.09)+(PAHN*0.37)+(HHWA2*0.23)+(HHKA2*0.23)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>CKTA2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="CKTA2GL_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GCKT1*0.1)+(PAHN*0.41)+(HHWA2*0.26)+(HHKA2*0.26)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>CKTA2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="CKTA2UPR_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAHN*0.46)+(HHWA2*0.29)+(HHKA2*0.29)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>CKTA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="CKTA2UPR_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAHN*0.53)+(HHWA2*0.33)+(HHKA2*0.33)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>CKTA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="CKTA2LWR_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAHN*0.46)+(HHWA2*0.18)+(HHKA2*0.18)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>CKTA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="CKTA2LWR_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAHN*0.51)+(HHWA2*0.21)+(HHKA2*0.21)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>CKTA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TYAA2UG_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(TYAA2*2.07)+(PAGY*0.72)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TYAA2UG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TYAA2UG_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(TYAA2*2.07)+(PAGY*0.72)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TYAA2UG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TYAA2LG_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(TYAA2*1.75)+(PAGY*0.61)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TYAA2LG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TYAA2LG_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(TYAA2*1.75)+(PAGY*0.61)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TYAA2LG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TYAA2UPR_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(TYAA2*1.94)+(PAGY*0.64)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TYAA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TYAA2UPR_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(TYAA2*1.94)+(PAGY*0.64)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TYAA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TYAA2LWR_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(TYAA2*1.46)+(PAGY*0.51)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TYAA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TYAA2LWR_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(TYAA2*1.46)+(PAGY*0.51)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TYAA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SKGA2GL_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAGY*1.10)+(TYAA2*0.29)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SKGA2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SKGA2GL_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAGY*1.10)+(TYAA2*0.29)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SKGA2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SKGA2UPR_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAGY*0.73)+(TYAA2*0.23)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SKGA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SKGA2UPR_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAGY*0.73)+(TYAA2*0.23)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SKGA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SKGA2LWR_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAGY*0.64)+(TYAA2*0.20)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SKGA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SKGA2LWR_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAGY*0.64)+(TYAA2*0.21)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SKGA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="MCAA2LWR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAJN*0.05)+(MCAA2*1.03)+(PAJK*0.1)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>MCAA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="MCAA2UPR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAJN*0.10)+(MCAA2*1.09)+(PAJK*0.15)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>MCAA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="MNDA2LG_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAJN*0.34)+(MCAA2*0.58)+(PAJK*0.43)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>MNDA2LG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="MNDA2LG_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAJN*0.34)+(MCAA2*0.58)+(PAJK*0.53)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>MNDA2LG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="MNDA2NG_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAJN*0.33)+(MCAA2*0.57)+(PAJK*0.49)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>MNDA2NG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="MNDA2NG_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAJN*0.33)+(MCAA2*0.57)+(PAJK*0.49)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>MNDA2NG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="MNDA2UG_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAJN*0.46)+(MCAA2*0.56)+(PAJK*0.59)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>MNDA2UG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="MNDA2UG_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAJN*0.46)+(MCAA2*0.56)+(PAJK*0.59)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>MNDA2UG</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+    <transformation id="JDCA2LOC_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAJN*0.59)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>JDCA2LOC</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="JDCA2LOC_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAJN*0.59)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>JDCA2LOC</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+ <transformation id="TKUA2GL_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GTKU3*0.14)+(GTKU2*0.24)+(PAJN*0.36)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TKUA2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TKUA2GL_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GTKU3*0.14)+(GTKU2*0.24)+(PAJN*0.36)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TKUA2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TKUA2UPR_WEIGHTED_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GTKU3*0.07)+(GTKU2*0.19)+(PAJN*0.21)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TKUA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="TKUA2LWR_WEIGHTED_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GTKU2*0.27)+(PAJN*0.18)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>TKUA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SGCQ2LWR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSGC1*0.07)+(GSGC2*0.07)+(GSGC3*0.07)+(GSGC4*0.07)+(GSGC5*0.07)+(GSGC6*0.07)+(PPLQ2*0.15) </expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SGCQ2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SGCQ2UPR_Weighted_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--01-01</startMonthDay>
+          <endMonthDay>--12-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSGC1*0.09)+(GSGC2*0.09)+(GSGC3*0.09)+(GSGC4*0.09)+(GSGC5*0.09)+(GSGC6*0.09)+(PPLQ2*0.20) </expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SGCQ2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="STTQ2LWR_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSTT1*0.06)+(GSTT1*0.06)+(GSTT3*0.06)+(GSTT4*0.06)+(GSTT5*0.06)+(SOUA2*0.04)+(PPLQ2*0.04)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>STTQ2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="STTQ2LWR_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSTT1*0.07)+(GSTT1*0.07)+(GSTT3*0.07)+(GSTT4*0.07)+(GSTT5*0.07)+(SOUA2*0.05)+(PPLQ2*0.05)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>STTQ2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="STTQ2UPR_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSTT1*0.08)+(GSTT2*0.08)+(GSTT3*0.08)+(GSTT4*0.08)+(GSTT5*0.08)+(SOUA2*0.05)+(PPLQ2*0.05)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>STTQ2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="STTQ2UPR_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSTT1*0.09)+(GSTT2*0.09)+(GSTT3*0.09)+(GSTT4*0.09)+(GSTT5*0.09)+(SOUA2*0.06)+(PPLQ2*0.06)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>STTQ2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+ <transformation id="SBFQ2GL_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSBF1*0.32)+(GSBF2*0.32)+(GSBF3*0.48)+(SOUA2*0.26)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SBFQ2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SBFQ2GL_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSBF1*0.30)+(GSBF2*0.30)+(GSBF3*0.45)+(SOUA2*0.25)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SBFQ2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SBFQ2UPR_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSBF1*0.14)+(GSBF2*0.14)+(GSBF3*0.21)+(SOUA2*0.27)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SBFQ2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SBFQ2UPR_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSBF1*0.11)+(GSBF2*0.11)+(GSBF3*0.17)+(SOUA2*0.26)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SBFQ2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SBFQ2LWR_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSBF1*0.10)+(GSBF2*0.10)+(GSBF3*0.16)+(SOUA2*0.25)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SBFQ2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SBFQ2LWR_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSBF1*0.08)+(GSBF2*0.08)+(GSBF3*0.13)+(SOUA2*0.24)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SBFQ2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ISKQ2GL_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GISK1*0.25)+(GISK2*0.25)+(GISK3*0.12)+(GISK4*0.12)+(KKEA2*0.12)+(ZMBA2*0.18)+(SOUA2*0.18)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ISKQ2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ISKQ2GL_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GISK1*0.22)+(GISK2*0.22)+(GISK3*0.11)+(GISK4*0.11)+(KKEA2*0.11)+(ZMBA2*0.17)+(SOUA2*0.17)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ISKQ2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ISKQ2UPR_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GISK1*0.1)+(GISK2*0.1)+(GISK3*0.1)+(GISK4*0.1)+(KKEA2*.07)+(ZMBA2*.07)+(SOUA2*0.07)+(PPLQ2*0.07)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ISKQ2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ISKQ2UPR_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GISK1*0.1)+(GISK2*0.1)+(GISK3*0.1)+(GISK4*0.1)+(KKEA2*.06)+(ZMBA2*.06)+(SOUA2*0.06)+(PPLQ2*0.06)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ISKQ2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ISKQ2LWR_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GISK1*0.11)+(GISK2*0.11)+(GISK3*0.11)+(GISK4*0.11)+(KKEA2*.07)+(ZMBA2*.07)+(SOUA2*0.07)+(PPLQ2*0.07)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ISKQ2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="ISKQ2LWR_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GISK1*0.1)+(GISK2*0.1)+(GISK3*0.1)+(GISK4*0.1)+(KKEA2*.06)+(ZMBA2*.06)+(SOUA2*0.06)+(PPLQ2*0.06)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>ISKQ2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+ <transformation id="STKA2GL_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSTK1*0.20)+(GSTK2*0.30)+(KKEA2*0.20)+(ZMBA2*0.2)+(SOUA2*0.1)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>STKA2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="STKA2GL_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSTK1*0.22)+(GSTK2*0.33)+(KKEA2*0.22)+(ZMBA2*0.22)+(SOUA2*0.11)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>STKA2GL</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="STKA2UPR_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSTK1*0.18)+(GSTK2*0.28)+(KKEA2*0.18)+(ZMBA2*0.09)+(SOUA2*0.18)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>STKA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="STKA2UPR_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSTK1*0.21)+(GSTK2*0.32)+(KKEA2*0.21)+(ZMBA2*0.11)+(SOUA2*0.21)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>STKA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="STKA2LWR_WEIGHTED_WINTER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--04-30</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSTK1*0.25)+(GSTK2*0.17)+(KKEA2*0.17)+(ZMBA2*0.08)+(SOUA2*0.17)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>STKA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="STKA2LWR_WEIGHTED_SUMMER_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--10-31</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(GSTK1*0.29)+(GSTK2*0.19)+(KKEA2*0.19)+(ZMBA2*0.10)+(SOUA2*0.19)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>STKA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SCKA2LWR_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAKW*0.79)+(THOA2*0.29)+(ZMBA2*0.20)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SCKA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SCKA2LWR_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAKW*0.79)+(THOA2*0.29)+(ZMBA2*0.2)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SCKA2LWR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SCKA2UPR_Weighted_Sumr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--05-01</startMonthDay>
+          <endMonthDay>--11-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAKW*0.79)+(THOA2*0.36)+(ZMBA2*0.2)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SCKA2UPR</locationId>
+              <timeSeriesType>external historical</timeSeriesType>
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+  <transformation id="SCKA2UPR_Weighted_Wntr_MAP">
+    <periodTransformation>
+      <period>
+        <season>
+          <startMonthDay>--11-01</startMonthDay>
+          <endMonthDay>--05-01</endMonthDay>
+        </season>
+      </period>
+      <user>
+        <simple>
+          <expression>+(PAKW*0.79)+(THOA2*0.36)+(ZMBA2*0.2)</expression>
+          <outputVariable>
+            <timeSeriesSet>
+              <moduleInstanceId>MAP_Wght_Southeast</moduleInstanceId>
+              <valueType>scalar</valueType>
+              <parameterId>MAP</parameterId>
+              <locationId>SCKA2UPR</locationId>
+	      <timeSeriesType>external historical</timeSeriesType>
+              <!--timeSeriesType>external historical</timeSeriesType>-->
+              <timeStep multiplier="6" unit="hour"/>
+              <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+              <readWriteMode>read only</readWriteMode>
+              <synchLevel>1</synchLevel>
+            </timeSeriesSet>
+          </outputVariable>
+        </simple>
+      </user>
+    </periodTransformation>
+  </transformation>
+</transformationModule>

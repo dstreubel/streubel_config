@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>SNOA2_SQME_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MEANQ_SNOA2_SNOA2_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<locationId>SNOA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SNOA2BAS_SQME_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MEANQ_SNOA2_SNOA2BAS_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<locationId>SNOA2BAS</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SNOA2TOT_SQME_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_SNOA2_SNOA2SQM_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<locationId>SNOA2TOT</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SNOA2SQM">
+		<user>
+			<simple>
+				<expression>((max(+SNOA2_SQME_24+0.000E+00,0))-SNOA2BAS_SQME_24)</expression>
+				<outputVariable>
+					<variableId>SNOA2TOT_SQME_24</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+</transformationModule>

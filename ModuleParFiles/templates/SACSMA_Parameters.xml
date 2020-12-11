@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_modelparameters.xsd" version="1.5" xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <group id="default">
+    <model>SACSMA</model>
+    <parameter id="RUNOFF_COMPONENT_INTERVAL">
+      <intValue>@RUNOFF_COMPONENT_INTERVAL@</intValue>
+    </parameter>
+    <!--<parameter id="SMZC_INTERVAL">
+      <intValue>@SMZC_INTERVAL@</intValue>
+    </parameter>-->
+    <parameter id="MAPE_INPUT">
+      <boolValue>@MAPE_INPUT@</boolValue>
+    </parameter>
+    <parameter id="SASC_INPUT_OPTION">
+      <boolValue>@SASC_INPUT@</boolValue>
+    </parameter>
+    <parameter id="PXADJ">
+      <dblValue>@PXADJ_SAC@</dblValue>
+    </parameter>
+    <parameter id="PEADJ">
+      <dblValue>@PEADJ@</dblValue>
+    </parameter>
+    <parameter id="UZTWM">
+      <dblValue>@UZTWM@</dblValue>
+    </parameter>
+    <parameter id="UZFWM">
+      <dblValue>@UZFWM@</dblValue>
+    </parameter>
+    <parameter id="UZK">
+      <dblValue>@UZK@</dblValue>
+    </parameter>
+    <parameter id="PCTIM">
+      <dblValue>@PCTIM@</dblValue>
+    </parameter>
+    <parameter id="ADIMP">
+      <dblValue>@ADIMP@</dblValue>
+    </parameter>
+    <parameter id="RIVA">
+      <dblValue>@RIVA@</dblValue>
+    </parameter>
+    <parameter id="ZPERC">
+      <dblValue>@ZPERC@</dblValue>
+    </parameter>
+    <parameter id="REXP">
+      <dblValue>@REXP@</dblValue>
+    </parameter>
+    <parameter id="LZTWM">
+      <dblValue>@LZTWM@</dblValue>
+    </parameter>
+    <parameter id="LZFSM">
+      <dblValue>@LZFSM@</dblValue>
+    </parameter>
+    <parameter id="LZFPM">
+      <dblValue>@LZFPM@</dblValue>
+    </parameter>
+    <parameter id="LZSK">
+      <dblValue>@LZSK@</dblValue>
+    </parameter>
+    <parameter id="LZPK">
+      <dblValue>@LZPK@</dblValue>
+    </parameter>
+    <parameter id="PFREE">
+      <dblValue>@PFREE@</dblValue>
+    </parameter>
+    <parameter id="RSERV">
+      <dblValue>@RSERV@</dblValue>
+    </parameter>
+    <parameter id="SIDE">
+      <dblValue>@SIDE@</dblValue>
+    </parameter>
+    <parameter id="EFC">
+      <dblValue>@EFC@</dblValue>
+    </parameter>
+      <parameter id="ET_DEMAND_CURVE">
+      <table>
+        <columnTypes A="double"/>
+        <row A="@JAN_ETD@"/>
+        <row A="@FEB_ETD@"/>
+        <row A="@MAR_ETD@"/>
+        <row A="@APR_ETD@"/>
+        <row A="@MAY_ETD@"/>
+        <row A="@JUN_ETD@"/>
+        <row A="@JUL_ETD@"/>
+        <row A="@AUG_ETD@"/>
+        <row A="@SEP_ETD@"/>
+        <row A="@OCT_ETD@"/>
+        <row A="@NOV_ETD@"/>
+        <row A="@DEC_ETD@"/>
+      </table>
+    </parameter>
+  </group>
+</parameters>

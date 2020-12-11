@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>qte_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QTE</parameterId>
+			<locationId>RTMA</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>qtf_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQTF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QTF</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>qte_qtf_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>QTE_QTF_Merge</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QTMRG</parameterId>
+			<locationId>HAS</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+                        <synchLevel>6</synchLevel>
+                        <expiryTime unit="day" multiplier="10"/>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="Merge_QTE_QTF">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>qte_grid</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>qtf_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>qte_qtf_merged</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	<transformation id="Interpolate">
+		<interpolationSerial>
+			<default>
+				<inputVariable>
+					<variableId>qte_qtf_merged</variableId>
+				</inputVariable>
+				<defaultValue>0.00</defaultValue>
+				<outputVariable>
+					<variableId>qte_qtf_merged</variableId>
+				</outputVariable>
+			</default>
+		</interpolationSerial>
+	</transformation>
+</transformationModule>

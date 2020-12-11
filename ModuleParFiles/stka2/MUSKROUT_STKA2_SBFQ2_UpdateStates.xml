@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+    <parameter id="X_PARAMETER">
+      <dblValue>0.2</dblValue>
+    </parameter>
+    <parameter id="INITIAL_OUTFLOW">
+      <dblValue>233.4904</dblValue>
+    </parameter>
+    <parameter id="K_PARAMETER">
+      <dblValue>6.0</dblValue>
+    </parameter>
+    <parameter id="GENERAL_INFO">
+      <stringValue>SBF Q ROUTED TO STK</stringValue>
+    </parameter>
+    <parameter id="CARRYOVER_FLAG">
+      <intValue>1</intValue>
+    </parameter>
+    <parameter id="TS_INFLOW_TYPE">
+      <stringValue>SQIN</stringValue>
+    </parameter>
+    <parameter id="TS_OUTFLOW_TIMESTEP">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="TS_INFLOW_ID">
+      <stringValue>SBFQ2</stringValue>
+    </parameter>
+    <parameter id="TS_OUTFLOW_ID">
+      <stringValue>SBFQ2RTD</stringValue>
+    </parameter>
+    <parameter id="TS_INFLOW_TIMESTEP">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="TS_OUTFLOW_TYPE">
+      <stringValue>SQIN</stringValue>
+    </parameter>
+    <parameter id="INITIAL_INFLOW">
+      <dblValue>232.1111</dblValue>
+    </parameter>
+  </group>
+</parameters>

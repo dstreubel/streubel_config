@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+
+<!-- Imported HI MRMS QPE grid -->
+	<variable>
+		<variableId>Grid_1hr_MRMS</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+      			<valueType>grid</valueType>
+      			<parameterId>QPE</parameterId>
+      			<locationId>HI_MRMS</locationId>
+      			<timeSeriesType>external historical</timeSeriesType>
+      			<timeStep unit="hour" multiplier="1"/>
+      			<relativeViewPeriod unit="hour" start="-60" end="0"/>
+      			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+<!-- Imported NWM short-range forecast precip grid -->
+	<variable>
+		<variableId>Grid_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+      			<valueType>grid</valueType>
+      			<parameterId>QPF</parameterId>
+      			<qualifierId>ShortRange</qualifierId>
+      			<locationId>NWM</locationId>
+      			<timeSeriesType>external forecasting</timeSeriesType>
+      			<timeStep unit="hour" multiplier="1"/>
+      			<relativeViewPeriod unit="hour" start="-48" end="60"/>
+      			<relativeForecastSearchPeriod unit="hour" start="-24" end="0"></relativeForecastSearchPeriod>
+      			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+<!-- Imported WRF_ARW short-range forecast precip grid -->
+	<variable>
+		<variableId>Grid_1hr_WRF</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPF</moduleInstanceId>
+      			<valueType>grid</valueType>
+      			<parameterId>QPF</parameterId>
+      			<locationId>Hawaii_WRF-ARW</locationId>
+      			<timeSeriesType>external forecasting</timeSeriesType>
+      			<timeStep unit="hour" multiplier="1"/>
+      			<relativeViewPeriod unit="hour" start="-48" end="48"/>
+      			<relativeForecastSearchPeriod unit="hour" start="-24" end="48"></relativeForecastSearchPeriod>
+      			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+<!--  NON-WEIGHTED MEAN AREALS -->
+<!--  Temp grids  -->
+	<variable>
+		<variableId>Temp_Grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NWMShortRangePrecipMeanAreals</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPF</parameterId>
+			<qualifierId>short</qualifierId>
+			<qualifierId>1hr</qualifierId>	
+			<locationId>NWM</locationId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" end="60"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+<!--  Mean areals  -->
+	<variable>
+		<variableId>NAM_NWM_FMAPX_Islands</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NWMShortRangePrecipMeanAreals</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAPX</parameterId>
+			<qualifierId>NAMNEST</qualifierId>
+			<locationSetId>Hawaii_Islands</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-48" startOverrulable="true" end="60" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<expiryTime unit="day" multiplier="10"/>
+		</timeSeriesSet>
+	</variable>	
+	<variable>
+		<variableId>WRF_NWM_FMAPX_Islands</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NWMShortRangePrecipMeanAreals</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAPX</parameterId>
+			<qualifierId>WRF-ARW</qualifierId>
+			<locationSetId>Hawaii_Islands</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-48" startOverrulable="true" end="60" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<expiryTime unit="day" multiplier="10"/>
+		</timeSeriesSet>
+	</variable>	
+	<variable>
+		<variableId>MRMS_QPE_Islands</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NWMShortRangePrecipMeanAreals</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Hawaii_Islands</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-60" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<expiryTime unit="day" multiplier="10"/>
+		</timeSeriesSet>
+	</variable>	
+	<variable>
+		<variableId>NAM_NWM_FMAPX_Basins</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NWMShortRangePrecipMeanAreals</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAPX</parameterId>
+			<qualifierId>NAMNEST</qualifierId>
+			<locationSetId>Gages_HI_Priority_Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-60" startOverrulable="true" end="60" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<expiryTime unit="day" multiplier="10"/>
+		</timeSeriesSet>
+	</variable>	
+	<variable>
+		<variableId>WRF_NWM_FMAPX_Basins</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NWMShortRangePrecipMeanAreals</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAPX</parameterId>
+			<qualifierId>WRF-ARW</qualifierId>
+			<locationSetId>Gages_HI_Priority_Basins</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-60" startOverrulable="true" end="60" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<expiryTime unit="day" multiplier="10"/>
+		</timeSeriesSet>
+	</variable>	
+	<variable>
+		<variableId>MRMS_QPE_Basins</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NWMShortRangePrecipMeanAreals</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<qualifierId>MRMS_PRATE</qualifierId>
+			<locationSetId>Gages_HI_Priority_Basins</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-60" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<expiryTime unit="day" multiplier="10"/>
+		</timeSeriesSet>
+	</variable>	
+
+<!-- NON-WEIGHTED MEAN AREALS -->
+<!--  Temp grids  -->
+	<transformation id="Temp_Grid">
+		<user>
+			<simple>
+				<expression>Grid_1hr</expression>
+				<outputVariable>
+					<variableId>Temp_Grid</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+
+<!--  NAM Mean areals  -->
+	<transformation id="NAM_Calculate_FMAPX_Basins">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>Grid_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>NAM_NWM_FMAPX_Basins</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="NAM_Calculate_FMAPX_Islands">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>Grid_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>NAM_NWM_FMAPX_Islands</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+<!--  WRF Mean areals  -->
+	<transformation id="WRF_Calculate_FMAPX_Basins">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>Grid_1hr_WRF</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>WRF_NWM_FMAPX_Basins</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="WRF_Calculate_FMAPX_Islands">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>Grid_1hr_WRF</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>WRF_NWM_FMAPX_Islands</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+<!--  MRMS Mean areals  -->
+	<transformation id="MRMS_Calculate_Basins">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>Grid_1hr_MRMS</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MRMS_QPE_Basins</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="MRMS_Calculate_Islands">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>Grid_1hr_MRMS</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MRMS_QPE_Islands</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+
+</transformationModule>

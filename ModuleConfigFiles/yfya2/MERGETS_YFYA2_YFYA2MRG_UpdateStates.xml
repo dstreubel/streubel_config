@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>YFYA2_QINE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADJUSTQ_YFYA2_YFYA2ADJ_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>YFYA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>YFYA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_YFYA2_YFYA2LOC_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>YFYA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>YFYA2MRG_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGETS_YFYA2_YFYA2MRG_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>YFYA2MRG</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="YFYA2MRG">
+	<merge>
+		<simple>
+			<inputVariable>
+				<variableId>YFYA2_QINE_6</variableId>
+			</inputVariable>
+			<inputVariable>
+				<variableId>YFYA2_SQIN_6</variableId>
+			</inputVariable>
+			<moduleParameterFile>MERGETS_YFYA2_YFYA2MRG_UpdateStates</moduleParameterFile>
+			<outputVariable>
+				<variableId>YFYA2MRG_SQIN_6</variableId>
+			</outputVariable>
+		</simple>
+	</merge>
+	</transformation>
+</transformationModule>

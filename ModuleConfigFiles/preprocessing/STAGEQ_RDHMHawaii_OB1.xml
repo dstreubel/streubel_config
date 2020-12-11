@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>Gages_Kauai_SQIN_R</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN_R</parameterId>
+			<locationSetId>Gages_Kauai</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="12" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Gages_Kauai_STGE_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_RDHMHawaii_OB1</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STGE</parameterId>
+			<locationSetId>Gages_Kauai</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="+12" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="HAWAIISSTG">
+		<dischargeStage>
+		<ratingCurve>
+			<discharge>
+				<variableId>Gages_Kauai_SQIN_R</variableId>
+			</discharge>
+			<stage>
+				<variableId>Gages_Kauai_STGE_1</variableId>
+			</stage>
+		</ratingCurve>
+		</dischargeStage>
+	</transformation>
+</transformationModule>

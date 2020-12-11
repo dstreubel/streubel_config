@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+
+    <!-- NOTE: Replace all timeZone attributes below with the appropriate time zone for the imported data. -->
+
+    <import>
+        <general>
+            <importType>NWS-DATACARD</importType>
+            <folder>$IMPORT_FOLDER_ROOT$/enspostpe_cardfiles</folder>
+            <idMapId>IdImportDataCard</idMapId>
+            <unitConversionsId>ImportEnglishUnits</unitConversionsId>
+            <missingValue>-999.0</missingValue>
+            <importTimeZone>
+                <timeZoneOffset>-06:00</timeZoneOffset>
+            </importTimeZone>
+        </general>         
+        <timeSeriesSet>
+            <moduleInstanceId>ImportEnsPostPEDatacards</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>QME</parameterId>             
+            <locationSetId>Gages_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="24" timeZone="GMT-0"/>             
+            <readWriteMode>add originals</readWriteMode>
+            <synchLevel>4</synchLevel>
+            <!--<expiryTime unit="year" multiplier="100"/>-->
+        </timeSeriesSet>                
+    </import>
+
+</timeSeriesImportRun>

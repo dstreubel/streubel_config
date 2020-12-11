@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MCDA2LOC_MAP_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Tanana_MergeMAP_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationId>MCDA2LOC</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MCDA2LOC_MAPX_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationId>MCDA2LOC</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MCDA2MRG_MAP_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGETS_MCDA2_MCDA2MRG_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationId>MCDA2MRG</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MCDA2MRG">
+	<merge>
+		<simple>
+			<inputVariable>
+				<variableId>MCDA2LOC_MAP_6</variableId>
+			</inputVariable>
+			<inputVariable>
+				<variableId>MCDA2LOC_MAPX_6</variableId>
+			</inputVariable>
+			<moduleParameterFile>MERGETS_MCDA2_MCDA2MRG_UpdateStates</moduleParameterFile>
+			<outputVariable>
+				<variableId>MCDA2MRG_MAP_6</variableId>
+			</outputVariable>
+		</simple>
+	</merge>
+	</transformation>
+</transformationModule>

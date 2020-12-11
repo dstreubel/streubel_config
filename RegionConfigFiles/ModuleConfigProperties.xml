@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleConfigProperties xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/moduleConfigProperties.xsd">
+	<string key="SACSNOW" value="TRUE"/>
+	<string key="SNOW" value="TRUE"/>
+	<string key="FROST" value="FALSE"/>
+	<string key="UPSC" value="TRUE"/>
+	<string key="UPWE" value="TRUE"/>
+	<string key="PRINTSMA" value="TRUE"/>
+	<string key="PRINTSNW" value="TRUE"/>
+	<string key="REGULATE" value="TRUE"/>
+	<string key="STARTLOCALHOUROFDAY" value="3"/>
+</moduleConfigProperties>

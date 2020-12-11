@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+	<general>
+		<description>Copy FMAPX_Southeast SHEF export to PAJK</description>
+		<piVersion>1.5</piVersion>
+		<rootDir>$APRFC_SCRIPTS$</rootDir>
+		<workDir>%ROOT_DIR%/work</workDir>
+		<exportDir>%ROOT_DIR%/input</exportDir>
+		<exportDataSetDir>%ROOT_DIR%/input</exportDataSetDir>
+		<exportIdMap>IdExportSHEF</exportIdMap>  
+		<importDir>%ROOT_DIR%/output</importDir>
+		<importIdMap>IdImportSHEF</importIdMap>   
+		<dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+		<dumpDir>%ROOT_DIR%</dumpDir>
+		<diagnosticFile>%ROOT_DIR%/output/diag.xml</diagnosticFile>
+		<missVal>-999</missVal>
+	</general>
+	<activities>
+		<startUpActivities>
+			<makeDir>
+				<dir>%ROOT_DIR%/work</dir>
+			</makeDir>	
+		</startUpActivities>
+		<executeActivities>
+			<executeActivity>
+				<command>
+					<executable>/awips/chps_share/scripts/copyFMAPXtoPAJK.ksh</executable>
+				</command>
+				<timeOut>600000</timeOut>
+				<ignoreDiagnostics>true</ignoreDiagnostics>
+			</executeActivity>
+		</executeActivities>
+	</activities>
+</generalAdapterRun>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MNDA2LGS_RAIM_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SNOW17_MNDA2_MNDA2LGS_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>RAIM</parameterId>
+			<locationId>MNDA2LGS</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MNDA2IML_RAIM_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MULTDIV_MNDA2_MNDA2LG_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>RAIM</parameterId>
+			<locationId>MNDA2IML</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MNDA2LG_RAIM_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_MNDA2_MNDA2LGS_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>RAIM</parameterId>
+			<locationId>MNDA2LG</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MNDA2LGS">
+		<user>
+			<simple>
+				<expression>max((max(+MNDA2LGS_RAIM_6+0.000E+00,0))+MNDA2IML_RAIM_6,0)</expression>
+				<outputVariable>
+					<variableId>MNDA2LG_RAIM_6</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+</transformationModule>

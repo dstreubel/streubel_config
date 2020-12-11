@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>HRR_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPF</parameterId>
+			<locationId>HRRR</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="30" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>HRR_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_HRRR</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Catchments_Southeast</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="30" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>HRR_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_HRRR</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R06</parameterId>
+			<locationSetId>Catchments_Southeast</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="30" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>HRR_basin_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_HRRR</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Basins_Southeast</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="30" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SampleMAPX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>HRR_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>HRR_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGEMAPX_1hr_to_6hr">
+		<aggregation>
+			<accumulative>
+				<inputVariable>
+					<variableId>HRR_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>HRR_scalar_6hr</variableId>
+				</outputVariable>
+			</accumulative>
+		</aggregation>
+	</transformation>
+	<transformation id="SampleMAPX_basin">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>HRR_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>HRR_basin_scalar</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+</transformationModule>

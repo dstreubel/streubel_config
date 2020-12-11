@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+<!--	<export>
+		<general>
+			<exportType>SHEF</exportType>
+			<folder>$EXPORT_FOLDER$/NOHRSC/historical</folder>
+			<exportFileName>
+				<name>_NOHRSC_hist_chps_shef_export.</name>
+				<prefix>
+					<timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+				</prefix>
+				<suffix>
+					<currentTimeFormattingString>yyyyMMddHHmm</currentTimeFormattingString>
+				</suffix>
+			</exportFileName>
+			<idMapId>IdExportSHEF</idMapId>
+			<unitConversionsId>exportEnglishUnits</unitConversionsId>
+			<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>true</omitMissingValues>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_CLM_GDAS</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-3650" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_NOAH32_GDAS</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-3650" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</export>-->
+	<export>
+		<general>
+			<exportType>PI</exportType>
+			<folder>$EXPORT_FOLDER$/NOHRSC/historical</folder>
+			<exportFileName>
+				<name>_NOHRSC_hist_chps_pi_export.</name>
+				<prefix>
+					<timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+				</prefix>
+				<suffix>
+					<currentTimeFormattingString>yyyyMMddHHmm</currentTimeFormattingString>
+				</suffix>
+			</exportFileName>
+			<unitConversionsId>exportEnglishUnits</unitConversionsId>
+			<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>true</omitMissingValues>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC_hist</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_CLM_GDAS</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep monthDays="--02-01 --03-01 --04-01 --05-01"/>
+			<relativeViewPeriod unit="day" start="-4000" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>SWE_PreProcessing_NOHRSC_hist</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE_NOAH32_GDAS</parameterId>
+			<locationSetId>Catchments_SWE</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep monthDays="--02-01 --03-01 --04-01 --05-01"/>
+			<relativeViewPeriod unit="day" start="-4000" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</export>
+</timeSeriesExportRun>

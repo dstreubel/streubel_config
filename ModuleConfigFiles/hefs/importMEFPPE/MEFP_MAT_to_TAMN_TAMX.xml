@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://c
+hps1/schemas/transformationModule.xsd" version="1.0">
+   
+   <!-- NOTE: This module uses coefficient sets to define coefficients and a 
+        divider to employ in the diurnal computations needed to transform 6h 
+        MAT to 24h TAMN (TMIN) and TAMX (TMAX).  See the coefficient set 
+        defined with the name of this module to see the coefficients used, 
+        which by default are the same coefficients used in the scientific 
+        prototype of MEFP (or EPP3).
+        
+        This module is meant to run for all HEFS catchments at one time and 
+        will need to be changed if memory problems occur.  Testing for 250+ 
+        catchments has not encountered any problems, however.
+    -->
+   
+   
+   <!-- Input variable: FMAT, or MAT in the future -->
+   <variable>
+        <variableId>hist_fmat</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>ImportMEFPPEDatacardsInLocaltime</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="6" timeZone="GMT-9"/>                           
+            <readWriteMode>read complete forecast</readWriteMode>                          
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Output variable: 24h (12-12Z) FMAT max and min -->
+   <variable>
+        <variableId>hist_tmax_24</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TAMX</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep id="12Z"/>
+            <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+    <variable>
+        <variableId>hist_tmin_24</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TAMN</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep id="12Z"/>
+            <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    
+    <!-- Intermediary variable: stores the GMT version of the input series, acquired by nearest neighbor 
+         interpolation.-->
+    <variable>
+        <variableId>gmt_fmat</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <qualifierId>GMT sampled</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>  
+            <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>                         
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Intermediary variable: Store time series shift forward by 6, 12, 18, and 24 hours so that at 12Z,
+        the values for 12Z, 6Z, 0Z, 18Z (previous day), and 12Z will line up for latter computations.-->
+   <!-- NOTE: The variables involved in shifting transformations have a start day of -36499
+        to avoid problems trying to shift to the start of output when there is no input. -->
+   <variable>
+        <variableId>hist_fmat_6_shift</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <qualifierId>shift6</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="day" start="-36499" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>hist_fmat_12_shift</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <qualifierId>shift12</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="day" start="-36499" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>hist_fmat_18_shift</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <qualifierId>shift18</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="day" start="-36499" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>hist_fmat_24_shift</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <qualifierId>shift24</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="day" start="-36499" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Intermediary Variable: 24h (12Z) values containing the 12, 18, 0, 6, and 12Z values covering a 12Z-12Z day.  
+        These are calculated via an instantaneous aggregation at 12Z of each day based on the shifted variables
+        above. -->
+   <variable>
+        <variableId>hist_fmat_12Z_end</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <qualifierId>12Z end</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="12:00"/>
+            <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>hist_fmat_6Z</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <qualifierId>6z</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="12:00"/>
+            <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>hist_fmat_0Z</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <qualifierId>0z</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="12:00"/>
+            <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>hist_fmat_18Z</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <qualifierId>18z</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="12:00"/>
+            <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>hist_fmat_12Z_start</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+            <qualifierId>12z start</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="12:00"/>
+            <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   
+    <!-- 
+    ========================================================
+    TRANSFORMATIONS
+    ========================================================
+    -->
+   
+    <!-- Create the GMT time series from the local time time series using nearest neighbor sampling. --> 
+    <transformation id="sample_gmt_fmat">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>hist_fmat</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>gmt_fmat</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closest</interpolationType>
+                <ignoreMissing>false</ignoreMissing>
+                <outputVariable>
+                    <variableId>gmt_fmat</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    
+   
+    <!-- Shift the input time series by 6, 12, 18, and 24 hours.  The result is that the 5 values over which the 
+         daily min/max needs to be computed will be at hour 12Z of each day. -->
+    <transformation id="hist_shift_6">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>gmt_fmat</variableId>
+                </inputVariable>
+                <direction>forward</direction>
+                <numberOfTimeSteps>1</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>hist_fmat_6_shift</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    <transformation id="hist_shift_12">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>gmt_fmat</variableId>
+                </inputVariable>
+                <direction>forward</direction>
+                <numberOfTimeSteps>2</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>hist_fmat_12_shift</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    <transformation id="hist_shift_18">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>gmt_fmat</variableId>
+                </inputVariable>
+                <direction>forward</direction>
+                <numberOfTimeSteps>3</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>hist_fmat_18_shift</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    <transformation id="hist_shift_24">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>gmt_fmat</variableId>
+                </inputVariable>
+                <direction>forward</direction>
+                <numberOfTimeSteps>4</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>hist_fmat_24_shift</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    
+    
+    <!-- Cut out only the 12Z values via an instantaneous aggregation. 
+         This yields time series at 12Z which contain values from the end period 12Z,
+         6Z, 0Z, 18Z, and start period 12Z, covering an entier 12Z-12Z day.-->
+    <transformation id="fmat_noshift_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>gmt_fmat</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>hist_fmat_12Z_end</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    <transformation id="fmat_shift_6_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>hist_fmat_6_shift</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>hist_fmat_6Z</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    <transformation id="fmat_shift_12_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>hist_fmat_12_shift</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>hist_fmat_0Z</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    <transformation id="fmat_shift_18_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>hist_fmat_18_shift</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>hist_fmat_18Z</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    <transformation id="fmat_shift_24_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>hist_fmat_24_shift</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>hist_fmat_12Z_start</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    
+    <!-- =============================================================================================== -->
+    <!-- The diurnal pattern equations are embedded below: -->
+    
+    <!-- Compute the 24h min at hour 12Z via the hist_fmat_*Z variables created above. -->
+    <transformation id="tmin_daily_12Z">
+        <user>
+            <simple>
+                <expression>(COEFF_12Z_START*hist_fmat_12Z_start + COEFF_18Z*hist_fmat_18Z + COEFF_0Z*hist_fmat_0Z + COEFF_6Z*hist_fmat_6Z + COEFF_12Z_END*hist_fmat_12Z_end)/DIVIDER</expression>
+                <coefficientSetId>TAMN</coefficientSetId>
+                <coefficientSetFile>MEFPPE_MAT_to_TAMN_TAMX_Coefficients</coefficientSetFile>
+                <outputVariable>
+                    <variableId>hist_tmin_24</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation>
+    
+    <!-- Compute the 24h max at hour 12Z via the hist_fmat_*Z variables created above. -->
+    <transformation id="tmax_daily_12Z">
+        <user>
+            <simple>
+                <expression>(COEFF_12Z_START*hist_fmat_12Z_start + COEFF_18Z*hist_fmat_18Z + COEFF_0Z*hist_fmat_0Z + COEFF_6Z*hist_fmat_6Z + COEFF_12Z_END*hist_fmat_12Z_end)/DIVIDER</expression>
+                <coefficientSetId>TAMX</coefficientSetId>
+                <coefficientSetFile>MEFPPE_MAT_to_TAMN_TAMX_Coefficients</coefficientSetFile>
+                <outputVariable>
+                    <variableId>hist_tmax_24</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation>
+    <!-- =============================================================================================== -->
+    
+    <!-- Shift the min value back 24 hours in order to match the scientific prototype. -->
+    <transformation id="tmin_daily_shift_back_1_day">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>hist_tmin_24</variableId>
+                </inputVariable>
+                <direction>backward</direction>
+                <numberOfTimeSteps>1</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>hist_tmin_24</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    
+    
+    
+</transformationModule>

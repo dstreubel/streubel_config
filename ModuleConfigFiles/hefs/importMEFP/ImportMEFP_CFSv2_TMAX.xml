@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Computer Services (WL | Delft Hydraulics) -->
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+    <import>
+        <general>
+            <importType>grib2</importType>
+            <folder>$IMPORT_FOLDER_CFSv2$/tmax</folder>
+            <idMapId>IdImportMEFPCFSv2</idMapId>
+            <unitConversionsId>ImportMEFPCFSv2Units</unitConversionsId>
+            <importTimeZone>
+                <timeZoneOffset>+00:00</timeZoneOffset>
+            </importTimeZone>
+        </general>
+        <timeSeriesSet>
+            <moduleInstanceId>ImportMEFP_CFSv2_TMAX</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>TFMX</parameterId>
+            <locationId>HEFS_CFSv2</locationId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+        <externUnit parameterId="TFMX" unit="K"/>
+    </import>
+</timeSeriesImportRun>

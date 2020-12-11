@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Computer Services (WL | Delft Hydraulics) -->
+<unitConversions xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/unitConversions.xsd">
+	<unitConversion>
+		<inputUnitType>K</inputUnitType>
+		<outputUnitType>DEGC</outputUnitType>
+		<multiplier>1</multiplier>
+		<incrementer>-273.15</incrementer>
+	</unitConversion>
+	<unitConversion>
+		<inputUnitType>kg/m^2</inputUnitType>
+		<outputUnitType>MM</outputUnitType>
+		<multiplier>1</multiplier> 
+		<incrementer>0</incrementer>
+	</unitConversion>	
+</unitConversions>

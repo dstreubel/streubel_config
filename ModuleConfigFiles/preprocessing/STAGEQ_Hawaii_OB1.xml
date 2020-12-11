@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>Hawaii_STG_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_Kauai</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Hawaii_QIN_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_Hawaii_OB1</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationSetId>Gages_Kauai</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Hawaii_STG</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>Gages_Kauai</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Hawaii_QIN</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_Hawaii_OB1</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationSetId>Gages_Kauai</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="HawaiiOB1">
+		<stageDischarge>
+		<ratingCurve>
+			<stage>
+				<variableId>Hawaii_STG_1</variableId>
+			</stage>
+			<discharge>
+				<variableId>Hawaii_QIN_1</variableId>
+			</discharge>
+		</ratingCurve>
+		</stageDischarge>
+	</transformation>
+	<transformation id="HawaiiOB">
+		<stageDischarge>
+		<ratingCurve>
+			<stage>
+				<variableId>Hawaii_STG</variableId>
+			</stage>
+			<discharge>
+				<variableId>Hawaii_QIN</variableId>
+			</discharge>
+		</ratingCurve>
+		</stageDischarge>
+	</transformation>
+</transformationModule>

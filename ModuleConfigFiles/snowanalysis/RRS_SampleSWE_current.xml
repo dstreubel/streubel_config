@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>Sim_current_basin_6h</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>SNOW17_UpdateStates</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-10" startOverrulable="true"  end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Sim_Timestep_12Z</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RRS_SampleSWE_current</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="day" start="-10" startOverrulable="true"  end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Sim_current_basin_1d</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RRS_SampleSWE_current</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-10" startOverrulable="true"  end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+
+        <transformation id="Sim_Current_6h_to_1d">
+                <sample>
+                        <equidistant>
+                                <equidistantInputVariable>
+                                        <variableId>Sim_current_basin_6h</variableId>
+                                </equidistantInputVariable>
+				<timeReferenceInputVariable>
+                                        <variableId>Sim_Timestep_12Z</variableId>
+				</timeReferenceInputVariable>
+                                <interpolationType>linear</interpolationType>
+                                <outputVariable>
+                                        <variableId>Sim_current_basin_1d</variableId>
+                                </outputVariable>
+                        </equidistant>
+                </sample>       
+        </transformation>
+
+</transformationModule>

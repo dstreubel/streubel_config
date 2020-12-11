@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/sch
+emas/workflow.xsd" version="1.1">
+        
+    <!-- Import historical data in local time. -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>ImportMEFPPEDatacardsInLocaltime</moduleInstanceId>
+    </activity>
+
+    <!-- Convert MAT to TAMN and TAMX and map MAP time 
+         zone to GMT time zone. -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_MAT_to_TAMN_TAMX</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_MAP_to_GMT</moduleInstanceId>
+    </activity>
+    
+</workflow>

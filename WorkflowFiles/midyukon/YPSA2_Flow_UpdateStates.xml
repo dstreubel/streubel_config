@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_YPSA2_YPSA2OB6_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SETTS_YPSA2_RSHA2RTD_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>LAGK_YPSA2_RSHA2_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_YPSA2_RSHA2RTD_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SETTS_YPSA2_YPSA2LCL_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>WEIGHTS_YPSA2_YPSA2LCL_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_YPSA2_YPSA2LCL_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_YPSA2_YPSA2SIM_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SETTS_YPSA2_YPSA2QN_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_YPSA2_YPSA2ADJ_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_YPSA2_YPSA2ADJ_UpdateStates</moduleInstanceId>
+	</activity>
+</workflow>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_MCDA2REZ_MCDA2RZ6_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RESJ_MCDA2REZ_MCDA2REZ_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>MERGETS_MCDA2REZ_MCDA2RMG_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_MCDA2REZ_MCDA2RSM_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SETTS_MCDA2REZ_MCDA2QN_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_MCDA2REZ_MCDA2RAJ_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_MCDA2REZ_MCDA2RAJ_Forecast</moduleInstanceId>
+	</activity>
+</workflow>

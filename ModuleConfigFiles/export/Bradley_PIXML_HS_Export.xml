@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+	<export>
+		<general>
+			<exportType>PI</exportType>
+			<folder>$EXPORT_FOLDER$/HS</folder>
+			<exportFileName>
+				<name>_Bradley_chps_pixml_export_SSTG.xml</name>
+				<prefix>
+					<timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+				</prefix>
+<!--				<suffix>
+					<currentTimeFormattingString>yyyyMMddHHmmss</currentTimeFormattingString>
+				</suffix> -->
+			</exportFileName>
+			<idMapId>IdExportPIXML</idMapId> 
+			<unitConversionsId>exportEnglishUnits</unitConversionsId>
+			<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>true</omitMissingValues>
+		</general>
+    		<timeSeriesSet>
+			<moduleInstanceSetId>SSTG</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Bradley</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>HS</ensembleId>
+		</timeSeriesSet>    
+	</export>
+	<export>
+		<general>
+			<exportType>PI</exportType>
+			<folder>$EXPORT_FOLDER$/HS</folder>
+			<exportFileName>
+				<name>_Bradley_chps_pixml_export_QINE.xml</name>
+				<prefix>
+					<timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+				</prefix>
+<!--				<suffix>
+					<currentTimeFormattingString>yyyyMMddHHmmss</currentTimeFormattingString>
+				</suffix> -->
+			</exportFileName>
+			<unitConversionsId>exportEnglishUnits</unitConversionsId>
+			<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>true</omitMissingValues>
+		</general>
+    		<timeSeriesSet>
+			<moduleInstanceSetId>QINE</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Bradley</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>HS</ensembleId>
+		</timeSeriesSet>    
+	</export>
+</timeSeriesExportRun>

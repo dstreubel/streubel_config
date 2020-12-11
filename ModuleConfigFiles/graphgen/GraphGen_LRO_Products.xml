@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+    <general>
+        <description>GraphGen Products</description>
+        <rootDir>%TEMP_DIR%</rootDir>
+        <workDir>%ROOT_DIR%/work</workDir>
+        <exportDir>%ROOT_DIR%/input</exportDir>
+        <exportDataSetDir>%ROOT_DIR%</exportDataSetDir>
+        <importDir>%ROOT_DIR%/output</importDir>
+        <dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+        <dumpDir>%ROOT_DIR%</dumpDir>
+        <diagnosticFile>%ROOT_DIR%/output/diag.xml</diagnosticFile>
+    </general>
+    <activities>
+        <startUpActivities>
+        	<purgeActivity>
+        		<filter>$LRO_DIR$/input/*.tbl</filter>
+        	</purgeActivity>
+        	<makeDir>
+                <dir>%ROOT_DIR%/output</dir>
+            </makeDir>
+            <makeDir>
+                <dir>%ROOT_DIR%/work</dir>
+            </makeDir>
+            <makeDir>
+                <dir>%ROOT_DIR%/products</dir>
+            </makeDir>
+        </startUpActivities>
+        <exportActivities>
+            <exportRunFileActivity>
+                <exportFile>%ROOT_DIR%/run_info.xml</exportFile>
+                <properties>
+		    <int key="printDebugInfo" value="0"/>
+<!-- comment out the next three lines for testing from a SA; will bypass global properties and run locally -->
+		    <string key="piServiceBackendRFCIdentifier" value="$piServiceBackendRFCIdentifier$"/>
+		    <string key="piServiceHostName" value="$piServiceHostName$"/>
+	            <string key="piServicePortNumber" value="$piServicePortNumber$"/> 
+                	
+                    <!--<string key="baseOutputDir" value="px1:/localapps/runtime/HydroRfc/LroFormatter"/>-->
+                    <string key="baseOutputDir" value="$LRO_DIR$/input"/>
+                    <string key="ohdGraphgenCentralDir" value="$ohdGraphgenCentralDir$"/>
+                    <string key="products.SRYA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.TYAA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.MCAA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.SCKA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.UCHA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.CHLA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.CHLA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.SALA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.GBDA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.TAFA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.TRTA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.MONA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.WLWA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.YLKA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.GAKA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.GULA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.TONA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.CHRA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.SHIA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.COOA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                    <string key="products.APTA2" value="AHPS_LRO_Minor; AHPS_LRO_Moderate; AHPS_LRO_Major"/> 
+                </properties>
+            </exportRunFileActivity>
+        </exportActivities>
+        <executeActivities>
+            <executeActivity>
+                <command>
+                    <className>ohd.hseb.graphgen.adapter.GraphGenModelAdapter</className>
+                    <binDir>$OHDBINDIR$</binDir>
+                </command>
+                <arguments>
+                    <argument>%ROOT_DIR%/run_info.xml</argument>
+                </arguments>
+                <timeOut>300000</timeOut>            	
+            </executeActivity>
+        	<executeActivity>
+        		<command>
+        			<executable>$OHD_SCRIPTS_DIR$/LRO.py</executable>
+        		</command>
+        		<arguments>
+        			<argument>APRFC</argument>
+        			<argument>$LRO_DIR$</argument>
+        		</arguments>        		
+        		<timeOut>300000</timeOut>
+        	</executeActivity>
+        </executeActivities>
+    </activities>
+</generalAdapterRun>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+    <parameter id="OPERATION_CONTENTS">
+      <stringValue>  TIMESERIES
+    TIMESTEP   6
+#                                               Routed inflow from
+    INPUT   MCDA2     SQIN   6   REZ_INFLOW   # CRHA2 plus local inflow
+    INPUT   MCDA2     QIN    6   OBS_OUTFLOW  # Observed time-series
+    INPUT   CHFA2LCL  SQIN   6   CHFLOCAL     # Local runoff for CHFA2
+    INPUT   CHLA2     QINE   6   LITTLECHENA  # Flow from CHLA2
+    INPUT   MCDA2     STG    6   MCD_STAGE
+    INPUT   MCDA2     PELV   6   MCD_POOL     # Observed pool
+    OUTPUT  MCDA2REZ  SQIN   6   REZ_OUTPUT   # Discharge to CHFA2
+    OUTPUT  MCDA2     SPEL   6   REZ_POOL     # Simulated pool
+    OUTPUT  MCDSPILL  QINE   6   MCD_SPILL    # Spillway discharge
+    OUTPUT  CHFA2REZ  QINE   6   CHFA2OUT     # Computed flow at CHFA2
+   ENDTIMESERIES
+#
+  TOPOLOGY
+    RESERVOIR   MOOSECRK
+    REACH       MCDTOCHF   BELOW   MOOSECRK
+    REACH       CHLTOCHF
+    NODE        CHFA2      BELOW   MCDTOCHF   BELOW   CHLTOCHF
+#    REACH       MCDTOTAF
+  ENDTOPOLOGY
+#
+  PARAMETERS
+    UNITS ENGLISH
+    RESERVOIR  MOOSECRK
+      CONSTANT  MOOSECRK.MAXFLOW_CHF  12000.0
+      TSINPUT   INFLOW    REZ_INFLOW
+      TSOUTPUT  RELEASE   REZ_OUTPUT
+      TSOUTPUT  POOL      REZ_POOL
+      TSOUTPUT  WITHDRAW  MCD_SPILL
+      TABLE    ELEV_STOR
+        480.0        0.0
+        485.0       30.0
+        487.0       60.0
+        490.0      120.0
+        492.5      800.0
+        495.0     2800.0
+        497.5     6800.0
+        500.0    13000.0
+        502.5    21000.0
+        505.0    32500.0
+        507.5    46500.0
+        510.0    62000.0
+        512.5    82000.0
+        515.0   105000.0
+        517.5   131000.0
+        520.0   161000.0
+        525.0   224000.0
+       ENDTABLE
+INITIALPOOL  480.000000
+INITIALRELEASE  1663.137691
+INITIALWITHDRAW  0.000000
+INITIALINFLOW  1663.137691
+PREVIOUSRELEASE  1343.902956
+PREVIOUSPOOL  480.000000
+PREVIOUSWITHDRAW  0.000000
+PREVIOUSINFLOW  1343.902956
+     ENDRESERVOIR
+    REACH   CHLTOCHF
+      TSINPUT   INFLOW   LITTLECHENA   # Input CHL flow
+     ENDREACH
+    REACH   MCDTOCHF
+#     TSINPUT   INFLOW   REZ_OUTPUT    # Input reservoir outflow
+     ENDREACH
+    NODE    CHFA2
+      TSINPUT   INFLOW   CHFLOCAL      # Input local inflow
+      TSOUTPUT  OUTFLOW  CHFA2OUT      # Input to segment CHFA2
+   DISCHARGE 2264.292828
+   PREVIOUSDISCHARGE 2421.720874
+   INITIALINFLOW 2264.292828
+   PREVIOUSINFLOW 2421.720874
+   INITIALDIVERSION 0.000000
+   PREVIOUSDIVERSION 0.000000
+     ENDNODE
+#    REACH   MCDTOTAF
+#      TSINPUT   INFLOW   REZ_SPILL     # Input spillway outflow
+#      TSOUTPUT  OUTFLOW  MCD_SPILL     # Output for external use
+#     ENDREACH
+#
+# Routing operation for CHLA2 to CHFA2
+#
+    LAGK  CHLTOCHF  CHL_RTD
+      LAG  14
+      K     4
+      COINFLOW
+        VALUES
+549.323375
+818.985415
+853.918141
+650.921708
+        ENDVALUES
+      ENDCOINFLOW
+INITIALOUTFLOW  656.229120
+INITIALSTORAGE  2624.917188
+INITIALLAGGEDINFLOW  729.098068
+    ENDLAGK
+#
+# Routing operation for MCDA2 to CHFA2
+#
+    LAGK  MCDTOCHF  MCD_RTD
+      LAG  10
+      K     3
+      COINFLOW
+        VALUES
+1388.353639
+1343.902956
+1663.137691
+         ENDVALUES
+       ENDCOINFLOW
+INITIALOUTFLOW  1493.943567
+INITIALSTORAGE  4481.830702
+INITIALLAGGEDINFLOW  1373.536745
+     ENDLAGK
+#
+# Reservoir output control for maximum flow of 12000 cfs at CHFA2
+#
+    MAXSTAGE  MOOSECRK  STG_AT_CHF
+      TABLE    RATING_CURVE
+        0.1      674.0
+        1.1     1280.0
+        2.1     2050.0
+        3.1     2920.0
+        4.1     3800.0
+        5.1     4760.0
+        6.1     5810.0
+        7.1     7000.0
+        8.1     8300.0
+        9.1     9680.0
+       10.1    11100.0
+       10.5    11700.0
+       10.7    12000.0
+       10.9    12400.0
+       11.9    14000.0
+       12.9    15600.0
+       13.9    17300.0
+       15.9    21800.0
+       17.7    39800.0
+       19.1    68400.0
+      ENDTABLE
+     MAXIMUMSTAGE  10.5
+     MINRELEASE   200
+     CRITERION      1.5
+     DSCONTROL   CHFA2
+     MAXITERATIONS 50
+    ENDMAXSTAGE
+#
+# Spillway disharge curve in SETWITHDRAW method to output as diversion
+#
+    SETWITHDRAW   MOOSECRK  SPILL
+      VALUES
+        ELEV  506.65    507.00    507.50    508.00    508.50    509.00 \
+              509.50    510.00    511.00    512.00    513.00    514.00 \
+              515.00    516.00    517.00    518.00    519.20  ENDELEV
+        01/01   0.00   1900.00   3800.00   6300.00  10000.00  14500.00 \
+            20000.00  26000.00  35000.00  46000.00  60000.00  75000.00 \
+            93000.00 118000.00 138000.00 167000.00 200000.00
+       ENDVALUES
+      INTERPOLATE  ELEV
+#      TOCOMP  INSTANTANEOUS  MCDTOTAF
+BLENDTBL  0  0
+BLENDTS  0  1
+    ENDSETWITHDRAW
+#
+# Storage discharge below spillway crest elevation
+#
+#    SETRELEASE   MOOSECRK  POOLQ
+#      VALUES
+#        ELEV       487.00    488.00    489.00    490.00    491.00  \
+#                   492.00    493.00    494.00    495.00    496.00  \
+#                   497.00    498.00    499.00    500.00  ENDELEV
+#        01/01_00:00  0.00     40.00    140.00    280.00    430.00  \
+#                   695.00    890.00    990.00   1080.00   1160.00  \
+#                  1240.00   1310.00   1370.00   1420.00
+#      ENDVALUES
+#      INTERPOLATE  ELEV
+#      BLENDTBL  0
+#      BLENDTS   0
+#    ENDSETRELEASE
+#
+# Storage discharge for control works and drainage structure
+#
+    SETRELEASE   MOOSECRK  POOLQ2
+      VALUES
+        ELEV       480.00    481.00    482.00    483.00    484.00   \
+                   485.00    486.00    487.00    488.00    489.00   \
+                   490.00    491.00    492.00    493.00    494.00   \
+                   495.00    496.00    497.00    498.00    499.00   \
+                   500.00    502.00    505.00    510.00    515.00   \
+                   ENDELEV
+        01/01_00:00  0.00     45.00     95.00    130.00    215.00   \
+                   290.00    385.00    525.00    680.00   1100.00   \
+                  1680.00   1975.00   2275.00   2885.00   3260.00   \
+                  3655.00   3940.00   4285.00   4610.00   4830.00   \
+                  5080.00   5570.00   6400.00   7200.00   8000.00
+      ENDVALUES
+      INTERPOLATE  ELEV
+BLENDTBL  0  1
+BLENDTS  0  1
+    ENDSETRELEASE
+#
+# SETRELEASE for passing inflow
+#
+    SETRELEASE   MOOSECRK  PASS_INFLOW
+      TSINPUT  OBSERVEDRELEASE  REZ_INFLOW
+      VALUES
+        ELEV    485.0   525.0   ENDELEV
+          01/01_00:00  0.0   1000.0
+          12/31_23:00  0.0   1000.0
+      ENDVALUES
+      INTERPOLATE  BOTH
+    ENDSETRELEASE
+#
+# SETRELEASE for 8200 cfs maximum flow in channel downstream of dam
+#
+    SETRELEASE   MOOSECRK  MAX_8100
+      VALUES
+        ELEV    485.0   525.0   ENDELEV
+          01/01_00:00  8100.00   8100.00
+          12/31_23:00  8100.00   8100.00
+      ENDVALUES
+      INTERPOLATE  BOTH
+    ENDSETRELEASE
+#
+    ADJUST   MOOSECRK  MCD_ADJUST
+      TSINPUT   OBSERVEDPOOL   MCD_POOL
+      TSINPUT   OBSERVEDRELEASE   OBS_OUTFLOW
+      BLENDTS   50
+      ADJSIM   ON
+    ENDADJUST
+#
+# SETSUM adds the passflow and drainage structure releases
+#
+    SETSUM   MOOSECRK  INF_AND_POOL
+      SETRELEASE   MOOSECRK  POOLQ2
+      SETRELEASE   MOOSECRK  PASS_INFLOW
+    ENDSETSUM
+#
+# SETMIN sets the outflow to the maximum allowable for flow at CHFA2,
+# the total of the passflow plus computed storage flow, or the
+# maximum in channel flow of 8200 cfs - whichever is less.
+#
+    SETMIN  MOOSECRK  MIN_CHANNEL
+      SETRELEASE   MOOSECRK  MAX_8100
+#     MAXSTAGE  MOOSECRK  STG_AT_CHF
+      SETSUM   MOOSECRK  INF_AND_POOL
+    ENDSETMIN
+#
+# SETSUM adds the spillway, minimum channel, and drainage structure
+# releases
+#
+#    SETMAX   MOOSECRK  MAX_CHN_OUT
+#      SETRELEASE   MOOSECRK  POOLQ2
+#      SETMIN  MOOSECRK  MIN_CHANNEL
+#    ENDSETSUM
+#
+#
+  ENDPARAMETERS
+#
+  RULES
+#
+#
+#
+#
+#
+    [TRUE]
+       ::LAGK  CHLTOCHF  CHL_RTD
+       ::LAGK  MCDTOCHF  MCD_RTD
+       ::ADJUST MOOSECRK MCD_ADJUST
+       ::SETMIN  MOOSECRK  MIN_CHANNEL
+       ::SETWITHDRAW   MOOSECRK  SPILL
+#
+# Calculate flow for conditions when CHFA2 flow would be less than
+# 12,000 cfs and pool would be high enough to need excess realease
+# through the drainage structure.
+#
+#    [MOOSECRK.ENDINGPOOL == 480.00]
+#       ::SETRELEASE   MOOSECRK  PASS_INFLOW
+#
+#
+  ENDRULES
+ENDRES-J
+</stringValue>
+    </parameter>
+  </group>
+</parameters>

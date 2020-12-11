@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+	<map internalParameter="QPE" internalLocation="HRAP" externalParameter="61" externalLocation="none"/>
+	<map internalParameter="QTE" internalLocation="HRAP" externalParameter="11" externalLocation="none"/>
+	<map internalParameter="QPE24" internalLocation="HRAP" externalParameter="61" externalLocation="none"/>
+	<map internalParameter="QPE01" internalLocation="HRAP" externalParameter="61" externalLocation="none"/>
+	<map internalParameter="FLE" internalLocation="HRAP" externalParameter="7"  externalLocation="none"/>
+</idMap>

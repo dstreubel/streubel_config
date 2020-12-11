@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>NAMNEST</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPF</parameterId>
+			<qualifierId>ShortRange</qualifierId>
+			<locationId>NWM</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="60" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>WRFARW</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPF</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPF</parameterId>
+			<locationId>Hawaii_WRF-ARW</locationId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="48" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>NAMNEST_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>QPF_PreProcessing</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PP01</parameterId>
+			<qualifierId>NAMNEST</qualifierId>
+			<locationSetId>Gages_Oahu_Leeward</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="60" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<!--synchLevel>1</synchLevel-->
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>WRFARW_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>QPF_PreProcessing</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PP01</parameterId>
+			<qualifierId>WRFARW</qualifierId>
+			<locationSetId>Gages_Kauai_Leeward</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="48" endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<!--synchLevel>1</synchLevel-->
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SampleNAMNEST">
+		<interpolationSpatial>
+			<closestDistance>
+				<inputVariable>
+					<variableId>NAMNEST</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>NAMNEST_scalar</variableId>
+				</outputVariable>
+			</closestDistance>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="SampleWRFARW">
+		<interpolationSpatial>
+			<closestDistance>
+				<inputVariable>
+					<variableId>WRFARW</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>WRFARW_scalar</variableId>
+				</outputVariable>
+			</closestDistance>
+		</interpolationSpatial>
+	</transformation>
+</transformationModule>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forecastLengthEstimator xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/forecastLengthEstimator.xsd">
+	<externalHistoricalTimeSeries>
+		<moduleInstanceId>SetTimes_Onehr_LastObserved</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>MAT</parameterId>
+		<locationId>LastObserved</locationId>
+		<timeSeriesType>external historical</timeSeriesType>
+		<timeStep unit="hour" multiplier="1"/>
+		<relativeViewPeriod unit="hour" start="-96" startOverrulable="false" end="0"/>
+		<readWriteMode>read only</readWriteMode>
+	</externalHistoricalTimeSeries>
+	<simulatedForecastTimeSeries>
+		<moduleInstanceId>MAT_Climatology</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>MAT</parameterId>
+        	<locationSetId>Catchments_Onehr</locationSetId>
+		<timeSeriesType>simulated forecasting</timeSeriesType>
+		<timeStep unit="hour" multiplier="1"/>
+		<relativeViewPeriod unit="hour" start="0" end="72"/>
+		<readWriteMode>read only</readWriteMode>
+	</simulatedForecastTimeSeries>
+	<minForecastLength multiplier="72" unit="hour"/>
+	<maxForecastLength multiplier="5" unit="day"/>	
+</forecastLengthEstimator>

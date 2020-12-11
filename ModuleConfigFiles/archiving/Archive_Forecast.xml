@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archiveRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/archiveRun.xsd">
+	<importDirectory>$FROM_ARCHIVE_PATH$</importDirectory>
+	<exportDirectory>$TO_ARCHIVE_PATH$</exportDirectory>
+	<exportArchiveRun>
+		<archivePeriod start="-24" end="0" unit="hour"/>
+                <workflow>Anch_Forecast</workflow>
+                <workflow>Bradley_Forecast</workflow>
+                <workflow>Copper_Forecast</workflow>
+                <workflow>Fortym_Forecast</workflow>
+                <workflow>Kenai_Forecast</workflow>
+                <workflow>Koyukuk_Forecast</workflow>
+                <workflow>Matsu_Forecast</workflow>
+                <workflow>Midyukon_Forecast</workflow>
+                <workflow>Northsl_Forecast</workflow>
+                <workflow>Southeast_Forecast</workflow>
+                <workflow>S_West_Forecast</workflow>
+                <workflow>Tanana_Forecast</workflow>
+                <workflow>Upyukon_Forecast</workflow>
+                <workflow>Yuk_Can_Forecast</workflow>
+                <workflow>APRFC_Forecast</workflow>
+		<exportToFile>true</exportToFile>
+	</exportArchiveRun>
+</archiveRun>

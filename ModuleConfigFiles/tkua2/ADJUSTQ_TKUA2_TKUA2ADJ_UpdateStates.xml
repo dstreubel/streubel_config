@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>TKUA2_QIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_TKUA2_TKUA2OB6_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>TKUA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>TKUA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_TKUA2_TKUA2GL_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>TKUA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>TKUA2_QINE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADJUSTQ_TKUA2_TKUA2ADJ_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>TKUA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="TKUA2ADJ">
+		<adjust>
+			<adjustQUsingObservedInstantaneousDischarge>
+				<observedDischarge>
+					<variableId>TKUA2_QIN_6</variableId>
+				</observedDischarge>
+				<simulatedInstantaneousDischarge>
+					<variableId>TKUA2_SQIN_6</variableId>
+				</simulatedInstantaneousDischarge>
+				<moduleParameterFile>ADJUSTQ_TKUA2_TKUA2ADJ_UpdateStates</moduleParameterFile>
+				<adjustedForecastDischarge>
+					<variableId>TKUA2_QINE_6</variableId>
+				</adjustedForecastDischarge>
+			</adjustQUsingObservedInstantaneousDischarge>
+		</adjust>
+	</transformation>
+</transformationModule>

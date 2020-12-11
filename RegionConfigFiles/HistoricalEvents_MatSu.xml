@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<historicalEvents xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/historicalEvents.xsd" version="1.0">
+	<historicalEvent locationId="SUDA2" parameterId="QIN" name="1971/08/10 maxQ=38200">
+		<eventData>
+			<data dateTime="1971-08-07T00:00:00" value="1200"/>
+			<data dateTime="1971-08-08T00:00:00" value="1500"/>
+			<data dateTime="1971-08-09T00:00:00" value="23200"/>
+			<data dateTime="1971-08-10T00:00:00" value="33400"/>
+			<data dateTime="1971-08-11T00:00:00" value="33300"/>
+			<data dateTime="1971-08-12T00:00:00" value="24600"/>
+			<data dateTime="1971-08-13T00:00:00" value="20200"/>
+			<data dateTime="1971-08-14T00:00:00" value="14900"/>
+			<data dateTime="1971-08-15T00:00:00" value="10400"/>
+			<data dateTime="1971-08-16T00:00:00" value="8430"/>
+			<data dateTime="1971-08-17T00:00:00" value="7830"/>
+			<data dateTime="1971-08-18T00:00:00" value="7650"/>
+			<data dateTime="1971-08-19T00:00:00" value="7870"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MACA2" parameterId="QIN" name="1971/08/11 maxQ=9620">
+		<eventData>
+			<data dateTime="1967-08-07T00:00:00" value="3280"/>
+			<data dateTime="1967-08-08T00:00:00" value="3220"/>
+			<data dateTime="1967-08-09T00:00:00" value="3580"/>
+			<data dateTime="1967-08-10T00:00:00" value="3480"/>
+			<data dateTime="1967-08-11T00:00:00" value="3070"/>
+			<data dateTime="1967-08-12T00:00:00" value="4460"/>
+			<data dateTime="1967-08-13T00:00:00" value="6080"/>
+			<data dateTime="1967-08-14T00:00:00" value="7280"/>
+			<data dateTime="1967-08-15T00:00:00" value="6610"/>
+			<data dateTime="1967-08-16T00:00:00" value="5220"/>
+			<data dateTime="1967-08-17T00:00:00" value="4620"/>
+			<data dateTime="1967-08-18T00:00:00" value="3960"/>
+			<data dateTime="1967-08-19T00:00:00" value="3720"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MACA2" parameterId="QIN" name="1967/08/14 maxQ=7460">
+		<eventData>
+			<data dateTime="1971-08-05T00:00:00" value="3580"/>
+			<data dateTime="1971-08-06T00:00:00" value="3480"/>
+			<data dateTime="1971-08-07T00:00:00" value="3730"/>
+			<data dateTime="1971-08-08T00:00:00" value="4390"/>
+			<data dateTime="1971-08-09T00:00:00" value="5660"/>
+			<data dateTime="1971-08-10T00:00:00" value="7740"/>
+			<data dateTime="1971-08-11T00:00:00" value="8100"/>
+			<data dateTime="1971-08-12T00:00:00" value="5930"/>
+			<data dateTime="1971-08-13T00:00:00" value="4910"/>
+			<data dateTime="1971-08-14T00:00:00" value="4060"/>
+			<data dateTime="1971-08-15T00:00:00" value="3450"/>
+			<data dateTime="1971-08-16T00:00:00" value="3020"/>
+			<data dateTime="1971-08-17T00:00:00" value="2660"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="GCSA2" parameterId="QIN" name="1962/06/15 maxQ=80600">
+		<eventData>
+			<data dateTime="1962-06-06T00:00:00" value="28700"/>
+			<data dateTime="1962-06-07T00:00:00" value="27500"/>
+			<data dateTime="1962-06-08T00:00:00" value="29800"/>
+			<data dateTime="1962-06-09T00:00:00" value="31300"/>
+			<data dateTime="1962-06-10T00:00:00" value="34600"/>
+			<data dateTime="1962-06-11T00:00:00" value="44700"/>
+			<data dateTime="1962-06-12T00:00:00" value="50400"/>
+			<data dateTime="1962-06-13T00:00:00" value="55800"/>
+			<data dateTime="1962-06-14T00:00:00" value="73000"/>
+			<data dateTime="1962-06-15T00:00:00" value="79900"/>
+			<data dateTime="1962-06-16T00:00:00" value="72800"/>
+			<data dateTime="1962-06-17T00:00:00" value="65900"/>
+			<data dateTime="1962-06-18T00:00:00" value="54800"/>
+			<data dateTime="1962-06-19T00:00:00" value="46700"/>
+			<data dateTime="1962-06-20T00:00:00" value="42400"/>
+			<data dateTime="1962-06-21T00:00:00" value="46200"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="GCSA2" parameterId="QIN" name="1964/06/07 maxQ=90700">
+		<eventData>
+			<data dateTime="1964-06-02T00:00:00" value="63400"/>
+			<data dateTime="1964-06-03T00:00:00" value="68000"/>
+			<data dateTime="1964-06-04T00:00:00" value="64500"/>
+			<data dateTime="1964-06-05T00:00:00" value="75000"/>
+			<data dateTime="1964-06-06T00:00:00" value="78800"/>
+			<data dateTime="1964-06-07T00:00:00" value="85900"/>
+			<data dateTime="1964-06-08T00:00:00" value="81000"/>
+			<data dateTime="1964-06-09T00:00:00" value="72000"/>
+			<data dateTime="1964-06-10T00:00:00" value="64100"/>
+			<data dateTime="1964-06-11T00:00:00" value="57300"/>
+			<data dateTime="1964-06-12T00:00:00" value="51900"/>
+			<data dateTime="1964-06-13T00:00:00" value="46000"/>
+			<data dateTime="1964-06-14T00:00:00" value="46500"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="GCSA2" parameterId="QIN" name="1971/08/10 maxQ=87400">
+		<eventData>
+			<data dateTime="1971-08-04T00:00:00" value="26500"/>
+			<data dateTime="1971-08-05T00:00:00" value="23100"/>
+			<data dateTime="1971-08-06T00:00:00" value="22700"/>
+			<data dateTime="1971-08-07T00:00:00" value="27100"/>
+			<data dateTime="1971-08-08T00:00:00" value="35700"/>
+			<data dateTime="1971-08-09T00:00:00" value="51000"/>
+			<data dateTime="1971-08-10T00:00:00" value="77700"/>
+			<data dateTime="1971-08-11T00:00:00" value="75900"/>
+			<data dateTime="1971-08-12T00:00:00" value="64600"/>
+			<data dateTime="1971-08-13T00:00:00" value="51100"/>
+			<data dateTime="1971-08-14T00:00:00" value="46500"/>
+			<data dateTime="1971-08-15T00:00:00" value="38400"/>
+			<data dateTime="1971-08-16T00:00:00" value="30800"/>
+			<data dateTime="1971-08-17T00:00:00" value="26000"/>
+			<data dateTime="1971-08-18T00:00:00" value="22600"/>
+			<data dateTime="1971-08-19T00:00:00" value="20900"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="GCSA2" parameterId="QIN" name="1972/06/17 maxQ=82600">
+		<eventData>
+			<data dateTime="1972-06-11T00:00:00" value="27300"/>
+			<data dateTime="1972-06-12T00:00:00" value="33800"/>
+			<data dateTime="1972-06-13T00:00:00" value="38700"/>
+			<data dateTime="1972-06-14T00:00:00" value="51900"/>
+			<data dateTime="1972-06-15T00:00:00" value="62300"/>
+			<data dateTime="1972-06-16T00:00:00" value="63800"/>
+			<data dateTime="1972-06-17T00:00:00" value="70700"/>
+			<data dateTime="1972-06-18T00:00:00" value="48600"/>
+			<data dateTime="1972-06-19T00:00:00" value="38200"/>
+			<data dateTime="1972-06-20T00:00:00" value="30900"/>
+			<data dateTime="1972-06-21T00:00:00" value="27000"/>
+			<data dateTime="1972-06-22T00:00:00" value="25300"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="GCSA2" parameterId="QIN" name="1967/08/15 maxQ=80200">
+		<eventData>
+			<data dateTime="1967-08-06T00:00:00" value="23000"/>
+			<data dateTime="1967-08-07T00:00:00" value="21800"/>
+			<data dateTime="1967-08-08T00:00:00" value="21800"/>
+			<data dateTime="1967-08-09T00:00:00" value="23800"/>
+			<data dateTime="1967-08-10T00:00:00" value="28000"/>
+			<data dateTime="1967-08-11T00:00:00" value="32700"/>
+			<data dateTime="1967-08-12T00:00:00" value="33600"/>
+			<data dateTime="1967-08-13T00:00:00" value="40200"/>
+			<data dateTime="1967-08-14T00:00:00" value="69400"/>
+			<data dateTime="1967-08-15T00:00:00" value="76000"/>
+			<data dateTime="1967-08-16T00:00:00" value="62400"/>
+			<data dateTime="1967-08-17T00:00:00" value="57500"/>
+			<data dateTime="1967-08-18T00:00:00" value="45000"/>
+			<data dateTime="1967-08-19T00:00:00" value="37200"/>
+			<data dateTime="1967-08-20T00:00:00" value="32600"/>
+			<data dateTime="1967-08-21T00:00:00" value="30800"/>
+			<data dateTime="1967-08-22T00:00:00" value="29700"/>
+			<data dateTime="1967-08-23T00:00:00" value="29800"/>
+			<data dateTime="1967-08-24T00:00:00" value="27900"/>
+			<data dateTime="1967-08-25T00:00:00" value="26200"/>
+			<data dateTime="1967-08-26T00:00:00" value="23600"/>
+			<data dateTime="1967-08-27T00:00:00" value="22100"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TRTA2" parameterId="QIN" name="1986/10/11 maxQ=75700">
+		<eventData>
+			<data dateTime="1986-10-07T00:00:00" value="4790"/>
+			<data dateTime="1986-10-08T00:00:00" value="4700"/>
+			<data dateTime="1986-10-09T00:00:00" value="4560"/>
+			<data dateTime="1986-10-10T00:00:00" value="16300"/>
+			<data dateTime="1986-10-11T00:00:00" value="63200"/>
+			<data dateTime="1986-10-12T00:00:00" value="33300"/>
+			<data dateTime="1986-10-13T00:00:00" value="20800"/>
+			<data dateTime="1986-10-14T00:00:00" value="16800"/>
+			<data dateTime="1986-10-15T00:00:00" value="13800"/>
+			<data dateTime="1986-10-16T00:00:00" value="11600"/>
+			<data dateTime="1986-10-17T00:00:00" value="9640"/>
+			<data dateTime="1986-10-18T00:00:00" value="8560"/>
+			<data dateTime="1986-10-19T00:00:00" value="8050"/>
+			<data dateTime="1986-10-20T00:00:00" value="7500"/>
+			<data dateTime="1986-10-21T00:00:00" value="6900"/>
+			<data dateTime="1986-10-22T00:00:00" value="6240"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TRTA2" parameterId="QIN" name="1971/08/10 maxQ=67400">
+		<eventData>
+			<data dateTime="1971-08-03T00:00:00" value="15000"/>
+			<data dateTime="1971-08-04T00:00:00" value="13000"/>
+			<data dateTime="1971-08-05T00:00:00" value="11000"/>
+			<data dateTime="1971-08-06T00:00:00" value="11000"/>
+			<data dateTime="1971-08-07T00:00:00" value="18000"/>
+			<data dateTime="1971-08-08T00:00:00" value="28000"/>
+			<data dateTime="1971-08-09T00:00:00" value="48000"/>
+			<data dateTime="1971-08-10T00:00:00" value="63000"/>
+			<data dateTime="1971-08-11T00:00:00" value="40300"/>
+			<data dateTime="1971-08-12T00:00:00" value="27200"/>
+			<data dateTime="1971-08-13T00:00:00" value="23500"/>
+			<data dateTime="1971-08-14T00:00:00" value="20800"/>
+			<data dateTime="1971-08-15T00:00:00" value="18000"/>
+			<data dateTime="1971-08-16T00:00:00" value="15000"/>
+			<data dateTime="1971-08-17T00:00:00" value="12000"/>
+			<data dateTime="1971-08-18T00:00:00" value="10000"/>
+			<data dateTime="1971-08-19T00:00:00" value="9000"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TRTA2" parameterId="QIN" name="1967/07/20 maxQ=59400">
+		<eventData>
+			<data dateTime="1967-07-12T00:00:00" value="9400"/>
+			<data dateTime="1967-07-13T00:00:00" value="9800"/>
+			<data dateTime="1967-07-14T00:00:00" value="10000"/>
+			<data dateTime="1967-07-15T00:00:00" value="10500"/>
+			<data dateTime="1967-07-16T00:00:00" value="11000"/>
+			<data dateTime="1967-07-17T00:00:00" value="11000"/>
+			<data dateTime="1967-07-18T00:00:00" value="10000"/>
+			<data dateTime="1967-07-19T00:00:00" value="20000"/>
+			<data dateTime="1967-07-20T00:00:00" value="40000"/>
+			<data dateTime="1967-07-21T00:00:00" value="25000"/>
+			<data dateTime="1967-07-22T00:00:00" value="19000"/>
+			<data dateTime="1967-07-23T00:00:00" value="14000"/>
+			<data dateTime="1967-07-24T00:00:00" value="13300"/>
+			<data dateTime="1967-07-25T00:00:00" value="13800"/>
+			<data dateTime="1967-07-26T00:00:00" value="15700"/>
+			<data dateTime="1967-07-27T00:00:00" value="13800"/>
+			<data dateTime="1967-07-28T00:00:00" value="12000"/>
+			<data dateTime="1967-07-29T00:00:00" value="10800"/>
+			<data dateTime="1967-07-30T00:00:00" value="9920"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="TRTA2" parameterId="QIN" name="2006/08/19 maxQ=57600">
+		<eventData>
+			<data dateTime="2006-08-08T00:00:00" value="8000"/>
+			<data dateTime="2006-08-09T00:00:00" value="7500"/>
+			<data dateTime="2006-08-10T00:00:00" value="7600"/>
+			<data dateTime="2006-08-11T00:00:00" value="8000"/>
+			<data dateTime="2006-08-12T00:00:00" value="8600"/>
+			<data dateTime="2006-08-13T00:00:00" value="9000"/>
+			<data dateTime="2006-08-14T00:00:00" value="10000"/>
+			<data dateTime="2006-08-15T00:00:00" value="11500"/>
+			<data dateTime="2006-08-16T00:00:00" value="10000"/>
+			<data dateTime="2006-08-17T00:00:00" value="9000"/>
+			<data dateTime="2006-08-18T00:00:00" value="21000"/>
+			<data dateTime="2006-08-19T00:00:00" value="45600"/>
+			<data dateTime="2006-08-20T00:00:00" value="30500"/>
+			<data dateTime="2006-08-21T00:00:00" value="25300"/>
+			<data dateTime="2006-08-22T00:00:00" value="19800"/>
+			<data dateTime="2006-08-23T00:00:00" value="19700"/>
+			<data dateTime="2006-08-24T00:00:00" value="16300"/>
+			<data dateTime="2006-08-25T00:00:00" value="15600"/>
+			<data dateTime="2006-08-26T00:00:00" value="15000"/>
+			<data dateTime="2006-08-27T00:00:00" value="13600"/>
+			<data dateTime="2006-08-28T00:00:00" value="12500"/>
+			<data dateTime="2006-08-29T00:00:00" value="11600"/>
+			<data dateTime="2006-08-30T00:00:00" value="10600"/>
+			<data dateTime="2006-08-31T00:00:00" value="9680"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="SUNA2" parameterId="QIN" name="1981/08/02 maxQ=150000">
+		<eventData>
+			<data dateTime="1981-07-05T00:00:00" value="41000"/>
+			<data dateTime="1981-07-06T00:00:00" value="43000"/>
+			<data dateTime="1981-07-07T00:00:00" value="49000"/>
+			<data dateTime="1981-07-08T00:00:00" value="58000"/>
+			<data dateTime="1981-07-09T00:00:00" value="78000"/>
+			<data dateTime="1981-07-10T00:00:00" value="125000"/>
+			<data dateTime="1981-07-11T00:00:00" value="150000"/>
+			<data dateTime="1981-07-12T00:00:00" value="140000"/>
+			<data dateTime="1981-07-13T00:00:00" value="125000"/>
+			<data dateTime="1981-07-14T00:00:00" value="105000"/>
+			<data dateTime="1981-07-15T00:00:00" value="95000"/>
+			<data dateTime="1981-07-16T00:00:00" value="98700"/>
+			<data dateTime="1981-07-17T00:00:00" value="98500"/>
+			<data dateTime="1981-07-18T00:00:00" value="97100"/>
+			<data dateTime="1981-07-19T00:00:00" value="97100"/>
+			<data dateTime="1981-07-20T00:00:00" value="96800"/>
+			<data dateTime="1981-07-21T00:00:00" value="97000"/>
+			<data dateTime="1981-07-22T00:00:00" value="90100"/>
+			<data dateTime="1981-07-23T00:00:00" value="87100"/>
+			<data dateTime="1981-07-24T00:00:00" value="86500"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="SUNA2" parameterId="QIN" name="1981/07/11 maxQ=126000">
+		<eventData>
+			<data dateTime="1981-07-29T00:00:00" value="75100"/>
+			<data dateTime="1981-07-30T00:00:00" value="76000"/>
+			<data dateTime="1981-07-31T00:00:00" value="72900"/>
+			<data dateTime="1981-08-01T00:00:00" value="78800"/>
+			<data dateTime="1981-08-02T00:00:00" value="126000"/>
+			<data dateTime="1981-08-03T00:00:00" value="116000"/>
+			<data dateTime="1981-08-04T00:00:00" value="99400"/>
+			<data dateTime="1981-08-05T00:00:00" value="85600"/>
+			<data dateTime="1981-08-06T00:00:00" value="76800"/>
+			<data dateTime="1981-08-07T00:00:00" value="72500"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="MONA2" parameterId="QIN" name="2006/08/19 maxQ=11200">
+		<eventData>
+			<data dateTime="2006-08-13T00:00:00" value="749"/>
+			<data dateTime="2006-08-14T00:00:00" value="1190"/>
+			<data dateTime="2006-08-15T00:00:00" value="1330"/>
+			<data dateTime="2006-08-16T00:00:00" value="1220"/>
+			<data dateTime="2006-08-17T00:00:00" value="1050"/>
+			<data dateTime="2006-08-18T00:00:00" value="2090"/>
+			<data dateTime="2006-08-19T00:00:00" value="6360"/>
+			<data dateTime="2006-08-20T00:00:00" value="3790"/>
+			<data dateTime="2006-08-21T00:00:00" value="3540"/>
+			<data dateTime="2006-08-22T00:00:00" value="2500"/>
+			<data dateTime="2006-08-23T00:00:00" value="2700"/>
+			<data dateTime="2006-08-24T00:00:00" value="1850"/>
+			<data dateTime="2006-08-25T00:00:00" value="1800"/>
+			<data dateTime="2006-08-26T00:00:00" value="1670"/>
+			<data dateTime="2006-08-27T00:00:00" value="1430"/>
+			<data dateTime="2006-08-28T00:00:00" value="1270"/>
+			<data dateTime="2006-08-29T00:00:00" value="1170"/>
+			<data dateTime="2006-08-30T00:00:00" value="1120"/>
+			<data dateTime="2006-08-31T00:00:00" value="1040"/>
+			<data dateTime="2006-09-01T00:00:00" value="1060"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="WLWA2" parameterId="QIN" name="1986/10/11 maxQ=8670">
+		<eventData>
+			<data dateTime="1986-10-07T00:00:00" value="565"/>
+			<data dateTime="1986-10-08T00:00:00" value="565"/>
+			<data dateTime="1986-10-09T00:00:00" value="548"/>
+			<data dateTime="1986-10-10T00:00:00" value="2790"/>
+			<data dateTime="1986-10-11T00:00:00" value="8670"/>
+			<data dateTime="1986-10-12T00:00:00" value="4020"/>
+			<data dateTime="1986-10-13T00:00:00" value="2420"/>
+			<data dateTime="1986-10-14T00:00:00" value="2040"/>
+			<data dateTime="1986-10-15T00:00:00" value="1460"/>
+			<data dateTime="1986-10-16T00:00:00" value="1230"/>
+			<data dateTime="1986-10-17T00:00:00" value="1010"/>
+			<data dateTime="1986-10-18T00:00:00" value="868"/>
+			<data dateTime="1986-10-19T00:00:00" value="789"/>
+			<data dateTime="1986-10-20T00:00:00" value="765"/>
+			<data dateTime="1986-10-21T00:00:00" value="708"/>
+			<data dateTime="1986-10-22T00:00:00" value="654"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="WLWA2" parameterId="QIN" name="2006/08/19 maxQ=6410">
+		<eventData>
+			<data dateTime="2006-08-13T00:00:00" value="839"/>
+			<data dateTime="2006-08-14T00:00:00" value="1270"/>
+			<data dateTime="2006-08-15T00:00:00" value="1360"/>
+			<data dateTime="2006-08-16T00:00:00" value="1320"/>
+			<data dateTime="2006-08-17T00:00:00" value="1440"/>
+			<data dateTime="2006-08-18T00:00:00" value="4500"/>
+			<data dateTime="2006-08-19T00:00:00" value="6410"/>
+			<data dateTime="2006-08-20T00:00:00" value="4900"/>
+			<data dateTime="2006-08-21T00:00:00" value="4190"/>
+			<data dateTime="2006-08-22T00:00:00" value="3440"/>
+			<data dateTime="2006-08-23T00:00:00" value="3380"/>
+			<data dateTime="2006-08-24T00:00:00" value="2500"/>
+			<data dateTime="2006-08-25T00:00:00" value="2600"/>
+			<data dateTime="2006-08-26T00:00:00" value="2120"/>
+			<data dateTime="2006-08-27T00:00:00" value="1820"/>
+			<data dateTime="2006-08-28T00:00:00" value="1550"/>
+			<data dateTime="2006-08-29T00:00:00" value="1350"/>
+			<data dateTime="2006-08-30T00:00:00" value="1210"/>
+			<data dateTime="2006-08-31T00:00:00" value="1090"/>
+			<data dateTime="2006-09-01T00:00:00" value="975"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="LSUA2" parameterId="QIN" name="2006/08/19 maxQ=6140">
+		<eventData>
+			<data dateTime="2006-08-14T00:00:00" value="602"/>
+			<data dateTime="2006-08-15T00:00:00" value="623"/>
+			<data dateTime="2006-08-16T00:00:00" value="592"/>
+			<data dateTime="2006-08-17T00:00:00" value="653"/>
+			<data dateTime="2006-08-18T00:00:00" value="3320"/>
+			<data dateTime="2006-08-19T00:00:00" value="4160"/>
+			<data dateTime="2006-08-20T00:00:00" value="2300"/>
+			<data dateTime="2006-08-21T00:00:00" value="1830"/>
+			<data dateTime="2006-08-22T00:00:00" value="1580"/>
+			<data dateTime="2006-08-23T00:00:00" value="1430"/>
+			<data dateTime="2006-08-24T00:00:00" value="1180"/>
+			<data dateTime="2006-08-25T00:00:00" value="1180"/>
+			<data dateTime="2006-08-26T00:00:00" value="1000"/>
+			<data dateTime="2006-08-27T00:00:00" value="837"/>
+			<data dateTime="2006-08-28T00:00:00" value="757"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="LSUA2" parameterId="QIN" name="1980/09/15 maxQ=3440">
+		<eventData>
+			<data dateTime="1980-09-13T00:00:00" value="200"/>
+			<data dateTime="1980-09-14T00:00:00" value="600"/>
+			<data dateTime="1980-09-15T00:00:00" value="2900"/>
+			<data dateTime="1980-09-16T00:00:00" value="1720"/>
+			<data dateTime="1980-09-17T00:00:00" value="1300"/>
+			<data dateTime="1980-09-18T00:00:00" value="1000"/>
+			<data dateTime="1980-09-19T00:00:00" value="850"/>
+			<data dateTime="1980-09-20T00:00:00" value="700"/>
+			<data dateTime="1980-09-21T00:00:00" value="600"/>
+			<data dateTime="1980-09-22T00:00:00" value="480"/>
+			<data dateTime="1980-09-23T00:00:00" value="400"/>
+			<data dateTime="1980-09-24T00:00:00" value="340"/>
+			<data dateTime="1980-09-25T00:00:00" value="303"/>
+			<data dateTime="1980-09-26T00:00:00" value="280"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="LSUA2" parameterId="QIN" name="1982/07/25 maxQ=2950">
+		<eventData>
+			<data dateTime="1982-07-19T00:00:00" value="494"/>
+			<data dateTime="1982-07-20T00:00:00" value="522"/>
+			<data dateTime="1982-07-21T00:00:00" value="515"/>
+			<data dateTime="1982-07-22T00:00:00" value="582"/>
+			<data dateTime="1982-07-23T00:00:00" value="1360"/>
+			<data dateTime="1982-07-24T00:00:00" value="1840"/>
+			<data dateTime="1982-07-25T00:00:00" value="2270"/>
+			<data dateTime="1982-07-26T00:00:00" value="1740"/>
+			<data dateTime="1982-07-27T00:00:00" value="1250"/>
+			<data dateTime="1982-07-28T00:00:00" value="1030"/>
+			<data dateTime="1982-07-29T00:00:00" value="999"/>
+			<data dateTime="1982-07-30T00:00:00" value="1200"/>
+			<data dateTime="1982-07-31T00:00:00" value="950"/>
+			<data dateTime="1982-08-01T00:00:00" value="850"/>
+			<data dateTime="1982-08-02T00:00:00" value="800"/>
+			<data dateTime="1982-08-03T00:00:00" value="704"/>
+			<data dateTime="1982-08-04T00:00:00" value="660"/>
+			<data dateTime="1982-08-05T00:00:00" value="602"/>
+			<data dateTime="1982-08-06T00:00:00" value="560"/>
+			<data dateTime="1982-08-07T00:00:00" value="546"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="LSUA2" parameterId="QIN" name="1984/08/25 maxQ=2830">
+		<eventData>
+			<data dateTime="1984-08-22T00:00:00" value="263"/>
+			<data dateTime="1984-08-23T00:00:00" value="532"/>
+			<data dateTime="1984-08-24T00:00:00" value="659"/>
+			<data dateTime="1984-08-25T00:00:00" value="2200"/>
+			<data dateTime="1984-08-26T00:00:00" value="1430"/>
+			<data dateTime="1984-08-27T00:00:00" value="995"/>
+			<data dateTime="1984-08-28T00:00:00" value="785"/>
+			<data dateTime="1984-08-29T00:00:00" value="637"/>
+			<data dateTime="1984-08-30T00:00:00" value="551"/>
+			<data dateTime="1984-08-31T00:00:00" value="479"/>
+			<data dateTime="1984-09-01T00:00:00" value="424"/>
+			<data dateTime="1984-09-02T00:00:00" value="385"/>
+		</eventData>
+	</historicalEvent>
+</historicalEvents>

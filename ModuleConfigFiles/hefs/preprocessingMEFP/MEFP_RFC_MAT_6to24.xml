@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://c
+hps1/schemas/transformationModule.xsd" version="1.0">
+   
+   <!-- Converts RFC 6h MAT/FMAT to 24h TFMX and TFMN values -->
+   
+   <!-- This does not use diurnal patterns, but, rather, computes
+        the minimum and maximum 24-hour values directly based on
+	the input time seires specified as the Input Variable.-->
+   
+   <!-- Input variable: FMAT, or MAT in the future -->
+   <variable>
+        <variableId>rfc_fmat_6</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>FGroup_MergeMAT_Forecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <locationSetId>Catchments_HEFS_FGroup</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="6" endOverrulable="false"/>
+            <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Output variable: 24h (12-12Z) FMAT max and min -->
+   <variable>
+        <variableId>rfc_tfmx_24</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep id="12Z"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+    <variable>
+        <variableId>rfc_tfmn_24</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep id="12Z"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+   
+   <!-- Intermediary variable: stores the 6, 12, and 18h shifted time series so that we can line up 
+        all values over which to calculate a maximum to be at 18Z. -->
+   <variable>
+        <variableId>rfc_fmat_6_shift</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+	    <qualifierId>shift6</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>rfc_fmat_12_shift</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+	    <qualifierId>shift12</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>rfc_fmat_18_shift</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+	    <qualifierId>shift18</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Intermediary Variable: 24h (18Z) instantaneous aggregation.  All the values required for
+        computing the 24h maximum are timed for 18Z via the shifts above. -->
+   <variable>
+        <variableId>rfc_fmat_24h_noshift_inst</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+	    <qualifierId>noshift inst</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>rfc_fmat_24h_6shift_inst</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+	    <qualifierId>shift6 inst</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>rfc_fmat_24h_12shift_inst</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+	    <qualifierId>shift12 inst</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   <variable>
+        <variableId>rfc_fmat_24h_18shift_inst</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>FMAT</parameterId>
+	    <qualifierId>shift18 inst</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Intermdiary variable: 24h maximum time series at 18Z. -->
+   <variable>
+        <variableId>rfc_tfmx_24h_18Z</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMX</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   
+   <!-- Intermdiary variable: 24h minimum time series at 18Z. -->
+   <variable>
+        <variableId>rfc_tfmn_24h_18Z</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_RFC_MAT_6to24</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>temporary</timeSeriesType>
+            <timeStep times="18:00"/>
+	    <relativeViewPeriod unit="day" start="0" startOverrulable="true" end="5" endOverrulable="false"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+   </variable>
+   
+    <!-- Shift the input time series by 6, 12, and 18 hours.  The result is that the 4 values over which the 
+         daily maximum needs to be computed will be at hour 18Z of each day. -->
+    <transformation id="ta_shift_6">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>rfc_fmat_6</variableId>
+                </inputVariable>
+		<!-- defaults to a backward shift direction -->
+                <numberOfTimeSteps>1</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>rfc_fmat_6_shift</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    <transformation id="ta_shift_12">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>rfc_fmat_6</variableId>
+                </inputVariable>
+		<!-- defaults to a backward shift direction -->
+                <numberOfTimeSteps>2</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>rfc_fmat_12_shift</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    <transformation id="ta_shift_18">
+        <timeShift>
+            <constant>
+                <inputVariable>
+                    <variableId>rfc_fmat_6</variableId>
+                </inputVariable>
+		<!-- defaults to a backward shift direction -->
+                <numberOfTimeSteps>3</numberOfTimeSteps>
+                <outputVariable>
+                    <variableId>rfc_fmat_18_shift</variableId>
+                </outputVariable>
+            </constant>
+        </timeShift>
+    </transformation>
+    
+    
+    <!-- Cut out only the 18Z values via an instantaneous aggregation. -->
+    <transformation id="fmat_noshift_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>rfc_fmat_6</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>rfc_fmat_24h_noshift_inst</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    <transformation id="fmat_shift_6_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>rfc_fmat_6_shift</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>rfc_fmat_24h_6shift_inst</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    <transformation id="fmat_shift_12_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>rfc_fmat_12_shift</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>rfc_fmat_24h_12shift_inst</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    <transformation id="fmat_shift_18_inst">
+        <aggregation>
+            <instantaneous>
+                <inputVariable>
+                    <variableId>rfc_fmat_18_shift</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>rfc_fmat_24h_18shift_inst</variableId>
+                </outputVariable>
+            </instantaneous>
+        </aggregation>
+    </transformation>
+    
+    <!-- Compute the 24h max at hour 18 via the *shift_inst variables above. -->
+    <transformation id="tfmx_daily_max_18Z">
+        <user>
+            <simple>
+                <expression>max(rfc_fmat_24h_noshift_inst,rfc_fmat_24h_6shift_inst,rfc_fmat_24h_12shift_inst,rfc_fmat_24h_18shift_inst)</expression>
+                <outputVariable>
+                    <variableId>rfc_tfmx_24h_18Z</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation>
+    
+    <!-- Compute the 24h min at hour 18 via the *shift_inst variables above. -->
+    <transformation id="tfmn_daily_max_18Z">
+        <user>
+            <simple>
+                <expression>min(rfc_fmat_24h_noshift_inst,rfc_fmat_24h_6shift_inst,rfc_fmat_24h_12shift_inst,rfc_fmat_24h_18shift_inst)</expression>
+                <outputVariable>
+                    <variableId>rfc_tfmn_24h_18Z</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation>
+    
+    <!-- Shift the 24h max via an equidistant sampling at 12Z using the closest backward value. -->
+    <transformation id="tfmx_resampled_12Z">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>rfc_tfmx_24h_18Z</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>rfc_tfmx_24</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>rfc_tfmx_24</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    
+    <!-- Shift the 24h min via an equidistant sampling at 12Z using the closest backward value. -->
+    <transformation id="tfmn_resampled_12Z">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>rfc_tfmn_24h_18Z</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>rfc_tfmn_24</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closestBackward</interpolationType>
+                <outputVariable>
+                    <variableId>rfc_tfmn_24</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    
+    
+</transformationModule>

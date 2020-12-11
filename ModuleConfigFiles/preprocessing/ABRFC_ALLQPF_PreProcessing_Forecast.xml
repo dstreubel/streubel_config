@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd"
+	version="1.0">
+
+	<variable>
+		<variableId>FMAP_0</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="0"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_0_sample</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="0"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>0</ensembleMemberIndex>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_12hrs</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="12"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_12hrs_sample</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="12"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>1</ensembleMemberIndex>
+		</timeSeriesSet>
+	</variable>
+
+	<variable>
+		<variableId>FMAP_24hrs</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="24"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_24hrs_sample</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="24"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>2</ensembleMemberIndex>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+	<variableId>FMAP_48hrs</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="48"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_48hrs_sample</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="48"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>3</ensembleMemberIndex>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_72hrs</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="72"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_72hrs_sample</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="72"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>4</ensembleMemberIndex>
+		</timeSeriesSet>
+	</variable>
+
+	
+    <variable>
+		<variableId>FMAP_95MAX_12hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<qualifierId>95MAX</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="12"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_95MAX_sample_12hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="12"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>5</ensembleMemberIndex>
+		</timeSeriesSet>
+    </variable>
+    <variable>
+		<variableId>FMAP_95MAX_24hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<qualifierId>95MAX</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="24"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_95MAX_sample_24hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="24"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>6</ensembleMemberIndex>
+		</timeSeriesSet>
+    </variable>
+    <variable>
+		<variableId>FMAP_95MAX_48hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<qualifierId>95MAX</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="48"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_95MAX_sample_48hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="48"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>7</ensembleMemberIndex>
+		</timeSeriesSet>
+    </variable>
+    <variable>
+		<variableId>FMAP_95MAX_All</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<qualifierId>95MAX</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="72"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_95MAX_sample_All</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="72"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>8</ensembleMemberIndex>
+		</timeSeriesSet>
+	</variable>
+    <variable>
+		<variableId>FMAP_95MIN_12hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<qualifierId>95MIN</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="12"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_95MIN_sample_12hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="12"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>9</ensembleMemberIndex>
+		</timeSeriesSet>
+	</variable>	
+    <variable>
+		<variableId>FMAP_95MIN_24hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<qualifierId>95MIN</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="24"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_95MIN_sample_24hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="24"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>10</ensembleMemberIndex>
+		</timeSeriesSet>
+    </variable>	
+    <variable>
+		<variableId>FMAP_95MIN_48hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<qualifierId>95MIN</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="48"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_95MIN_sample_48hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="48"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>11</ensembleMemberIndex>
+		</timeSeriesSet>
+	</variable>	
+	<variable>
+		<variableId>FMAP_95MIN_All</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<qualifierId>95MIN</qualifierId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="72"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_95MIN_sample_All</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="72"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>12</ensembleMemberIndex>
+		</timeSeriesSet>
+	</variable>	
+	<variable>
+		<variableId>FMAP_120hrs</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>FMAP_PreProcessing_QPF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="120"
+				endOverrulable="false"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>FMAP_120hrs_sample</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ABRFC_ALLQPF_PreProcessing_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>FMAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="120"
+				endOverrulable="false"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+			<ensembleId>ALLQPF</ensembleId>
+			<ensembleMemberIndex>13</ensembleMemberIndex>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SampleFMAP_0">
+		<user>
+			<simple>
+				<expression>FMAP_0</expression>
+				<outputVariable>
+					<variableId>FMAP_0_sample</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="SampleFMAP_12hrs">
+		<user>
+			<simple>
+				<expression>FMAP_12hrs</expression>
+				<outputVariable>
+					<variableId>FMAP_12hrs_sample</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+
+	<transformation id="SampleFMAP_24hrs">
+		<user>
+			<simple>
+				<expression>FMAP_24hrs</expression>
+				<outputVariable>
+					<variableId>FMAP_24hrs_sample</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="SampleFMAP_48hrs">
+		<user>
+			<simple>
+				<expression>FMAP_48hrs</expression>
+				<outputVariable>
+					<variableId>FMAP_48hrs_sample</variableId>
+				</outputVariable>
+			</simple>
+		</user>	</transformation>
+	<transformation id="SampleFMAP_72hrs">
+		<user>
+			<simple>
+				<expression>FMAP_72hrs</expression>
+				<outputVariable>
+					<variableId>FMAP_72hrs_sample</variableId>
+				</outputVariable>
+			</simple>
+		</user>	</transformation>
+
+	<transformation id="SampleFMAP_95MAX_12hr">
+		<user>
+			<simple>
+				<expression>FMAP_95MAX_12hr</expression>
+				<outputVariable>
+					<variableId>FMAP_95MAX_sample_12hr</variableId>
+				</outputVariable>
+			</simple>
+		</user>	</transformation>
+    <transformation id="SampleFMAP_95MAX_24hr">
+    	<user>
+    		<simple>
+    			<expression>FMAP_95MAX_24hr</expression>
+    			<outputVariable>
+    				<variableId>FMAP_95MAX_sample_24hr</variableId>
+    			</outputVariable>
+    		</simple>
+    	</user>	</transformation>
+    <transformation id="SampleFMAP_95MAX_48hr">
+    	<user>
+    		<simple>
+    			<expression>FMAP_95MAX_48hr</expression>
+    			<outputVariable>
+    				<variableId>FMAP_95MAX_sample_48hr</variableId>
+    			</outputVariable>
+    		</simple>
+    	</user>	</transformation>
+    <transformation id="SampleFMAP_95MAX_All">
+    	<user>
+    		<simple>
+    			<expression>FMAP_95MAX_All</expression>
+    			<outputVariable>
+    				<variableId>FMAP_95MAX_sample_All</variableId>
+    			</outputVariable>
+    		</simple>
+    	</user>	</transformation>
+    <transformation id="SampleFMAP_95MIN_12hr">
+    	<user>
+    		<simple>
+    			<expression>FMAP_95MIN_12hr</expression>
+    			<outputVariable>
+    				<variableId>FMAP_95MIN_sample_12hr</variableId>
+    			</outputVariable>
+    		</simple>
+    	</user>	</transformation>
+    <transformation id="SampleFMAP_95MIN_24hr">
+    	<user>
+    		<simple>
+    			<expression>FMAP_95MIN_24hr</expression>
+    			<outputVariable>
+    				<variableId>FMAP_95MIN_sample_24hr</variableId>
+    			</outputVariable>
+    		</simple>
+    	</user>	</transformation>
+    <transformation id="SampleFMAP_95MIN_48hr">
+    	<user>
+    		<simple>
+    			<expression>FMAP_95MIN_48hr</expression>
+    			<outputVariable>
+    				<variableId>FMAP_95MIN_sample_48hr</variableId>
+    			</outputVariable>
+    		</simple>
+    	</user>
+	</transformation>
+	<transformation id="SampleFMAP_95MIN_All">
+		<user>
+			<simple>
+				<expression>FMAP_95MIN_All</expression>
+				<outputVariable>
+					<variableId>FMAP_95MIN_sample_All</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+    <transformation id="SampleFMAP_120hrs">
+		<user>
+			<simple>
+				<expression>FMAP_120hrs</expression>
+				<outputVariable>
+					<variableId>FMAP_120hrs_sample</variableId>
+				</outputVariable>
+			</simple>
+		</user>	
+    </transformation>
+</transformationModule>

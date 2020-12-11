@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+	<export>
+		<general>
+			<exportType>PI</exportType>
+			<folder>$EXPORT_FOLDER$/snow_export</folder>
+			<exportFileName>
+				<!--<name>Kusko_SWE_export.xml</name>-->
+				<!--<name>NorthSl_SWE_export.xml</name>-->
+				<name>MATA2_SWE_export.xml</name>
+				<!--<prefix>
+					<timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+				</prefix>-->
+			</exportFileName>
+			<idMapId>IdExportPIXML</idMapId> 
+			<unitConversionsId>exportEnglishUnits</unitConversionsId>
+			<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>true</omitMissingValues>
+		</general>
+   		<!--<timeSeriesSet>
+   			<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+   			<locationSetId>Catchments_Kuskokwim</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+   			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>0</synchLevel>
+   		</timeSeriesSet>-->
+		<timeSeriesSet>
+			<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>MATA2UPR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>0</synchLevel>
+		</timeSeriesSet>	
+		<timeSeriesSet>
+			<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>MATA2LWR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>0</synchLevel>
+		</timeSeriesSet>
+		</export>
+</timeSeriesExportRun>

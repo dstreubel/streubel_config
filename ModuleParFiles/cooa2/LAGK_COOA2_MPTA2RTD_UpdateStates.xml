@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+     <parameter id="LAGQ_PAIRS">
+       <table>
+         <columnTypes A="double" B="double"/>
+         <row A="6.000" B="3000.000"/>
+         <row A="0.000" B="12000.000"/>
+       </table>
+     </parameter>
+     <parameter id="KQ_PAIRS">
+      <table>
+        <columnTypes A="double" B="double"/>
+        <row A="235.000" B="500.000"/>
+        <row A="225.000" B="2500.000"/>
+        <row A="175.000" B="4500.000"/>
+        <row A="105.000" B="6500.000"/>
+        <row A="65.000" B="8890.000"/>
+        <row A="40.000" B="11400.000"/>
+        <row A="25.000" B="14000.000"/>
+        <row A="28.000" B="23200.000"/>
+      </table>
+    </parameter>
+    <parameter id="NUMBER_OF_LAGQ_PAIRS">
+      <intValue>2</intValue>
+    </parameter>
+    <parameter id="NUMBER_OF_KQ_PAIRS">
+      <intValue>8</intValue>
+    </parameter>
+    <parameter id="INFLOW_TS_DATA_TYPE">
+      <stringValue>SQIN</stringValue>
+    </parameter>
+    <parameter id="OUTFLOW_TS_DATA_TYPE">
+      <stringValue>SQIN</stringValue>
+    </parameter>
+    <parameter id="TRANSMISSION_LOSS_THRESHOLD_FLOW">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="METR_OR_ENGL_UNITS">
+      <stringValue>ENGL</stringValue>
+    </parameter>
+    <parameter id="INFLOW_TS_ID">
+      <stringValue>COOA2LIN</stringValue>
+    </parameter>
+    <parameter id="OUTFLOW_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="INFLOW_TS_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="TRANSMISSION_LOSS_COEFFICIENT">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="OUTFLOW_TS_ID">
+      <stringValue>MPTA2RTD</stringValue>
+    </parameter>
+
+    <parameter id="CONSTANT_LAG_VALUE">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="CONSTANT_K_VALUE">
+      <dblValue>0.0</dblValue>
+    </parameter>
+  </group>
+</parameters>

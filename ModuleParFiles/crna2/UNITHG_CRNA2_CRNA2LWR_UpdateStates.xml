@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <modifierType>BASEFLOW</modifierType>
+  <modifierType>UNITHG</modifierType>
+  <group id= "default">
+    <parameter id="UHG_DURATION">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="UNIT">
+      <stringValue>ENGLISH</stringValue>
+    </parameter>
+    <parameter id="UHG_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="DRAINAGE_AREA">
+      <dblValue>2361.6</dblValue>
+    </parameter>
+    <parameter id="CONSTANT_BASE_FLOW">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="UHG_ORDINATES">
+      <table>
+        <columnTypes A="double"/>
+        <row A="560.0"/>
+        <row A="1231.0"/>
+        <row A="2127.0"/>
+        <row A="3358.0"/>
+        <row A="4702.0"/>
+        <row A="5821.0"/>
+        <row A="7277.0"/>
+        <row A="8620.0"/>
+        <row A="10075.0"/>
+        <row A="11195.0"/>
+        <row A="12314.0"/>
+        <row A="13434.0"/>
+        <row A="14553.0"/>
+        <row A="15673.0"/>
+        <row A="16344.0"/>
+        <row A="16008.0"/>
+        <row A="15225.0"/>
+        <row A="14329.0"/>
+        <row A="13322.0"/>
+        <row A="12314.0"/>
+        <row A="11083.0"/>
+        <row A="9404.0"/>
+        <row A="8172.0"/>
+        <row A="6829.0"/>
+        <row A="5373.0"/>
+        <row A="4030.0"/>
+        <row A="3135.0"/>
+        <row A="2239.0"/>
+        <row A="1679.0"/>
+        <row A="1231.0"/>
+        <row A="1008.0"/>
+        <row A="672.0"/>
+        <row A="448.0"/>
+        <row A="224.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+      </table>
+    </parameter>
+  </group>
+</parameters>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>OFSDE</importType>
+			<folder>$IMPORT_FOLDER_OFSDE$</folder>
+			<idMapId>IdImportIHFSDB</idMapId>
+			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+			<missingValue>-999.0</missingValue>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportIHFSDB</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>STG</parameterId>
+			<locationSetId>ImportSHEF</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportIHFSDB</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationSetId>ImportIHFSDB</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+		<externUnit parameterId="STG" unit="FT"/>
+		<externUnit parameterId="QIN" unit="CFS"/>
+	</import>
+</timeSeriesImportRun>

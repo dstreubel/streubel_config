@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MCDSPIL0_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>NOMSNG_MCDSPILL_MCDSPIL0_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>MCDSPIL0</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MCDSPILL_QINE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RESJ_MCDA2REZ_MCDA2REZ_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>MCDSPILL</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MCDTOTAF_QINE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGETS_MCDSPILL_MCDSPIL_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>MCDTOTAF</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MCDSPIL">
+	<merge>
+		<simple>
+			<inputVariable>
+				<variableId>MCDSPIL0_SQIN_6</variableId>
+			</inputVariable>
+			<inputVariable>
+				<variableId>MCDSPILL_QINE_6</variableId>
+			</inputVariable>
+			<moduleParameterFile>MERGETS_MCDSPILL_MCDSPIL_UpdateStates</moduleParameterFile>
+			<outputVariable>
+				<variableId>MCDTOTAF_QINE_6</variableId>
+			</outputVariable>
+		</simple>
+	</merge>
+	</transformation>
+</transformationModule>

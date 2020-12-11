@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+   <general>
+      <description>TANANA_FG HEFS RAW SQIN Hindcast Export</description>
+      <piVersion>1.5</piVersion>
+      <rootDir>%REGION_HOME%/Export</rootDir>
+      <workDir>%ROOT_DIR%/Export</workDir>
+      <exportDir>%REGION_HOME%/Export/MEFP/chfa2lcl/SQIN</exportDir>
+      <exportDataSetDir>REGION_HOME%/Export</exportDataSetDir>
+      <exportIdMap>IdExportLAGK</exportIdMap>
+      <importDir>%ROOT_DIR%/output</importDir>
+      <importIdMap>IdImportLAGK</importIdMap>
+      <dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+      <dumpDir>%ROOT_DIR%</dumpDir>
+      <diagnosticFile>%ROOT_DIR%/output/diag.fi</diagnosticFile>
+      <missVal>-999</missVal>
+      <modelTimeStep unit="hour" multiplier="6"/>
+   </general>
+<!-- MEFP Streamflow Export -->
+   <activities>
+      <exportActivities>
+
+          <exportTimeSeriesActivity>
+            <exportFile>%TIME0%_CHFA2LCL_MEFP_SQIN.xml</exportFile>
+            <exportBinFile>false</exportBinFile>
+            <timeSeriesSets>
+               <timeSeriesSet>
+                  <moduleInstanceId>UNITHG_CHFA2LCL_CHFA2LCL_Forecast</moduleInstanceId>
+                  <valueType>scalar</valueType>
+                  <parameterId>SQIN</parameterId>
+                  <locationId>CHFA2LCL</locationId>
+                  <timeSeriesType>simulated forecasting</timeSeriesType>
+                  <timeStep unit="hour" multiplier="6"/>
+                  <relativeViewPeriod unit="hour" start="6" startOverrulable="false" end="360" endOverrulable="true"/>
+                  <readWriteMode>read only</readWriteMode>
+                  <ensembleId>MEFP</ensembleId>
+                  <ensembleMemberIndexRange start='1975' end='2010'/>
+               </timeSeriesSet>
+           </timeSeriesSets>
+         </exportTimeSeriesActivity>
+
+      </exportActivities>
+   </activities>
+</generalAdapterRun>

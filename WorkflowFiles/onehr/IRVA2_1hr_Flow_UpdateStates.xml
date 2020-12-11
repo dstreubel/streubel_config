@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+        <activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>Onehr_MergeMAP_UpdateStates</moduleInstanceId>
+	</activity>
+        <activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>Onehr_MergeMAT_UpdateStates</moduleInstanceId>
+	</activity>
+        <activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_IRVA2_1hr_IRVA2RSN_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_IRVA2_1hr_IRVA2LOC_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_IRVA2_1hr_IRVA2LOC_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_IRVA2_1hr_IRVA2LOC_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_IRVA2_1hr_IRVA2OB1_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_IRVA2_1hr_IRVA2SIM_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_IRVA2_1hr_IRVA2ADJ_UpdateStates</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_IRVA2_1hr_IRVA2ADJ_UpdateStates</moduleInstanceId>
+	</activity>
+</workflow>

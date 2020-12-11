@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+	<map internalLocation="NRDA2" externalLocation="NRDA2RTD" internalParameter="SQIN" externalParameter="SQIN" externalQualifier="NRDA2"/>
+	<map internalLocation="NRDA2" externalLocation="NRDA2RTD" internalParameter="SQME" externalParameter="SQME" externalQualifier="NRDA2"/>
+	<map internalLocation="TIKA2" externalLocation="NRDA2RTD" internalParameter="SPEL" externalParameter="SPEL" externalQualifier="TIKA2"/>
+	<enableOneToOneMapping/>	
+</idMap>

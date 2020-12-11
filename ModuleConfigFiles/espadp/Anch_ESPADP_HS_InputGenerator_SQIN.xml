@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+	<general>
+		<description>Anch .HS File SQIN ESPADP Input Generator</description>
+		<piVersion>1.8</piVersion>
+		<rootDir>$ESPADPMODELDIR$</rootDir>
+		<workDir>%ROOT_DIR%/work</workDir>
+		<exportDir>%ROOT_DIR%/input</exportDir>
+		<exportDataSetDir>%ROOT_DIR%/input</exportDataSetDir>
+	   	<exportIdMap>IdExportESPADP_Generator</exportIdMap>  
+		<importDir>%ROOT_DIR%/output</importDir>
+	   	<importIdMap>IdImportESPADP_Generator</importIdMap>   
+		<dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+		<dumpDir>%ROOT_DIR%</dumpDir>
+		<diagnosticFile>%ROOT_DIR%/output/diag.fi</diagnosticFile>
+		<missVal>-999</missVal>
+		<timeZone>
+			<timeZoneOffset>-00:00</timeZoneOffset>
+		</timeZone> 
+	</general>
+	<activities>
+		<startUpActivities>
+   		        <purgeActivity>
+    		              <filter>%ROOT_DIR%/states/*</filter>
+   		        </purgeActivity>
+   		        <purgeActivity>
+  		              <filter>%ROOT_DIR%/work/*</filter>
+		        </purgeActivity>
+		        <purgeActivity>
+		               <filter>%ROOT_DIR%/input/*</filter>
+		        </purgeActivity>
+		        <purgeActivity>
+               			<filter>%ROOT_DIR%/output/*</filter>
+           		</purgeActivity>
+		</startUpActivities>
+		<exportActivities>
+			<exportTimeSeriesActivity>
+				<exportFile>inputs.fi</exportFile>
+				<exportBinFile>true</exportBinFile>				
+				<timeSeriesSets>
+<!-- Template TS -->
+					<timeSeriesSet>
+						<moduleInstanceSetId>SQIN</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>SQIN</parameterId>
+						<locationSetId>ESPADP_Anch</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<relativeViewPeriod unit="hour" start="0" end="0" endOverrulable="true"/>
+						<readWriteMode>read only</readWriteMode>
+						<ensembleId>HS</ensembleId>
+						<ensembleMemberIndexRange start='1971' end='1971'/>
+					</timeSeriesSet>
+<!-- Calibration TS -->
+					<timeSeriesSet>
+						<moduleInstanceSetId>SQIN</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>SQIN</parameterId>
+						<locationSetId>ESPADP_Anch</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<relativeViewPeriod unit="hour" start="-876000" startOverrulable="true" end="0" endOverrulable="true"/>
+						<readWriteMode>read only</readWriteMode>
+						<ensembleId>HS</ensembleId>
+					</timeSeriesSet>
+				</timeSeriesSets>
+			</exportTimeSeriesActivity>
+          	   	<exportParameterActivity>
+               			<fileName>params</fileName>
+               			<moduleInstanceId>All_RFC_ESPADP_InputGenerator</moduleInstanceId>
+           		</exportParameterActivity>  
+			<exportRunFileActivity>
+                                <exportFile>%ROOT_DIR%/run_info.xml</exportFile>
+                                <properties>
+					<string key="model" value="ohd.hseb.ensutilities.espadpingen.ESPADPInputGeneratorModelDriver"/> 
+				        <string key="legacyLocation" value="$OHDBINDIR$"/>
+  					<int key="printDebugInfo" value="0"/>
+                                	<string key="outputDirectory" value="$ESPTSDIR$"/>
+                                	<string key="firstYearToUse" value="1970"/>
+                                	<string key="generatedEnsembleType" value="HS"/>
+                                	<string key="generatedFileType" value="ESPBinary"/> 
+                                	<string key="segmentIdFor.SRYA2UPR" value="SRYA2"/>
+                                	<string key="segmentIdFor.SRYA2LWR" value="SRYA2"/>
+                                	<string key="segmentIdFor.DEZQ9UPR" value="DEZQ9"/>
+                                	<string key="segmentIdFor.DEZQ9LWR" value="DEZQ9"/>
+                                	<string key="segmentIdFor.ALSQ9GL" value="ALSQ9"/>
+                                	<string key="segmentIdFor.ALSQ9UPR" value="ALSQ9"/>
+                                	<string key="segmentIdFor.ALSQ9LWR" value="ALSQ9"/>
+                                	<string key="segmentIdFor.TATQ9UPR" value="TATQ9"/>
+                                	<string key="segmentIdFor.TATQ9LWR" value="TATQ9"/>
+                                	<string key="segmentIdFor.ALKA2UG" value="ALKA2"/>
+                                	<string key="segmentIdFor.ALKA2LG" value="ALKA2"/>
+                                	<string key="segmentIdFor.ALKA2UPR" value="ALKA2"/>
+                                	<string key="segmentIdFor.ALKA2LWR" value="ALKA2"/>
+                                	<string key="segmentIdFor.ALEA2UG" value="ALEA2"/>
+                                	<string key="segmentIdFor.ALEA2LG" value="ALEA2"/>
+                                	<string key="segmentIdFor.ALEA2UPR" value="ALEA2"/>
+                                	<string key="segmentIdFor.ALEA2LWR" value="ALEA2"/>
+                                	<string key="segmentIdFor.CKTA2GL" value="CKTA2"/>
+                                	<string key="segmentIdFor.CKTA2UPR" value="CKTA2"/>
+                                	<string key="segmentIdFor.CKTA2LWR" value="CKTA2"/>
+                                	<string key="segmentIdFor.TYAA2UG" value="TYAA2"/>
+                                	<string key="segmentIdFor.TYAA2LG" value="TYAA2"/>
+                                	<string key="segmentIdFor.TYAA2UPR" value="TYAA2"/>
+                                	<string key="segmentIdFor.TYAA2LWR" value="TYAA2"/>
+                                	<string key="segmentIdFor.SKGA2GL" value="SKGA2"/>
+                                	<string key="segmentIdFor.SKGA2UPR" value="SKGA2"/>
+                                	<string key="segmentIdFor.SKGA2LWR" value="SKGA2"/>
+                                	<string key="segmentIdFor.MCAA2UPR" value="MCAA2"/>
+                                	<string key="segmentIdFor.MCAA2LWR" value="MCAA2"/>
+                                	<string key="segmentIdFor.MNDA2UG" value="MNDA2"/>
+                                	<string key="segmentIdFor.MNDA2LG" value="MNDA2"/>
+                                	<string key="segmentIdFor.MNDA2NG" value="MNDA2"/>
+                                	<string key="segmentIdFor.JDCA2LOC" value="JDCA2"/>
+                                	<string key="segmentIdFor.TKUA2GL" value="TKUA2"/>
+                                	<string key="segmentIdFor.TKUA2UPR" value="TKUA2"/>
+                                	<string key="segmentIdFor.TKUA2LWR" value="TKUA2"/>
+                                	<string key="segmentIdFor.SGCQ2UPR" value="SGCQ2"/>
+                                	<string key="segmentIdFor.SGCQ2LWR" value="SGCQ2"/>
+                                	<string key="segmentIdFor.STTQ2UPR" value="STTQ2"/>
+                                	<string key="segmentIdFor.STTQ2LWR" value="STTQ2"/>
+                                	<string key="segmentIdFor.SBFQ2GL" value="SBFQ2"/>
+                                	<string key="segmentIdFor.SBFQ2UPR" value="SBFQ2"/>
+                                	<string key="segmentIdFor.SBFQ2LWR" value="SBFQ2"/>
+                                	<string key="segmentIdFor.ISKQ2GL" value="ISKQ2"/>
+                                	<string key="segmentIdFor.ISKQ2UPR" value="ISKQ2"/>
+                                	<string key="segmentIdFor.ISKQ2LWR" value="ISKQ2"/>
+                                	<string key="segmentIdFor.STKA2GL" value="STKA2"/>
+                                	<string key="segmentIdFor.STKA2UPR" value="STKA2"/>
+                                	<string key="segmentIdFor.STKA2LWR" value="STKA2"/>
+                                	<string key="segmentIdFor.SCKA2UPR" value="SCKA2"/>
+                                	<string key="segmentIdFor.SCKA2LWR" value="SCKA2"/>
+
+                                	<string key="segmentIdFor.HNRA2GL" value="HNRA2"/>
+                                	<string key="segmentIdFor.HNRA2UPR" value="HNRA2"/>
+                                	<string key="segmentIdFor.HNRA2LWR" value="HNRA2"/>
+                                	<string key="segmentIdFor.UCHA2UPR" value="UCHA2"/>
+                                	<string key="segmentIdFor.UCHA2LWR" value="UCHA2"/>
+                                	<string key="segmentIdFor.CRHA2UPR" value="CRHA2"/>
+                                	<string key="segmentIdFor.CRHA2LWR" value="CRHA2"/>
+                                	<string key="segmentIdFor.MCDA2REZ" value="MCDSPILL"/>
+                                	<string key="segmentIdFor.MCDA2LOC" value="MCDA2"/>
+                                	<string key="segmentIdFor.CHLA2UPR" value="CHLA2"/>
+                                	<string key="segmentIdFor.CHLA2LWR" value="CHLA2"/>
+                                	<string key="segmentIdFor.CHFA2LOC" value="CHFA2"/>
+                                	<string key="segmentIdFor.SALA2UPR" value="SALA2"/>
+                                	<string key="segmentIdFor.SALA2LWR" value="SALA2"/>
+                                	<string key="segmentIdFor.CRNA2UG" value="CRNA2"/>
+                                	<string key="segmentIdFor.CRNA2LG" value="CRNA2"/>
+                                	<string key="segmentIdFor.CRNA2UPR" value="CRNA2"/>
+                                	<string key="segmentIdFor.CRNA2LWR" value="CRNA2"/>
+                                	<string key="segmentIdFor.NEBA2UG" value="NEBA2"/>
+                                	<string key="segmentIdFor.NEBA2LG" value="NEBA2"/>
+                                	<string key="segmentIdFor.NEBA2UPR" value="NEBA2"/>
+                                	<string key="segmentIdFor.NEBA2LWR" value="NEBA2"/>
+                                	<string key="segmentIdFor.TLNA2LOC" value="TLNA2"/>
+                                	<string key="segmentIdFor.TRAA2UPR" value="TRAA2"/>
+                                	<string key="segmentIdFor.TRAA2LWR" value="TRAA2"/>
+                                	<string key="segmentIdFor.TSGA2LOC" value="TSGA2"/>
+                                	<string key="segmentIdFor.GBDA2UPR" value="GBDA2"/>
+                                	<string key="segmentIdFor.GBDA2LWR" value="GBDA2"/>
+                                	<string key="segmentIdFor.BGDA2GL" value="BGDA2"/>
+                                	<string key="segmentIdFor.BGDA2UPR" value="BGDA2"/>
+                                	<string key="segmentIdFor.BGDA2LWR" value="BGDA2"/>
+                                	<string key="segmentIdFor.DBRA2GL" value="DBRA2"/>
+                                	<string key="segmentIdFor.DBRA2UPR" value="DBRA2"/>
+                                	<string key="segmentIdFor.DBRA2LWR" value="DBRA2"/>
+                                	<string key="segmentIdFor.TAFA2GL" value="TAFA2"/>
+                                	<string key="segmentIdFor.TAFA2UPR" value="TAFA2"/>
+                                	<string key="segmentIdFor.TAFA2LWR" value="TAFA2"/>
+                                	<string key="segmentIdFor.ENNA2UPR" value="ENNA2"/>
+                                	<string key="segmentIdFor.ENNA2LWR" value="ENNA2"/>
+                                	<string key="segmentIdFor.CRSA2UPR" value="CRSA2"/>
+                                	<string key="segmentIdFor.CRSA2LWR" value="CRSA2"/>
+                                	<string key="segmentIdFor.CHAA2LOC" value="CHAA2"/>
+                                	<string key="segmentIdFor.MHSA2UPR" value="MHSA2"/>
+                                	<string key="segmentIdFor.MHSA2LWR" value="MHSA2"/>
+                                	<string key="segmentIdFor.PHLA2GL" value="PHLA2"/>
+                                	<string key="segmentIdFor.PHLA2NG" value="PHLA2"/>
+
+                                	<string key="segmentIdFor.KLNQ9UPR" value="KLNQ9"/>
+                                	<string key="segmentIdFor.KLNQ9LWR" value="KLNQ9"/>
+                                	<string key="segmentIdFor.SRFQ9UPR" value="SRFQ9"/>
+                                	<string key="segmentIdFor.SRFQ9LWR" value="SRFQ9"/>
+                                	<string key="segmentIdFor.SRMQ9UPR" value="SRMQ9"/>
+                                	<string key="segmentIdFor.SRMQ9LWR" value="SRMQ9"/>
+                                	<string key="segmentIdFor.PRXQ9UPR" value="PRXQ9"/>
+                                	<string key="segmentIdFor.PRXQ9LWR" value="PRXQ9"/>
+                                	<string key="segmentIdFor.YWRQ9UPR" value="YWRQ9"/>
+                                	<string key="segmentIdFor.YWRQ9LWR" value="YWRQ9"/>
+                                	<string key="segmentIdFor.NIRQ9LOC" value="NIRQ9"/>
+                                	<string key="segmentIdFor.WHRQ9GL" value="WHRQ9"/>
+                                	<string key="segmentIdFor.WHRQ9NG" value="WHRQ9"/>
+                                	<string key="segmentIdFor.YDAQ9UPR" value="YDAQ9"/>
+                                	<string key="segmentIdFor.YDAQ9LWR" value="YDAQ9"/>
+
+                                	<string key="segmentIdFor.FMMA2UPR" value="FMMA2"/>
+                                	<string key="segmentIdFor.FMMA2LWR" value="FMMA2"/>
+                                	<string key="segmentIdFor.FMKA2UPR" value="FMKA2"/>
+                                	<string key="segmentIdFor.FMKA2LWR" value="FMKA2"/>
+                                	<string key="segmentIdFor.FMWA2UPR" value="FMWA2"/>
+                                	<string key="segmentIdFor.FMWA2LWR" value="FMWA2"/>
+                                	<string key="segmentIdFor.FMRA2UPR" value="FMRA2"/>
+                                	<string key="segmentIdFor.FMRA2LWR" value="FMRA2"/>
+
+                                	<string key="segmentIdFor.OCRQ9UPR" value="OCRQ9"/>
+                                	<string key="segmentIdFor.OCRQ9LWR" value="OCRQ9"/>
+                                	<string key="segmentIdFor.PROQ9UPR" value="PROQ9"/>
+                                	<string key="segmentIdFor.PROQ9LWR" value="PROQ9"/>
+                                	<string key="segmentIdFor.PRBQ9UPR" value="PRBQ9"/>
+                                	<string key="segmentIdFor.PRBQ9LWR" value="PRBQ9"/>
+                                	<string key="segmentIdFor.PRCA2LOC" value="PRCA2"/>
+                                	<string key="segmentIdFor.CLNA2UPR" value="CLNA2"/>
+                                	<string key="segmentIdFor.CLNA2LWR" value="CLNA2"/>
+                                	<string key="segmentIdFor.SHJA2UPR" value="SHJA2"/>
+                                	<string key="segmentIdFor.SHJA2LWR" value="SHJA2"/>
+                                	<string key="segmentIdFor.BRCA2UPR" value="BRCA2"/>
+                                	<string key="segmentIdFor.BRCA2LWR" value="BRCA2"/>
+                                	<string key="segmentIdFor.PFYA2LOC" value="PFYA2"/>
+
+                                	<string key="segmentIdFor.SLAA2UPR" value="SLAA2"/>
+                                	<string key="segmentIdFor.SLAA2LWR" value="SLAA2"/>
+                                	<string key="segmentIdFor.MFKA2UPR" value="MFKA2"/>
+                                	<string key="segmentIdFor.MFKA2LWR" value="MFKA2"/>
+                                	<string key="segmentIdFor.KNFA2UPR" value="KNFA2"/>
+                                	<string key="segmentIdFor.KNFA2LWR" value="KNFA2"/>
+                                	<string key="segmentIdFor.BTTA2UPR" value="BTTA2"/>
+                                	<string key="segmentIdFor.BTTA2LWR" value="BTTA2"/>
+                                	<string key="segmentIdFor.JIRA2UPR" value="JIRA2"/>
+                                	<string key="segmentIdFor.JIRA2LWR" value="JIRA2"/>
+                                	<string key="segmentIdFor.SFKA2UPR" value="SFKA2"/>
+                                	<string key="segmentIdFor.SFKA2LWR" value="SFKA2"/>
+                                	<string key="segmentIdFor.JONA2UPR" value="JONA2"/>
+                                	<string key="segmentIdFor.JONA2LWR" value="JONA2"/>
+                                	<string key="segmentIdFor.ALAA2UPR" value="ALAA2"/>
+                                	<string key="segmentIdFor.ALAA2LWR" value="ALAA2"/>
+                                	<string key="segmentIdFor.ALLA2LOC" value="ALLA2"/>
+                                	<string key="segmentIdFor.KNRA2UPR" value="KNRA2"/>
+                                	<string key="segmentIdFor.KNRA2LWR" value="KNRA2"/>
+                                	<string key="segmentIdFor.KRHA2LOC" value="KRHA2"/>
+
+                                	<string key="segmentIdFor.KUPA2UPR" value="KUPA2"/>
+                                	<string key="segmentIdFor.KUPA2LWR" value="KUPA2"/>
+                                	<string key="segmentIdFor.SGRA2UPR" value="SGRA2"/>
+                                	<string key="segmentIdFor.SGRA2LWR" value="SGRA2"/>
+                                	<string key="segmentIdFor.CRUA2UPR" value="CRUA2"/>
+                                	<string key="segmentIdFor.CRUA2MID" value="CRUA2"/>
+                                	<string key="segmentIdFor.CRUA2LWR" value="CRUA2"/>
+
+                                	<string key="segmentIdFor.YEAA2LOC" value="YEAA2"/>
+                                	<string key="segmentIdFor.CIRA2LOC" value="CIRA2"/>
+                                	<string key="segmentIdFor.YFYA2LOC" value="YFYA2"/>
+                                	<string key="segmentIdFor.VENA2UPR" value="VENA2"/>
+                                	<string key="segmentIdFor.VENA2LWR" value="VENA2"/>
+                                	<string key="segmentIdFor.BVRA2LOC" value="BVRA2"/>
+                                	<string key="segmentIdFor.YRBA2LOC" value="YRBA2"/>
+                                	<string key="segmentIdFor.TALA2LOC" value="TALA2"/>
+
+<!--                                	<string key="segmentIdFor.RBYA2LOC" value="RBYA2"/>
+                                	<string key="segmentIdFor.GYRA2LOC" value="GYRA2"/>
+                                	<string key="segmentIdFor.NULA2LOC" value="NULA2"/>
+                                	<string key="segmentIdFor.YANA2LOC" value="YANA2"/>
+                                	<string key="segmentIdFor.RSHA2LOC" value="RSHA2"/>
+                                	<string key="segmentIdFor.YPSA2LOC" value="YPSA2"/>-->
+
+                                	<string key="segmentIdFor.SUDA2UG" value="SUDA2"/>
+                                	<string key="segmentIdFor.SUDA2LG" value="SUDA2"/>
+                                	<string key="segmentIdFor.SUDA2UPR" value="SUDA2"/>
+                                	<string key="segmentIdFor.SUDA2LWR" value="SUDA2"/>
+                                	<string key="segmentIdFor.MACA2UG" value="MACA2"/>
+                                	<string key="segmentIdFor.MACA2LG" value="MACA2"/>
+                                	<string key="segmentIdFor.MACA2UPR" value="MACA2"/>
+                                	<string key="segmentIdFor.MACA2LWR" value="MACA2"/>
+                                	<string key="segmentIdFor.SUCA2UPR" value="SUCA2"/>
+                                	<string key="segmentIdFor.SUCA2LWR" value="SUCA2"/>
+                                	<string key="segmentIdFor.GCSA2UPR" value="GCSA2"/>
+                                	<string key="segmentIdFor.GCSA2LWR" value="GCSA2"/>
+                                	<string key="segmentIdFor.CLTA2GL" value="CLTA2"/>
+                                	<string key="segmentIdFor.CLTA2UPR" value="CLTA2"/>
+                                	<string key="segmentIdFor.CLTA2LWR" value="CLTA2"/>
+                                	<string key="segmentIdFor.TRTA2GL" value="TRTA2"/>
+                                	<string key="segmentIdFor.TRTA2UPR" value="TRTA2"/>
+                                	<string key="segmentIdFor.TRTA2LWR" value="TRTA2"/>
+                                	<string key="segmentIdFor.TKTA2" value="TRTA2"/>
+                                	<string key="segmentIdFor.SUNA2LOC" value="SUNA2"/>
+                                	<string key="segmentIdFor.MONA2UPR" value="MONA2"/>
+                                	<string key="segmentIdFor.MONA2LWR" value="MONA2"/>
+                                	<string key="segmentIdFor.WLWA2UPR" value="WLWA2"/>
+                                	<string key="segmentIdFor.WLWA2LWR" value="WLWA2"/>
+                                	<string key="segmentIdFor.WILA2LOC" value="WILA2"/>
+                                	<string key="segmentIdFor.LSUA2GL" value="LSUA2"/>
+                                	<string key="segmentIdFor.LSUA2UPR" value="LSUA2"/>
+                                	<string key="segmentIdFor.LSUA2LWR" value="LSUA2"/>
+                                	<string key="segmentIdFor.LSOA2" value="LSUA2"/>
+                                	<string key="segmentIdFor.LSHA2UPR" value="LSHA2"/>
+                                	<string key="segmentIdFor.LSHA2LWR" value="LSHA2"/>
+                                	<string key="segmentIdFor.SKWA2UG" value="SKWA2"/>
+                                	<string key="segmentIdFor.SKWA2LG" value="SKWA2"/>
+                                	<string key="segmentIdFor.SKWA2UPR" value="SKWA2"/>
+                                	<string key="segmentIdFor.SKWA2LWR" value="SKWA2"/>
+                                	<string key="segmentIdFor.YLKA2UG" value="YLKA2"/>
+                                	<string key="segmentIdFor.YLKA2LG" value="YLKA2"/>
+                                	<string key="segmentIdFor.YLKA2UPR" value="YLKA2"/>
+                                	<string key="segmentIdFor.YLKA2LWR" value="YLKA2"/>
+                                	<string key="segmentIdFor.YSSA2UG" value="YSSA2"/>
+                                	<string key="segmentIdFor.YSSA2LG" value="YSSA2"/>
+                                	<string key="segmentIdFor.YSSA2UPR" value="YSSA2"/>
+                                	<string key="segmentIdFor.YSSA2LWR" value="YSSA2"/>
+
+                                	<string key="segmentIdFor.GAKA2GL" value="GAKA2"/>
+                                	<string key="segmentIdFor.GAKA2UPR" value="GAKA2"/>
+                                	<string key="segmentIdFor.GAKA2LWR" value="GAKA2"/>
+                                	<string key="segmentIdFor.GPOA2UPR" value="GPOA2"/>
+                                	<string key="segmentIdFor.GPOA2LWR" value="GPOA2"/>
+                                	<string key="segmentIdFor.GRSA2UPR" value="GRSA2"/>
+                                	<string key="segmentIdFor.GRSA2LWR" value="GRSA2"/>
+                                	<string key="segmentIdFor.GULA2LOC" value="GULA2"/>
+                                	<string key="segmentIdFor.TAZA2UG" value="TAZA2"/>
+                                	<string key="segmentIdFor.TAZA2LG" value="TAZA2"/>
+                                	<string key="segmentIdFor.TAZA2UPR" value="TAZA2"/>
+                                	<string key="segmentIdFor.TAZA2LWR" value="TAZA2"/>
+                                	<string key="segmentIdFor.KLUA2GL" value="KLUA2"/>
+                                	<string key="segmentIdFor.KLUA2UPR" value="KLUA2"/>
+                                	<string key="segmentIdFor.KLUA2LWR" value="KLUA2"/>
+                                	<string key="segmentIdFor.TONA2GL" value="TONA2"/>
+                                	<string key="segmentIdFor.TONA2UPR" value="TONA2"/>
+                                	<string key="segmentIdFor.TONA2LWR" value="TONA2"/>
+
+                                	<string key="segmentIdFor.CHRA2LOC" value="CHRA2"/>
+                                	<string key="segmentIdFor.CSRA2UPR" value="CSRA2"/>
+                                	<string key="segmentIdFor.CSRA2LWR" value="CSRA2"/>
+                                	<string key="segmentIdFor.SHIA2UPR" value="SHIA2"/>
+                                	<string key="segmentIdFor.SHIA2LWR" value="SHIA2"/>
+                                	<string key="segmentIdFor.ERBA2GL" value="ERBA2"/>
+                                	<string key="segmentIdFor.ERBA2UPR" value="ERBA2"/>
+                                	<string key="segmentIdFor.ERBA2LWR" value="ERBA2"/>
+                                	<string key="segmentIdFor.TRPA2GL" value="TRPA2"/>
+                                	<string key="segmentIdFor.TRPA2UPR" value="TRPA2"/>
+                                	<string key="segmentIdFor.TRPA2LWR" value="TRPA2"/>
+
+                                	<string key="segmentIdFor.SNOA2GL" value="SNOA2"/>
+                                	<string key="segmentIdFor.SNOA2UPR" value="SNOA2"/>
+                                	<string key="segmentIdFor.SNOA2LWR" value="SNOA2"/>
+                                	<string key="segmentIdFor.MPTA2GL" value="MPTA2"/>
+                                	<string key="segmentIdFor.MPTA2UPR" value="MPTA2"/>
+                                	<string key="segmentIdFor.MPTA2LWR" value="MPTA2"/>
+                                	<string key="segmentIdFor.COOA2UPR" value="COOA2"/>
+                                	<string key="segmentIdFor.COOA2LWR" value="COOA2"/>
+                                	<string key="segmentIdFor.CTSA2UPR" value="CTSA2"/>
+                                	<string key="segmentIdFor.CTSA2LWR" value="CTSA2"/>
+                                	<string key="segmentIdFor.SKIA2UG" value="SKIA2"/>
+                                	<string key="segmentIdFor.SKIA2LG" value="SKIA2"/>
+                                	<string key="segmentIdFor.SKIA2NG" value="SKIA2"/>
+                                	<string key="segmentIdFor.SKLA2UPR" value="SKLA2"/>
+                                	<string key="segmentIdFor.SKLA2LWR" value="SKLA2"/>
+                                	<string key="segmentIdFor.KIYA2GL" value="KIYA2"/>
+                                	<string key="segmentIdFor.KIYA2UPR" value="KIYA2"/>
+                                	<string key="segmentIdFor.KIYA2LWR" value="KIYA2"/>
+                                	<string key="segmentIdFor.KRKA2LOC" value="KRKA2"/>
+                                	<string key="segmentIdFor.KEYA2" value="KRKA2"/>
+                                	<string key="segmentIdFor.SXRA2FUP" value="SXRA2"/>
+                                	<string key="segmentIdFor.SXRA2FLO" value="SXRA2"/>
+                                	<string key="segmentIdFor.SXRA2MOO" value="SXRA2"/>
+                                	<string key="segmentIdFor.SXRA2LOC" value="SXRA2"/>
+                                	<string key="segmentIdFor.RESA2GL" value="RESA2"/>
+                                	<string key="segmentIdFor.RESA2UPR" value="RESA2"/>
+                                	<string key="segmentIdFor.RESA2LWR" value="RESA2"/>
+                                	<string key="segmentIdFor.SIXA2UPR" value="SIXA2"/>
+                                	<string key="segmentIdFor.SIXA2LWR" value="SIXA2"/>
+                                	<string key="segmentIdFor.NINA2UPR" value="NINA2"/>
+                                	<string key="segmentIdFor.NINA2LWR" value="NINA2"/>
+                                	<string key="segmentIdFor.APTA2UPR" value="APTA2"/>
+                                	<string key="segmentIdFor.APTA2LWR" value="APTA2"/>
+                                	<string key="segmentIdFor.APBA2UPR" value="APBA2"/>
+                                	<string key="segmentIdFor.APBA2LWR" value="APBA2"/>
+
+                                	<string key="segmentIdFor.ILRA2UPR" value="ILRA2"/>
+                                	<string key="segmentIdFor.ILRA2LWR" value="ILRA2"/>
+                                	<string key="segmentIdFor.NRDA2UPR" value="NRDA2"/>
+                                	<string key="segmentIdFor.NRDA2LWR" value="NRDA2"/>
+                                	<string key="segmentIdFor.MULA2UPR" value="MULA2"/>
+                                	<string key="segmentIdFor.MULA2LWR" value="MULA2"/>
+                                	<string key="segmentIdFor.NSHA2UPR" value="NSHA2"/>
+                                	<string key="segmentIdFor.NSHA2LWR" value="NSHA2"/>
+
+                                	<string key="segmentIdFor.BRUA2GL" value="BRUA2"/>
+                                	<string key="segmentIdFor.BRUA2NG" value="BRUA2"/>
+                                	<string key="segmentIdFor.BRMA2GL" value="BRMA2"/>
+                                	<string key="segmentIdFor.BRMA2NG" value="BRMA2"/>
+                                	<string key="segmentIdFor.BRDA2GL" value="BRDA2"/>
+                                	<string key="segmentIdFor.BRDA2UPR" value="BRDA2"/>
+                                	<string key="segmentIdFor.BRDA2LWR" value="BRDA2"/>
+                                	<string key="segmentIdFor.BRTA2UPR" value="BRTA2"/>
+                                	<string key="segmentIdFor.BRTA2MID" value="BRTA2"/>
+                                	<string key="segmentIdFor.BRTA2LWR" value="BRTA2"/>
+				</properties>
+                        </exportRunFileActivity>
+		</exportActivities>
+		<executeActivities>
+			<executeActivity>
+				<command>
+					<className>ohd.hseb.ohdfewsadapter.OHDFewsAdapter</className>
+					<binDir>$OHDBINDIR$</binDir>
+				</command>
+				<arguments>
+					<argument>%ROOT_DIR%/run_info.xml</argument>
+				</arguments>
+				<timeOut>600000</timeOut>
+			</executeActivity>
+		</executeActivities>
+	</activities>
+</generalAdapterRun>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+<!-- Merged the historical SWE states in both PIXML and Datacard formats-->
+	<variable>
+		<variableId>PIXML_SWE_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportPIXML</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>		
+	</variable>
+	<variable>
+		<variableId>Datacard_SWE_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDataCard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>	
+	</variable>
+	<variable>
+		<variableId>Merged_SWE_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MergeSWE_NE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>4</synchLevel>
+			<expiryTime unit="year" multiplier="100"/>
+		</timeSeriesSet>
+	</variable>	
+	<transformation id="Obs_merge_swe_ne">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>PIXML_SWE_ne</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>Datacard_SWE_ne</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>Merged_SWE_ne</variableId>
+				</outputVariable>
+			</simple>
+		</merge>	
+	</transformation>
+</transformationModule>

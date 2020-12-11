@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://c
+hps1/schemas/transformationModule.xsd" version="1.0">
+   
+    <!-- NOTE: This module converts 6h MAP data imported in local time to a GMT synoptic time clock (0, 6, 12, 18Z).  
+        It is done using nearest neighbor, shifting the local time time series accordingly.
+    -->
+   
+    <!-- Input variable: FMAP -->
+    <variable>
+        <variableId>hist_fmap</variableId>
+        <timeSeriesSet>
+             <moduleInstanceId>ImportMEFPPEDatacardsInLocaltime</moduleInstanceId>
+             <valueType>scalar</valueType>
+             <parameterId>MAP</parameterId>
+             <locationSetId>Catchments_HEFS</locationSetId>
+             <timeSeriesType>external historical</timeSeriesType>
+             <timeStep unit="hour" multiplier="6" timeZone="GMT-9"/>               
+             <readWriteMode>read complete forecast</readWriteMode>                  
+         </timeSeriesSet>
+    </variable>
+    
+    <!-- Intermediary variable: stores the GMT version of the input series, acquired by nearest neighbor 
+         interpolation.-->
+    <variable>
+        <variableId>gmt_fmap</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_MAP_to_GMT</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>MAP</parameterId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>  
+        <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="true"/>             
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+   
+    <!-- 
+    ========================================================
+    TRANSFORMATIONS
+    ========================================================
+    -->
+   
+    <!-- Create the GMT time series from the local time time series using nearest neighbor sampling. --> 
+    <transformation id="sample_gmt_fmat">
+        <sample>
+            <equidistant>
+                <equidistantInputVariable>
+                    <variableId>hist_fmap</variableId>
+                </equidistantInputVariable>
+                <timeReferenceInputVariable>
+                    <variableId>gmt_fmap</variableId>
+                </timeReferenceInputVariable>
+                <interpolationType>closest</interpolationType>
+                <ignoreMissing>false</ignoreMissing>
+                <outputVariable>
+                    <variableId>gmt_fmap</variableId>
+                </outputVariable>
+            </equidistant>
+        </sample>
+    </transformation>
+    
+    
+</transformationModule>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientConfiguration xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews
+http://fews.wldelft.nl/schemas/version1.0/clientConfig.xsd">
+	<clientType>Operator Client</clientType>
+	<otherRootConfigFiles>
+		<name>patch.jar</name>
+		<name>nwct_oc_global.properties</name>
+	</otherRootConfigFiles>
+	<connection id="ACRMCNWCT" name="APRFC">
+		<databaseServer>
+			<url>jdbc:postgresql://chps11-nwct:5432/acrdbnwct?sslfactory=org.postgresql.ssl.jdbc4.LibPQFactory&amp;sslmode=verify-ca</url>
+			<user>awips</user>
+			<!-- <encryptedPassword>lKAS5t5PHw5wPI9hLCn0pg==</encryptedPassword> -->
+		</databaseServer>
+		<!-- Uncomment if synchronisation is desired -->
+		<!--<synchProfileId>full</synchProfileId>
+		<synchProfileId>minimal</synchProfileId>-->
+	</connection>
+
+        <jvmOption>-Dsession.temp.dirs=/awips/chps_local/temp/acr</jvmOption>
+	<jvmOption>-Xmn1100m</jvmOption>
+	<jvmOption>-Xmx2048m</jvmOption>
+</clientConfiguration>

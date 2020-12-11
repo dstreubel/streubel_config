@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>APBA2_QIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_APBA2_APBA2OB6_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QIN</parameterId>
+			<locationId>APBA2</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>APBA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_APBA2_APTA2RTD_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>APBA2</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>APBA2_QINE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADJUSTQ_APBA2_APBA2ADJ_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationId>APBA2</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="APBA2ADJ">
+		<adjust>
+			<adjustQUsingObservedInstantaneousDischarge>
+				<observedDischarge>
+					<variableId>APBA2_QIN_6</variableId>
+				</observedDischarge>
+				<simulatedInstantaneousDischarge>
+					<variableId>APBA2_SQIN_6</variableId>
+				</simulatedInstantaneousDischarge>
+				<moduleParameterFile>ADJUSTQ_APBA2_APBA2ADJ_UpdateStates</moduleParameterFile>
+				<adjustedForecastDischarge>
+					<variableId>APBA2_QINE_6</variableId>
+				</adjustedForecastDischarge>
+			</adjustQUsingObservedInstantaneousDischarge>
+		</adjust>
+	</transformation>
+</transformationModule>

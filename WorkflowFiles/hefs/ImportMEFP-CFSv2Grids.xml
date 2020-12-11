@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+
+    <!-- Import CFSv2 and interpolate the grid to the USA subset grid. -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>ImportMEFP_CFSv2_FMAP</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>ImportMEFP_CFSv2_TMAX</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>ImportMEFP_CFSv2_TMIN</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_CFSv2_Interpolate_USA</moduleInstanceId>
+    </activity>
+    
+    <!-- Location interpolation and data export is done here because the lagged ensemble
+         archive directory must be populated for every imported grid.  So it makes sense
+	 to do this during import. -->
+    
+    <!-- Location interpolation. -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_CFSv2_Interpolate_Location_FMAP</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_CFSv2_Interpolate_Location_TFMX</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_CFSv2_Interpolate_Location_TFMN</moduleInstanceId>
+    </activity>
+    
+    <!-- Interpolate USA CFSv2 grid over the HEFS points and export files -->
+    <!-- Add one activity per HEFS forecast group here -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <workflowId>MEFP_CFSv2_Export</workflowId>
+    </activity>
+
+</workflow>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+<!-- raw ingested data-->
+<!--	<variable>
+		<variableId>snotel_SNWE_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MergeSNWE_NE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snotel</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>-->
+
+	<variable>
+		<variableId>snowcourse_SNWE_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MergeSNWE_NE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snowcourses</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+
+	<!-- sampled/snapped to equidistant timesteps, editable, stored in datastore-->
+<!--	<variable>
+		<variableId>snotel_SNWE_eq_1d</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RRS_SampleSNWE_historical</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snotel</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="day" start="-20000" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>4</synchLevel>
+		</timeSeriesSet>
+	</variable>-->
+
+	<variable>
+		<variableId>snowcourse_SNWE_eq_1m</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RRS_SampleSNWE_historical</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snowcourses</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="month" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-20000" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+
+<!--	<transformation id="snotel_RRS_SampleSNWE_eq_1d">
+		<sample>
+			<nonEquidistant>
+				<nonEquidistantInputVariable>
+					<variableId>snotel_SNWE_ne</variableId>
+				</nonEquidistantInputVariable>
+				<interpolationType>linearOrClosest</interpolationType>
+				<outputVariable>
+					<variableId>snotel_SNWE_eq_1d</variableId>
+				</outputVariable>
+			</nonEquidistant>
+		</sample>
+	</transformation>-->
+
+	<transformation id="snowcourse_RRS_SampleSNWE_eq_1m">
+		<sample>
+			<nonEquidistant>
+				<nonEquidistantInputVariable>
+					<variableId>snowcourse_SNWE_ne</variableId>
+				</nonEquidistantInputVariable>
+				<interpolationType>linearOrClosest</interpolationType>
+				<outputVariable>
+					<variableId>snowcourse_SNWE_eq_1m</variableId>
+				</outputVariable>
+			</nonEquidistant>
+		</sample>
+	</transformation>
+
+</transformationModule>

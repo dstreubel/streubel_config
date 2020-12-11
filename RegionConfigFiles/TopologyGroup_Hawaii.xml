@@ -1,0 +1,449 @@
+<topologyGroup xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/topologyGroup.xsd">
+	<group id="ForecastGroup_Hawaii">
+		<!--nodes id="NWM" name="Import National Water Model">
+			<node id="ImportNetCDF_NWMAssim" name="Import NWM Observations">
+			<workflowId>ImportNetCDF_NWMAssimHrly</workflowId>
+			<localRun>false</localRun>
+			<showRunApprovedForecastButton>true</showRunApprovedForecastButton>
+			</node>
+		<node id="ImportNetCDF_NWMFcstHrly" name="Import Hourly NWM Forecasts">
+			<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+			<localRun>false</localRun>
+			<showRunApprovedForecastButton>true</showRunApprovedForecastButton>
+			</node>
+		<mapExtentId>APRFC</mapExtentId>
+		<filterId>NWM</filterId>
+		</nodes-->
+		<nodes id="HFO-RFC Priority Basins" name="HFO-RFC Priority Basins">
+			<node id="NLIH1 " name="NLIH1 Honolii Str. Nr Papaikou">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_NLIH1_NLIH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_NLIH1_NLIH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WLUH1 " name="WLUH1 Wailuku River at Piihonua">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WLUH1_WLUH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WLUH1_WLUH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WWKH1 " name="WWKH1 West Wailuaiki Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WWKH1_WWKH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WWKH1_WWKH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WHRH1 " name="WHRH1 Waihee River abv Waihee Ditch">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WHRH1_WHRH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WHRH1_WHRH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="MNWH1 " name="MNWH1 Manoa Stream - Woodlawn">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_MNWH1_MNWH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_MNWH1_MNWH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WHSH1 " name="WHSH1 Waiahole Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WHSH1_WHSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WHSH1_WHSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="OPAH1 " name="OPAH1 Opaeula Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_OPAH1_OPAH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_OPAH1_OPAH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="HLEH1 " name="HLEH1 Hanalei River">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_HLEH1_HLEH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_HLEH1_HLEH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WSFH1 " name="WSFH1 SF Wailua River">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WSFH1_WSFH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WSFH1_WSFH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WRVH1 " name="WRVH1 Waimea River">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+			        <moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+			</node>
+		</nodes>
+		<nodes id="Kauai" name="Kauai">
+			<node id="AEPH1" name="AEPH1 Aepo Reservoir">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="ALEH1" name="ALEH1 Alexander Reservoir">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="APHH1" name="APHH1 Aepoeha Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="ELUH1" name="ELUH1 Elua Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="HLAH1" name="HLAH1 Halaulani Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_HLAH1_HLAH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_HLAH1_HLAH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="HLEH1" name="HLEH1 Hanalei River">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_HLEH1_HLEH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_HLEH1_HLEH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="HNRH1" name="HNRH1 Halenanahu Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="HUNH1" name="HUNH1 Huinawai Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="KLKH1" name="KLKH1 Kaloko Reservoir">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KLKH1_KLKH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KLKH1_KLKH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KLWH1" name="KLWH1 Kalihiwai Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="KRSH1" name="KRSH1 Kapaia Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="KWKH1" name="KWKH1 Kawaikoi Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KWKH1_KWKH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KWKH1_KWKH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="MKUH1" name="MKUH1 Mauka Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="MKLH1" name="MKLH1 Makaweli River">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_MKLH1_MKLH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_MKLH1_MKLH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="OKNH1" name="OKNH1 Okinawa Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>		
+			<node id="OLBH1" name="OLBH1 Opaekaa Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_OLBH1_OLBH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_OLBH1_OLBH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="UKRH1" name="UKRH1 Upper Kapahi Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="WURH1" name="WURH1 Wailua River">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="WEBH1" name="WEBH1 Wailua River">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WEBH1_WEBH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WEBH1_WEBH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WIEH1" name="WIEH1 Waialae Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WIEH1_WIEH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WIEH1_WIEH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WLRH1" name="WLRH1 Waiakalua Stream">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="WTRH1" name="WTRH1 Waita Stream">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="WNIH1" name="WNIH1 Wainiha River">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WNIH1_WNIH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WNIH1_WNIH1SIM_Forecast</moduleInstanceId>	
+			</node>
+
+			<node id="WLDH1" name="WLDH1 Wailua Ditch">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="WRVH1" name="WRVH1 Waimea River">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+			        <moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+			</node>
+			<node id="WSFH1" name="WSFH1 SF Wailua River">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WSFH1_WSFH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WSFH1_WSFH1SIM_Forecast</moduleInstanceId>	
+			</node>
+		</nodes>
+		<nodes id="Oahu_Molakai" name="Oahu_Molakai">
+			
+			
+			<node id="HOUH1" name="HOUH1 Honouliuli Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_HOUH1_HOUH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_HOUH1_HOUH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="HKSH1" name="HKSH1 Honokohau Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_HKSH1_HKSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_HKSH1_HKSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="HMRH1" name="HMRH1 Helemano 16 Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="HLSH1" name="HLSH1 Helemano Stream Nr Haleiwa">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_HLSH1_HLSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_HLSH1_HLSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="HUSH1" name="HUSH1 HEEIA STREAM">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_HUSH1_HUSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_HUSH1_HUSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="HLWH1" name="HLWH1 Halawa Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_HLWH1_HLWH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_HLWH1_HLWH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KKGH1" name="KKGH1 Kaunakakai Gulch">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KKGH1_KKGH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KKGH1_KKGH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KNAH1" name="KNAH1 Kahana Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KNAH1_KNAH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KNAH1_KNAH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KWGH1" name="KWGH1 KAWELA GULCH">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KWGH1_KWGH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KWGH1_KWGH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KHSH1" name="KHSH1 Kalihi Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KHSH1_KHSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KHSH1_KHSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KNNH1" name="KNNH1 Kamananui Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KNNH1_KNNH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KNNH1_KNNH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KMSH1" name="KMSH1 Kawainui Marsh Stn 15">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="KNFH1" name="KNFH1 North Fork Kaukonahua Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KNFH1_KNFH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KNFH1_KNFH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KSFH1" name="KSFH1 South Fork Kaukonahua Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KSFH1_KSFH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KSFH1_KSFH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KUTH1" name="KUTH1 Ku Tree Reservoir">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KUTH1_KUTH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KUTH1_KUTH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KOWH1" name="KOWH1 Kaukonahua Stream - Waialua">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KOWH1_KOWH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KOWH1_KOWH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KLSH1" name="KLSH1 Kaluanui Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KLSH1_KLSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KLSH1_KLSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="MNSH1" name="MNSH1 Manoa Stream - Kanewai">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="MNWH1" name="MNWH1 Manoa Stream - Woodlawn">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_MNWH1_MNWH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_MNWH1_MNWH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="MKSH1" name="MKSH1 Makiki Stream - King">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_MKSH1_MKSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_MKSH1_MKSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="MWSH1" name="MWSH1 Makawao Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_MWSH1_MWSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_MWSH1_MWSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="MKHH1" name="MKHH1 Makaha Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_MKHH1_MKHH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_MKHH1_MKHH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="NHSH1" name="NHSH1 North Halawa Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_NHSH1_NHSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_NHSH1_NHSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="NURH1" name="NURH1 Nuuanu Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="OPAH1" name="OPAH1 Opaeula Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_OPAH1_OPAH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_OPAH1_OPAH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="OPSH1" name="OPSH1 Opaeula Stream Nr Haleiwa">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_OPSH1_OPSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_OPSH1_OPSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="PKSH1" name="PKSH1 Pukele Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_PKSH1_PKSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_PKSH1_PKSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="PNSH1" name="PNSH1 Punaluu Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_PNSH1_PNSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_PNSH1_PNSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="UHLH1" name="UHLH1 Upper Helemano Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<!--node id="WRSH1" name="WRSH1 Wahiawa Reservoir Spillway">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WRSH1_WRSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WRSH1_WRSH1SIM_Forecast</moduleInstanceId>	
+			</node-->
+			<node id="WKNH1" name="WKNH1 Waikane Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WKNH1_WKNH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WKNH1_WKNH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WKGH1" name="WKGH1 Waiakeakua Stream">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="WHSH1" name="WHSH1 Waiahole Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WHSH1_WHSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WHSH1_WHSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WESH1" name="WESH1 Waihee Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WESH1_WESH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WESH1_WESH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WISH1" name="WISH1 Waihi Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WISH1_WISH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WISH1_WISH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WKSH1" name="WKSH1 Waikele Stream">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+				<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>	
+			</node>
+			<node id="WKRH1" name="WKRH1 Waiakoali">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+			        <moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+			</node>
+			
+		</nodes>
+		<nodes id="Mauai" name="Mauai">
+			<node id="HNWH1" name="HNWH1 Hanawi Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_HNWH1_HNWH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_HNWH1_HNWH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="HPOH1" name="HPOH1 Honopou Stream Nr Huelo">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_HPOH1_HPOH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_HPOH1_HPOH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="IAOH1" name="IAOH1 Wailuku River">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_IAOH1_IAOH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_IAOH1_IAOH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KKLH1" name="KKLH1 Kahakuloa Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KKLH1_KKLH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KKLH1_KKLH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KLRH1" name="KLRH1 Kaupakulua Reservoir">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+			        <moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+			</node>
+			<node id="KWSH1" name="KWSH1 Kawainui Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_KWSH1_KWSH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_KWSH1_KWSH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="KKSH1" name="KKSH1 Kohakohau Stream">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+			        <moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+			</node>
+			<node id="OHGH1" name="OHGH1 Oheo Gulch">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_OHGH1_OHGH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_OHGH1_OHGH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WKMH1" name="WKMH1 Waiokamilo Stream">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+			        <moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+			</node>
+			<node id="WWKH1" name="WWKH1 West Wailuaiki Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WWKH1_WWKH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WWKH1_WWKH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WKOH1" name="WKOH1 Waikoloa Stream">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+			        <moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+			</node>
+		</nodes>
+		<nodes id="Big Island" name="Big Island">
+			<node id="ALKH1" name="ALKH1 Alakahi Stream">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_ALKH1_ALKH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_ALKH1_ALKH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="NLIH1" name="NLIH1 Honolii Str. Nr Papaikou">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_NLIH1_NLIH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_NLIH1_NLIH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="SDQH1" name="SDQH1 Saddle Road Quarry">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+			        <moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+			</node>
+			<node id="WLUH1" name="WLUH1 Wailuku River at Piihonua">
+				<workflowId>Hawaii_Forecast</workflowId>
+				<moduleInstanceId>QSTAGE_WLUH1_WLUH1OB1_Forecast</moduleInstanceId>
+				<moduleInstanceId>QSTAGE_WLUH1_WLUH1SIM_Forecast</moduleInstanceId>	
+			</node>
+			<node id="WASH1" name="WASH1 Waiakea Stream">
+				<workflowId>ImportNetCDF_NWMFcstHrly</workflowId>
+			        <moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+			</node>
+			<mapExtentId>APRFC_Hawaii</mapExtentId>
+		</nodes>
+		
+			
+	</group>
+</topologyGroup>

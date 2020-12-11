@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd">
+	<modifierType>HISTORICWATERYEARS</modifierType>
+	<group id="default">
+		<parameter id="startYear">
+			<intValue>1970</intValue>
+		</parameter>
+		<parameter id="firstEnsembleMemberIndex">
+			<intValue>1970</intValue>
+		</parameter>
+		<parameter id="ensembleMemberCount">
+			<intValue>36</intValue>
+		</parameter>
+		<parameter id="startWaterYear">
+			<stringValue>--10-01</stringValue>
+		</parameter>
+	</group>
+</parameters>

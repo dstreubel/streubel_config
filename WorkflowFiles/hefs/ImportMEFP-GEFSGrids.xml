@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+
+    <!-- Import GEFS and interpolate the grid to the USA subset grid. 
+         The data is already the ensemble mean, so no further work is needed. -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>ImportMEFP_GEFS</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_GEFS_Interpolate_USA</moduleInstanceId>
+    </activity>
+
+</workflow>

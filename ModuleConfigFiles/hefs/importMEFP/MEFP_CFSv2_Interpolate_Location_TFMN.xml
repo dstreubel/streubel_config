@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+    <variable>
+        <variableId>cfsv2_grid</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_CFSv2_Interpolate_USA</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>TFMN</parameterId>
+            <locationId>HEFS_CFSv2_USA</locationId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6" />
+            <readWriteMode>read complete forecast</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>cfsv2_scalar</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>MEFP_CFSv2_Interpolate_Location_TFMN</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TFMN</parameterId>
+            <qualifierId>CFSv2</qualifierId>
+            <locationSetId>Catchments_HEFS</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>add originals</readWriteMode>
+            <ensembleId>main</ensembleId>
+        </timeSeriesSet>
+    </variable>
+    <transformation id="SpatiallyInterpolatedHEFS-CFSv2">
+        <interpolationSpatial>
+            <closestDistance>
+                <inputVariable>
+                    <variableId>cfsv2_grid</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>cfsv2_scalar</variableId>
+                </outputVariable>
+            </closestDistance>
+        </interpolationSpatial>
+    </transformation>
+</transformationModule>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/fle/mpe/fzl06</folder>
+			<idMapId>IdImportGRIB1_Estimate</idMapId>
+			<unitConversionsId>ImportGrib</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+        
+		<timeSeriesSet>
+			<moduleInstanceId>ImportFLE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>FLE</parameterId>
+			<locationId>HRAP</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+        <externUnit unit="KFT" parameterId="FLE"/> 
+	</import>
+	
+</timeSeriesImportRun>

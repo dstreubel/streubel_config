@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+    <group id="default">
+     <parameter id="LAGQ_PAIRS">
+      <table>
+         <columnTypes A="double" B="double"/>
+         <row A="0.000" B="0.000"/>
+         <row A="0.000" B="0.000"/>
+      </table>
+    </parameter>
+     <parameter id="KQ_PAIRS">
+      <table>
+         <columnTypes A="double" B="double"/>
+         <row A="0.000" B="0.000"/>
+         <row A="0.000" B="0.000"/>
+      </table>
+     </parameter>
+        <!--<model>LAGK</model>-->
+        <parameter id="METR_OR_ENGL_UNITS">
+            <stringValue>@UNITS@</stringValue>
+        </parameter>
+        <parameter id="INFLOW_TS_ID">
+            <stringValue>@INFLOW_TS_LOC@</stringValue>
+        </parameter>
+        <parameter id="INFLOW_TS_DATA_TYPE">
+            <stringValue>SQIN</stringValue>
+        </parameter>
+        <parameter id="INFLOW_TS_INTERVAL">
+            <intValue>@INTERVAL@</intValue>
+        </parameter>
+        <parameter id="OUTFLOW_TS_ID">
+            <stringValue>@OUTFLOW_TS_LOC@</stringValue>
+        </parameter>
+        <parameter id="OUTFLOW_TS_DATA_TYPE">
+            <stringValue>SQIN</stringValue>
+        </parameter>
+        <parameter id="OUTFLOW_TS_INTERVAL">
+            <intValue>@INTERVAL@</intValue>
+        </parameter>
+        <parameter id="NUMBER_OF_LAGQ_PAIRS">
+            <intValue>@NUMBER_OF_LAGQ_PAIRS@</intValue>
+        </parameter>
+        <parameter id="CONSTANT_LAG_VALUE">
+            <dblValue>@LAG1@</dblValue>
+        </parameter>
+        <parameter id="NUMBER_OF_KQ_PAIRS">
+            <intValue>@NUMBER_OF_KQ_PAIRS@</intValue>
+        </parameter>
+        <parameter id="CONSTANT_K_VALUE">
+            <dblValue>@K1@</dblValue>
+        </parameter>
+    </group>
+</parameters>

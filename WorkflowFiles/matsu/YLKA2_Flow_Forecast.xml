@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="FGROUP" value="Matsu"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_YLKA2_YLKA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2UG"/>
+			<string key="FGROUP" value="Matsu"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_YLKA2_YLKA2UG_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_GL_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2LG"/>
+			<string key="FGROUP" value="Matsu"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_YLKA2_YLKA2LG_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_GL_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2UPR"/>
+			<string key="FGROUP" value="Matsu"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_YLKA2_YLKA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2LWR"/>
+			<string key="FGROUP" value="Matsu"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_YLKA2_YLKA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2UG"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>GLACIER_YLKA2_YLKA2UG_Forecast</moduleInstanceId>
+		<moduleConfigFileName>GLACIER_UG_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2LG"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>GLACIER_YLKA2_YLKA2LG_Forecast</moduleInstanceId>
+		<moduleConfigFileName>GLACIER_LG_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_YLKA2_YLKA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_YLKA2_YLKA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2UG"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_YLKA2_YLKA2UG_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_GL_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2LG"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_YLKA2_YLKA2LG_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_GL_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_YLKA2_YLKA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="CATCHMENT" value="YLKA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_YLKA2_YLKA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>LAGK_YLKA2_SKWA2_Forecast</moduleInstanceId>
+	</activity>    
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_YLKA2_YLKA2UG_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_YLKA2_YLKA2LOC_Forecast</moduleInstanceId>
+	</activity>   
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_YLKA2_YLKA2LOC_Forecast"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_YLKA2_YLKA2OB6_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_YLKA2_YLKA2LOC_Forecast"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_YLKA2_YLKA2SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_Forecast_template</moduleConfigFileName>
+	</activity>		
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_YLKA2_YLKA2LOC_Forecast"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_YLKA2_YLKA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_YLKA2_YLKA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="ZONE" value="UG"/>		
+			<string key="exportParameter" value="UGS"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>				
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_YLKA2_YLKA2UGS_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="ZONE" value="LG"/>		
+			<string key="exportParameter" value="LGS"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>				
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_YLKA2_YLKA2LGS_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_YLKA2_YLKA2USW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_YLKA2_YLKA2LSW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="ZONE" value="UG"/>		
+			<string key="exportParameter" value="UGC"/>
+			<string key="internalParameter" value="SASC"/>
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_YLKA2_YLKA2UGC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="ZONE" value="LG"/>		
+			<string key="exportParameter" value="LGC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_YLKA2_YLKA2LGC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_YLKA2_YLKA2USC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_YLKA2_YLKA2LSC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_YLKA2_YLKA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="YLKA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Matsu"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_YLKA2_YLKA2MAT_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_Forecast_template</moduleConfigFileName>
+	</activity>		
+</workflow>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="FGROUP" value="Matsu"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_SUCA2_SUCA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="CATCHMENT" value="SUCA2UPR"/>
+			<string key="FGROUP" value="Matsu"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_SUCA2_SUCA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="CATCHMENT" value="SUCA2LWR"/>
+			<string key="FGROUP" value="Matsu"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_SUCA2_SUCA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_Forecast_template</moduleConfigFileName>
+	</activity>		
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="CATCHMENT" value="SUCA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_SUCA2_SUCA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="CATCHMENT" value="SUCA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_SUCA2_SUCA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="CATCHMENT" value="SUCA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_SUCA2_SUCA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="CATCHMENT" value="SUCA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_SUCA2_SUCA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_SUCA2_SUCA2UPR_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>MUSKROUT_SUCA2_SUDA2RTD_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>MUSKROUT_SUCA2_MACA2RTD_Forecast</moduleInstanceId>
+	</activity>
+	<!--<activity>
+		<properties>
+		<string key="SEGMENT" value="SUCA2"/>
+		<string key="US_SEGMENT" value="SUDA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>MUSKROUT_SUCA2_SUDA2RTD_Forecast</moduleInstanceId>
+		<moduleConfigFileName>MUSKROUT_Forecast_template</moduleConfigFileName>
+		</activity>		
+		<activity>
+		<properties>
+		<string key="SEGMENT" value="SUCA2"/>
+		<string key="US_SEGMENT" value="MACA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>MUSKROUT_SUCA2_MACA2RTD_Forecast</moduleInstanceId>
+		<moduleConfigFileName>MUSKROUT_Forecast_template</moduleConfigFileName>
+		</activity>-->
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_SUCA2_SUDA2RTD_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SUCA2_SUCA2USW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SUCA2_SUCA2LSW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SUCA2_SUCA2USC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SUCA2_SUCA2LSC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SUCA2_SUCA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SUCA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Matsu"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SUCA2_SUCA2MAT_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_Forecast_template</moduleConfigFileName>
+	</activity>			
+</workflow>

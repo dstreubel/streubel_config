@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>SHEF</importType>
+			<folder>/awips/chps_share/sa/dps/aprfc_sa/Export/Forcings/onehr</folder>
+			<!--folder>/awips/chps_data/fromCHPS/aprfc/Forcings/onehr</folder-->
+			<!--  Turn on for debugging
+			<logWarningsForUnmappableTimeSeries>true</logWarningsForUnmappableTimeSeries>
+			<logWarningsForUnmappableLocations>true</logWarningsForUnmappableLocations>
+			-->
+			<idMapId>IdImportSHEF</idMapId> 
+			<unitConversionsId>ImportSHEF</unitConversionsId>
+			<missingValue>-999.0</missingValue>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+		</general>
+		<startTimeShift>
+			<locationSetId>Catchments</locationSetId>
+			<parameterId>FMAT</parameterId>
+			<relativePeriod unit="hour" start="-6" end="0"/>
+		</startTimeShift>
+		<startTimeShift>
+			<locationSetId>Catchments</locationSetId>
+			<parameterId>FMAP</parameterId>
+			<relativePeriod unit="hour" start="-6" end="0"/>
+		</startTimeShift>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportRAPSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Catchments_Onehr</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+		<externUnit unit="IN" parameterId="MAP"/>
+		<externUnit unit="IN" parameterId="MAPX_R01"/>
+		<externUnit unit="IN" parameterId="MAPX_R06"/>
+		<externUnit unit="IN" parameterId="PP06"/>
+		<externUnit unit="IN" parameterId="FMAP"/>
+	</import>
+</timeSeriesImportRun>

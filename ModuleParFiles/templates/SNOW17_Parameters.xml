@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_modelparameters.xsd" version="1.5" xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<group id="default">
+		<model>SNOW17</model>
+		<parameter id="MV">
+			<intValue>@MV@</intValue>
+		</parameter>
+		<parameter id="MBASE">
+			<dblValue>@MBASE@</dblValue>
+		</parameter>
+		<parameter id="TAELEV">
+			<dblValue>@TAELEV@</dblValue>
+		</parameter>
+		<!--<parameter id="TALMAX">
+			<dblValue>@TALMAX@</dblValue>
+		</parameter>
+		<parameter id="TALMIN">
+			<dblValue>@TALMIN@</dblValue>
+		</parameter>-->
+		<parameter id="TIPM">
+			<dblValue>@TIPM@</dblValue>
+		</parameter>
+		<parameter id="SCF">
+			<dblValue>@SCF@</dblValue>
+		</parameter>
+		<parameter id="PXTEMP">
+			<dblValue>@PXTEMP@</dblValue>
+		</parameter>
+		<parameter id="SASC_OUTPUT_TS_INTERVAL">
+			<intValue>@SASC_INT@</intValue>
+		</parameter>
+		<parameter id="SI">
+			<dblValue>@SI@</dblValue>
+		</parameter>
+		<parameter id="ELEV">
+			<dblValue>@ELEV@</dblValue>
+		</parameter>
+		<parameter id="PXADJ">
+			<dblValue>@PXADJ@</dblValue>
+		</parameter>
+		<parameter id="AREA_ELEV_CURVE(METR)">
+			<table>
+				<columnTypes A="double" B="double"/>
+				<row A="@EC_A1@" B="@EC_B1@"/>
+				<row A="@EC_A2@" B="@EC_B2@"/>
+				<row A="@EC_A3@" B="@EC_B3@"/>
+				<row A="@EC_A4@" B="@EC_B4@"/>
+				<row A="@EC_A5@" B="@EC_B5@"/>
+				<row A="@EC_A6@" B="@EC_B6@"/>
+				<row A="@EC_A7@" B="@EC_B7@"/>
+				<row A="@EC_A8@" B="@EC_B8@"/>
+				<row A="@EC_A9@" B="@EC_B9@"/>
+				<row A="@EC_A10@" B="@EC_B10@"/>
+				<row A="@EC_A11@" B="@EC_B11@"/>
+				<row A="@EC_A12@" B="@EC_B12@"/>
+				<row A="@EC_A13@" B="@EC_B13@"/>
+				<row A="@EC_A14@" B="@EC_B14@"/>
+			</table>
+		</parameter>
+		<parameter id="SWE_OUTPUT_TS_INTERVAL">
+			<intValue>@SWE_INT@</intValue>
+		</parameter>
+		<parameter id="UADJ">
+			<dblValue>@UADJ@</dblValue>
+		</parameter>
+		<parameter id="MFMIN">
+			<dblValue>@MFMIN@</dblValue>
+		</parameter>
+		<parameter id="SNSG_OUTPUT_TS_INTERVAL">
+			<intValue>@SNSG_INT@</intValue>
+		</parameter>
+		<parameter id="WETOL[0., 1.0]">
+			<dblValue>@WETOL@</dblValue>
+		</parameter>
+		<parameter id="NMF">
+			<dblValue>@NMF@</dblValue>
+		</parameter>
+		<parameter id="SCTOL[0., 1.0]">
+			<dblValue>@SCTOL@</dblValue>
+		</parameter>
+		<parameter id="ALAT">
+			<dblValue>@ALAT@</dblValue>
+		</parameter>
+		<parameter id="MFMAX">
+			<dblValue>@MFMAX@</dblValue>
+		</parameter>
+		<parameter id="PLWHC">
+			<dblValue>@PLWHC@</dblValue>
+		</parameter>
+		<parameter id="RAIN_SNOW_ELEV_INPUT_OPTION">
+			<boolValue>@RAIN_SNOW@</boolValue>
+		</parameter>
+		<parameter id="DAYGM">
+			<dblValue>@DAYGM@</dblValue>
+		</parameter>
+		<parameter id="AREA_DEPLETION_CURVE">
+			<table>
+				<columnTypes A="double"/>
+				<row A="@ADC1@"/>
+				<row A="@ADC2@"/>
+				<row A="@ADC3@"/>
+				<row A="@ADC4@"/>
+				<row A="@ADC5@"/>
+				<row A="@ADC6@"/>
+				<row A="@ADC7@"/>
+				<row A="@ADC8@"/>
+				<row A="@ADC9@"/>
+				<row A="@ADC10@"/>
+				<row A="@ADC11@"/>
+			</table>
+		</parameter>
+	</group>
+</parameters>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<!-- Run nested archive modules -->
+	<activity>
+		<moduleInstanceId>Archive_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<moduleInstanceId>Archive_Thresholds</moduleInstanceId>
+	</activity>
+	<activity>
+		<moduleInstanceId>Archive_TimeSeries</moduleInstanceId>
+	</activity>
+	<activity>
+		<moduleInstanceId>Archive_Configuration</moduleInstanceId>
+	</activity>
+</workflow>

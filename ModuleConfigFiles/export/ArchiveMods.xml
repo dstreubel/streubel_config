@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exportArchiveModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/exportArchiveModule.xsd">
+	<exportSimulated>
+		<general>
+			<archiveFolder>$ARCHIVE_FOLDER$</archiveFolder>
+			<areaId>APRFC</areaId>
+			<idMapId>IdExportArchive</idMapId>
+			<overwritePreviousForecast>true</overwritePreviousForecast>
+		</general>
+		<activities>
+			<netcdfExportActivities>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_MAT.nc</fileName>
+					<!--<sourceId>APRFC</sourceId>-->
+					<ncMetaData>
+						<source>MergeMAT_Forecast</source>
+						<keyword>Mean Areal Temperature</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>MAT</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>MAT</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<!--<locationSetId>$CATCHMENT_SET$</locationSetId>-->
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_MAP.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>MergeMAP_Forecast</source>
+						<keyword>Mean Areal Precipitation</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>MAP</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>MAP</parameterId>
+						<!--<locationSetId>$CATCHMENT_SET$</locationSetId>-->
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_RSEL.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>RSNWELEV_Forecast</source>
+						<keyword>Rain Snow Elevation</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>RainSnowElev</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>RSEL</parameterId>
+						<!--<locationSetId>$RSN_SET$</locationSetId>-->
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_RAIM.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SNOW17_Forecast</source>
+						<keyword>Rain+Melt</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>RAIM</parameterId>
+						<!--<locationSetId>$CATCHMENT_SET$</locationSetId>-->
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_SWE.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SNOW17_Forecast</source>
+						<keyword>Snow Water Equivalence</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>SWE</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_SASC.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SNOW17_Forecast</source>
+						<keyword>Snow Covered Area</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>SASC</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_PSFALL.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SNOW17_Forecast</source>
+						<keyword>Precipitation as Snow</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>PSFALL</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_PRAIN.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SNOW17_Forecast</source>
+						<keyword>Precipitation as Rain</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>PRAIN</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_SNTMP.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SNOW17_Forecast</source>
+						<keyword>Snowpack Temperature</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SNOW17_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>SNTMP</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_INFW.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SACSMA_Forecast</source>
+						<keyword>Runoff</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>INFW</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_UZTWF.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SACSMA_Forecast</source>
+						<keyword>Upper Zone Tension Water Fraction</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>UZTWF</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_UZFWF.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SACSMA_Forecast</source>
+						<keyword>Upper Zone Tension Water Fraction</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>UZFWF</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_LZTWF.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SACSMA_Forecast</source>
+						<keyword>Lower Zone Tension Water Fraction</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>LZTWF</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_LZFSF.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SACSMA_Forecast</source>
+						<keyword>Lower Zone Free Supplemental Fraction</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>LZFSF</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_LZFPF.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SACSMA_Forecast</source>
+						<keyword>Lower Zone Free Primary Fraction</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>LZFPF</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_ADIMF.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>SACSMA_Forecast</source>
+						<keyword>Additional Impervious Fraction</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SACSMA_Forecast</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>ADIMF</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_SQIN.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>UNITHG_Forecast</source>
+						<keyword>Simulated Flow</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SQIN</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>SQIN</parameterId>
+						<locationSetId>Catchments</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<!--<netcdfExportActivity>
+					<fileName>Simulated_Forecast_Routed_SQIN.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>LAGK_Forecast</source>
+						<keyword>Simulated Flow</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SQIN</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>SQIN</parameterId>
+						<locationSetId>$RTD_SET$</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_Total_SQIN.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>ADDSUB_Forecast</source>
+						<keyword>Simulated Flow</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>SQIN</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>SQIN</parameterId>
+						<locationSetId>$SEGMENT_SET$</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>
+				<netcdfExportActivity>
+					<fileName>Simulated_Forecast_QINE.nc</fileName>
+					<sourceId>APRFC</sourceId>
+					<ncMetaData>
+						<source>ADJUSTQ_Forecast</source>
+						<keyword>Adjusted Flow</keyword>
+					</ncMetaData>
+					<timeSeriesSet>
+						<moduleInstanceSetId>QINE</moduleInstanceSetId>
+						<valueType>scalar</valueType>
+						<parameterId>QINE</parameterId>
+						<locationSetId>$SEGMENT_SET$</locationSetId>
+						<timeSeriesType>simulated forecasting</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>read complete forecast</readWriteMode>
+					</timeSeriesSet>
+				</netcdfExportActivity>-->
+			</netcdfExportActivities>
+		</activities>
+	</exportSimulated>
+</exportArchiveModule>

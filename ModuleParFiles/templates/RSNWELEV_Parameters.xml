@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+    <model>RSNWELEV</model>
+    <parameter id="ELEVATION_OF_TEMPERATURE_DATA">
+      <dblValue>@ELTEMP@</dblValue>
+    </parameter>
+    <parameter id="MAT_TS_TYPE">
+      <stringValue>MAT</stringValue>
+    </parameter>
+    <parameter id="RSEL_TS_ID">
+      <stringValue>@RSEL_TSID@</stringValue>
+    </parameter>
+    <parameter id="CARRYOVER_FLAG">
+      <intValue>0</intValue>
+    </parameter>
+    <parameter id="LAPSE_RATE">
+      <dblValue>@LAPSE@</dblValue>
+    </parameter>
+    <parameter id="MAT_TS_ID">
+      <stringValue>@MAT_TSID@</stringValue>
+    </parameter>
+    <parameter id="RSEL_TS_TYPE">
+      <stringValue>RSEL</stringValue>
+    </parameter>
+    <parameter id="THRESHOLD_TEMPERATURE">
+      <dblValue>@TH_TEMP@</dblValue>
+    </parameter>
+    <parameter id="RSEL_TS_TIME_STEP">
+      <intValue>@TIMESTEP@</intValue>
+    </parameter>
+  </group>
+</parameters>

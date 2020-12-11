@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Koyukuk_PreProcessing_HEFS_GEFS_Only_Forecast</workflowId>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>SLAA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity> 
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>MFKA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity> 
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>KNFA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>  
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>BTTA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+    	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>JIRA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>SFKA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>JONA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+        <activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>ALAA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>  
+	<activity>
+        	<runIndependent>false</runIndependent>
+		<workflowId>ALLA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>          
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>KNRA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity> 
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>KRHA2_Flow_Forecast</workflowId>
+		<ensemble>
+			<ensembleId>MEFP</ensembleId>
+			<ensembleMemberIndexRange start='1970' end='2000'/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+
+                    
+<!--    Produces 10-25-50-75-90 percentile exceedances  -->
+	<activity>
+                <runIndependent>false</runIndependent>
+		<workflowId>Koyukuk_ENSPOST_Forecast</workflowId>
+        </activity>
+	<!--activity>
+                <runIndependent>false</runIndependent>
+		<workflowId>Koyukuk_HEFS_Stats</workflowId>
+        </activity-->
+
+</workflow>

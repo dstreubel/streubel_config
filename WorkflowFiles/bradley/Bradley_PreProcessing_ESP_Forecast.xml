@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>SetTimes_LastObserved</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>SetTimes_ESP_Forecast_BradleySnow</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Bradley_SampleESP_Forecast</moduleInstanceId>
+	</activity>	
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Bradley_Merge_Forecast</moduleInstanceId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="1998" end="2017"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity>
+	<!--activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Bradley_MergeMAP_Forecast</moduleInstanceId>
+		<ensemble>
+			<ensembleId>ESP</ensembleId>
+                        <ensembleMemberIndexRange start="2004" end="2017"/>
+			<runInLoop>true</runInLoop>
+		</ensemble>
+	</activity-->
+</workflow>

@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polygons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/polygons.xsd"
+ xmlns="http://www.wldelft.nl/fews">
+<!--	<esriShapeFile>
+		<file>Catchments_Kusko.shp</file>
+		<geoDatum>WGS 1984</geoDatum>
+		<shapeIdAttributeName>hb5id</shapeIdAttributeName>
+		<shape locationId="MCGA2" shapeId="MCGA2"/>
+		<shape locationId="KLCA2" shapeId="KLCA2"/>
+		<shape locationId="KLCA2LOC" shapeId="KLCA2"/>
+		<shape locationId="CJXA2" shapeId="CJXA2"/>
+		<shape locationId="CJXA2LOC" shapeId="CJXA2"/>
+		<shape locationId="ANKA2" shapeId="ANKA2"/>
+		<shape locationId="ANKA2LOC" shapeId="ANKA2"/>
+	</esriShapeFile>-->
+	<esriShapeFile>
+		<!--<file>Kuskokwim_BasinSplits_UPDATED.shp</file>-->
+		<file>bsn_splits_WGS84.shp</file>
+		<geoDatum>WGS 1984</geoDatum>
+		<shapeIdAttributeName>UNIQUE_ID</shapeIdAttributeName>
+		<!--Areas for the Kuskokwim Peninsula-->
+		<shape locationId="MCGA2GL" shapeId="MCGA2GL"/>
+		<shape locationId="MCGA2UPR" shapeId="MCGA2UPR"/>
+		<shape locationId="MCGA2LWR" shapeId="MCGA2LWR"/>
+		<shape locationId="KLCA2UPR" shapeId="KLCA2UPR"/>
+		<shape locationId="KLCA2LWR" shapeId="KLCA2LWR"/>
+		<shape locationId="CJXA2GL" shapeId="CJXA2GL"/>
+		<shape locationId="CJXA2UPR" shapeId="CJXA2UPR"/>
+		<shape locationId="CJXA2LWR" shapeId="CJXA2LWR"/>
+		<shape locationId="ANKA2UPR" shapeId="ANKA2UPR"/>
+		<shape locationId="ANKA2LWR" shapeId="ANKA2LWR"/>
+	</esriShapeFile>
+	<esriShapeFile>
+		<file>bsn_splits_WGS84.shp</file>
+		<geoDatum>WGS 1984</geoDatum>
+		<shapeIdAttributeName>UNIQUE_ID</shapeIdAttributeName>
+		<!--Areas for the Kenai Peninsula-->
+		<shape locationId="MPTA2GL" shapeId="MPTA2GL"/>
+		<shape locationId="MPTA2UPR" shapeId="MPTA2UPR"/>
+		<shape locationId="MPTA2LWR" shapeId="MPTA2LWR"/>
+		<shape locationId="SNOA2GL" shapeId="SNOA2GL"/>
+		<shape locationId="SNOA2UPR" shapeId="SNOA2UPR"/>
+		<shape locationId="SNOA2LWR" shapeId="SNOA2LWR"/>
+		<shape locationId="RESA2GL" shapeId="RESA2GL"/>
+		<shape locationId="RESA2UPR" shapeId="RESA2UPR"/>
+		<shape locationId="RESA2LWR" shapeId="RESA2LWR"/>
+		<shape locationId="SIXA2UPR" shapeId="SIXA2UPR"/>
+		<shape locationId="SIXA2LWR" shapeId="SIXA2LWR"/>
+		<shape locationId="COOA2UPR" shapeId="COOA2UPR"/>
+		<shape locationId="COOA2LWR" shapeId="COOA2LWR"/>
+		<shape locationId="CTSA2UPR" shapeId="CTSA2UPR"/>
+		<shape locationId="CTSA2LWR" shapeId="CTSA2LWR"/>
+		<shape locationId="SKLA2UPR" shapeId="SKLA2UPR"/>
+		<shape locationId="SKLA2LWR" shapeId="SKLA2LWR"/>
+		<shape locationId="SXRA2LOC" shapeId="SXRA2LOC"/>
+		<shape locationId="SXRA2MOO" shapeId="SXRA2MOO"/>
+		<shape locationId="SXRA2FUP" shapeId="SXRA2FUP"/>
+		<shape locationId="SXRA2FLO" shapeId="SXRA2FLO"/>
+		<shape locationId="KRKA2LOC" shapeId="KRKA2LOC"/>
+		<shape locationId="KIYA2GL" shapeId="KIYA2GL"/>
+		<shape locationId="KIYA2UPR" shapeId="KIYA2UPR"/>
+		<shape locationId="KIYA2LWR" shapeId="KIYA2LWR"/>
+		<shape locationId="SKIA2NG" shapeId="SKIA2NG"/>
+		<shape locationId="SKIA2LG" shapeId="SKIA2LG"/>
+		<shape locationId="SKIA2UG" shapeId="SKIA2UG"/>
+		<shape locationId="NINA2UPR" shapeId="NINA2UPR"/>
+		<shape locationId="NINA2LWR" shapeId="NINA2LWR"/>
+		<shape locationId="APTA2UPR" shapeId="APTA2UPR"/>
+		<shape locationId="APTA2LWR" shapeId="APTA2LWR"/>
+		<shape locationId="APBA2UPR" shapeId="APBA2UPR"/>
+		<shape locationId="APBA2LWR" shapeId="APBA2LWR"/>
+		<!--Areas for the Bradley Basin-->
+		<shape locationId="BRUA2GL" shapeId="BRUA2GL"/>
+		<shape locationId="BRUA2NG" shapeId="BRUA2NG"/>
+		<shape locationId="BRMA2GL" shapeId="BRMA2GL"/>
+		<shape locationId="BRMA2NG" shapeId="BRMA2NG"/>
+		<shape locationId="BRDA2GL" shapeId="BRDA2GL"/>
+		<shape locationId="BRDA2UPR" shapeId="BRDA2UPR"/>
+		<shape locationId="BRDA2LWR" shapeId="BRDA2LWR"/>
+		<shape locationId="BRTA2LWR" shapeId="BRTA2LWR"/>
+		<shape locationId="BRTA2MID" shapeId="BRTA2MID"/>
+		<shape locationId="BRTA2UPR" shapeId="BRTA2UPR"/>
+		<shape locationId="BRINGL" shapeId="BRINGL"/>
+		<shape locationId="BRINNG" shapeId="BRINNG"/>
+		<!--Areas for the Copper River Basin-->
+		<shape locationId="POWA2GL" shapeId="POWA2GL"/>
+		<shape locationId="POWA2UPR" shapeId="POWA2UPR"/>
+		<shape locationId="POWA2LWR" shapeId="POWA2LWR"/>
+		<shape locationId="EYAA2LOC" shapeId="EYAA2LOC"/>
+		<shape locationId="TONA2GL" shapeId="TONA2GL"/>
+		<shape locationId="TONA2UPR" shapeId="TONA2UPR"/>
+		<shape locationId="TONA2LWR" shapeId="TONA2LWR"/>
+		<shape locationId="TAZA2UG" shapeId="TAZA2UG"/>
+		<shape locationId="TAZA2LG" shapeId="TAZA2LG"/>
+		<shape locationId="TAZA2UPR" shapeId="TAZA2UPR"/>
+		<shape locationId="TAZA2LWR" shapeId="TAZA2LWR"/>
+		<shape locationId="KLUA2GL" shapeId="KLUA2GL"/>
+		<shape locationId="KLUA2UPR" shapeId="KLUA2UPR"/>
+		<shape locationId="KLUA2LWR" shapeId="KLUA2LWR"/>
+		<shape locationId="GPOA2UPR" shapeId="GPOA2UPR"/>
+		<shape locationId="GPOA2LWR" shapeId="GPOA2LWR"/>
+		<shape locationId="GRSA2UPR" shapeId="GRSA2UPR"/>
+		<shape locationId="GRSA2LWR" shapeId="GRSA2LWR"/>
+		<shape locationId="GULA2LOC" shapeId="GULA2LOC"/>
+		<shape locationId="GAKA2GL" shapeId="GAKA2GL"/>
+		<shape locationId="GAKA2UPR" shapeId="GAKA2UPR"/>
+		<shape locationId="GAKA2LWR" shapeId="GAKA2LWR"/>
+		<!--Areas for the Anchorage Bowl-->
+		<shape locationId="CSRA2UPR" shapeId="CSRA2UPR"/>
+		<shape locationId="CSRA2LWR" shapeId="CSRA2LWR"/>
+		<shape locationId="CHRA2LOC" shapeId="CHRA2LOC"/>
+		<shape locationId="SHIA2UPR" shapeId="SHIA2UPR"/>
+		<shape locationId="SHIA2LWR" shapeId="SHIA2LWR"/>
+		<shape locationId="ERBA2UPR" shapeId="ERBA2UPR"/>
+		<shape locationId="ERBA2LWR" shapeId="ERBA2LWR"/>
+		<shape locationId="ERBA2GL" shapeId="ERBA2GL"/>
+		<shape locationId="TRPA2UPR" shapeId="TRPA2UPR"/>
+		<shape locationId="TRPA2LWR" shapeId="TRPA2LWR"/>
+		<shape locationId="TRPA2GL" shapeId="TRPA2GL"/>
+		<shape locationId="GCGA2UPR" shapeId="GCGA2UPR"/>
+		<shape locationId="GCGA2LWR" shapeId="GCGA2LWR"/>
+		<shape locationId="GCGA2GL" shapeId="GCGA2GL"/>
+		<!--Areas for Southeast Alaska-->
+		<shape locationId="TYAA2UPR" shapeId="TYAA2UPR"/>
+		<shape locationId="TYAA2UG" shapeId="TYAA2UG"/>
+		<shape locationId="TYAA2LWR" shapeId="TYAA2LWR"/>
+		<shape locationId="TYAA2LG" shapeId="TYAA2LG"/>
+		<shape locationId="TKUA2UPR" shapeId="TKUA2UPR"/>
+		<shape locationId="TKUA2LWR" shapeId="TKUA2LWR"/>
+		<shape locationId="TKUA2GL" shapeId="TKUA2GL"/>
+		<shape locationId="TATQ9UPR" shapeId="TATQ9UPR"/>
+		<shape locationId="TATQ9LWR" shapeId="TATQ9LWR"/>
+		<shape locationId="STTQ2UPR" shapeId="STTQ2UPR"/>
+		<shape locationId="STTQ2LWR" shapeId="STTQ2LWR"/>
+		<shape locationId="STKA2UPR" shapeId="STKA2UPR"/>
+		<shape locationId="STKA2LWR" shapeId="STKA2LWR"/>
+		<shape locationId="STKA2GL" shapeId="STKA2GL"/>
+		<shape locationId="SRYA2UPR" shapeId="SRYA2UPR"/>
+		<shape locationId="SRYA2LWR" shapeId="SRYA2LWR"/>
+		<shape locationId="SKGA2GL" shapeId="SKGA2GL"/>
+		<shape locationId="SKGA2UPR" shapeId="SKGA2UPR"/>
+		<shape locationId="SKGA2LWR" shapeId="SKGA2LWR"/>
+		<shape locationId="SGCQ2UPR" shapeId="SGCQ2UPR"/>
+		<shape locationId="SGCQ2LWR" shapeId="SGCQ2LWR"/>
+		<shape locationId="SBFQ2UPR" shapeId="SBFQ2UPR"/>
+		<shape locationId="SBFQ2LWR" shapeId="SBFQ2LWR"/>
+		<shape locationId="SBFQ2GL" shapeId="SBFQ2GL"/>
+		<shape locationId="MNDA2UG" shapeId="MNDA2UG"/>
+		<shape locationId="MNDA2NG" shapeId="MNDA2NG"/>
+		<shape locationId="MNDA2LG" shapeId="MNDA2LG"/>
+		<shape locationId="MCAA2UPR" shapeId="MCAA2UPR"/>
+		<shape locationId="MCAA2LWR" shapeId="MCAA2LWR"/>
+		<shape locationId="ISKQ2UPR" shapeId="ISKQ2UPR"/>
+		<shape locationId="ISKQ2LWR" shapeId="ISKQ2LWR"/>
+		<shape locationId="ISKQ2GL" shapeId="ISKQ2GL"/>
+		<shape locationId="DEZQ9UPR" shapeId="DEZQ9UPR"/>
+		<shape locationId="DEZQ9LWR" shapeId="DEZQ9LWR"/>
+		<shape locationId="ALKA2UPR" shapeId="ALKA2UPR"/>
+		<shape locationId="ALKA2UG" shapeId="ALKA2UG"/>
+		<shape locationId="ALKA2LWR" shapeId="ALKA2LWR"/>
+		<shape locationId="ALKA2LG" shapeId="ALKA2LG"/>
+		<shape locationId="ALEA2UPR" shapeId="ALEA2UPR"/>
+		<shape locationId="ALEA2UG" shapeId="ALEA2UG"/>
+		<shape locationId="ALEA2LWR" shapeId="ALEA2LWR"/>
+		<shape locationId="ALEA2LG" shapeId="ALEA2LG"/>
+		<shape locationId="ALSQ9UPR" shapeId="ALSQ9UPR"/>
+		<shape locationId="ALSQ9LWR" shapeId="ALSQ9LWR"/>
+		<shape locationId="ALSQ9GL" shapeId="ALSQ9GL"/>
+                <shape locationId="CKTA2UPR" shapeId="CKTA2UPR"/>
+                <shape locationId="CKTA2LWR" shapeId="CKTA2LWR"/>
+                <shape locationId="CKTA2GL" shapeId="CKTA2GL"/>
+                <shape locationId="SCKA2UPR" shapeId="SCKA2UPR"/>
+                <shape locationId="SCKA2LWR" shapeId="SCKA2LWR"/>
+                <shape locationId="JDCA2LOC" shapeId="JDCA2LOC"/>
+                <shape locationId="IRVA2LOC" shapeId="IRVA2LOC"/>
+		<!--Areas for Matsu Basin-->
+		<shape locationId="SUDA2UPR" shapeId="SUDA2UPR"/>
+		<shape locationId="SUDA2UG" shapeId="SUDA2UG"/>
+		<shape locationId="SUDA2LWR" shapeId="SUDA2LWR"/>
+		<shape locationId="SUDA2LG" shapeId="SUDA2LG"/>
+		<shape locationId="MACA2UPR" shapeId="MACA2UPR"/>
+		<shape locationId="MACA2UG" shapeId="MACA2UG"/>
+		<shape locationId="MACA2LWR" shapeId="MACA2LWR"/>
+		<shape locationId="MACA2LG" shapeId="MACA2LG"/>
+		<shape locationId="SUCA2UPR" shapeId="SUCA2UPR"/>
+		<shape locationId="SUCA2LWR" shapeId="SUCA2LWR"/>
+		<shape locationId="GCSA2UPR" shapeId="GCSA2UPR"/>
+		<shape locationId="GCSA2LWR" shapeId="GCSA2LWR"/>
+		<shape locationId="CLTA2GL" shapeId="CLTA2GL"/>
+		<shape locationId="CLTA2LWR" shapeId="CLTA2LWR"/>
+		<shape locationId="CLTA2UPR" shapeId="CLTA2UPR"/>
+		<shape locationId="TRTA2UPR" shapeId="TRTA2UPR"/>
+		<shape locationId="TRTA2LWR" shapeId="TRTA2LWR"/>
+		<shape locationId="TRTA2GL" shapeId="TRTA2GL"/>
+		<shape locationId="SUNA2LOC" shapeId="SUNA2LOC"/>
+		<shape locationId="MONA2UPR" shapeId="MONA2UPR"/>
+		<shape locationId="MONA2LWR" shapeId="MONA2LWR"/>
+		<shape locationId="WLWA2UPR" shapeId="WLWA2UPR"/>
+		<shape locationId="WLWA2LWR" shapeId="WLWA2LWR"/>
+		<shape locationId="WILA2LOC" shapeId="WILA2LOC"/>
+		<shape locationId="LSUA2UPR" shapeId="LSUA2UPR"/>
+		<shape locationId="LSUA2LWR" shapeId="LSUA2LWR"/>
+		<shape locationId="LSUA2GL" shapeId="LSUA2GL"/>
+		<shape locationId="LSHA2UPR" shapeId="LSHA2UPR"/>
+		<shape locationId="LSHA2LWR" shapeId="LSHA2LWR"/>
+		<shape locationId="MATA2UPR" shapeId="MATA2UPR"/>
+		<shape locationId="MATA2UG" shapeId="MATA2UG"/>
+		<shape locationId="MATA2LWR" shapeId="MATA2LWR"/>
+		<shape locationId="MATA2LG" shapeId="MATA2LG"/>
+		<shape locationId="KNKA2GL" shapeId="KNKA2GL"/>
+		<shape locationId="KNKA2LWR" shapeId="KNKA2LWR"/>
+		<shape locationId="KNKA2UPR" shapeId="KNKA2UPR"/>
+		<shape locationId="SKWA2UG" shapeId="SKWA2UG"/>
+		<shape locationId="SKWA2LG" shapeId="SKWA2LG"/>
+		<shape locationId="SKWA2UPR" shapeId="SKWA2UPR"/>
+		<shape locationId="SKWA2LWR" shapeId="SKWA2LWR"/>
+		<shape locationId="YSSA2UPR" shapeId="YSSA2UPR"/>
+		<shape locationId="YSSA2UG" shapeId="YSSA2UG"/>
+		<shape locationId="YSSA2LWR" shapeId="YSSA2LWR"/>
+		<shape locationId="YSSA2LG" shapeId="YSSA2LG"/>
+		<shape locationId="YLKA2UPR" shapeId="YLKA2UPR"/>
+		<shape locationId="YLKA2UG" shapeId="YLKA2UG"/>
+		<shape locationId="YLKA2LWR" shapeId="YLKA2LWR"/>
+		<shape locationId="YLKA2LG" shapeId="YLKA2LG"/>
+		<!--Areas for North Slope-->
+		<shape locationId="SGRA2UPR" shapeId="SGRA2UPR"/>
+		<shape locationId="SGRA2LWR" shapeId="SGRA2LWR"/>
+		<shape locationId="KUPA2UPR" shapeId="KUPA2UPR"/>
+		<shape locationId="KUPA2LWR" shapeId="KUPA2LWR"/>
+		<shape locationId="WULA2UPR" shapeId="WULA2UPR"/>
+		<shape locationId="WULA2LWR" shapeId="WULA2LWR"/>
+		<shape locationId="ABLA2UPR" shapeId="ABLA2UPR"/>
+		<shape locationId="ABLA2LWR" shapeId="ABLA2LWR"/>
+		<shape locationId="KIAA2UPR" shapeId="KIAA2UPR"/>
+		<shape locationId="KIAA2LWR" shapeId="KIAA2LWR"/>
+		<shape locationId="CRUA2UPR" shapeId="CRUA2UPR"/>
+		<shape locationId="CRUA2MID" shapeId="CRUA2MID"/>
+		<shape locationId="CRUA2LWR" shapeId="CRUA2LWR"/>
+		<!--Areas for Southwest Alaska-->
+		<shape locationId="NSHA2UPR" shapeId="NSHA2UPR"/>
+		<shape locationId="NSHA2LWR" shapeId="NSHA2LWR"/>
+		<shape locationId="NRDA2UPR" shapeId="NRDA2UPR"/>
+		<shape locationId="NRDA2LWR" shapeId="NRDA2LWR"/>
+		<shape locationId="MULA2UPR" shapeId="MULA2UPR"/>
+		<shape locationId="MULA2LWR" shapeId="MULA2LWR"/>
+		<shape locationId="ILRA2UPR" shapeId="ILRA2UPR"/>
+		<shape locationId="ILRA2LWR" shapeId="ILRA2LWR"/>
+		<!--Areas for Tanana Basin-->
+		<shape locationId="UCHA2UPR" shapeId="UCHA2UPR"/>
+		<shape locationId="UCHA2LWR" shapeId="UCHA2LWR"/>
+		<shape locationId="TAFA2LWR" shapeId="TAFA2LWR"/>
+		<shape locationId="TAFA2UPR" shapeId="TAFA2UPR"/>
+		<shape locationId="TAFA2GL" shapeId="TAFA2GL"/>
+		<shape locationId="TRAA2LWR" shapeId="TRAA2LWR"/>
+		<shape locationId="TRAA2UPR" shapeId="TRAA2UPR"/>
+		<shape locationId="TSGA2LOC" shapeId="TSGA2LOC"/>
+		<shape locationId="TLNA2LOC" shapeId="TLNA2LOC"/>
+		<shape locationId="SALA2LWR" shapeId="SALA2LWR"/>
+		<shape locationId="SALA2UPR" shapeId="SALA2UPR"/>
+		<shape locationId="NEBA2LWR" shapeId="NEBA2LWR"/>
+		<shape locationId="NEBA2UG" shapeId="NEBA2UG"/>
+		<shape locationId="NEBA2LG" shapeId="NEBA2LG"/>
+		<shape locationId="NEBA2UPR" shapeId="NEBA2UPR"/>
+		<shape locationId="MHSA2UPR" shapeId="MHSA2UPR"/>
+		<shape locationId="MHSA2LWR" shapeId="MHSA2LWR"/>
+<!--		<shape locationId="MHSA2GL" shapeId="MHSA2GL"/>-->
+		<shape locationId="MCDA2LOC" shapeId="MCDA2LOC"/>
+		<shape locationId="HNRA2UPR" shapeId="HNRA2UPR"/>
+		<shape locationId="HNRA2LWR" shapeId="HNRA2LWR"/>
+		<shape locationId="HNRA2GL" shapeId="HNRA2GL"/>
+		<shape locationId="GBDA2UPR" shapeId="GBDA2UPR"/>
+		<shape locationId="GBDA2LWR" shapeId="GBDA2LWR"/>
+		<shape locationId="ENNA2UPR" shapeId="ENNA2UPR"/>
+		<shape locationId="ENNA2LWR" shapeId="ENNA2LWR"/>
+		<shape locationId="DBRA2UPR" shapeId="DBRA2UPR"/>
+		<shape locationId="DBRA2LWR" shapeId="DBRA2LWR"/>
+		<shape locationId="DBRA2GL" shapeId="DBRA2GL"/>
+		<shape locationId="CRSA2UPR" shapeId="CRSA2UPR"/>
+		<shape locationId="CRSA2LWR" shapeId="CRSA2LWR"/>
+		<shape locationId="CRNA2UPR" shapeId="CRNA2UPR"/>
+		<shape locationId="CRNA2UG" shapeId="CRNA2UG"/>
+		<shape locationId="CRNA2LWR" shapeId="CRNA2LWR"/>
+		<shape locationId="CRNA2LG" shapeId="CRNA2LG"/>
+		<shape locationId="CRHA2UPR" shapeId="CRHA2UPR"/>
+		<shape locationId="CRHA2LWR" shapeId="CRHA2LWR"/>
+		<shape locationId="CHLA2UPR" shapeId="CHLA2UPR"/>
+		<shape locationId="CHLA2LWR" shapeId="CHLA2LWR"/>
+		<shape locationId="CHFA2LOC" shapeId="CHFA2LOC"/>
+		<shape locationId="CHAA2LOC" shapeId="CHAA2LOC"/>
+		<shape locationId="BGDA2UPR" shapeId="BGDA2UPR"/>
+		<shape locationId="BGDA2LWR" shapeId="BGDA2LWR"/>
+		<shape locationId="BGDA2GL" shapeId="BGDA2GL"/>
+		<shape locationId="PHLA2NG" shapeId="PHLA2NG"/>
+		<shape locationId="PHLA2GL" shapeId="PHLA2GL"/>
+		<!--Areas for Canadian Yukon-->
+		<shape locationId="YWRQ9UPR" shapeId="YWRQ9UPR"/>
+		<shape locationId="YWRQ9LWR" shapeId="YWRQ9LWR"/>
+		<shape locationId="YDAQ9UPR" shapeId="YDAQ9UPR"/>
+		<shape locationId="YDAQ9LWR" shapeId="YDAQ9LWR"/>
+		<shape locationId="WHRQ9NG" shapeId="WHRQ9NG"/>
+		<shape locationId="WHRQ9GL" shapeId="WHRQ9GL"/>
+		<shape locationId="SRMQ9UPR" shapeId="SRMQ9UPR"/>
+		<shape locationId="SRMQ9LWR" shapeId="SRMQ9LWR"/>
+		<shape locationId="SRFQ9UPR" shapeId="SRFQ9UPR"/>
+		<shape locationId="SRFQ9LWR" shapeId="SRFQ9LWR"/>
+		<shape locationId="PRXQ9UPR" shapeId="PRXQ9UPR"/>
+		<shape locationId="PRXQ9LWR" shapeId="PRXQ9LWR"/>
+		<shape locationId="NIRQ9LOC" shapeId="NIRQ9LOC"/>
+		<shape locationId="KLNQ9UPR" shapeId="KLNQ9UPR"/>
+		<shape locationId="KLNQ9LWR" shapeId="KLNQ9LWR"/>
+		<!--Areas for Fortymile Basin-->
+		<shape locationId="FMWA2UPR" shapeId="FMWA2UPR"/>
+		<shape locationId="FMWA2LWR" shapeId="FMWA2LWR"/>
+		<shape locationId="FMRA2UPR" shapeId="FMRA2UPR"/>
+		<shape locationId="FMRA2LWR" shapeId="FMRA2LWR"/>
+		<shape locationId="FMMA2UPR" shapeId="FMMA2UPR"/>
+		<shape locationId="FMMA2LWR" shapeId="FMMA2LWR"/>
+		<shape locationId="FMKA2UPR" shapeId="FMKA2UPR"/>
+		<shape locationId="FMKA2LWR" shapeId="FMKA2LWR"/>
+		<!--Areas for Koyukuk Basin-->
+		<shape locationId="SLAA2UPR" shapeId="SLAA2UPR"/>
+		<shape locationId="SLAA2LWR" shapeId="SLAA2LWR"/>
+		<shape locationId="SFKA2UPR" shapeId="SFKA2UPR"/>
+		<shape locationId="SFKA2LWR" shapeId="SFKA2LWR"/>
+		<shape locationId="MFKA2UPR" shapeId="MFKA2UPR"/>
+		<shape locationId="MFKA2LWR" shapeId="MFKA2LWR"/>
+		<shape locationId="KRHA2LOC" shapeId="KRHA2LOC"/>
+		<shape locationId="KNRA2UPR" shapeId="KNRA2UPR"/>
+		<shape locationId="KNRA2LWR" shapeId="KNRA2LWR"/>
+		<shape locationId="KNFA2UPR" shapeId="KNFA2UPR"/>
+		<shape locationId="KNFA2LWR" shapeId="KNFA2LWR"/>
+		<shape locationId="JONA2UPR" shapeId="JONA2UPR"/>
+		<shape locationId="JONA2LWR" shapeId="JONA2LWR"/>
+		<shape locationId="JIRA2UPR" shapeId="JIRA2UPR"/>
+		<shape locationId="JIRA2LWR" shapeId="JIRA2LWR"/>
+		<shape locationId="BTTA2UPR" shapeId="BTTA2UPR"/>
+		<shape locationId="BTTA2LWR" shapeId="BTTA2LWR"/>
+		<shape locationId="ALAA2UPR" shapeId="ALAA2UPR"/>
+		<shape locationId="ALAA2LWR" shapeId="ALAA2LWR"/>
+		<shape locationId="ALLA2LOC" shapeId="ALLA2LOC"/>
+		<!--Areas for Porcupine Basin-->
+		<shape locationId="OCRQ9UPR" shapeId="OCRQ9UPR"/>
+		<shape locationId="OCRQ9LWR" shapeId="OCRQ9LWR"/>
+		<shape locationId="PROQ9UPR" shapeId="PROQ9UPR"/>
+		<shape locationId="PROQ9LWR" shapeId="PROQ9LWR"/>
+		<shape locationId="PRBQ9UPR" shapeId="PRBQ9UPR"/>
+		<shape locationId="PRBQ9LWR" shapeId="PRBQ9LWR"/>
+		<shape locationId="PRCA2LOC" shapeId="PRCA2LOC"/>
+		<shape locationId="CLNA2UPR" shapeId="CLNA2UPR"/>
+		<shape locationId="CLNA2LWR" shapeId="CLNA2LWR"/>
+		<shape locationId="SHJA2UPR" shapeId="SHJA2UPR"/>
+		<shape locationId="SHJA2LWR" shapeId="SHJA2LWR"/>
+		<shape locationId="BRCA2UPR" shapeId="BRCA2UPR"/>
+		<shape locationId="BRCA2LWR" shapeId="BRCA2LWR"/>
+		<shape locationId="PFYA2LOC" shapeId="PFYA2LOC"/>
+		<!--Areas for Yukon Local Areas-->
+		<shape locationId="YEAA2LOC" shapeId="YEAA2LOC"/>
+		<shape locationId="CIRA2LOC" shapeId="CIRA2LOC"/>
+		<shape locationId="YFYA2LOC" shapeId="YFYA2LOC"/>
+		<shape locationId="VENA2UPR" shapeId="VENA2UPR"/>
+		<shape locationId="VENA2LWR" shapeId="VENA2LWR"/>
+		<shape locationId="BVRA2LOC" shapeId="BVRA2LOC"/>
+		<shape locationId="YRBA2LOC" shapeId="YRBA2LOC"/>
+		<shape locationId="TALA2LOC" shapeId="TALA2LOC"/>
+		<shape locationId="RBYA2LOC" shapeId="RBYA2LOC"/>
+		<shape locationId="GYRA2LOC" shapeId="GYRA2LOC"/>
+		<shape locationId="HUSA2LOC" shapeId="HUSA2LOC"/>
+		<shape locationId="NULA2LOC" shapeId="NULA2LOC"/>
+		<shape locationId="YANA2LOC" shapeId="YANA2LOC"/>
+		<shape locationId="RSHA2LOC" shapeId="RSHA2LOC"/>
+		<shape locationId="YPSA2LOC" shapeId="YPSA2LOC"/>	
+	</esriShapeFile>
+
+	<esriShapeFile>
+		<file>bsn_splits_diss_WGS84.shp</file>
+		<!--<file>bsn_splits_diss.shp</file>-->
+		<geoDatum>WGS 1984</geoDatum>
+		<shapeIdAttributeName>hb5id</shapeIdAttributeName>
+		<!--Basins for the Kenai Peninsula-->
+		<shape locationId="MPTA2" shapeId="MPTA2"/>
+		<shape locationId="SNOA2" shapeId="SNOA2"/>
+		<shape locationId="RESA2" shapeId="RESA2"/>
+		<shape locationId="SIXA2" shapeId="SIXA2"/>
+		<shape locationId="COOA2" shapeId="COOA2"/>
+		<shape locationId="CTSA2" shapeId="CTSA2"/>
+		<shape locationId="SKLA2" shapeId="SKLA2"/>
+		<shape locationId="SXRA2" shapeId="SXRA2"/>
+		<shape locationId="KRKA2" shapeId="KRKA2"/>
+		<shape locationId="KIYA2" shapeId="KIYA2"/>
+		<shape locationId="SKIA2" shapeId="SKIA2"/>
+		<shape locationId="NINA2" shapeId="NINA2"/>
+		<shape locationId="APTA2" shapeId="APTA2"/>
+		<shape locationId="APBA2" shapeId="APBA2"/>
+		<!--Basins for the Bradley Basin-->
+		<shape locationId="BRUA2" shapeId="BRUA2"/>
+		<shape locationId="BRMA2" shapeId="BRMA2"/>
+		<shape locationId="BRDA2" shapeId="BRDA2"/>
+		<shape locationId="BRTA2" shapeId="BRTA2"/>
+		<!--Basins for the Copper River Basin-->
+		<shape locationId="EYAA2" shapeId="EYAA2"/>
+		<shape locationId="POWA2" shapeId="POWA2"/>		
+		<shape locationId="TONA2" shapeId="TONA2"/>
+		<shape locationId="TAZA2" shapeId="TAZA2"/>
+		<shape locationId="KLUA2" shapeId="KLUA2"/>
+		<shape locationId="GPOA2" shapeId="GPOA2"/>
+		<shape locationId="GRSA2" shapeId="GRSA2"/>
+		<shape locationId="GULA2" shapeId="GULA2"/>
+		<shape locationId="GAKA2" shapeId="GAKA2"/>
+		<!--Basins for the Anchorage Bowl-->
+		<shape locationId="CSRA2" shapeId="CSRA2"/>
+		<shape locationId="CHRA2" shapeId="CHRA2"/>
+		<shape locationId="SHIA2" shapeId="SHIA2"/>
+		<shape locationId="ERBA2" shapeId="ERBA2"/>
+		<shape locationId="TRPA2" shapeId="TRPA2"/>
+		<!--Basins for Southeast Alaska-->
+		<shape locationId="TYAA2" shapeId="TYAA2"/>
+		<shape locationId="TKUA2" shapeId="TKUA2"/>
+		<shape locationId="TATQ9" shapeId="TATQ9"/>
+		<shape locationId="STTQ2" shapeId="STTQ2"/>
+		<shape locationId="STKA2" shapeId="STKA2"/>
+		<shape locationId="SRYA2" shapeId="SRYA2"/>
+		<shape locationId="SKGA2" shapeId="SKGA2"/>
+		<shape locationId="SGCQ2" shapeId="SGCQ2"/>
+		<shape locationId="SBFQ2" shapeId="SBFQ2"/>
+		<shape locationId="MNDA2" shapeId="MNDA2"/>
+		<shape locationId="MCAA2" shapeId="MCAA2"/>
+		<shape locationId="ISKQ2" shapeId="ISKQ2"/>
+		<shape locationId="DEZQ9" shapeId="DEZQ9"/>
+		<shape locationId="ALKA2" shapeId="ALKA2"/>
+		<shape locationId="ALEA2" shapeId="ALEA2"/>
+		<shape locationId="ALSQ9" shapeId="ALSQ9"/>
+                <shape locationId="CKTA2" shapeId="CKTA2"/>
+                <shape locationId="SCKA2" shapeId="SCKA2"/>
+                <shape locationId="JDCA2" shapeId="JDCA2"/>
+		<!--Basins for Matsu Basin-->
+		<shape locationId="SUDA2" shapeId="SUDA2"/>
+		<shape locationId="MACA2" shapeId="MACA2"/>
+		<shape locationId="SUCA2" shapeId="SUCA2"/>
+		<shape locationId="GCSA2" shapeId="GCSA2"/>
+		<shape locationId="CLTA2" shapeId="CLTA2"/>
+		<shape locationId="TRTA2" shapeId="TRTA2"/>
+		<shape locationId="SUNA2" shapeId="SUNA2"/>
+		<shape locationId="MONA2" shapeId="MONA2"/>
+		<shape locationId="WLWA2" shapeId="WLWA2"/>
+		<shape locationId="WILA2" shapeId="WILA2"/>
+		<shape locationId="LSUA2" shapeId="LSUA2"/>
+		<shape locationId="MATA2" shapeId="MATA2"/>
+		<shape locationId="KNKA2" shapeId="MATA2"/>
+		<shape locationId="LSHA2" shapeId="LSHA2"/>
+		<shape locationId="SKWA2" shapeId="SKWA2"/>
+		<shape locationId="YSSA2" shapeId="YSSA2"/>
+		<shape locationId="YLKA2" shapeId="YLKA2"/>
+		<!--Basins for North Slope-->
+		<shape locationId="SGRA2" shapeId="SGRA2"/>
+		<shape locationId="KUPA2" shapeId="KUPA2"/>
+		<shape locationId="WULA2" shapeId="WULA2"/>
+		<shape locationId="ABLA2" shapeId="ABLA2"/>
+		<shape locationId="KIAA2" shapeId="KIAA2"/>
+		<shape locationId="CRUA2" shapeId="CRUA2"/>
+		<!--Basins for Southwest Alaska-->
+		<shape locationId="NSHA2" shapeId="NSHA2"/>
+		<shape locationId="NRDA2" shapeId="NRDA2"/>
+		<shape locationId="MULA2" shapeId="MULA2"/>
+		<shape locationId="ILRA2" shapeId="ILRA2"/>
+		<!--Basins for Tanana Basin-->
+		<shape locationId="UCHA2" shapeId="UCHA2"/>
+		<shape locationId="TAFA2" shapeId="TAFA2"/>
+		<shape locationId="TRAA2" shapeId="TRAA2"/>
+		<shape locationId="TSGA2" shapeId="TSGA2"/>
+		<shape locationId="TLNA2" shapeId="TLNA2"/>
+		<shape locationId="SALA2" shapeId="SALA2"/>
+		<shape locationId="NEBA2" shapeId="NEBA2"/>
+		<shape locationId="MHSA2" shapeId="MHSA2"/>
+		<shape locationId="MCDA2" shapeId="MCDA2"/>
+		<shape locationId="HNRA2" shapeId="HNRA2"/>
+		<shape locationId="GBDA2" shapeId="GBDA2"/>
+		<shape locationId="ENNA2" shapeId="ENNA2"/>
+		<shape locationId="DBRA2" shapeId="DBRA2"/>
+		<shape locationId="CRSA2" shapeId="CRSA2"/>
+		<shape locationId="CRNA2" shapeId="CRNA2"/>
+		<shape locationId="CRHA2" shapeId="CRHA2"/>
+		<shape locationId="CHLA2" shapeId="CHLA2"/>
+		<shape locationId="CHFA2" shapeId="CHFA2"/>
+		<shape locationId="CHAA2" shapeId="CHAA2"/>
+		<shape locationId="BGDA2" shapeId="BGDA2"/>
+		<shape locationId="PHLA2" shapeId="PHLA2"/>
+		<!--Basins for Canadian Yukon-->
+		<shape locationId="YWRQ9" shapeId="YWRQ9"/>
+		<shape locationId="YDAQ9" shapeId="YDAQ9"/>
+		<shape locationId="WHRQ9" shapeId="WHRQ9"/>
+		<shape locationId="SRMQ9" shapeId="SRMQ9"/>
+		<shape locationId="SRFQ9" shapeId="SRFQ9"/>
+		<shape locationId="PRXQ9" shapeId="PRXQ9"/>
+		<shape locationId="NIRQ9" shapeId="NIRQ9"/>
+		<shape locationId="KLNQ9" shapeId="KLNQ9"/>
+		<!--Basins for Fortymile Basin-->
+		<shape locationId="FMWA2" shapeId="FMWA2"/>
+		<shape locationId="FMRA2" shapeId="FMRA2"/>
+		<shape locationId="FMMA2" shapeId="FMMA2"/>
+		<shape locationId="FMKA2" shapeId="FMKA2"/>
+		<!--Basins for Koyukuk Basin-->
+		<shape locationId="SLAA2" shapeId="SLAA2"/>
+		<shape locationId="SFKA2" shapeId="SFKA2"/>
+		<shape locationId="MFKA2" shapeId="MFKA2"/>
+		<shape locationId="KRHA2" shapeId="KRHA2"/>
+		<shape locationId="KNRA2" shapeId="KNRA2"/>
+		<shape locationId="KNFA2" shapeId="KNFA2"/>
+		<shape locationId="JONA2" shapeId="JONA2"/>
+		<shape locationId="JIRA2" shapeId="JIRA2"/>
+		<shape locationId="BTTA2" shapeId="BTTA2"/>
+		<shape locationId="ALAA2" shapeId="ALAA2"/>
+		<shape locationId="ALLA2" shapeId="ALLA2"/>
+		<!--Basins for Porcupine Basin-->
+		<shape locationId="OCRQ9" shapeId="OCRQ9"/>
+		<shape locationId="PROQ9" shapeId="PROQ9"/>
+		<shape locationId="PRBQ9" shapeId="PRBQ9"/>
+		<shape locationId="PRCA2" shapeId="PRCA2"/>
+		<shape locationId="CLNA2" shapeId="CLNA2"/>
+		<shape locationId="SHJA2" shapeId="SHJA2"/>
+		<shape locationId="BRCA2" shapeId="BRCA2"/>
+		<shape locationId="PFYA2" shapeId="PFYA2"/>
+		<!--Basins for Yukon Local Areas-->
+		<shape locationId="YEAA2" shapeId="YEAA2"/>
+		<shape locationId="CIRA2" shapeId="CIRA2"/>
+		<shape locationId="YFYA2" shapeId="YFYA2"/>
+		<shape locationId="VENA2" shapeId="VENA2"/>
+		<shape locationId="BVRA2" shapeId="BVRA2"/>
+		<shape locationId="YRBA2" shapeId="YRBA2"/>
+		<shape locationId="TALA2" shapeId="TALA2"/>
+		<shape locationId="RBYA2" shapeId="RBYA2"/>
+		<shape locationId="GYRA2" shapeId="GYRA2"/>
+		<shape locationId="HUSA2" shapeId="HUSA2"/>
+		<shape locationId="NULA2" shapeId="NULA2"/>
+		<shape locationId="YANA2" shapeId="YANA2"/>
+		<shape locationId="RSHA2" shapeId="RSHA2"/>
+		<shape locationId="YPSA2" shapeId="YPSA2"/>	
+	</esriShapeFile>
+	<esriShapeFile>
+		<file>HFO_priority_basins_wgs84.shp</file>
+		<geoDatum>WGS 1984</geoDatum>
+		<shapeIdAttributeName>HB5ID</shapeIdAttributeName>
+		<!--Areas for the Hawaii-->
+		<shape locationId="WWKH1" shapeId="WWKH1"/>
+		<shape locationId="WLUH1" shapeId="WLUH1"/>
+		<shape locationId="WHSH1" shapeId="WHSH1"/>
+		<shape locationId="OPAH1" shapeId="OPAH1"/>
+		<shape locationId="NLIH1" shapeId="NLIH1"/>
+		<shape locationId="MNWH1" shapeId="MNWH1"/>
+		<shape locationId="WSFH1" shapeId="WSFH1"/>
+		<shape locationId="WRVH1" shapeId="WRVH1"/>
+		<shape locationId="HLEH1" shapeId="HLEH1"/>
+		<shape locationId="WHRH1" shapeId="WHRH1"/>
+	</esriShapeFile>
+	<esriShapeFile>
+		<file>Hawaii.shp</file>
+		<geoDatum>WGS 1984</geoDatum>
+		<shapeIdAttributeName>Name</shapeIdAttributeName>
+		<!--Areas for individual islands Hawaii-->
+		<shape locationId="Kauai" shapeId="Kauai"/>
+		<shape locationId="Niihau" shapeId="Niihau"/>
+		<shape locationId="Lanai" shapeId="Lanai"/>
+		<shape locationId="Molokai" shapeId="Molokai"/>
+		<shape locationId="Maui" shapeId="Maui"/>
+		<shape locationId="Oahu" shapeId="Oahu"/>
+		<shape locationId="Kahoolawe" shapeId="Kahoolawe"/>
+		<shape locationId="Hawaii" shapeId="Hawaii"/>
+	</esriShapeFile>
+
+
+</polygons>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+        <activity>
+        	<runIndependent>false</runIndependent>
+		<moduleInstanceId>Bradley_Merge_UpdateStates</moduleInstanceId>
+        </activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRIN"/>
+			<string key="FGROUP" value="Bradley"/>
+			<string key="CATCHMENT_TYPE" value="NG"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_BRIN_BRINRSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_UpdateStates_Bradley_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRIN"/>
+			<string key="CATCHMENT" value="BRINGL"/>
+			<string key="FGROUP" value="Bradley"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_BRIN_BRINGL_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_BRINGL_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRIN"/>
+			<string key="CATCHMENT" value="BRINNG"/>
+			<string key="FGROUP" value="Bradley"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_BRIN_BRINNG_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_BRINNG_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRIN"/>
+			<string key="CATCHMENT" value="BRINGL"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>GLACIER_BRIN_BRINGL_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>GLACIER_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRIN"/>
+			<string key="CATCHMENT" value="BRINNG"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_BRIN_BRINNG_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_NG_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRIN"/>
+			<string key="CATCHMENT" value="BRINGL"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_BRIN_BRINGL_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_GL_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRIN"/>
+			<string key="CATCHMENT" value="BRINNG"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_BRIN_BRINNG_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_NG_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+                <properties>
+                        <string key="SEGMENT" value="BRIN"/>
+                </properties>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>ADDSUB_BRIN_BRIN_UpdateStates</moduleInstanceId>
+                <moduleConfigFileName>ADDSUB_BRIN_UpdateStates_template</moduleConfigFileName>
+        </activity>
+	<activity>
+                <properties>
+                        <string key="SEGMENT" value="BRUA2"/>
+                        <string key="CATCHMENT" value="BRUA2NG"/>
+                </properties>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>UNITHG_BRUA2_BRUA2NG_UpdateStates</moduleInstanceId>
+                <moduleConfigFileName>UNITHG_BRUA2NG_UpdateStates_template</moduleConfigFileName>
+        </activity>
+	<activity>
+                <properties>
+                        <string key="SEGMENT" value="BRUA2"/>
+                        <string key="CATCHMENT" value="BRUA2GL"/>
+                </properties>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>UNITHG_BRUA2_BRUA2GL_UpdateStates</moduleInstanceId>
+                <moduleConfigFileName>UNITHG_BRUA2GL_UpdateStates_template</moduleConfigFileName>
+        </activity>
+	<activity>
+                <properties>
+                        <string key="SEGMENT" value="BRUA2"/>
+                </properties>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>ADDSUB_BRUA2_BRUA2_UpdateStates</moduleInstanceId>
+                <moduleConfigFileName>ADDSUB_BRUA2_UpdateStates_template</moduleConfigFileName>
+        </activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRUA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_BRUA2_BRUA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_BRUA2_BRUA2SIM_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRUA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_BRUA2_BRUA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_BRUA2_BRUA2OB6_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRUA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_BRUA2_BRUA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_BRUA2_BRUA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="BRUA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_BRUA2_BRUA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+</workflow>

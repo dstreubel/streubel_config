@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+        <import>
+                <general>
+                        <importType>grib</importType>
+                        <folder>$IMPORT_FOLDER_GRIB1$/flf/has/fzl06</folder>
+<!--
+                        <fileNamePatternFilter>qpf06f_has_*.grb</fileNamePatternFilter>
+-->
+                        <idMapId>IdImportGRIB1_Forecast</idMapId>
+                        <unitConversionsId>ImportGRIB</unitConversionsId>
+                        <importTimeZone>
+                                <timeZoneOffset>+00:00</timeZoneOffset>
+                        </importTimeZone>
+                        <gridStartPoint>SW</gridStartPoint>
+                </general>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportFLF</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>FLF</parameterId>
+                        <locationId>HAS</locationId>
+                        <timeSeriesType>external forecasting</timeSeriesType>
+                        <timeStep unit="hour" multiplier="1"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <synchLevel>6</synchLevel>
+                        <expiryTime unit="day" multiplier="2"/>
+                </timeSeriesSet>
+        </import>
+
+</timeSeriesImportRun>

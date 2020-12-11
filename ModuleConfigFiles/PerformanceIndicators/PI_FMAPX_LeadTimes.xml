@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<performanceIndicatorSets xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/performanceIndicatorSets.xsd" version="1.1">
+
+    <!--Rules below apply to when using leadTimeAccuracyIndicator-->
+    <!--relativeViewPeriod (RVP) of input variables determines the analysis window-->
+    <!-- A start time of -24 and end time of 0 will perform stats on the past 24 hours from T0-->
+    <!-- A start time of -24 and end time of -6 will perform stats on 18 hours between -24 and -6 from T0-->
+
+    <performanceIndicatorSet performanceIndicatorId="LeadTime_History">
+        <inputVariable variableId="6hr_FMAPX">
+            <timeSeriesSet>
+                <moduleInstanceId>FMAPX_PreProcessing_QPF</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>FMAPX</parameterId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <relativeViewPeriod unit="hour" start="-72" end="0"/>
+                <readWriteMode>read only</readWriteMode>
+            </timeSeriesSet>
+        </inputVariable>
+        <inputVariable variableId="6hr_MAP">
+            <timeSeriesSet>
+                <moduleInstanceId>ImportSHEF</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>MAP</parameterId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <relativeViewPeriod unit="hour" start="-72" end="0"/>
+                <readWriteMode>read only</readWriteMode>
+            </timeSeriesSet>
+        </inputVariable>
+        <forecastSelectionPeriod unit="hour" start="-72" end="-6"/>
+        <!--forecastSelectionPeriod (FSP) notes below... -->
+        <!--The FSP is required when input variables use forecasting timeSeriesTypes (i.e. external/simulated forecasting)-->
+        <!--Determines what forecast to grab from the LDS for the input variables that are using forecasting timeSeriesType-->
+        <!--If multiple forecast timeseries are selected, calculations are performed on every forecast timeseries within the RVP when data is available-->
+        <!--Hint: Use debug mode to view Log and confirm what forecast TimeSeries are selected for the forecast input variable-->
+
+        <!--*******************************************************************************************************************-->
+        <leadTimeAccuracyIndicator indicatorType="R2" calculatedVariableId="6hr_FMAPX" observedVariableId="6hr_MAP">
+            <leadTimes unit="hour">
+                <leadTime time="12" outputVariableId="R2L12"/>
+            </leadTimes>
+        </leadTimeAccuracyIndicator>
+        <leadTimeAccuracyIndicator indicatorType="bias" calculatedVariableId="6hr_FMAPX" observedVariableId="6hr_MAP">
+            <leadTimes unit="hour">
+                <leadTime time="12" outputVariableId="BiasL12"/>
+            </leadTimes>
+        </leadTimeAccuracyIndicator>
+        <!--Explanation of how module works: -->
+        <!--If RVP is set to -72 to 0, the analysis window is the past 72 hours.-->
+        <!--If the FSP is set to -72 to -6, all external forecast in the past 72 hrs in the LDS are used for the anaysis.-->
+        <!--If leadTime is set to 12 hours, then the 6-12 hr period of each external forecast is compared to the 6-12 hr observation for the cooresponding period-->
+        <!--If data is not available for a forecast, the calculation for that period is skipped and indicator moves on to the next forecast period-->
+        <!--*******************************************************************************************************************-->
+
+        <outputVariable variableId="R2L12">
+            <timeSeriesSet>
+                <moduleInstanceId>PI_FMAPX_LeadTimes</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>R2</parameterId>
+                <qualifierId>R2.FMAPX.12</qualifierId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="nonequidistant"/>
+                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                <readWriteMode>add originals</readWriteMode>
+                <synchLevel>8</synchLevel>
+                <expiryTime unit="year"/>
+            </timeSeriesSet>
+        </outputVariable>
+        <outputVariable variableId="BiasL12">
+            <timeSeriesSet>
+                <moduleInstanceId>PI_FMAPX_LeadTimes</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>bias</parameterId>
+                <qualifierId>bias.FMAPX.12</qualifierId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="nonequidistant"/>
+                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                <readWriteMode>add originals</readWriteMode>
+                <synchLevel>8</synchLevel>
+                <expiryTime unit="year"/>
+            </timeSeriesSet>
+        </outputVariable>
+    </performanceIndicatorSet>
+</performanceIndicatorSets>

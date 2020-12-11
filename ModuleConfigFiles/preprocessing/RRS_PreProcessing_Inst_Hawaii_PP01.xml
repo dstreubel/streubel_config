@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>PP01_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PP01</parameterId>
+			<locationSetId>Gages_Precip_Std</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PP01_eq_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RRS_PreProcessing_Inst_Hawaii_PP01</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PP01</parameterId>
+			<locationSetId>Gages_Precip_Std</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PP01_ne_59after</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PP01</parameterId>
+			<locationSetId>Gages_Precip_59after</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PP01_eq_1_59after</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RRS_PreProcessing_Inst_Hawaii_PP01</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PP01</parameterId>
+			<locationSetId>Gages_Precip_59after</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PP24_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PP24</parameterId>
+			<locationSetId>Gages_Precip</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PP24_eq_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RRS_PreProcessing_Inst_Hawaii_PP01</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PP24</parameterId>
+			<locationSetId>Gages_Precip</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-480" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="RRS_PP01">
+		<sample>
+			<nonEquidistant>
+				<nonEquidistantInputVariable>
+					<variableId>PP01_ne</variableId>
+				</nonEquidistantInputVariable>
+				<interpolationType>previousTimeStep</interpolationType>
+				<outputVariable>
+					<variableId>PP01_eq_1</variableId>
+				</outputVariable>
+			</nonEquidistant>
+		</sample>
+	</transformation>
+	<transformation id="RRS_PP01_59after">
+		<sample>
+			<nonEquidistant>
+				<nonEquidistantInputVariable>
+					<variableId>PP01_ne_59after</variableId>
+				</nonEquidistantInputVariable>
+				<interpolationType>linearOrClosest</interpolationType>
+				<outputVariable>
+					<variableId>PP01_eq_1_59after</variableId>
+				</outputVariable>
+			</nonEquidistant>
+		</sample>
+	</transformation>
+	<transformation id="RRS_PP24">
+		<sample>
+			<nonEquidistant>
+				<nonEquidistantInputVariable>
+					<variableId>PP24_ne</variableId>
+				</nonEquidistantInputVariable>
+				<interpolationType>previousTimeStep</interpolationType>
+				<outputVariable>
+					<variableId>PP24_eq_1</variableId>
+				</outputVariable>
+			</nonEquidistant>
+		</sample>
+	</transformation>
+</transformationModule>

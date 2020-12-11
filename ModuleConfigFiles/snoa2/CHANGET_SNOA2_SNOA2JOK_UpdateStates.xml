@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>GLAKONLY_SQME_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MEANQ_SNOA2_SNOA2JOK_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<locationId>GLAKONLY</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>GLAKONLY_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_SNOA2_SNOA2JOK_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>GLAKONLY</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SNOA2JOK">
+		<disaggregation>
+			<meanToInstantaneous>
+				<inputVariable>
+					<variableId>GLAKONLY_SQME_24</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>GLAKONLY_SQIN_6</variableId>
+				</outputVariable>
+			</meanToInstantaneous>
+		</disaggregation>
+	</transformation>
+	<transformation id="ExtrapolateToBase">
+		<interpolationSerial>
+			<extrapolateConstant>
+				<inputVariable>
+					<variableId>GLAKONLY_SQIN_6</variableId>
+				</inputVariable>
+				<extrapolateDirection>start</extrapolateDirection>
+				<outputVariable>
+					<variableId>GLAKONLY_SQIN_6</variableId>
+				</outputVariable>
+			</extrapolateConstant>
+		</interpolationSerial>
+	</transformation>
+</transformationModule>

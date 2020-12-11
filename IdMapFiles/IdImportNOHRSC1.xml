@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+
+	
+
+<!--	<map internalParameter="SWE" internalLocation="NOHRSC" externalParameter="Snow_depth_water_equivalent" externalLocation="none"/>
+	<map internalParameter="QTF" internalLocation="SREF" externalParameter="Temperature" externalLocation="none"/>-->
+<map internalParameter="SWE" internalLocation="LIS_CLM_GDAS" externalParameter="Snow_depth_water_equivalent" externalLocation="none"/>
+	<enableOneToOneMapping/>
+</idMap>

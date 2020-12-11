@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+    <variable>
+        <variableId>YesterdaysStageFcst</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>ImportSHEF</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>STGE-1</parameterId>
+            <locationSetId>Gages_AK</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="100" endOverrulable="true"/>
+            <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet>
+       </variable>
+    <variable>
+        <variableId>YesterdaysQFcst</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>STG-1_PreProcessing</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>QIN</parameterId>
+            <locationSetId>SQIN-QINE</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="100" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+      <!--      <expiryTime unit="day" multiplier="1"/>-->
+        </timeSeriesSet>  
+    </variable>
+   <transformation id="Stage2Q">
+       <stageDischarge>
+           <ratingCurve>
+               <stage>  
+                   <variableId>YesterdaysStageFcst</variableId>
+               </stage>
+               <discharge>
+                   <variableId>YesterdaysQFcst</variableId>
+               </discharge>
+           </ratingCurve>
+       </stageDischarge>      
+   </transformation>
+</transformationModule>    

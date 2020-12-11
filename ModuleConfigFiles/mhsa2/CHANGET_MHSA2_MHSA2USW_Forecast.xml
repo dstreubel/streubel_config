@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MHSA2UPR_SWE_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SNOW17_MHSA2_MHSA2UPR_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>MHSA2UPR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MHSA2UPR_SWE_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>CHANGET_MHSA2_MHSA2USW_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>MHSA2UPR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MHSA2USW">
+		<aggregation>
+			<instantaneous>
+				<inputVariable>
+					<variableId>MHSA2UPR_SWE_6</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>MHSA2UPR_SWE_24</variableId>
+				</outputVariable>
+			</instantaneous>
+		</aggregation>
+	</transformation>
+</transformationModule>

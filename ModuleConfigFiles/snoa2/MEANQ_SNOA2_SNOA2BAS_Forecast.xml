@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>SNOA2BAS_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_SNOA2_SNOA2UPR_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>SNOA2BAS</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SNOA2BAS_SQME_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MEANQ_SNOA2_SNOA2BAS_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<locationId>SNOA2BAS</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SNOA2BAS">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>SNOA2BAS_SQIN_6</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>SNOA2BAS_SQME_24</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+</transformationModule>

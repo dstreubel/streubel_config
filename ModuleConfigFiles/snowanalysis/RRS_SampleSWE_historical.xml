@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+<!-- raw ingested data-->
+	<variable>
+		<variableId>histsim_SWE_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MergeSWE_NE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<!--<timeStep unit="nonequidistant"/>-->
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<!-- sampled/snapped to equidistant timesteps, editable, stored in datastore-->
+	<variable>
+		<variableId>histsim_SWE_eq_1d</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>RRS_SampleSWE_historical</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationSetId>Catchments_snow_update</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-20000" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>4</synchLevel>
+			<expiryTime unit="year" multiplier="100"/>
+		</timeSeriesSet>
+	</variable>
+
+	<transformation id="histsim_RRS_SampleSWE_eq_1d">
+		<sample>
+			<nonEquidistant>
+				<nonEquidistantInputVariable>
+					<variableId>histsim_SWE_ne</variableId>
+				</nonEquidistantInputVariable>
+				<interpolationType>linearOrClosest</interpolationType>
+				<outputVariable>
+					<variableId>histsim_SWE_eq_1d</variableId>
+				</outputVariable>
+			</nonEquidistant>
+		</sample>
+	</transformation>
+</transformationModule>

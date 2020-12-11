@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>CSV</importType>
+			<folder>$IMPORT_FOLDER_ROOT$/csv</folder>
+			<idMapId>IdImportCSV</idMapId>
+			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+			<missingValue>-999.0</missingValue>
+			<importTimeZone>
+				<timeZoneOffset>-08:00</timeZoneOffset>
+			</importTimeZone>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportCSV_QME</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QME</parameterId>
+			<locationSetId>Calibration_Gages</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>4</synchLevel>
+			<expiryTime unit="year" multiplier="100"/>
+		</timeSeriesSet>
+		<!--externUnit parameterId="QME" unit="CFSD"/-->
+	</import>
+</timeSeriesImportRun>

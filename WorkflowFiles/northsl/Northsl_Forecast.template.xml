@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 sp1 (x64) (http://www.altova.com) by Benjamin Balk (Amec E&I Inc.) -->
+<!--<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/workflow.xsd" version="1.1">-->
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<!--PreProcessing_Forecast-->
+	<activity>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>SetTimes_LastObserved</moduleInstanceId>
+    </activity>	
+	<activity>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>SetTimes_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+		<properties>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Northsl_MergeMAP_Forecast</moduleInstanceId>
+		<moduleConfigFileName>MergeMAP_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Northsl_MergeMAT_Forecast</moduleInstanceId>
+		<moduleConfigFileName>MergeMAT_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<!-- SEGMENT KUPA2-->
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="FGROUP" value="Northsl"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_KUPA2_KUPA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2UPR"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_KUPA2_KUPA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2LWR"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_KUPA2_KUPA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_KUPA2_KUPA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_KUPA2_KUPA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_KUPA2_KUPA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="CATCHMENT" value="KUPA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_KUPA2_KUPA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_KUPA2_KUPA2_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADDSUB_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KUPA2_KUPA2OB6_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KUPA2_KUPA2OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB1_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_KUPA2_KUPA2_Forecast"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KUPA2_KUPA2SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_KUPA2_KUPA2_Forecast"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_KUPA2_KUPA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KUPA2_KUPA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2USW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2LSW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>			
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2USC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2LSC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUPA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Northsl"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KUPA2_KUPA2MAT_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_Forecast_template</moduleConfigFileName>
+	</activity>			
+	
+	<!-- SEGMENT SGRA2-->
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="FGROUP" value="Northsl"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_SGRA2_SGRA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="CATCHMENT" value="SGRA2UPR"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_SGRA2_SGRA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="CATCHMENT" value="SGRA2LWR"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_SGRA2_SGRA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="CATCHMENT" value="SGRA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_SGRA2_SGRA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="CATCHMENT" value="SGRA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_SGRA2_SGRA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="CATCHMENT" value="SGRA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_SGRA2_SGRA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="CATCHMENT" value="SGRA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_SGRA2_SGRA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_SGRA2_SGRA2_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADDSUB_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_SGRA2_SGRA2OB6_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_SGRA2_SGRA2OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB1_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_SGRA2_SGRA2_Forecast"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_SGRA2_SGRA2SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_SGRA2_SGRA2_Forecast"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_SGRA2_SGRA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_SGRA2_SGRA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SGRA2_SGRA2USW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SGRA2_SGRA2LSW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>			
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SGRA2_SGRA2USC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SGRA2_SGRA2LSC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SGRA2_SGRA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SGRA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Northsl"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_SGRA2_SGRA2MAT_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_Forecast_template</moduleConfigFileName>
+	</activity>		
+
+	
+<!--CRUA2-->
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="FGROUP" value="Northsl"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_CRUA2_CRUA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="CATCHMENT" value="CRUA2UPR"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_CRUA2_CRUA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="CATCHMENT" value="CRUA2MID"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_CRUA2_CRUA2MID_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="CATCHMENT" value="CRUA2LWR"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_CRUA2_CRUA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="CATCHMENT" value="CRUA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_CRUA2_CRUA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="CATCHMENT" value="CRUA2MID"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_CRUA2_CRUA2MID_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="CATCHMENT" value="CRUA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_CRUA2_CRUA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="CATCHMENT" value="CRUA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_CRUA2_CRUA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="CATCHMENT" value="CRUA2MID"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_CRUA2_CRUA2MID_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="CATCHMENT" value="CRUA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_CRUA2_CRUA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_CRUA2_CRUA2_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADDSUB_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_CRUA2_CRUA2OB6_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_CRUA2_CRUA2OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB1_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_CRUA2_CRUA2_Forecast"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_CRUA2_CRUA2SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_CRUA2_CRUA2_Forecast"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_CRUA2_CRUA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_CRUA2_CRUA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CRUA2_CRUA2USW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="ZONE" value="MID"/>		
+			<string key="exportParameter" value="MSW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CRUA2_CRUA2MSW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CRUA2_CRUA2LSW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>			
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CRUA2_CRUA2USC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="ZONE" value="MID"/>		
+			<string key="exportParameter" value="MSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CRUA2_CRUA2MSC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CRUA2_CRUA2LSC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CRUA2_CRUA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CRUA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Northsl"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CRUA2_CRUA2MAT_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_Forecast_template</moduleConfigFileName>
+	</activity>			
+	<activity>
+		<runIndependent>false</runIndependent>
+		<workflowId>Northsl_Export</workflowId>
+	</activity>
+</workflow>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>TAFXCHFR_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>LAGK_ENNA2_LAGTAFXC_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>TAFXCHFR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>TAFXCHFL_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>LOOKUP_ENNA2_ENNA2LKP_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>TAFXCHFL</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="ENNA2LKP">
+		<lookup>
+			<simple>
+			<input>
+				<variableId>TAFXCHFR_SQIN_6</variableId>
+			</input>
+			<coefficientSet>
+				<interpolationType>linear</interpolationType>
+				<extrapolationType>extrapolate</extrapolationType>
+				<lookupTable>
+					<lookupTableRow input="0.0" output="0.0"></lookupTableRow>
+					<lookupTableRow input="1132.68" output="1132.68"></lookupTableRow>
+					<lookupTableRow input="1282.7601" output="1231.7895"></lookupTableRow>
+					<lookupTableRow input="1699.02" output="1614.069"></lookupTableRow>
+
+				</lookupTable>
+			</coefficientSet>
+			<output>
+				<variableId>TAFXCHFL_SQIN_6</variableId>
+			</output>
+			</simple>
+		</lookup>
+	</transformation>
+</transformationModule>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskRunDialog xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/taskRunDialog.xsd">
+  <taskGroup name="Upload to Archive">
+     <archiveTask name="Archive TimeSeries" workflowId="Archive_TimeSeries" iconName="barrier.png" queryServiceUrl="$ARCHIVE_QUERY_SERVICE$">
+      <archiveRun>
+        <exportDirectory>$TO_ARCHIVE_PATH$</exportDirectory>
+        <exportArchiveRun>
+          <archivePeriod start="-24" end="0" unit="hour"/>
+          <archiveType>TimeSeriesArchive</archiveType>
+        </exportArchiveRun>
+      </archiveRun>
+    </archiveTask>
+<!-- SA ONLY
+     <archiveTask name="Archive Forecast" workflowId="Archive_Forecast" iconName="barrier.png" queryServiceUrl="$ARCHIVE_QUERY_SERVICE$">
+      <archiveRun>
+        <exportDirectory>$TO_ARCHIVE_PATH$</exportDirectory>
+        <exportArchiveRun>
+          <archivePeriod start="-24" end="0" unit="hour"/>
+          <archiveType>ForecastArchive</archiveType>
+        </exportArchiveRun>
+      </archiveRun>
+    </archiveTask>
+     <archiveTask name="Archive TimeSeries" workflowId="Archive_TimeSeries" iconName="barrier.png" queryServiceUrl="$ARCHIVE_QUERY_SERVICE$">
+      <archiveRun>
+        <exportDirectory>$TO_ARCHIVE_PATH$</exportDirectory>
+        <exportArchiveRun>
+          <archivePeriod start="-24" end="0" unit="hour"/>
+          <archiveType>TimeSeriesArchive</archiveType>
+        </exportArchiveRun>
+      </archiveRun>
+    </archiveTask>
+    <archiveTask name="Archive Configuration" workflowId="Archive_Configuration" iconName="barrier.png" queryServiceUrl="$ARCHIVE_QUERY_SERVICE$">
+      <archiveRun>
+        <exportDirectory>$TO_ARCHIVE_PATH$</exportDirectory>
+        <exportArchiveRun>
+          <archivePeriod start="-26" end="0" unit="week"/>
+          <archiveType>ConfigurationArchive</archiveType>
+        </exportArchiveRun>
+      </archiveRun>
+    </archiveTask>
+    <archiveTask name="Threshold Events" workflowId="Archive_Thresholds" iconName="barrier.png" queryServiceUrl="$ARCHIVE_QUERY_SERVICE$">
+      <archiveRun>
+        <exportDirectory>$TO_ARCHIVE_PATH$</exportDirectory>
+        <exportArchiveRun>
+          <archivePeriod start="-24" end="0" unit="week"/>
+          <archiveType>ThresholdEventsArchive</archiveType>
+        </exportArchiveRun>
+      </archiveRun>
+    </archiveTask>
+-->
+  </taskGroup>
+  <taskGroup name="Retrieve from Archive">
+     <archiveTask name="Forecast archive" workflowId="Retrieve_Forecast_Archive" iconName="barrier.png" queryServiceUrl="$ARCHIVE_QUERY_SERVICE$">
+      <archiveRun>
+        <importDirectory>$FROM_ARCHIVE_PATH$</importDirectory>
+        <importArchiveRun>
+          <archiveType>ForecastArchive</archiveType>
+        </importArchiveRun>
+      </archiveRun>
+    </archiveTask>
+    <archiveTask name="TimeSeries archive" workflowId="Retrieve_TimeSeries_Archive" iconName="barrier.png" queryServiceUrl="$ARCHIVE_QUERY_SERVICE$">
+      <archiveRun>
+        <importDirectory>$FROM_ARCHIVE_PATH$</importDirectory>
+        <importArchiveRun>
+          <archiveType>TimeSeriesArchive</archiveType>
+        </importArchiveRun>
+      </archiveRun>
+    </archiveTask>
+    <archiveTask name="Configuration archive" workflowId="Retrieve_Configuration_Archive" iconName="barrier.png" queryServiceUrl="$ARCHIVE_QUERY_SERVICE$">
+      <archiveRun>
+        <importDirectory>$FROM_ARCHIVE_PATH$</importDirectory>
+        <importArchiveRun>
+          <archiveType>ConfigurationArchive</archiveType>
+        </importArchiveRun>
+      </archiveRun>
+    </archiveTask>
+    <archiveTask name="Threshold events archive" workflowId="Retrieve_Thresholds_Archive" iconName="barrier.png" queryServiceUrl="$ARCHIVE_QUERY_SERVICE$">
+      <archiveRun>
+        <importDirectory>$ARCHIVE_IMPORT_PATH$</importDirectory>
+        <importArchiveRun>
+          <archiveType>ThresholdEventsArchive</archiveType>
+        </importArchiveRun>
+      </archiveRun>
+    </archiveTask>
+  </taskGroup>
+</taskRunDialog>

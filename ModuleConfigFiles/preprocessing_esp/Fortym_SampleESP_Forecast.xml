@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MAP_Historic</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDataCard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments_Fortym</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-36500" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAP_ESP</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Fortym_SampleESP_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments_Fortym</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>ESP</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_Historic</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDataCard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments_Fortym</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-36500" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MAT_ESP</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>Fortym_SampleESP_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAT</parameterId>
+			<locationSetId>Catchments_Fortym</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>ESP</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SampleESP_MAP">
+		<sample>
+			<historical>
+				<inputVariable>
+					<variableId>MAP_Historic</variableId>
+				</inputVariable>
+				<moduleParameterFile>Fortym_SampleESP_Forecast</moduleParameterFile>
+				<outputVariable>
+					<variableId>MAP_ESP</variableId>
+				</outputVariable>
+			</historical>
+		</sample>
+	</transformation>
+	<transformation id="SampleESP_MAT">
+		<sample>
+			<historical>
+				<inputVariable>
+					<variableId>MAT_Historic</variableId>
+				</inputVariable>
+				<moduleParameterFile>Fortym_SampleESP_Forecast</moduleParameterFile>
+				<outputVariable>
+					<variableId>MAT_ESP</variableId>
+				</outputVariable>
+			</historical>
+		</sample>
+	</transformation>
+</transformationModule>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qualifiers xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/qualifiers.xsd">
+	<allowReferencingUndefinedQualifiers>true</allowReferencingUndefinedQualifiers>
+	<qualifier id="FX" name="Forecast Data"> </qualifier>
+	<qualifier id="err" name="Error"> </qualifier>
+	<qualifier id="err_persist" name="Error decay"> </qualifier>
+	<qualifier id="err_zero" name="Error Zero"> </qualifier>
+	<qualifier id="err_corr" name="Error Correction"> </qualifier>
+	<qualifier id="DS" name="DS Resv"> </qualifier>
+	<qualifier id="RRS" name="RRS"> </qualifier>
+	<qualifier id="OL" name="OL"> </qualifier>
+	<qualifier id="CD" name="CD"> </qualifier>
+	<qualifier id="CE" name="CE"> </qualifier>
+	<qualifier id="RFIN" name="RFIN"> </qualifier>
+	<qualifier id="RANGE" name="RANGE"> </qualifier>
+	<qualifier id="EBTID1" name="EBTID1"> </qualifier>
+	<qualifier id="EBTID2" name="EBTID2"> </qualifier>
+	<qualifier id="EBTID3" name="EBTID3"> </qualifier>
+	<qualifier id="EBTID4" name="EBTID4"> </qualifier>
+	<qualifier id="SBALR1" name="SBALR1"> </qualifier>
+	<qualifier id="SBALR2" name="SBALR2"> </qualifier>
+	<qualifier id="SBALR3" name="SBALR3"> </qualifier>
+	<qualifier id="SBALR4" name="SBALR4"> </qualifier>
+	<qualifier id="1" name="1"> </qualifier>
+<!--	<qualifier id="2" name="2"> </qualifier> -->
+	<qualifier id="3" name="3"> </qualifier>
+    	<qualifier id="4" name="4"> </qualifier>
+<!--	<qualifier id="5" name="5"> </qualifier> -->
+   	<qualifier id="GFSX" name="GFSQPF ensemble"> </qualifier>
+    	<qualifier id="NAMX" name="NAMQPF ensemble"> </qualifier>
+    	<qualifier id="ECMX" name="ECMQPF ensemble"> </qualifier>
+	<qualifier id="NBMX" name="NBMQPF ensemble"> </qualifier>	
+   	<qualifier id="GFSX_T" name="GFST ensemble"> </qualifier>
+    	<qualifier id="NAMX_T" name="NAMT ensemble"> </qualifier>
+    	<qualifier id="ECMX_T" name="ECMT ensemble"> </qualifier>
+    	<qualifier id="observed" name="observed"> </qualifier>
+    	<qualifier id="forecast" name="forecast"> </qualifier>
+        <!--snow update system-->
+        <qualifier id="diff" name="Difference"/>
+        <qualifier id="ndiff" name="Normalized difference"/>
+        <qualifier id="pca" name="pca"/>
+        <qualifier id="current" name="current"/>
+        <qualifier id="hist" name="historic"/>
+        <qualifier id="rmse" name="RMS Error"/>
+    	<qualifier id="sim" name="simulated"> </qualifier>
+        <qualifier id="min" name="ESP min"/>
+        <qualifier id="max" name="ESP max"/>
+        <qualifier id="min_24" name="record min"/>
+        <qualifier id="max_24" name="record max"/>
+        <qualifier id="mean" name="mean"/>
+        <qualifier id="median" name="median"/>
+        <qualifier id="10" name="10% exceedance"/>
+        <qualifier id="25" name="25% exceedance"/>
+        <qualifier id="75" name="75% exceedance"/>
+        <qualifier id="90" name="90% exceedance"/>
+        <qualifier id="30" name="30% exceedance"/>
+        <qualifier id="20" name="20% exceedance"/>
+        <qualifier id="5" name="5% exceedance"/>
+        <qualifier id="2" name="2% exceedance"/>
+        <qualifier id="D90" name="D90"/>
+	<!--Performance Indicator statistics-->
+	<qualifier id="R2.24"></qualifier>
+	<qualifier id="bias.24"></qualifier>
+	<qualifier id="MSE.24"></qualifier>
+	<qualifier id="MAE.24"></qualifier>	
+	<qualifier id="NS.24"></qualifier>
+	<!--Added for NWM-->
+        <qualifier id="Assimilated" name="Assimilated"/>
+        <qualifier id="ShortRange" name="ShortRange"/>
+        <qualifier id="MediumRange" name="MediumRange"/>
+        <qualifier id="LongRange" name="LongRange"/>
+        <qualifier id="1hr" name="1hr"/>
+        <qualifier id="6hr" name="6hr"/>
+</qualifiers>

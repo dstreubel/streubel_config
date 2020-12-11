@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>Obs_hist</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>DayMonthSampleSNWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+				<locationSetId>Bradley_area_snow</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Sim_hist</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>DayMonthSampleSWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>BRTA2UPR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Obs_current</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>DayMonthSampleSNWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+				<locationSetId>Bradley_area_snow</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-2" end="2"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Current_sim</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>DayMonthSampleSWE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<locationId>BRTA2UPR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-2" end="2"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+
+	<variable>
+		<variableId>PCA_swe</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>PCA_BRTA2UPR_RMSE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<qualifierId>pca</qualifierId>
+			<locationId>BRTA2UPR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-2" end="2"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PCA_rmse</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>PCA_BRTA2UPR_RMSE_SnowAnalysis</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SWE</parameterId>
+			<qualifierId>rmse</qualifierId>
+			<locationId>BRTA2UPR</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-2" end="2"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>main</ensembleId>
+		</timeSeriesSet>
+	</variable>
+
+	<transformation id="PCA">
+		<regression>
+			<principalComponentAnalysis>
+				<historicalObserved>
+					<variableId>Obs_hist</variableId>
+				</historicalObserved>
+				<historicalSimulated>
+					<variableId>Sim_hist</variableId>
+				</historicalSimulated>
+				<currentObserved>
+					<variableId>Obs_current</variableId>
+				</currentObserved>
+				<currentSimulated>
+					<variableId>Current_sim</variableId>
+				</currentSimulated>
+				<enableCombinationAnalysis>true</enableCombinationAnalysis>
+				<estimatedCurrentSimulated>
+					<variableId>PCA_swe</variableId>
+				</estimatedCurrentSimulated>
+				<errorStatistics>
+					<variableId>PCA_rmse</variableId>
+				</errorStatistics>
+			</principalComponentAnalysis>
+		</regression>
+	</transformation>
+
+</transformationModule>

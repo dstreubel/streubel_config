@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+	
+	<!-- External parameters were acquired via wgrib -->
+	<map internalParameter="FMAP" internalLocation="HEFS_GEFS" externalParameter="Total_precipitation_surface_6_Hour_Accumulation_unweightedMean" externalLocation="GEFS"/>
+        <map internalParameter="TFMX" internalLocation="HEFS_GEFS" externalParameter="Maximum_temperature_height_above_ground_6_Hour_Maximum_unweightedMean" externalLocation="GEFS"/>
+        <map internalParameter="TFMN" internalLocation="HEFS_GEFS" externalParameter="Minimum_temperature_height_above_ground_6_Hour_Minimum_unweightedMean" externalLocation="GEFS"/>
+
+</idMap>

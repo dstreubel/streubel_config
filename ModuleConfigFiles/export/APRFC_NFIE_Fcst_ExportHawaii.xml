@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+
+<!-- The following is a template file that can be used to generate the actual export configuration file
+	 The parts to be filled in include
+		FGROUP_ID - forecast group in the "Gages" and Catchments LocationSet
+		SET_OF_MODULES_PRODUCING_QINE - module instance set name for modules producing QINE (e.g. RFV)	
+		
+-->	
+
+<!-- Reservoir Releases -->
+	<export>
+		<general>
+			<exportTypeStandard>pi 1.10</exportTypeStandard>
+			<folder>$EXPORT_FOLDER$/NFIE_Exported_Files</folder>
+			<exportFileName>
+				<name>Hawaii_SQIN_Export.</name>
+				<suffix>
+					<currentTimeFormattingString>yyyyMMddHHmm</currentTimeFormattingString>
+				</suffix>
+			</exportFileName>
+			<idMapId>IdExportPIXML</idMapId>
+			<unitConversionsId>importEnglishUnits</unitConversionsId>
+	 		<exportMissingValue>-999</exportMissingValue>
+			<omitMissingValues>true</omitMissingValues>
+		</general>		 		 
+
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN_R</parameterId>
+			<locationSetId>Gages_Kauai</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-5" startOverrulable="true" end="5" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</export>
+
+
+
+</timeSeriesExportRun>

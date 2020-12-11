@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+    <activity>
+    	<moduleInstanceId>RRS_PreProcessing_Inst_QIN</moduleInstanceId>
+    </activity>
+<!-- Short-Range -->    
+    <activity>
+        <properties>
+		<string key="Variable" value="QINE"/>
+		<string key="Type" value="ShortRange"/>
+		<string key="TSstart" value="-100"/>
+		<string key="TSend" value="100"/>
+		<string key="FPstart" value="-14"/>
+		<string key="FPend" value="-10"/>
+	</properties>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>NWMShortRangeVerificationQIN</moduleInstanceId>
+	<moduleConfigFileName>NWMShortRangeVerificationQINTemplate</moduleConfigFileName>        
+    </activity>
+    <!--activity>
+    	<properties>
+		<string key="Type" value="ShortRange"/>
+	</properties>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>NWMShortRangeVerificationQINMerge</moduleInstanceId>
+	<moduleConfigFileName>NWMShortRangeVerificationQINMergeTemplate</moduleConfigFileName>        
+    </activity-->
+
+<!-- Upstream points -->    
+    <!--<activity>
+        <properties>
+		<string key="Variable" value="SQIN"/>
+		<string key="Type" value="ShortRangeUpstream"/>
+		<string key="TSstart" value="-24"/>
+		<string key="TSend" value="0"/>
+		<string key="FPstart" value="-24"/>
+		<string key="FPend" value="-24"/>
+	</properties>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>NWMShortRangeUpstreamVerificationQIN</moduleInstanceId>
+	<moduleConfigFileName>NWMShortRangeVerificationQINTemplate</moduleConfigFileName>        
+    </activity>
+    <activity>
+    	<properties>
+		<string key="Type" value="ShortRangeUpstream"/>
+	</properties>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>NWMShortRangeUpstreamVerificationQINMerge</moduleInstanceId>
+	<moduleConfigFileName>NWMShortRangeVerificationQINMergeTemplate</moduleConfigFileName>        
+    </activity>-->
+    
+</workflow>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locationIcons xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/locationIcons.xsd">
+	<rootDir>Icons</rootDir>
+	<locationIcon>
+		<description>Reservoirs</description>
+		<iconId>reach_site_data</iconId>
+		<locationSetId>Reservoirs</locationSetId>
+	</locationIcon>
+	<locationIcon>
+		<description>Fluvial sites</description>
+		<iconId>fluvial_site_data</iconId>
+		<locationSetId>Gages</locationSetId>
+	</locationIcon>
+	<locationIcon>
+		<description>Catchments</description>
+		<iconId>radar_forecast_data</iconId>
+		<locationSetId>Catchments</locationSetId>
+	</locationIcon>
+	<locationIcon>
+		<description>Precipitation sites</description>
+		<iconId>meteo_site_data</iconId>
+		<locationSetId>Gages_Precip</locationSetId>
+	</locationIcon>
+</locationIcons>

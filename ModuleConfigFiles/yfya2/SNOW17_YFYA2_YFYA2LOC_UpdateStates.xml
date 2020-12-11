@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/generalAdapterRun.xsd">
+	<general>
+		<description>SNOW17 Operation YFYA2LOC</description>
+		<piVersion>1.5</piVersion>
+		<rootDir>%TEMP_DIR%</rootDir>
+		<workDir>%ROOT_DIR%/work</workDir>
+		<exportDir>%ROOT_DIR%/input</exportDir>
+		<exportDataSetDir>%ROOT_DIR%</exportDataSetDir>
+		<exportIdMap>IdExportSNOW17</exportIdMap>
+		<importDir>%ROOT_DIR%/output</importDir>
+		<importIdMap>IdImportSNOW17</importIdMap>
+		<dumpFileDir>$GA_DUMPFILEDIR$</dumpFileDir>
+		<dumpDir>%ROOT_DIR%</dumpDir>
+		<diagnosticFile>%ROOT_DIR%/output/diag.fi</diagnosticFile>
+		<missVal>-999</missVal>
+		<timeZone>
+			<timeZoneOffset>-09:00</timeZoneOffset>
+		</timeZone>
+		<modelTimeStep unit="hour" multiplier="6"/>
+	</general>
+	<activities>
+		<startUpActivities>
+			<makeDir>
+				<dir>%ROOT_DIR%/work</dir>
+			</makeDir>
+		</startUpActivities>
+		<exportActivities>
+			<exportStateActivity>
+				<moduleInstanceId>SNOW17_YFYA2_YFYA2LOC_UpdateStates</moduleInstanceId>
+				<stateExportDir>%ROOT_DIR%/states</stateExportDir>
+				<stateConfigFile>%ROOT_DIR%/states/states.fi</stateConfigFile>
+				<stateLocations type="file">
+					<stateLocation>
+						<readLocation>statesI.txt</readLocation>
+						<writeLocation>statesO.txt</writeLocation>
+					</stateLocation>
+					<stateLocation>
+						<readLocation>params_previous.xml</readLocation>
+						<writeLocation>params_current.xml</writeLocation>
+					</stateLocation>
+				</stateLocations>
+				<loopTimeStep id="12Z"/>
+			</exportStateActivity>
+			<exportTimeSeriesActivity>
+				<exportFile>inputs.fi</exportFile>
+				<exportBinFile>true</exportBinFile>				
+				<timeSeriesSets>
+					<timeSeriesSet>
+						<moduleInstanceId>Upyukon_MergeMAT_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>MAT</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<relativeViewPeriod unit="hour" end="0"/>
+						<readWriteMode>read only</readWriteMode>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>Upyukon_MergeMAP_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>MAP</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<relativeViewPeriod unit="hour" end="0"/>
+						<readWriteMode>read only</readWriteMode>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>RSNWELEV_YFYA2_YFYA2RSN_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>RSEL</parameterId>
+						<locationId>YFYA2RSN</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<relativeViewPeriod unit="hour" end="0"/>
+						<readWriteMode>read only</readWriteMode>
+					</timeSeriesSet>
+				</timeSeriesSets>
+				<checkMissing>true</checkMissing>
+			</exportTimeSeriesActivity>
+			<exportTimeSeriesActivity>
+				<exportFile>mods_snow17_ne.fi</exportFile>
+				<exportBinFile>false</exportBinFile>
+				<timeSeriesSets>
+					<timeSeriesSet>
+						<moduleInstanceId>ExportMODS</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>WECHNG</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>external historical</timeSeriesType>
+						<timeStep unit="nonequidistant"/>
+						<relativeViewPeriod unit="hour" end="0"/>
+						<readWriteMode>read only</readWriteMode>
+						<ensembleId>main</ensembleId>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>ExportMODS</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>WEADD</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>external historical</timeSeriesType>
+						<timeStep unit="nonequidistant"/>
+						<relativeViewPeriod unit="hour" end="0"/>
+						<readWriteMode>read only</readWriteMode>
+						<ensembleId>main</ensembleId>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>ExportMODS</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>AESCCHNG</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>external historical</timeSeriesType>
+						<timeStep unit="nonequidistant"/>
+						<relativeViewPeriod unit="hour" end="0"/>
+						<readWriteMode>read only</readWriteMode>
+						<ensembleId>main</ensembleId>
+					</timeSeriesSet>
+				</timeSeriesSets>
+			</exportTimeSeriesActivity>
+			<exportTimeSeriesActivity>
+				<exportFile>mods_snow17_eq.fi</exportFile>
+				<exportBinFile>true</exportBinFile>
+				<timeSeriesSets>
+					<timeSeriesSet>
+						<moduleInstanceId>ExportMODS</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>RAINSNOW</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>external historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<relativeViewPeriod unit="hour" end="0" endOverrulable="true"/>
+						<readWriteMode>read only</readWriteMode>
+						<ensembleId>main</ensembleId>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>ExportMODS</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>MFC</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>external historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<relativeViewPeriod unit="hour" end="0" endOverrulable="true"/>
+						<readWriteMode>read only</readWriteMode>
+						<ensembleId>main</ensembleId>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>ExportMODS</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>UADJ</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>external historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<relativeViewPeriod unit="hour" end="0" endOverrulable="true"/>
+						<readWriteMode>read only</readWriteMode>
+						<ensembleId>main</ensembleId>
+					</timeSeriesSet>
+				</timeSeriesSets>
+			</exportTimeSeriesActivity>
+			<exportParameterActivity>
+				<fileName>params.xml</fileName>
+				<moduleInstanceId>SNOW17_YFYA2_YFYA2LOC_UpdateStates</moduleInstanceId>
+			</exportParameterActivity>
+			<exportRunFileActivity>
+                                <exportFile>%ROOT_DIR%/run_info.fi</exportFile>
+                                <properties>
+					<string key="model" value="ohd.hseb.ohdmodels.snow17.Snow17ModelDriver"/>
+                                        <string key="outputLocationId" value="YFYA2LOC"/>										
+					<string key="SACSNOW" value="$SACSNOW$"/>
+					<string key="PRINTSNW" value="$PRINTSNW$"/>
+					<string key="SNOW" value="$SNOW$"/>
+					<string key="UPSC" value="$UPSC$"/>
+					<string key="UPWE" value="$UPWE$"/>
+					<int key="startLocalHourOfDay" value="$STARTLOCALHOUROFDAY$"/>
+					<int key="printDebugInfo" value="0"/>
+                                </properties>
+                        </exportRunFileActivity>
+		</exportActivities>
+		<executeActivities>
+			<executeActivity>
+				<command>
+					<className>ohd.hseb.ohdfewsadapter.OHDFewsAdapter</className>
+					<binDir>$OHDBINDIR$</binDir>
+				</command>
+				<arguments>
+					<argument>%ROOT_DIR%/run_info.fi</argument>
+				</arguments>
+				<timeOut>300000</timeOut>
+			</executeActivity>
+		</executeActivities>
+		<importActivities>
+			<importStateActivity>
+				<stateConfigFile>%ROOT_DIR%/states/states.fi</stateConfigFile>
+				<synchLevel>20</synchLevel>
+			</importStateActivity>
+			<importTimeSeriesActivity>
+				<importFile>outputs.fi</importFile>
+				<timeSeriesSets>
+					<timeSeriesSet>
+						<moduleInstanceId>SNOW17_YFYA2_YFYA2LOC_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>RAIM</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>add originals</readWriteMode>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>SNOW17_YFYA2_YFYA2LOC_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>SWE</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>add originals</readWriteMode>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>SNOW17_YFYA2_YFYA2LOC_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>SASC</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>add originals</readWriteMode>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>SNOW17_YFYA2_YFYA2LOC_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>PSFALL</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>add originals</readWriteMode>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>SNOW17_YFYA2_YFYA2LOC_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>PRAIN</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>add originals</readWriteMode>
+					</timeSeriesSet>
+					<timeSeriesSet>
+						<moduleInstanceId>SNOW17_YFYA2_YFYA2LOC_UpdateStates</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>SNTMP</parameterId>
+						<locationId>YFYA2LOC</locationId>
+						<timeSeriesType>simulated historical</timeSeriesType>
+						<timeStep unit="hour" multiplier="6"/>
+						<readWriteMode>add originals</readWriteMode>
+					</timeSeriesSet>
+				</timeSeriesSets>
+			</importTimeSeriesActivity>
+		</importActivities>
+	</activities>
+</generalAdapterRun>

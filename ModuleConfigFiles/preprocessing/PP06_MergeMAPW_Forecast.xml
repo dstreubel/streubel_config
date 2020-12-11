@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>PP06_observed</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PP06</parameterId>
+			<locationSetId>ImportSHEF</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PPF06_forecast</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PPF06</parameterId>
+			<locationSetId>ImportSHEF</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="0" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>PP06_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>PP06_MergeMAPW_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>PP06</parameterId>
+			<locationSetId>ImportSHEF</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MergePP06">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>PP06_observed</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>PPF06_forecast</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>PP06_merged</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	<transformation id="InterpolatePP06">
+		<interpolationSerial>
+			<default>
+				<inputVariable>
+					<variableId>PP06_merged</variableId>
+				</inputVariable>
+				<defaultValue>0.00</defaultValue>
+				<outputVariable>
+					<variableId>PP06_merged</variableId>
+				</outputVariable>
+			</default>
+		</interpolationSerial>
+	</transformation>
+</transformationModule>

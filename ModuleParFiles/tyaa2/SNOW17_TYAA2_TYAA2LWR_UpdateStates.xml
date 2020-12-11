@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters
+    xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_modelparameters.xsd"
+    version="1.5" xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <group id="default">
+        <parameter id="TALMIN">
+            <description></description>
+            <dblValue>0.25</dblValue>
+        </parameter>
+        <parameter id="TAELEV">
+            <description></description>
+            <dblValue>300.0</dblValue>
+        </parameter>
+        <parameter id="TIPM">
+            <description></description>
+            <dblValue>0.1</dblValue>
+        </parameter>
+        <parameter id="TALMAX">
+            <description></description>
+            <dblValue>0.55</dblValue>
+        </parameter>
+        <parameter id="SASC_OUTPUT_TS_INTERVAL">
+            <description></description>
+            <intValue>6</intValue>
+        </parameter>
+        <parameter id="PXTEMP">
+            <description></description>
+            <dblValue>1.7</dblValue>
+        </parameter>
+        <parameter id="PXADJ">
+            <description></description>
+            <dblValue>1.0</dblValue>
+        </parameter>
+        <parameter id="ELEV">
+            <description></description>
+            <dblValue>300.0</dblValue>
+        </parameter>
+        <parameter id="UADJ">
+            <description></description>
+            <dblValue>0.12</dblValue>
+        </parameter>
+        <parameter id="MFMIN">
+            <description></description>
+            <dblValue>0.1</dblValue>
+        </parameter>
+        <parameter id="NMF">
+            <description></description>
+            <dblValue>0.15</dblValue>
+        </parameter>
+        <parameter id="WETOL[0., 1.0]">
+            <description></description>
+            <dblValue>0.0</dblValue>
+        </parameter>
+        <parameter id="ALAT">
+            <description></description>
+            <dblValue>59.5</dblValue>
+        </parameter>
+        <parameter id="PLWHC">
+            <description></description>
+            <dblValue>0.0</dblValue>
+        </parameter>
+        <parameter id="MV">
+            <description></description>
+            <intValue>0</intValue>
+        </parameter>
+        <parameter id="MBASE">
+            <description></description>
+            <dblValue>0.0</dblValue>
+        </parameter>
+        <parameter id="SCF">
+            <description></description>
+            <dblValue>1.2</dblValue>
+        </parameter>
+        <parameter id="SI">
+            <description></description>
+            <dblValue>999.0</dblValue>
+        </parameter>
+        <parameter id="SWE_OUTPUT_TS_INTERVAL">
+            <description></description>
+            <intValue>6</intValue>
+        </parameter>
+        <parameter id="SNSG_OUTPUT_TS_INTERVAL">
+            <description></description>
+            <intValue>6</intValue>
+        </parameter>
+        <parameter id="AREA_ELEV_CURVE(METR)">
+            <description></description>
+            <table>
+                <columnTypes A="double" B="double"/>
+                <row A="70.0" B="0.0"/>
+                <row A="122.0" B="0.02"/>
+                <row A="149.0" B="0.09"/>
+                <row A="294.0" B="0.26"/>
+                <row A="481.0" B="0.44"/>
+                <row A="604.0" B="0.6"/>
+                <row A="620.0" B="0.65"/>
+                <row A="694.0" B="0.71"/>
+                <row A="756.0" B="0.81"/>
+                <row A="812.0" B="0.85"/>
+                <row A="861.0" B="0.93"/>
+                <row A="914.0" B="1.0"/>
+            </table>
+        </parameter>
+        <parameter id="SCTOL[0., 1.0]">
+            <description></description>
+            <dblValue>0.0</dblValue>
+        </parameter>
+        <parameter id="MFMAX">
+            <description></description>
+            <dblValue>1.2</dblValue>
+        </parameter>
+        <parameter id="RAIN_SNOW_ELEV_INPUT_OPTION">
+            <description></description>
+            <boolValue>true</boolValue>
+        </parameter>
+        <parameter id="DAYGM">
+            <description></description>
+            <dblValue>0.0</dblValue>
+        </parameter>
+        <parameter id="AREA_DEPLETION_CURVE">
+            <description></description>
+            <table>
+                <columnTypes A="double"/>
+                <row A="0.05"/>
+                <row A="0.25"/>
+                <row A="0.38"/>
+                <row A="0.43"/>
+                <row A="0.46"/>
+                <row A="0.48"/>
+                <row A="0.5"/>
+                <row A="0.54"/>
+                <row A="0.6"/>
+                <row A="0.71"/>
+                <row A="1.0"/>
+            </table>
+        </parameter>
+    </group>
+</parameters>

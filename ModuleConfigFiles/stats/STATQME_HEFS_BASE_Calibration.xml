@@ -1,0 +1,2303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/transformationModule.xsd" version="1.0">
+<!-- inputs -->
+	 
+	<variable>
+		<variableId>QME_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDataCard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QME</parameterId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="24" timeZone="GMT-6"/>
+			<relativeViewPeriod unit="day" start="-365" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>			 
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SQIN_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="-365" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>			 	
+		</timeSeriesSet>
+	</variable>
+<!-- used to create a copy of QME as an output of this workflow -->	
+	<variable>
+		<variableId>QME_24_merged</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QME</parameterId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24" timeZone="GMT-6"/>
+			<relativeViewPeriod unit="day" start="-365" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+<!-- calculated-->
+	
+	<!--STAT_QME 1a: simMean=<aggregation><instantaneousToMean><input>SQIN_6</input><output>SQME_1m</output>-->
+		<variable>
+		<variableId>SQME_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24" timeZone="GMT-6"/>			 
+			<relativeViewPeriod unit="day" start="-365" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>			 
+		</timeSeriesSet>
+	</variable>
+	 			
+	 
+	
+<!-- STATE-QME 3a, 4a: error=<user><simple><expression>SQME_24-QME_24<output>SQME_error_24-->
+	
+	<variable>
+		<variableId>SQME_error_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24" timeZone="GMT-6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+		 		 
+	<variable>
+		<variableId>SQME_avg_1m</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>avg</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="monthly"/>
+			<cycle unit="year"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+		
+	<variable>
+		<variableId>QME_avg_1m</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QME</parameterId>
+			<qualifierId>avg</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep id="monthly"/>
+			<cycle unit="year"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+
+<!-- merges -->	 
+	
+	
+<!-- jan -->	
+	<variable>
+		<variableId>SQME_24_jan_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jan1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_jan_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jan2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_jan_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>jan</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_jan_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jan1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_jan_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jan2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_jan_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>jan</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	 
+<!-- feb -->	
+	<variable>
+		<variableId>SQME_24_feb_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="feb1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_feb_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="feb2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_feb_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>feb</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_feb_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="feb1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_feb_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="feb2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_feb_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>feb</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>		
+
+<!-- mar -->	
+	<variable>
+		<variableId>SQME_24_mar_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="mar1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_mar_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="mar2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_mar_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>mar</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_mar_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="mar1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_mar_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="mar2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_mar_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>mar</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<!-- apr -->	
+	<variable>
+		<variableId>SQME_24_apr_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="apr1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_apr_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="apr2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_apr_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>apr</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_apr_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="apr1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_apr_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="apr2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_apr_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>apr</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<!-- may -->	
+	<variable>
+		<variableId>SQME_24_may_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="may1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_may_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="may2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_may_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>may</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_may_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="may1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_may_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="may2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_may_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>may</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<!-- jun -->	
+	<variable>
+		<variableId>SQME_24_jun_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jun1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_jun_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jun2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_jun_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>jun</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_jun_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jun1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_jun_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jun2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_jun_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>jun</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<!-- jul -->	
+	<variable>
+		<variableId>SQME_24_jul_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jul1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_jul_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jul2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_jul_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>jul</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_jul_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jul1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_jul_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="jul2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_jul_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>jul</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<!-- aug -->	
+	<variable>
+		<variableId>SQME_24_aug_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="aug1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_aug_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="aug2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_aug_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>aug</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_aug_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="aug1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_aug_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="aug2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_aug_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>aug</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<!-- sep -->	
+	<variable>
+		<variableId>SQME_24_sep_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="sep1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_sep_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="sep2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_sep_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>sep</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_sep_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="sep1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_sep_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="sep2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_sep_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>sep</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<!-- oct -->	
+	<variable>
+		<variableId>SQME_24_oct_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="oct1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_oct_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="oct2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_oct_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>oct</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_oct_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="oct1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_oct_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="oct2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_oct_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>oct</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>	
+	
+	<!-- nov -->	
+	<variable>
+		<variableId>SQME_24_nov_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="nov1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_nov_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="nov2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_nov_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>nov</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_nov_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="nov1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_nov_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="nov2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_nov_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>nov</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<!-- dec -->	
+	<variable>
+		<variableId>SQME_24_dec_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="dec1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_dec_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="dec2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>SQME_24_dec_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<qualifierId>dec</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_dec_1</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>1sthalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="dec1sthalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_dec_2</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>2ndhalf</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep id="dec2ndhalf"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	
+	<variable>
+		<variableId>ESQME_24_dec_total</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STATQME_HEFS_BASE_Calibration</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ESQME</parameterId>
+			<qualifierId>dec</qualifierId>
+			<locationSetId>Gages</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read complete forecast</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+<!-- TRANSFORMATIONS -->	
+	<!-- Make a copy of QME24 to display with this workflow -->
+	<transformation id="MergeQME">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>QME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>QME_24_merged</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--STAT_QME 1a: simMean=<aggregation><instantaneousToMean><input>SQIN_6</input><output>SQME_24</output>-->
+	<transformation id="SQME_24">
+		<aggregation>
+			<instantaneousToMean>
+				<inputVariable>
+					<variableId>SQIN_1</variableId>
+				</inputVariable>
+				<allowMissingValues>false</allowMissingValues>
+				<outputVariable>
+					<variableId>SQME_24</variableId>
+				</outputVariable>
+			</instantaneousToMean>
+		</aggregation>
+	</transformation>
+	 					
+	
+	<!-- STATE-QME 3a, 4a: error=<user><simple><expression>SQME_24-QME_24<output>SQME_error_24-->
+	<transformation id="SQME_error_24">
+		<user>
+			<simple>
+				<expression>SQME_24-QME_24</expression>
+				<outputVariable>
+					<variableId>SQME_error_24</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	
+	 
+	
+	<!--STAT_QME 1b: simMean=<statisticsPeriodic><mean><input>SQIN_6</input><output>SQME_1m</output>-->
+	<transformation id="SQME_avg_1m">
+		<statisticsPeriodic>
+			<mean>
+				<inputVariable>
+					<variableId>SQIN_1</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>SQME_avg_1m</variableId>
+				</outputVariable>
+			</mean>
+		</statisticsPeriodic>
+	</transformation>
+	
+	<!--STATE-QME 2b: obsMean=<aggregation><instantaneousToMean><input>QINE_6</input><output>QME_1m</output> -->	
+	<transformation id="QME_avg_1m">
+		<statisticsPeriodic>
+			<mean>
+				<inputVariable>
+					<variableId>QME_24</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>QME_avg_1m</variableId>
+				</outputVariable>
+			</mean>
+		</statisticsPeriodic>
+	</transformation>	
+	
+<!-- MERGES - copy into monthly time series -->	
+	
+		
+<!--jan -->	
+	<transformation id="MergeSQMEjan1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_jan_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEjan2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_jan_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEjanTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_jan_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_jan_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_jan_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErrorjan1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_jan_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorjan2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_jan_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorjanTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_jan_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_jan_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_jan_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--feb -->	
+	<transformation id="MergeSQMEfeb1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_feb_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEfeb2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_feb_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEfebTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_feb_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_feb_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_feb_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErrorfeb1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_feb_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorfeb2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_feb_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorfebTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_feb_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_feb_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_feb_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--mar -->	
+	<transformation id="MergeSQMEmar1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_mar_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEmar2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_mar_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEmarTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_mar_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_mar_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_mar_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErrormar1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_mar_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrormar2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_mar_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrormarTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_mar_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_mar_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_mar_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--apr -->	
+	<transformation id="MergeSQMEapr1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_apr_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEapr2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_apr_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEaprTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_apr_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_apr_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_apr_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErrorapr1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_apr_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorapr2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_apr_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErroraprTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_apr_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_apr_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_apr_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--may -->	
+	<transformation id="MergeSQMEmay1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_may_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEmay2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_may_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEmayTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_may_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_may_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_may_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErrormay1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_may_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrormay2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_may_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrormayTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_may_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_may_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_may_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--jun -->	
+	<transformation id="MergeSQMEjun1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_jun_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEjun2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_jun_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEjunTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_jun_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_jun_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_jun_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErrorjun1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_jun_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorjun2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_jun_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorjunTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_jun_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_jun_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_jun_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--jul -->	
+	<transformation id="MergeSQMEjul1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_jul_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEjul2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_jul_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEjulTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_jul_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_jul_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_jul_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErrorjul1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_jul_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorjul2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_jul_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorjulTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_jul_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_jul_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_jul_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--aug -->	
+	<transformation id="MergeSQMEaug1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_aug_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEaug2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_aug_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEaugTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_aug_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_aug_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_aug_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErroraug1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_aug_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErroraug2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_aug_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErroraugTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_aug_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_aug_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_aug_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--sep -->	
+	<transformation id="MergeSQMEsep1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_sep_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEsep2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_sep_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEsepTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_sep_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_sep_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_sep_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErrorsep1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_sep_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorsep2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_sep_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrorsepTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_sep_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_sep_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_sep_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--oct -->	
+	<transformation id="MergeSQMEoct1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_oct_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEoct2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_oct_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEoctTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_oct_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_oct_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_oct_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErroroct1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_oct_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErroroct2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_oct_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErroroctTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_oct_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_oct_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_oct_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--nov -->	
+	<transformation id="MergeSQMEnov1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_nov_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEnov2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_nov_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEnovTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_nov_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_nov_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_nov_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErrornov1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_nov_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrornov2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_nov_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrornovTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_nov_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_nov_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_nov_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<!--dec -->	
+	<transformation id="MergeSQMEdec1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_dec_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEdec2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_dec_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeSQMEdecTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_24_dec_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SQME_24_dec_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>SQME_24_dec_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+
+      <transformation id="MergeErrordec1sthalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_dec_1</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrordec2ndhalf">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>SQME_error_24</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_dec_2</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>
+	
+	<transformation id="MergeErrordecTotal">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>ESQME_24_dec_1</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>ESQME_24_dec_2</variableId>
+				</inputVariable>								 
+				<outputVariable>
+					<variableId>ESQME_24_dec_total</variableId>
+				</outputVariable>
+			</simple>
+		</merge>
+	</transformation>			 
+	 
+</transformationModule>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>SRYA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+	<!--
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>ALEA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+	-->
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>TYAA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+	<!--
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>MCAA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>MNDA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>TKUA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>STKA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+	-->
+        <activity>
+                <runIndependent>false</runIndependent>
+                <moduleInstanceId>SCKA2_ENSPOST_Forecast</moduleInstanceId>
+        </activity>
+
+	<!--activity>
+		<runIndependent>true</runIndependent>
+		<workflowId>Southeast_HEFS_Stats</workflowId>
+	</activity-->
+</workflow>

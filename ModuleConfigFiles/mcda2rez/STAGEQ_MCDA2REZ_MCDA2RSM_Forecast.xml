@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>MCDA2RZ_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MERGETS_MCDA2REZ_MCDA2RMG_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>MCDA2RZ</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MCDA2REZ_SSTG_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>STAGEQ_MCDA2REZ_MCDA2RSM_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationId>MCDA2REZ</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="MCDA2RSM">
+		<dischargeStage>
+		<ratingCurve>
+			<discharge>
+				<variableId>MCDA2RZ_SQIN_6</variableId>
+			</discharge>
+			<ratingCurve>
+				<locationId>MCDA2</locationId>
+			</ratingCurve>
+			<stage>
+				<variableId>MCDA2REZ_SSTG_6</variableId>
+			</stage>
+		</ratingCurve>
+		</dischargeStage>
+	</transformation>
+</transformationModule>

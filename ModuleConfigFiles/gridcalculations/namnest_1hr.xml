@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pcrTransformationSets xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/pcrTransformationSets.xsd" version="1.1">
+<pcrTransformationSet id="Resample_Grid">
+		<areaMap>
+			<locationId>Hawaii_NAMNEST_Test</locationId>
+		</areaMap>
+		<definitions>
+			<dataExchange>memory</dataExchange>
+			<inputVariable variableId="NAMNEST_Grid" dataType="scalar" convertDatum="false">
+				<timeSeriesSet>
+					<moduleInstanceId>ImportQPF</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>QPF</parameterId>
+					<locationId>Hawaii_NAMNEST</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="6"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+			</inputVariable>
+			<outputVariable variableId="Test_NAMNEST" dataType="scalar" convertDatum="false">
+			<timeSeriesSet>
+					<moduleInstanceId>namnest_1hr</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>QPF</parameterId>
+					<locationId>Hawaii_NAMNEST</locationId>
+					<timeSeriesType>simulated forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="0" end="6"/>
+					<readWriteMode>add originals</readWriteMode>
+					<expiryTime unit="day" multiplier="2"/>
+				</timeSeriesSet>
+			</outputVariable>
+		</definitions>
+		<pcrModel id="MAP_Grid">
+			<text><![CDATA[
+			
+			CONV=2;
+
+			dynamic
+			Test_NAMNEST_ = NAMNEST_Grid/CONV;
+					
+			]]></text>
+			
+		</pcrModel>
+	</pcrTransformationSet>
+</pcrTransformationSets>

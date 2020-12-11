@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI" version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI pi_modelparameters.xsd">
+  <group id="default">
+    <parameter id="CG1_PARAMETER">
+      <dblValue>-4.0</dblValue>
+    </parameter>
+    <parameter id="GLACIER_STORAGE">
+      <dblValue>9.0</dblValue>
+    </parameter>
+    <parameter id="ANTECEDENT_FLOW_ID">
+      <stringValue>CJXA2FAI</stringValue>
+    </parameter>
+    <parameter id="INITIAL_AFI_DECAY_PARAMETER">
+      <dblValue>14.6</dblValue>
+    </parameter>
+    <parameter id="TS_OUTPUT_TIME_STEP">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="TS_OUTPUT_TYPE">
+      <stringValue>GOUT</stringValue>
+    </parameter>
+    <parameter id="KG2_PARAMETER">
+      <dblValue>0.5</dblValue>
+    </parameter>
+    <parameter id="CG2_PARAMETER">
+      <dblValue>0.01</dblValue>
+    </parameter>
+    <parameter id="TS_ID">
+      <stringValue>CJXA2GL</stringValue>
+    </parameter>
+    <parameter id="KG1_PARAMETER">
+      <dblValue>0.05</dblValue>
+    </parameter>
+    <parameter id="TS_TYPE">
+      <stringValue>RAIM</stringValue>
+    </parameter>
+    <parameter id="ANTECEDENT_FLOW_TYPE">
+      <stringValue>AFAI</stringValue>
+    </parameter>
+    <parameter id="TS_OUTPUT_ID">
+      <stringValue>CJXA2GL</stringValue>
+    </parameter>
+    <parameter id="AFI_DECAY_PARAMETER">
+      <dblValue>0.95</dblValue>
+    </parameter>
+  </group>
+</parameters>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+	<parameter external="TAQPM" internal="MAT"/>
+	<parameter external="PPQPM" internal="MAP"/>
+	<parameter external="PPHPM" internal="MAP"/>
+	<parameter external="TAQFL" internal="FMAT"/>
+	<parameter external="PPQFL" internal="FMAP"/>
+	<parameter external="PPHFL" internal="FMAP"/>
+	<parameter external="QRIFM" internal="QINE"/>
+	<parameter external="QRIFE" internal="SQIN"/>
+	<parameter external="QRIFR" internal="SQIN_R"/>
+	<parameter external="QRIPZ" internal="QIN_HIST"/>
+	<parameter external="QR" internal="SQIN"/>
+	<parameter external="QR" internal="QIN"/>
+	<parameter external="QI" internal="INFW"/>
+	<parameter external="HG" internal="STG"/>
+	<parameter external="HG" internal="SSTG"/>
+	<parameter external="HGIFE" internal="STGE-1"/>
+	<parameter external="HGIFZ" internal="STGE-1"/>	
+	<parameter external="HGIRGZ" internal="STG"/>
+	<parameter external="HGI1GZ" internal="STG"/>	
+	<parameter external="HGIFA" internal="OFS-STGE"/>
+	<parameter external="HP" internal="PELV"/>
+	<parameter external="HP" internal="SPEL"/>
+	<parameter external="SW" internal="SWE"/>
+	<parameter external="SWDPZ" internal="SWE-AVE"/>
+	<parameter external="BFIPZ" internal="SWE-OFS"/>
+	<parameter external="SWIPZ" internal="SWE-AVE6"/>
+	<parameter external="SWIPMZ" internal="SWE_CLM_GDAS_AVE"/>
+	<parameter external="SWIPMX" internal="SWE_CLM_GDAS_MAX"/>
+	<parameter external="SWIPMN" internal="SWE_CLM_GDAS_MIN"/>
+	<parameter external="SWIPNZ" internal="SWE_NOAH32_GDAS_AVE"/>
+	<parameter external="SWIPNX" internal="SWE_NOAH32_GDAS_MAX"/>
+	<parameter external="SWIPNN" internal="SWE_NOAH32_GDAS_MIN"/>
+	<parameter external="SWIRV" internal="SNWE"/>
+	<parameter external="SWIPV" internal="SNWE-PON"/>
+	<parameter external="SDIRM" internal="SD"/>	
+	<parameter external="QRDPAZ1" internal="Q10"/>
+	<parameter external="QRDPAZ5" internal="Q50"/>
+	<parameter external="QRDPAZ9" internal="Q90"/>
+	<parameter external="PPQRZ" internal="PP06"/>
+	<parameter external="PPQFFZZ" internal="PP06"/>
+	<parameter external="PPQ2MZZ" internal="PP06"/>
+	<parameter external="PPQ2GZZ" internal="PP06"/>
+	<parameter external="PPQ2PZZ" internal="PP06"/>
+	<parameter external="PPQ2ZZZ" internal="PP06"/>
+	<parameter external="QRIRZZ"  internal="QIN_USGS"/>
+	<parameter external="QID"  internal="QME"/>
+	<parameter external="TAIRMZZ" internal="TAIN"/>
+	<enableOneToOneMapping/>
+	
+</idMap>

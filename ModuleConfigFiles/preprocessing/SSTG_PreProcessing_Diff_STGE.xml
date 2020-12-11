@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>sstg_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>QIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>QIN</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>stge_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>QIN</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>STGE</parameterId>
+			<locationSetId>QIN</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>sstg-stge_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>SSTG_PreProcessing_Diff_STGE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG-STGE</parameterId>
+			<locationSetId>QIN</locationSetId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="240" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+
+	<transformation id="SSTG-STGE">
+		<user>
+			<simple>
+				<expression>+(sstg_scalar)-(stge_scalar)</expression>
+				<outputVariable>
+					<variableId>sstg-stge_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+</transformationModule>

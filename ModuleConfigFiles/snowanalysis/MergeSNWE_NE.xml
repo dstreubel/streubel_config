@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+<!-- raw ingested data-->
+	<variable>
+		<variableId>Datacard_SNWE_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDataCard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snowcourses</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SHEF_SNWE_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSHEF</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snowcourses</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>Merged_SNWE_ne</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MergeSNWE_NE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SNWE</parameterId>
+			<locationSetId>snowcourses</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-20000" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>4</synchLevel>
+			<expiryTime unit="year" multiplier="100"/>
+		</timeSeriesSet>
+	</variable>
+	
+	<transformation id="Obs_merge_ne">
+		<merge>
+			<simple>
+				<inputVariable>
+					<variableId>Datacard_SNWE_ne</variableId>
+				</inputVariable>
+				<inputVariable>
+					<variableId>SHEF_SNWE_ne</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>Merged_SNWE_ne</variableId>
+				</outputVariable>
+			</simple>
+		</merge>	
+	</transformation>
+
+
+</transformationModule>

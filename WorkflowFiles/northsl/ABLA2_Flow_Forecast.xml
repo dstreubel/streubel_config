@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="FGROUP" value="Northsl"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_ABLA2_ABLA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="CATCHMENT" value="ABLA2UPR"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_ABLA2_ABLA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="CATCHMENT" value="ABLA2LWR"/>
+			<string key="FGROUP" value="Northsl"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_ABLA2_ABLA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="CATCHMENT" value="ABLA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_ABLA2_ABLA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="CATCHMENT" value="ABLA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_ABLA2_ABLA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="CATCHMENT" value="ABLA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_ABLA2_ABLA2UPR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="CATCHMENT" value="ABLA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_ABLA2_ABLA2LWR_Forecast</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_ABLA2_ABLA2_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADDSUB_ABLA2_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_ABLA2_ABLA2OB6_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_ABLA2_ABLA2OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB1_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_ABLA2_ABLA2_Forecast"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_ABLA2_ABLA2SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_ABLA2_ABLA2_Forecast"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_ABLA2_ABLA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_ABLA2_ABLA2ADJ_Forecast</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ABLA2_ABLA2USW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ABLA2_ABLA2LSW_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>			
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ABLA2_ABLA2USC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ABLA2_ABLA2LSC_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ABLA2_ABLA2RSN_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_Forecast_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ABLA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Northsl"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ABLA2_ABLA2MAT_Forecast</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_Forecast_template</moduleConfigFileName>
+	</activity>			
+</workflow>

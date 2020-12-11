@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>UCHA2UPN_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_UCHA2_UCHA2UPN_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>UCHA2UPN</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>UCHA2UPS_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_UCHA2_UCHA2UPS_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>UCHA2UPS</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>UCHA2LWR_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>UNITHG_UCHA2_UCHA2LWR_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>UCHA2LWR</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>UCHA2_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_UCHA2_UCHA2UPN_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>UCHA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>UCHA2_QME</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportDatacard</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QME</parameterId>
+			<locationId>UCHA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>UCHA2_SQME_24</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_UCHA2_UCHA2UPN_UpdateStates</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQME</parameterId>
+			<locationId>UCHA2</locationId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep id= "12Z"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="UCHA2UPN">
+		<user>
+			<simple>
+				<expression>max(max((max(+UCHA2UPN_SQIN_6+0.000E+00,0))+UCHA2UPS_SQIN_6,0)+UCHA2LWR_SQIN_6,0)</expression>
+				<outputVariable>
+					<variableId>UCHA2_SQIN_6</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+        <transformation id="SQME_24">
+                <aggregation>
+                        <instantaneousToMean>
+                                <inputVariable>
+                                        <variableId>UCHA2_SQIN_6</variableId>
+                                </inputVariable>
+                                <outputVariable>
+                                        <variableId>UCHA2_SQME_24</variableId>
+                                </outputVariable>
+                        </instantaneousToMean>
+                </aggregation>
+        </transformation>
+</transformationModule>

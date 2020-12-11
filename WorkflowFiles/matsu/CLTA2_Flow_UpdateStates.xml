@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="FGROUP" value="Matsu"/>
+            <string key="CATCHMENT_TYPE" value="LWR"/>	
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>RSNWELEV_CLTA2_CLTA2RSN_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>RSNWELEV_UpdateStates_template</moduleConfigFileName>
+    </activity>
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="CATCHMENT" value="CLTA2GL"/>
+            <string key="FGROUP" value="Matsu"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>SNOW17_CLTA2_CLTA2GL_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>SNOW17_GL_UpdateStates_template</moduleConfigFileName>
+    </activity>	
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="CATCHMENT" value="CLTA2UPR"/>
+            <string key="FGROUP" value="Matsu"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>SNOW17_CLTA2_CLTA2UPR_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>SNOW17_UPR_UpdateStates_template</moduleConfigFileName>
+    </activity>
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="CATCHMENT" value="CLTA2LWR"/>
+            <string key="FGROUP" value="Matsu"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>SNOW17_CLTA2_CLTA2LWR_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>SNOW17_LWR_UpdateStates_template</moduleConfigFileName>
+    </activity>
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="CATCHMENT" value="CLTA2GL"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>GLACIER_CLTA2_CLTA2GL_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>GLACIER_UpdateStates_template</moduleConfigFileName>
+    </activity>
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="CATCHMENT" value="CLTA2UPR"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>SACSMA_CLTA2_CLTA2UPR_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>SACSMA_UPR_UpdateStates_template</moduleConfigFileName>
+    </activity>
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="CATCHMENT" value="CLTA2LWR"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>SACSMA_CLTA2_CLTA2LWR_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>SACSMA_LWR_UpdateStates_template</moduleConfigFileName>
+    </activity>	
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="CATCHMENT" value="CLTA2GL"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>UNITHG_CLTA2_CLTA2GL_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>UNITHG_GL_UpdateStates_template</moduleConfigFileName>
+    </activity>
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="CATCHMENT" value="CLTA2UPR"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>UNITHG_CLTA2_CLTA2UPR_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>UNITHG_UPR_UpdateStates_template</moduleConfigFileName>
+    </activity>
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="CATCHMENT" value="CLTA2LWR"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>UNITHG_CLTA2_CLTA2LWR_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>UNITHG_LWR_UpdateStates_template</moduleConfigFileName>
+    </activity>
+    <activity>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>ADDSUB_CLTA2_CLTA2GL_UpdateStates</moduleInstanceId>
+    </activity>
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="BASIN_SQIN_MODULE" value="ADDSUB_CLTA2_CLTA2GL_UpdateStates"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>STAGEQ_CLTA2_CLTA2OB6_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>STAGEQ_OB6_UpdateStates_template</moduleConfigFileName>
+    </activity>	
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="BASIN_SQIN_MODULE" value="ADDSUB_CLTA2_CLTA2GL_UpdateStates"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>STAGEQ_CLTA2_CLTA2SIM_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>STAGEQ_SIM_UpdateStates_template</moduleConfigFileName>
+    </activity>		
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="BASIN_SQIN_MODULE" value="ADDSUB_CLTA2_CLTA2GL_UpdateStates"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>ADJUSTQ_CLTA2_CLTA2ADJ_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>ADJUSTQ_UpdateStates_template</moduleConfigFileName>
+    </activity>
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>STAGEQ_CLTA2_CLTA2ADJ_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>STAGEQ_ADJ_UpdateStates_template</moduleConfigFileName>
+    </activity>	
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="ZONE" value="UPR"/>		
+            <string key="exportParameter" value="USW"/>
+            <string key="internalParameter" value="SWE"/>	
+            <string key="module" value="SNOW17"/>			
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>CHANGET_CLTA2_CLTA2USW_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+    </activity>	
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="ZONE" value="LWR"/>		
+            <string key="exportParameter" value="LSW"/>
+            <string key="internalParameter" value="SWE"/>		
+            <string key="module" value="SNOW17"/>			
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>CHANGET_CLTA2_CLTA2LSW_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+    </activity>	
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="ZONE" value="UPR"/>		
+            <string key="exportParameter" value="USC"/>
+            <string key="internalParameter" value="SASC"/>		
+            <string key="module" value="SNOW17"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>CHANGET_CLTA2_CLTA2USC_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+    </activity>	
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="ZONE" value="LWR"/>		
+            <string key="exportParameter" value="LSC"/>
+            <string key="internalParameter" value="SASC"/>		
+            <string key="module" value="SNOW17"/>
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>CHANGET_CLTA2_CLTA2LSC_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+    </activity>	
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="ZONE" value="RSN"/>		
+            <string key="exportParameter" value="RSN"/>
+            <string key="internalParameter" value="RSEL"/>
+            <string key="module" value="RSNWELEV"/>			
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>CHANGET_CLTA2_CLTA2RSN_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+    </activity>	
+    <activity>
+        <properties>
+            <string key="SEGMENT" value="CLTA2"/>
+            <string key="ZONE" value="LWR"/>		
+            <string key="exportParameter" value="MAT"/>
+            <string key="internalParameter" value="MAT"/>
+            <string key="FGROUP" value="Matsu"/>			
+        </properties>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>CHANGET_CLTA2_CLTA2MAT_UpdateStates</moduleInstanceId>
+        <moduleConfigFileName>CHANGET_MAT_UpdateStates_template</moduleConfigFileName>
+    </activity>	
+</workflow>

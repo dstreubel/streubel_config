@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modifierDisplay xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/modifierDisplay.xsd">
+   
+    <createModifierButtons>
+        <modifierId>tschng_MAT</modifierId>
+        <modifierId>tschng_MAP</modifierId>
+        <modifierId>rrichng</modifierId>
+        <modifierId>mfc</modifierId>
+        <modifierId>sacbasef</modifierId>
+        <modifierId>sacco</modifierId>
+        <modifierId>wechng</modifierId>
+    </createModifierButtons>    
+    <timeSeriesModifiersDisplayConfig>
+        <showTimeShiftModifierButtons>true</showTimeShiftModifierButtons>
+        <showTablePanel>true</showTablePanel>
+    </timeSeriesModifiersDisplayConfig>
+</modifierDisplay>

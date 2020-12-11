@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+<!--The fcstGroup_SampleESP_Historical modules take the Imported external Historical Time series and samples them for the period T0+120 days.  This enables the HS to be plotted in the probability AHPS plots produed by GraphGen.-->
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>SetTimes_LastObserved</moduleInstanceId>
+	</activity>
+    	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>SetTimes_ESP_Forecast</moduleInstanceId>
+	</activity> 
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Southeast_SampleESP_Historical</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Tanana_SampleESP_Historical</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Yuk_Can_SampleESP_Historical</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Fortym_SampleESP_Historical</moduleInstanceId>
+	</activity>
+ 	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Koyukuk_SampleESP_Historical</moduleInstanceId>
+	</activity>       
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Northsl_SampleESP_Historical</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Matsu_SampleESP_Historical</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Copper_SampleESP_Historical</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Anch_SampleESP_Historical</moduleInstanceId>
+	</activity>
+ 	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Kenai_SampleESP_Historical</moduleInstanceId>
+	</activity>       
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>S_West_SampleESP_Historical</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Bradley_SampleESP_Historical</moduleInstanceId>
+	</activity>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</workflow>

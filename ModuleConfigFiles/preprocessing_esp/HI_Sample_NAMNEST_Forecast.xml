@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>NAMNEST_FMAP</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_NAMNEST</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Gages_HI_Precip</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="0" end="36"/>
+			<readWriteMode>read only</readWriteMode>
+			<ensembleId>QPF</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>NAMNEST_ENSEMBLE</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>HI_Sample_NAMNEST_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Gages_HI_Precip</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="0" end="36" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<ensembleId>ESP</ensembleId>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="SampleESP_MAP">
+		<generationEnsemble>
+				<copy>
+					<inputOutput>
+						<inputVariable>
+							<variableId>NAMNEST_FMAP</variableId>
+						</inputVariable>
+						<outputVariable>
+							<variableId>NAMNEST_ENSEMBLE</variableId>
+						</outputVariable>
+						
+					</inputOutput>
+				</copy>
+		</generationEnsemble>
+	</transformation>
+</transformationModule>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationCoefficientSets version="1.0" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationCoefficientSets.xsd">
+
+    <coefficientSet id="FMAT 18Z">
+        <user>
+            <simple>
+                <coefficient id="COEFF_18Z_TFMN_AFTER"  value="0.0"/>
+                <coefficient id="COEFF_18Z_TFMN_BEFORE" value="0.4"/>
+                <coefficient id="COEFF_18Z_TFMX_AFTER"  value="0.6"/>
+                <coefficient id="COEFF_18Z_TFMX_BEFORE" value="0.0"/>
+            </simple>
+        </user>
+    </coefficientSet>
+    <coefficientSet id="FMAT 0Z">
+        <user>
+            <simple>
+                <coefficient id="COEFF_0Z_TFMN_AFTER"  value="0.05"/>
+                <coefficient id="COEFF_0Z_TFMN_BEFORE" value="0.025"/>
+                <coefficient id="COEFF_0Z_TFMX_AFTER"  value="0.925"/>
+                <coefficient id="COEFF_0Z_TFMX_BEFORE" value="0.0"/>
+            </simple>
+        </user>
+    </coefficientSet>
+    <coefficientSet id="FMAT 6Z">
+        <user>
+            <simple>
+                <coefficient id="COEFF_6Z_TFMN_AFTER"  value="0.67"/>
+                <coefficient id="COEFF_6Z_TFMN_BEFORE" value="0.0"/>
+                <coefficient id="COEFF_6Z_TFMX_AFTER"  value="0.33"/>
+                <coefficient id="COEFF_6Z_TFMX_BEFORE" value="0.0"/>
+            </simple>
+        </user>
+    </coefficientSet>
+    <coefficientSet id="FMAT 12Z">
+        <user>
+            <simple>
+                <coefficient id="COEFF_12Z_TFMN_AFTER"  value="0.0"/>
+                <coefficient id="COEFF_12Z_TFMN_BEFORE" value="0.0"/>
+                <coefficient id="COEFF_12Z_TFMX_AFTER"  value="0.0"/>
+                <coefficient id="COEFF_12Z_TFMX_BEFORE" value="0.0"/>
+                <coefficient id="COEFF_12Z_TFMN_ON"     value="0.95"/>
+                <coefficient id="COEFF_12Z_TFMX_ON"     value="0.05"/>
+            </simple>
+        </user>
+    </coefficientSet>
+</transformationCoefficientSets>

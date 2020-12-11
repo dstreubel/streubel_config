@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Computer Services (WL | Delft Hydraulics) -->
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+    <import>
+        <general>
+            <importType>grib2</importType>
+            <folder>$IMPORT_FOLDER_GEFS$</folder>
+	    <logWarningsForUnmappableTimeSeries>true</logWarningsForUnmappableTimeSeries>
+	    <logWarningsForUnmappableLocations>true</logWarningsForUnmappableLocations>
+            <idMapId>IdImportMEFPGEFS</idMapId>
+            <unitConversionsId>ImportMEFPGEFSUnits</unitConversionsId>
+            <importTimeZone>
+                <timeZoneOffset>+00:00</timeZoneOffset>
+            </importTimeZone>
+        </general>
+        
+        <!-- Since all three time series come from one set of grids, all three must be imported
+             at one time -->
+        <timeSeriesSet>
+            <moduleInstanceId>ImportMEFP_GEFS</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>FMAP</parameterId>
+            <locationId>HEFS_GEFS</locationId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceId>ImportMEFP_GEFS</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>TFMX</parameterId>
+            <locationId>HEFS_GEFS</locationId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceId>ImportMEFP_GEFS</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>TFMN</parameterId>
+            <locationId>HEFS_GEFS</locationId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>add originals</readWriteMode>
+        </timeSeriesSet>
+        
+        <externUnit parameterId="FMAP" unit="kg/m^2"/>
+        <externUnit parameterId="TFMX" unit="K"/>
+        <externUnit parameterId="TFMN" unit="K"/>
+    </import>
+</timeSeriesImportRun>

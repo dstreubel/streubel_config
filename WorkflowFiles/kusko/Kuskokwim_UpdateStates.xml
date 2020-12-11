@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<!--PreProcessing_UpdateStates-->
+	<activity>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SetTimes_LastObserved</moduleInstanceId>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Kuskokwim_MergeMAP_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>MergeMAP_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Kuskokwim_MergeMAT_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>MergeMAT_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<!-- SEGMENT MCGA2-->
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_MCGA2_MCGA2OB6_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_MCGA2_MCGA2RSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="CATCHMENT" value="MCGA2GL"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_MCGA2_MCGA2GL_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_GL_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="CATCHMENT" value="MCGA2UPR"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_MCGA2_MCGA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="CATCHMENT" value="MCGA2LWR"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_MCGA2_MCGA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="CATCHMENT" value="MCGA2GL"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>GLACIER_MCGA2_MCGA2GL_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>GLACIER_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="CATCHMENT" value="MCGA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_MCGA2_MCGA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="CATCHMENT" value="MCGA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_MCGA2_MCGA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="CATCHMENT" value="MCGA2GL"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_MCGA2_MCGA2GL_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_GL_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="CATCHMENT" value="MCGA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_MCGA2_MCGA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="CATCHMENT" value="MCGA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_MCGA2_MCGA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_MCGA2_MCGA2_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>ADDSUB_MCGA2_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_MCGA2_MCGA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_MCGA2_MCGA2SIM_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_MCGA2_MCGA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_MCGA2_MCGA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_MCGA2_MCGA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="ZONE" value="GL"/>	
+			<string key="exportParameter" value="GSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_MCGA2_MCGA2GSW_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_MCGA2_MCGA2USW_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_MCGA2_MCGA2LSW_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="ZONE" value="GL"/>		
+			<string key="exportParameter" value="GSC"/>
+			<string key="internalParameter" value="SASC"/>
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_MCGA2_MCGA2GSC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_MCGA2_MCGA2USC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_MCGA2_MCGA2LSC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_MCGA2_MCGA2RSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MCGA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Kuskokwim"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_MCGA2_MCGA2MAT_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_UpdateStates_template</moduleConfigFileName>
+	</activity>		
+		
+		<!-- SEGMENT KLCA2-->
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KLCA2_KLCA2OB6_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_KLCA2_KLCA2RSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="CATCHMENT" value="KLCA2UPR"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_KLCA2_KLCA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="CATCHMENT" value="KLCA2LWR"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_KLCA2_KLCA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="CATCHMENT" value="KLCA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_KLCA2_KLCA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="CATCHMENT" value="KLCA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_KLCA2_KLCA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="CATCHMENT" value="KLCA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_KLCA2_KLCA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="CATCHMENT" value="KLCA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_KLCA2_KLCA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="UP_SEGMENT" value="MCGA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>LAGK_KLCA2_MCGA2_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>LAGK_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_KLCA2_KLCA2_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>ADDSUB_KLCA2_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_KLCA2_KLCA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KLCA2_KLCA2SIM_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_KLCA2_KLCA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_KLCA2_KLCA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_KLCA2_KLCA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KLCA2_KLCA2USW_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KLCA2_KLCA2LSW_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KLCA2_KLCA2USC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KLCA2_KLCA2LSC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KLCA2_KLCA2RSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLCA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Kuskokwim"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_KLCA2_KLCA2MAT_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_UpdateStates_template</moduleConfigFileName>
+	</activity>		
+		<!-- SEGMENT CJXA2-->
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_CJXA2_CJXA2OB6_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_CJXA2_CJXA2RSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="CATCHMENT" value="CJXA2GL"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_CJXA2_CJXA2GL_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_GL_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="CATCHMENT" value="CJXA2UPR"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_CJXA2_CJXA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="CATCHMENT" value="CJXA2LWR"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_CJXA2_CJXA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="CATCHMENT" value="CJXA2GL"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>GLACIER_CJXA2_CJXA2GL_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>GLACIER_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="CATCHMENT" value="CJXA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_CJXA2_CJXA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="CATCHMENT" value="CJXA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_CJXA2_CJXA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="CATCHMENT" value="CJXA2GL"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_CJXA2_CJXA2GL_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_GL_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="CATCHMENT" value="CJXA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_CJXA2_CJXA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="CATCHMENT" value="CJXA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_CJXA2_CJXA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="UP_SEGMENT" value="KLCA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>LAGK_CJXA2_KLCA2_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>LAGK_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_CJXA2_CJXA2_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>ADDSUB_CJXA2_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_CJXA2_CJXA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_CJXA2_CJXA2SIM_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_CJXA2_CJXA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_CJXA2_CJXA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_CJXA2_CJXA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="ZONE" value="GL"/>		
+			<string key="exportParameter" value="GSW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CJXA2_CJXA2GSW_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>		
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CJXA2_CJXA2USW_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CJXA2_CJXA2LSW_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="ZONE" value="GL"/>		
+			<string key="exportParameter" value="GSC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CJXA2_CJXA2GSC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>		
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CJXA2_CJXA2USC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CJXA2_CJXA2LSC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CJXA2_CJXA2RSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="CJXA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Kuskokwim"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_CJXA2_CJXA2MAT_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_UpdateStates_template</moduleConfigFileName>
+	</activity>			
+	<!-- SEGMENT ANKA2-->
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_ANKA2_ANKA2OB6_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_OB6_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+			<string key="CATCHMENT_TYPE" value="LWR"/>	
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>RSNWELEV_ANKA2_ANKA2RSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>RSNWELEV_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="CATCHMENT" value="ANKA2UPR"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_ANKA2_ANKA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="CATCHMENT" value="ANKA2LWR"/>
+			<string key="FGROUP" value="Kuskokwim"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SNOW17_ANKA2_ANKA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SNOW17_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="CATCHMENT" value="ANKA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_ANKA2_ANKA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="CATCHMENT" value="ANKA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>SACSMA_ANKA2_ANKA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>SACSMA_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="CATCHMENT" value="ANKA2UPR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_ANKA2_ANKA2UPR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_UPR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="CATCHMENT" value="ANKA2LWR"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>UNITHG_ANKA2_ANKA2LWR_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>UNITHG_LWR_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="UP_SEGMENT" value="CJXA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>LAGK_ANKA2_CJXA2_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>LAGK_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADDSUB_ANKA2_ANKA2_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>ADDSUB_ANKA2_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_ANKA2_ANKA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_ANKA2_ANKA2SIM_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_SIM_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="BASIN_SQIN_MODULE" value="ADDSUB_ANKA2_ANKA2_UpdateStates"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ADJUSTQ_ANKA2_ANKA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>ADJUSTQ_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>STAGEQ_ANKA2_ANKA2ADJ_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>STAGEQ_ADJ_UpdateStates_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USW"/>
+			<string key="internalParameter" value="SWE"/>	
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ANKA2_ANKA2USW_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSW"/>
+			<string key="internalParameter" value="SWE"/>		
+			<string key="module" value="SNOW17"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ANKA2_ANKA2LSW_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="ZONE" value="UPR"/>		
+			<string key="exportParameter" value="USC"/>
+			<string key="internalParameter" value="SASC"/>	
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ANKA2_ANKA2USC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="LSC"/>
+			<string key="internalParameter" value="SASC"/>		
+			<string key="module" value="SNOW17"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ANKA2_ANKA2LSC_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="ZONE" value="RSN"/>		
+			<string key="exportParameter" value="RSN"/>
+			<string key="internalParameter" value="RSEL"/>
+			<string key="module" value="RSNWELEV"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ANKA2_ANKA2RSN_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_UpdateStates_template</moduleConfigFileName>
+	</activity>	
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ANKA2"/>
+			<string key="ZONE" value="LWR"/>		
+			<string key="exportParameter" value="MAT"/>
+			<string key="internalParameter" value="MAT"/>
+			<string key="FGROUP" value="Kuskokwim"/>			
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>CHANGET_ANKA2_ANKA2MAT_UpdateStates</moduleInstanceId>
+		<moduleConfigFileName>CHANGET_MAT_UpdateStates_template</moduleConfigFileName>
+	</activity>		
+</workflow>

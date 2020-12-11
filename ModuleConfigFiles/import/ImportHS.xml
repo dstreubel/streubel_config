@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+	<import> 
+		<general>
+			<importType>PI</importType>
+			<folder>$IMPORT_FOLDER_PIXML$</folder>
+			<idMapId>IdImportPIXML</idMapId>
+			<unitConversionsId>ImportEnglishUnits</unitConversionsId>
+			<missingValue>-999.0</missingValue>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+		</general>
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Southeast</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Southeast</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Tanana</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Tanana</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Yuk_Can</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Yuk_Can</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Fortym</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Fortym</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Koyukuk</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Koyukuk</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Northsl</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Northsl</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Matsu</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Matsu</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Copper</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Copper</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Anch</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Anch</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Kenai</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Kenai</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_S_West</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_S_West</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SSTG</parameterId>
+			<locationSetId>ESPADP_Bradley</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet>    
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>QINE</parameterId>
+			<locationSetId>ESPADP_Bradley</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+    		<timeSeriesSet>
+			<moduleInstanceId>ImportHS</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationSetId>ESPADP_Bradley</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6" timeZone="GMT-0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<expiryTime unit="year" multiplier="25"/>
+		</timeSeriesSet> 
+ 
+	</import>
+</timeSeriesImportRun>
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forecastLengthEstimator xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/forecastLengthEstimator.xsd">
+<!--	<externalHistoricalTimeSeries>
+		<moduleInstanceId>ImportDataCard</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>MAT</parameterId>
+		<locationId>LastObserved</locationId>
+		<timeSeriesType>external historical</timeSeriesType>
+		<timeStep unit="hour" multiplier="6"/>
+	        <relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="false"/>
+		<readWriteMode>read only</readWriteMode>
+	</externalHistoricalTimeSeries>
+	<externalForecastTimeSeries>
+		<moduleInstanceId>ImportDataCard</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>MAT</parameterId>
+		<locationSetId>Catchments</locationSetId>
+		<timeSeriesType>external forecasting</timeSeriesType>
+		<timeStep unit="hour" multiplier="6"/>
+		<relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="false"/>
+		<readWriteMode>read only</readWriteMode>
+	</externalForecastTimeSeries>-->
+	<externalHistoricalTimeSeries>
+		<moduleInstanceId>SetTimes_LastObserved</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>MAT</parameterId>
+		<locationId>LastObserved</locationId>
+		<timeSeriesType>external historical</timeSeriesType>
+		<timeStep unit="hour" multiplier="6"/>
+		<relativeViewPeriod unit="day" start="-36500" startOverrulable="true" end="0" endOverrulable="false"/>
+		<readWriteMode>read only</readWriteMode>
+	</externalHistoricalTimeSeries>
+	<externalForecastTimeSeries>
+		<moduleInstanceId>ImportSHEF</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>FMAT</parameterId>
+		<locationSetId>Catchments_FMAT</locationSetId>
+		<timeSeriesType>external forecasting</timeSeriesType>
+		<timeStep unit="hour" multiplier="6"/>
+		<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="false"/>
+		<readWriteMode>read only</readWriteMode>
+	</externalForecastTimeSeries>
+	<minForecastLength multiplier="0" unit="day"/>
+</forecastLengthEstimator>
+
+<!--	<externalHistoricalTimeSeries>
+		<moduleInstanceId>SetTimes_LastObserved</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>MAT</parameterId>
+		<locationId>LastObserved</locationId>
+		<timeSeriesType>external historical</timeSeriesType>
+		<timeStep unit="hour" multiplier="6"/>
+		<relativeViewPeriod unit="day" start="-18250" startOverrulable="true" end="0"/>
+		<readWriteMode>read only</readWriteMode>
+	</externalHistoricalTimeSeries>
+	<externalForecastTimeSeries>
+		<moduleInstanceId>Grid_PreProcessing_GFE</moduleInstanceId>
+		<valueType>scalar</valueType>
+		<parameterId>FMAT</parameterId>
+		<locationSetId>Catchments</locationSetId>
+		<timeSeriesType>external forecasting</timeSeriesType>
+		<timeStep unit="hour" multiplier="6"/>
+		<relativeViewPeriod unit="day" start="0" end="0" endOverrulable="true"/>
+		<readWriteMode>read only</readWriteMode>
+	</externalForecastTimeSeries>
+	<minForecastLength multiplier="0" unit="day"/>-->

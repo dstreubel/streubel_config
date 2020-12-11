@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <modifierType>BASEFLOW</modifierType>
+  <modifierType>UNITHG</modifierType>
+  <group id= "default">
+    <parameter id="UHG_DURATION">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="UNIT">
+      <stringValue>ENGLISH</stringValue>
+    </parameter>
+    <parameter id="UHG_INTERVAL">
+      <intValue>6</intValue>
+    </parameter>
+    <parameter id="DRAINAGE_AREA">
+      <dblValue>24897.0</dblValue>
+    </parameter>
+    <parameter id="CONSTANT_BASE_FLOW">
+      <dblValue>0.0</dblValue>
+    </parameter>
+    <parameter id="UHG_ORDINATES">
+      <table>
+        <columnTypes A="double"/>
+        <row A="0.0"/>
+        <row A="2276.0"/>
+        <row A="5463.0"/>
+        <row A="8194.0"/>
+        <row A="13657.0"/>
+        <row A="23673.0"/>
+        <row A="32778.0"/>
+        <row A="43704.0"/>
+        <row A="54629.0"/>
+        <row A="64654.0"/>
+        <row A="75571.0"/>
+        <row A="86497.0"/>
+        <row A="100154.0"/>
+        <row A="113811.0"/>
+        <row A="127469.0"/>
+        <row A="141126.0"/>
+        <row A="154783.0"/>
+        <row A="166620.0"/>
+        <row A="176635.0"/>
+        <row A="182098.0"/>
+        <row A="174814.0"/>
+        <row A="163888.0"/>
+        <row A="150231.0"/>
+        <row A="129290.0"/>
+        <row A="111990.0"/>
+        <row A="95601.0"/>
+        <row A="78302.0"/>
+        <row A="61913.0"/>
+        <row A="46890.0"/>
+        <row A="34599.0"/>
+        <row A="23673.0"/>
+        <row A="14568.0"/>
+        <row A="8650.0"/>
+        <row A="4552.0"/>
+        <row A="2731.0"/>
+        <row A="1457.0"/>
+        <row A="637.0"/>
+        <row A="182.0"/>
+        <row A="64.0"/>
+        <row A="9.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+        <row A="0.0"/>
+      </table>
+    </parameter>
+  </group>
+</parameters>

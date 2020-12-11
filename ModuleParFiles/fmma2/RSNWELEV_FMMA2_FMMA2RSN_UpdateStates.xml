@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+    <parameter id="FREEZING_LEVEL_TS_ID">
+      <stringValue></stringValue>
+    </parameter>
+    <parameter id="ELEVATION_OF_TEMPERATURE_DATA">
+      <dblValue>750.0</dblValue>
+    </parameter>
+    <parameter id="MAT_TS_TYPE">
+      <stringValue>MAT</stringValue>
+    </parameter>
+    <parameter id="RSEL_TS_ID">
+      <stringValue>FMMA2RSN</stringValue>
+    </parameter>
+    <parameter id="CARRYOVER_FLAG">
+      <intValue>0</intValue>
+    </parameter>
+    <parameter id="LAPSE_RATE">
+      <dblValue>0.55</dblValue>
+    </parameter>
+    <parameter id="MAT_TS_ID">
+      <stringValue>FMMA2LWR</stringValue>
+    </parameter>
+    <parameter id="RSEL_TS_TYPE">
+      <stringValue>RSEL</stringValue>
+    </parameter>
+    <parameter id="THRESHOLD_TEMPERATURE">
+      <dblValue>1.7</dblValue>
+    </parameter>
+    <parameter id="RSEL_TS_TIME_STEP">
+      <intValue>6</intValue>
+    </parameter>
+  </group>
+</parameters>

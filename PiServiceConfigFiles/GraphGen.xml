@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by WL | Delft Hydraulics (WL | Delft Hydraulics) -->
+<fewsPiServiceConfig xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/fewsPiServiceConfig.xsd">
+    <general>
+        <exportIdMap>IdExportPiService</exportIdMap>
+    </general>
+    <timeSeries>
+        <id>selectedTimeSeries</id>
+        <selectedTimeSeries></selectedTimeSeries>
+    </timeSeries>
+    <timeSeries>
+        <id>selectedSegmentTimeSeries</id>
+        <selectedSegmentTimeSeries></selectedSegmentTimeSeries>
+    </timeSeries>
+
+    <!--  Returns the observed streamflow -->
+    <timeSeries>
+        <id>QIN</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QIN</parameterId>
+            <locationSetId>ImportSHEF</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6" />
+            <readWriteMode>read only</readWriteMode> 
+            <ensembleId>QPF</ensembleId>                      
+        </timeSeriesSet>
+    </timeSeries>
+
+    <!--  Returns the observed river stage -->
+    <timeSeries>
+        <id>STG</id>
+        <timeSeriesSet>                        
+            <moduleInstanceId>ImportSHEF</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>STG</parameterId>
+            <locationSetId>ImportSHEF</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" multiplier="6" />
+            <readWriteMode>read only</readWriteMode>                        
+        </timeSeriesSet>
+    </timeSeries>
+
+    <!--  Returns the deterministic forecast streamflow -->
+    <timeSeries>
+        <id>QINE</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ImportSHEF</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6" />
+            <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet>		
+    </timeSeries>
+
+    <!--  Returns the deterministic forecast river stage -->
+    <timeSeries>
+        <id>SSTG</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>SSTG</moduleInstanceSetId>            
+            <!--<moduleInstanceSetId>QIN</moduleInstanceSetId>-->
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ImportSHEF</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6" />
+            <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet>
+    </timeSeries>  
+
+    <!--  Returns the standard ESP streamflow forecasts -->
+    <timeSeries>
+        <id>QINE ESP</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Southeast</locationSetId> 
+            <timeSeriesType>simulated forecasting</timeSeriesType> 
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='1998'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Tanana</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1971' end='1998'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Yuk_Can</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1981' end='2002'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Fortym</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1978' end='2005'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Koyukuk</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2000'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Northsl</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1982' end='2002'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Matsu</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='1999'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Copper</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2005'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Anch</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2005'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Kenai</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2003'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_S_West</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2005'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QINE</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>QINE</parameterId>
+            <locationSetId>ESPADP_Bradley</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2008'/>
+        </timeSeriesSet>
+    </timeSeries>
+    
+    <!-- Returns the SQIN time series for Bradley Inflow -->
+    <timeSeries>
+        <id>SQIN ESP</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>SQIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SQIN</parameterId>
+            <locationSetId>ESPADP_Bradley</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+        </timeSeriesSet>
+    </timeSeries>
+    
+    <!--  Returns the standard ESP river stage forecasts -->
+    <timeSeries>
+        <id>SSTG ESP</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Southeast</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='1998'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Tanana</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1971' end='1998'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Yuk_Can</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1980' end='2002'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Fortym</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1978' end='2005'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Koyukuk</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2000'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Northsl</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1982' end='2002'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Matsu</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='1999'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Copper</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2005'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Anch</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2005'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Kenai</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2003'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_S_West</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2005'/>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceSetId>QIN</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>SSTG</parameterId>
+            <locationSetId>ESPADP_Bradley</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+	    <ensembleMemberIndexRange start='1970' end='2005'/>
+        </timeSeriesSet>
+    </timeSeries>
+   
+    <!--  Returns the historical ESP streamflow forecasts -->
+    <timeSeries>
+        <id>QINE HS</id>        
+            <timeSeriesSet>
+                <moduleInstanceId>Southeast_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Southeast</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>Tanana_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Tanana</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>Yuk_Can_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Yuk_Can</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>Fortym_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Fortym</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>Koyukuk_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Koyukuk</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>Northsl_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Northsl</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>Matsu_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Matsu</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>Copper_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Copper</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>Anch_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Anch</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>Kenai_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Kenai</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>S_West_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_S_West</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>Bradley_SampleESP_Historical</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>QINE</parameterId>
+                <locationSetId>ESPADP_Bradley</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <readWriteMode>read only</readWriteMode>
+                <ensembleId>HS</ensembleId>
+            </timeSeriesSet>
+        </timeSeries>
+
+    <!--  Returns the historical ESP stage forecasts-->
+    <timeSeries>
+        <id>SSTG HS</id>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Southeast_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Southeast</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Tanana_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Tanana</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Yuk_Can_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Yuk_Can</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Fortym_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Fortym</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Koyukuk_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Koyukuk</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Northsl_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Northsl</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Matsu_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Matsu</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Copper_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Copper</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Anch_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Anch</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Kenai_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Kenai</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>S_West_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_S_West</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+ 	<timeSeriesSet>
+  		<moduleInstanceId>Bradley_SampleESP_Historical</moduleInstanceId>
+  		<valueType>scalar</valueType>
+  		<parameterId>SSTG</parameterId>
+  		<locationSetId>ESPADP_Bradley</locationSetId>
+  		<timeSeriesType>simulated forecasting</timeSeriesType>
+  		<timeStep unit="hour" multiplier="6"/>
+  		<readWriteMode>read only</readWriteMode>
+  		<ensembleId>HS</ensembleId>
+ 	</timeSeriesSet>
+    </timeSeries>  
+
+    <!--  Returns the precipitation ensembles used to generate the standard ESP forecasts -->
+    <timeSeries>
+        <id>MAP ESP</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>MAP</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>MAP</parameterId>
+            <locationSetId>Catchments</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+            <ensembleMemberIndexRange start="1970" />
+        </timeSeriesSet>
+    </timeSeries>
+
+    <!--  Returns the temperature ensembles used to generate the standard ESP forecasts -->
+    <timeSeries>
+        <id>MAT ESP</id>
+        <timeSeriesSet>
+            <moduleInstanceSetId>MAT</moduleInstanceSetId>
+            <valueType>scalar</valueType>
+            <parameterId>MAT</parameterId>
+            <locationSetId>Catchments</locationSetId>
+            <timeSeriesType>simulated forecasting</timeSeriesType>
+            <timeStep unit="hour" multiplier="6"/>
+            <readWriteMode>read only</readWriteMode>
+            <ensembleId>ESP</ensembleId>
+            <ensembleMemberIndexRange start="1970" />
+        </timeSeriesSet>
+    </timeSeries>
+
+</fewsPiServiceConfig>

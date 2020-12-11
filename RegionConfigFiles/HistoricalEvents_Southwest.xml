@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<historicalEvents xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/historicalEvents.xsd" version="1.0">
+	<historicalEvent locationId="ILRA2" parameterId="QIN" name="2003/10/01 maxQ=53000">
+		<eventData>
+			<data dateTime="2003-09-23T00:00:00" value="327"/>
+			<data dateTime="2003-09-24T00:00:00" value="321"/>
+			<data dateTime="2003-09-25T00:00:00" value="313"/>
+			<data dateTime="2003-09-26T00:00:00" value="308"/>
+			<data dateTime="2003-09-27T00:00:00" value="337"/>
+			<data dateTime="2003-09-28T00:00:00" value="489"/>
+			<data dateTime="2003-09-29T00:00:00" value="1850"/>
+			<data dateTime="2003-09-30T00:00:00" value="4610"/>
+			<data dateTime="2003-10-01T00:00:00" value="33800"/>
+			<data dateTime="2003-10-02T00:00:00" value="25700"/>
+			<data dateTime="2003-10-03T00:00:00" value="5810"/>
+			<data dateTime="2003-10-04T00:00:00" value="2530"/>
+			<data dateTime="2003-10-05T00:00:00" value="1860"/>
+			<data dateTime="2003-10-06T00:00:00" value="1710"/>
+			<data dateTime="2003-10-07T00:00:00" value="1510"/>
+			<data dateTime="2003-10-08T00:00:00" value="1660"/>
+			<data dateTime="2003-10-09T00:00:00" value="1330"/>
+			<data dateTime="2003-10-10T00:00:00" value="1100"/>
+			<data dateTime="2003-10-11T00:00:00" value="961"/>
+			<data dateTime="2003-10-12T00:00:00" value="830"/>
+			<data dateTime="2003-10-13T00:00:00" value="764"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ILRA2" parameterId="QIN" name="1998/06/08 maxQ=14800">
+		<eventData>
+			<data dateTime="1998-06-01T00:00:00" value="3160"/>
+			<data dateTime="1998-06-02T00:00:00" value="2630"/>
+			<data dateTime="1998-06-03T00:00:00" value="2330"/>
+			<data dateTime="1998-06-04T00:00:00" value="2440"/>
+			<data dateTime="1998-06-05T00:00:00" value="5040"/>
+			<data dateTime="1998-06-06T00:00:00" value="6480"/>
+			<data dateTime="1998-06-07T00:00:00" value="8360"/>
+			<data dateTime="1998-06-08T00:00:00" value="12300"/>
+			<data dateTime="1998-06-09T00:00:00" value="7780"/>
+			<data dateTime="1998-06-10T00:00:00" value="4260"/>
+			<data dateTime="1998-06-11T00:00:00" value="3440"/>
+			<data dateTime="1998-06-12T00:00:00" value="3270"/>
+			<data dateTime="1998-06-13T00:00:00" value="2630"/>
+			<data dateTime="1998-06-14T00:00:00" value="2150"/>
+			<data dateTime="1998-06-15T00:00:00" value="2480"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="ILRA2" parameterId="QIN" name="1999/09/18 maxQ=13800">
+		<eventData>
+			<data dateTime="1999-09-12T00:00:00" value="628"/>
+			<data dateTime="1999-09-13T00:00:00" value="934"/>
+			<data dateTime="1999-09-14T00:00:00" value="1050"/>
+			<data dateTime="1999-09-15T00:00:00" value="885"/>
+			<data dateTime="1999-09-16T00:00:00" value="807"/>
+			<data dateTime="1999-09-17T00:00:00" value="2850"/>
+			<data dateTime="1999-09-18T00:00:00" value="12100"/>
+			<data dateTime="1999-09-19T00:00:00" value="7750"/>
+			<data dateTime="1999-09-20T00:00:00" value="8250"/>
+			<data dateTime="1999-09-21T00:00:00" value="4900"/>
+			<data dateTime="1999-09-22T00:00:00" value="3510"/>
+			<data dateTime="1999-09-23T00:00:00" value="2130"/>
+			<data dateTime="1999-09-24T00:00:00" value="1540"/>
+			<data dateTime="1999-09-25T00:00:00" value="1250"/>
+			<data dateTime="1999-09-26T00:00:00" value="1060"/>
+			<data dateTime="1999-09-27T00:00:00" value="937"/>
+			<data dateTime="1999-09-28T00:00:00" value="852"/>
+			<data dateTime="1999-09-29T00:00:00" value="778"/>
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="NRDA2" parameterId="QIN" name="1988/06/21 maxQ=24900">
+		<eventData>
+			<data dateTime="1988-06-01T00:00:00" value="10800"/>
+			<data dateTime="1988-06-02T00:00:00" value="11400"/>
+			<data dateTime="1988-06-03T00:00:00" value="12200"/>
+			<data dateTime="1988-06-04T00:00:00" value="12900"/>
+			<data dateTime="1988-06-05T00:00:00" value="13900"/>
+			<data dateTime="1988-06-06T00:00:00" value="14700"/>
+			<data dateTime="1988-06-07T00:00:00" value="15800"/>
+			<data dateTime="1988-06-08T00:00:00" value="16600"/>
+			<data dateTime="1988-06-09T00:00:00" value="17400"/>
+			<data dateTime="1988-06-10T00:00:00" value="18500"/>
+			<data dateTime="1988-06-11T00:00:00" value="19600"/>
+			<data dateTime="1988-06-12T00:00:00" value="20400"/>
+			<data dateTime="1988-06-13T00:00:00" value="21100"/>
+			<data dateTime="1988-06-14T00:00:00" value="21500"/>
+			<data dateTime="1988-06-15T00:00:00" value="22600"/>
+			<data dateTime="1988-06-16T00:00:00" value="23600"/>
+			<data dateTime="1988-06-17T00:00:00" value="24100"/>
+			<data dateTime="1988-06-18T00:00:00" value="24400"/>
+			<data dateTime="1988-06-19T00:00:00" value="24600"/>
+			<data dateTime="1988-06-20T00:00:00" value="24700"/>
+			<data dateTime="1988-06-21T00:00:00" value="24800"/>
+			<data dateTime="1988-06-22T00:00:00" value="24800"/>
+			<data dateTime="1988-06-23T00:00:00" value="24700"/>
+			<data dateTime="1988-06-24T00:00:00" value="24500"/>
+			<data dateTime="1988-06-25T00:00:00" value="24300"/>
+			<data dateTime="1988-06-26T00:00:00" value="24000"/>
+			<data dateTime="1988-06-27T00:00:00" value="23800"/>
+			<data dateTime="1988-06-28T00:00:00" value="23600"/>
+			<data dateTime="1988-06-29T00:00:00" value="23400"/>
+			<data dateTime="1988-06-30T00:00:00" value="23200"/>
+			<data dateTime="1988-07-01T00:00:00" value="23200"/>
+			<data dateTime="1988-07-02T00:00:00" value="23000"/>
+			<data dateTime="1988-07-03T00:00:00" value="23200"/>
+			<data dateTime="1988-07-04T00:00:00" value="23000"/>
+			<data dateTime="1988-07-05T00:00:00" value="22700"/>
+			<data dateTime="1988-07-06T00:00:00" value="22400"/>
+			<data dateTime="1988-07-07T00:00:00" value="22300"/>
+			<data dateTime="1988-07-08T00:00:00" value="21900"/>
+			<data dateTime="1988-07-09T00:00:00" value="21600"/>
+			<data dateTime="1988-07-10T00:00:00" value="21100"/>
+			<data dateTime="1988-07-11T00:00:00" value="20700"/>
+			<data dateTime="1988-07-12T00:00:00" value="20500"/>
+			<data dateTime="1988-07-13T00:00:00" value="20400"/>
+			<data dateTime="1988-07-14T00:00:00" value="20000"/>
+			<data dateTime="1988-07-15T00:00:00" value="19900"/>
+			<data dateTime="1988-07-16T00:00:00" value="19400"/>
+			<data dateTime="1988-07-17T00:00:00" value="19000"/>
+			<data dateTime="1988-07-18T00:00:00" value="18600"/>
+			<data dateTime="1988-07-19T00:00:00" value="18300"/>
+			<data dateTime="1988-07-20T00:00:00" value="17800"/>
+			<data dateTime="1988-07-21T00:00:00" value="17500"/>
+			<data dateTime="1988-07-22T00:00:00" value="16900"/>
+			<data dateTime="1988-07-23T00:00:00" value="16600"/>
+			<data dateTime="1988-07-24T00:00:00" value="16200"/>
+			<data dateTime="1988-07-25T00:00:00" value="15700"/>
+			<data dateTime="1988-07-26T00:00:00" value="15300"/>
+			<data dateTime="1988-07-27T00:00:00" value="14700"/>
+			<data dateTime="1988-07-28T00:00:00" value="14300"/>
+			<data dateTime="1988-07-29T00:00:00" value="13900"/>
+			<data dateTime="1988-07-30T00:00:00" value="13600"/>
+			<data dateTime="1988-07-31T00:00:00" value="12900"/>
+			<data dateTime="1988-08-01T00:00:00" value="12700"/>			
+		</eventData>
+	</historicalEvent>
+	<historicalEvent locationId="NRDA2" parameterId="QIN" name="1994/06/19 maxQ=22000">
+		<eventData>
+			<data dateTime="1994-06-10T00:00:00" value="17000"/>
+			<data dateTime="1994-06-11T00:00:00" value="17500"/>
+			<data dateTime="1994-06-12T00:00:00" value="18500"/>
+			<data dateTime="1994-06-13T00:00:00" value="19000"/>
+			<data dateTime="1994-06-14T00:00:00" value="19500"/>
+			<data dateTime="1994-06-15T00:00:00" value="20500"/>
+			<data dateTime="1994-06-16T00:00:00" value="21000"/>
+			<data dateTime="1994-06-17T00:00:00" value="21600"/>
+			<data dateTime="1994-06-18T00:00:00" value="21700"/>
+			<data dateTime="1994-06-19T00:00:00" value="21700"/>
+			<data dateTime="1994-06-20T00:00:00" value="21800"/>
+			<data dateTime="1994-06-21T00:00:00" value="21700"/>
+			<data dateTime="1994-06-22T00:00:00" value="21800"/>
+			<data dateTime="1994-06-23T00:00:00" value="21600"/>
+			<data dateTime="1994-06-24T00:00:00" value="21400"/>
+			<data dateTime="1994-06-25T00:00:00" value="21100"/>
+			<data dateTime="1994-06-26T00:00:00" value="20500"/>
+			<data dateTime="1994-06-27T00:00:00" value="20000"/>
+			<data dateTime="1994-06-28T00:00:00" value="19400"/>
+			<data dateTime="1994-06-29T00:00:00" value="18900"/>
+			<data dateTime="1994-06-30T00:00:00" value="18300"/>
+			<data dateTime="1994-07-01T00:00:00" value="17600"/>
+			<data dateTime="1994-07-02T00:00:00" value="17300"/>
+			<data dateTime="1994-07-03T00:00:00" value="16900"/>
+			<data dateTime="1994-07-04T00:00:00" value="16500"/>
+			<data dateTime="1994-07-05T00:00:00" value="16300"/>
+			<data dateTime="1994-07-06T00:00:00" value="15900"/>
+			<data dateTime="1994-07-07T00:00:00" value="15500"/>
+			<data dateTime="1994-07-08T00:00:00" value="15100"/>
+			<data dateTime="1994-07-09T00:00:00" value="14700"/>
+			<data dateTime="1994-07-10T00:00:00" value="14700"/>
+		</eventData>
+	</historicalEvent>
+</historicalEvents>		

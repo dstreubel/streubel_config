@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+	<variable>
+		<variableId>mpe_radar_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE01</parameterId>
+			<locationId>HRAP</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mapx_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE</parameterId>
+			<locationId>HRAP</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mrms_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE</parameterId>
+			<locationId>MRMS</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mapx_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mrms_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mapx_chena_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationSetId>COE_Basins_Chena</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mapx_basin_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>map_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAP_Wght_Anch</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>map-mapx_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAP-MAPX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mpe_radar_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mpe_radar_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R06</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mpe_radar_basin_scalar_1hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R01</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>mpe_radar_basin_scalar_6hr</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX_R06</parameterId>
+			<locationSetId>Basins</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>AKNBM_grid</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE</parameterId>
+			<locationId>AKNBM</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>AKNBM_scalar</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>MAPX_PreProcessing_QPE</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>MAPX</parameterId>
+			<locationSetId>Catchments</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>1</synchLevel>
+		</timeSeriesSet>
+	</variable>
+
+	<transformation id="SampleAKNBM">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>AKNBM_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>AKNBM_scalar</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="SampleMAPX">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>mapx_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mapx_scalar</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<!--transformation id="SampleMRMS">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>mrms_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mapx_scalar</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation-->
+	<transformation id="SampleMAPXchena">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>mapx_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mapx_chena_scalar</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="SampleMAPX_basin">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>mapx_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mapx_basin_scalar</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="MAP-MAPX">
+		<user>
+			<simple>
+				<expression>+(map_scalar)-(mapx_scalar)</expression>
+				<outputVariable>
+					<variableId>map-mapx_scalar</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+	<transformation id="SampleMAPX_MPE">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>mpe_radar_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mpe_radar_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar_MPE">
+		<aggregation>
+			<accumulative>
+				<inputVariable>
+					<variableId>mpe_radar_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mpe_radar_scalar_6hr</variableId>
+				</outputVariable>
+			</accumulative>
+		</aggregation>
+	</transformation>
+	<transformation id="SampleMAPX_MPE_basin">
+		<interpolationSpatial>
+			<average>
+				<inputVariable>
+					<variableId>mpe_radar_grid</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mpe_radar_basin_scalar_1hr</variableId>
+				</outputVariable>
+			</average>
+		</interpolationSpatial>
+	</transformation>
+	<transformation id="CHANGET_1hr_to_6hr_Scalar_MPE_basin">
+		<aggregation>
+			<accumulative>
+				<inputVariable>
+					<variableId>mpe_radar_basin_scalar_1hr</variableId>
+				</inputVariable>
+				<outputVariable>
+					<variableId>mpe_radar_basin_scalar_6hr</variableId>
+				</outputVariable>
+			</accumulative>
+		</aggregation>
+	</transformation>
+
+</transformationModule>

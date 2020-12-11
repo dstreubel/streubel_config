@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qpe/mpe/qpe06</folder>
+ 			<idMapId>IdImportGRIB1_Estimate</idMapId>
+			<unitConversionsId>ImportGrib</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE</parameterId>
+			<locationId>HRAP</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+	</import>
+        <import>
+                <general>
+                        <importType>grib2</importType>
+                        <folder>$IMPORT_FOLDER_GRIB2$/nasa</folder>
+                        <fileNamePatternFilter>*sport_imerg_noHemis*</fileNamePatternFilter>
+                        <idMapId>IdImportNASA</idMapId>
+                        <unitConversionsId>ImportEnglishUnits</unitConversionsId>
+                        <importTimeZone>
+                                <timeZoneOffset>+00:00</timeZoneOffset>
+                        </importTimeZone>
+                </general>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportQPE</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>QPE</parameterId>
+                        <locationId>NASA</locationId>
+                        <timeSeriesType>external historical</timeSeriesType>
+                        <timeStep unit="hour" multiplier="1"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <synchLevel>6</synchLevel>
+                        <expiryTime unit="day" multiplier="5"/>
+                </timeSeriesSet>
+                <externUnit parameterId="QPE" unit="MM"/>
+        </import>
+
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qpe/mpe/qpe24</folder>
+ 			<idMapId>IdImportGRIB1_Estimate</idMapId>
+			<unitConversionsId>ImportGrib</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE24</parameterId>
+			<locationId>HRAP</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="40"/>
+		</timeSeriesSet>
+	</import>
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qpe/mpe/qpe01</folder>
+ 			<idMapId>IdImportGRIB1_Estimate</idMapId>
+			<unitConversionsId>ImportGrib</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE01</parameterId>
+			<locationId>HRAP</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+	</import>
+	<import>
+		<general>
+			<importType>ArcInfoAsciiGrid</importType>
+			<folder>$IMPORT_FOLDER_ROOT$/asciiGrid/mrms</folder>
+		        <logWarningsForUnmappableTimeSeries>true</logWarningsForUnmappableTimeSeries>
+		        <logWarningsForUnmappableLocations>true</logWarningsForUnmappableLocations>
+ 			<idMapId>IdImportMRMS6hr</idMapId>
+			<geoDatum>WGS 1984</geoDatum>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE</parameterId>
+			<locationId>MRMS</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<!--timeStep unit="nonequidistant"/-->
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+	</import>
+	<import>
+		<general>
+			<importType>ArcInfoAsciiGrid</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qpe/mpe/ascii</folder>
+		        <logWarningsForUnmappableTimeSeries>true</logWarningsForUnmappableTimeSeries>
+		        <logWarningsForUnmappableLocations>true</logWarningsForUnmappableLocations>
+ 			<idMapId>IdImportMPE1hr</idMapId>
+			<geoDatum>WGS 1984</geoDatum>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE01</parameterId>
+			<locationId>HRAP</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<!--timeStep unit="nonequidistant"/-->
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+	</import>
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qpe/rdhm/qpe01</folder>
+ 			<idMapId>IdImportGRIB1_Kauai</idMapId>
+			<unitConversionsId>ImportGrib</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+<!--			<gridStartPoint>SW</gridStartPoint>-->
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE01</parameterId>
+			<locationId>HRAP_QTR_KAUAI</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+	</import>
+	<import>
+		<general>
+			<importType>grib</importType>
+			<folder>$IMPORT_FOLDER_GRIB1$/qpe/mpe/qpe01_hfo</folder>
+ 			<idMapId>IdImportGRIB1_HFO</idMapId>
+			<unitConversionsId>ImportGrib</unitConversionsId>
+			<importTimeZone>
+				<timeZoneOffset>+00:00</timeZoneOffset>
+			</importTimeZone>
+			<gridStartPoint>SW</gridStartPoint>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportQPE</moduleInstanceId>
+			<valueType>grid</valueType>
+			<parameterId>QPE01</parameterId>
+			<locationId>HRAP_HFO</locationId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>6</synchLevel>
+			<expiryTime unit="day" multiplier="21"/>
+		</timeSeriesSet>
+	</import>
+	<import>
+                <general>
+                        <importType>grib2</importType>
+                        <folder>$IMPORT_FOLDER_GRIB2$/qpe/nbm_qpe</folder>
+                        <idMapId>IdImportGRIB2QPE_NBM</idMapId>
+                        <unitConversionsId>ImportNBM</unitConversionsId>
+                        <importTimeZone>
+                                <timeZoneOffset>+00:00</timeZoneOffset>
+                        </importTimeZone>
+                        <gridStartPoint>SW</gridStartPoint>
+                </general>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportQPE</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>QPE</parameterId>
+                        <locationId>AKNBM</locationId>
+                        <timeSeriesType>external historical</timeSeriesType>
+                        <timeStep unit="hour" multiplier="6"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <synchLevel>6</synchLevel>
+                        <expiryTime unit="day" multiplier="21"/>
+                </timeSeriesSet>
+        </import>		
+	<import>
+                <general>
+                        <importType>grib2</importType>
+                        <folder>$IMPORT_FOLDER_GRIB2$/qpe/HI_MRMS</folder>
+		        <logWarningsForUnmappableTimeSeries>true</logWarningsForUnmappableTimeSeries>
+		        <logWarningsForUnmappableLocations>true</logWarningsForUnmappableLocations>
+                        <idMapId>IdImportGRIB2_MRMS</idMapId>
+                        <unitConversionsId>ImportNBM</unitConversionsId>
+                        <importTimeZone>
+                                <timeZoneOffset>+00:00</timeZoneOffset>
+                        </importTimeZone>
+                        <gridStartPoint>NW</gridStartPoint>
+                </general>
+                <timeSeriesSet>
+                        <moduleInstanceId>ImportQPE</moduleInstanceId>
+                        <valueType>grid</valueType>
+                        <parameterId>QPE</parameterId>
+                        <locationId>HI_MRMS</locationId>
+                        <timeSeriesType>external historical</timeSeriesType>
+                        <timeStep unit="hour" multiplier="1"/>
+                        <readWriteMode>add originals</readWriteMode>
+                        <synchLevel>6</synchLevel>
+                        <expiryTime unit="day" multiplier="21"/>
+                </timeSeriesSet>
+        </import>		
+</timeSeriesImportRun>

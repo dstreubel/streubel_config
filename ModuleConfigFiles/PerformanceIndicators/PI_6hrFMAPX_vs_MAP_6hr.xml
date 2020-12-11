@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<performanceIndicatorSets xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/performanceIndicatorSets.xsd" version="1.1">
+
+    <!--Rules below apply to when only comparing one period from timestep interval-->
+    <!--relativeViewPeriod of input variables determines the analysis window-->
+    <!-- A start time of 0 and end time of 0 will perform stats on the past 6 hours from T0-->
+    <!-- A start time of -6 and end time of 0 will perform stats on the past 12 hours from T0-->
+    <!-- A start time of -12 and end time of 0 will perform stats on the past 18 hours from T0-->
+    <!-- A start time of -18 and end time of 0 will perform stats on the past 24 hours from T0-->
+
+    <!--Analysis windows with multiple 6 hour periods will perform stats differently depending on the statistic-->
+    <!--It is important to always validate your results-->
+
+    <performanceIndicatorSet>
+        <inputVariable variableId="6hr_MAP">
+<!--            <timeSeriesSet>
+                <moduleInstanceId>ImportSHEF</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>MAP</parameterId>
+                <locationId>STKA2LWR</locationId>
+                <!-\-<locationSetId>Catchments</locationSetId>-\->
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                <readWriteMode>read only</readWriteMode>
+            </timeSeriesSet>-->
+            <timeSeriesSet>
+                <moduleInstanceId>Southeast_MergeMAP_Forecast</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>MAP</parameterId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <relativeViewPeriod unit="hour" start="0" end="48"/>
+                <readWriteMode>read only</readWriteMode>
+            </timeSeriesSet>
+        </inputVariable>
+        <inputVariable variableId="6hr_FMAPX">
+            <timeSeriesSet>
+                <moduleInstanceId>FMAPX_PreProcessing_QPF</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>FMAPX</parameterId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external forecasting</timeSeriesType>
+                <timeStep unit="hour" multiplier="6"/>
+                <relativeViewPeriod unit="hour" start="0" end="48"/>
+                <readWriteMode>read only</readWriteMode>
+            </timeSeriesSet>
+  
+        </inputVariable>
+
+        <forecastSelectionPeriod start="-24" end="0" unit="hour"/>
+        <!--forecastSelectionPeriod (FSP) notes below... -->
+        <!--FSP is required when input variables use forecasting timeSeriesTypes (i.e. external/simulated forecasting)-->
+        <!--Determines what forecast to grab from the LDS for the input variables that are using forecasting timeSeriesType-->
+        <!--If multiple forecast timeseries are selected, calculations are performed on the earliest (i.e. oldest) forecast timeseries-->
+        <!--Hint: Use debug mode to view Log and confirm what forecast TimeSeries are selected for the forecast input variable-->
+        <!--forecastSelectionPeriod needs to be at least -24 in this instance since QPF is only imported once a day at APRFC-->
+
+
+        <!--*******************************************************************************************************************-->
+        <!--Notice there are several performance indicators to use besides modulePerformanceIndicator-->
+        <!--indicatorType statistic options vary depending upon the type of performance indicator -->
+        <modulePerformanceIndicator indicatorType="meanabsoluteerror" calculatedVariableId="6hr_FMAPX" observedVariableId="6hr_MAP" outputVariableId="6hr_MAE_FMAPX"/>
+        <modulePerformanceIndicator indicatorType="bias" calculatedVariableId="6hr_FMAPX" observedVariableId="6hr_MAP" outputVariableId="6hr_bias_FMAPX">
+            <!--<additionalCriteria criteria="" value=""/>--> </modulePerformanceIndicator>
+        <!--Uncomment above and check out the additional criteria options-->
+        <!--*******************************************************************************************************************-->
+
+        <outputVariable variableId="6hr_MAE_FMAPX">
+            <timeSeriesSet>
+                <moduleInstanceId>PI_6hrFMAPX_vs_MAP_6hr</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>MAE</parameterId>
+                <qualifierId>MAE.FMAPX.06</qualifierId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="nonequidistant"/>
+                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                <readWriteMode>add originals</readWriteMode>
+                <synchLevel>1</synchLevel>
+                <expiryTime unit="year"/>
+            </timeSeriesSet>
+        </outputVariable>
+        <outputVariable variableId="6hr_bias_FMAPX">
+            <timeSeriesSet>
+                <moduleInstanceId>PI_6hrFMAPX_vs_MAP_6hr</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>bias</parameterId>
+                <qualifierId>bias.FMAPX.06</qualifierId>
+                <locationId>STKA2LWR</locationId>
+                <!--<locationSetId>Catchments</locationSetId>-->
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="nonequidistant"/>
+                <relativeViewPeriod unit="hour" start="0" end="0"/>
+                <readWriteMode>add originals</readWriteMode>
+                <synchLevel>1</synchLevel>
+                <expiryTime unit="year"/>
+            </timeSeriesSet>
+        </outputVariable>
+    </performanceIndicatorSet>
+</performanceIndicatorSets>

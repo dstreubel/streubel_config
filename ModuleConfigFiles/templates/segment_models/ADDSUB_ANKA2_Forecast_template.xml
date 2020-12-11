@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+		<variable>
+		<variableId>GL_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>Unit_Hydrograph_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationRelationId>GL</locationRelationId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>UPR_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>Unit_Hydrograph_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationRelationId>UPR</locationRelationId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>MID_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>Unit_Hydrograph_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationRelationId>MID</locationRelationId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>LWR_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>Unit_Hydrograph_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationRelationId>LWR</locationRelationId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>RTD_SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceSetId>Routed_Flows_Forecast</moduleInstanceSetId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationRelationId>RTD_UP1</locationRelationId>
+            <locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SQIN_6</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_$SEGMENT$_$SEGMENT$_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>$SEGMENT$</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="hour" start="-240" startOverrulable="true" end="0" endOverrulable="true"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="$SEGMENT$_SUM">
+        <merge>
+            <relations>
+                <relation>
+                    <expression>UPR_SQIN_6 + LWR_SQIN_6 + RTD_SQIN_6</expression>
+                    <outputComment>UPR+RTD</outputComment>
+                </relation>
+                <outputVariable>
+                    <variableId>SQIN_6</variableId>
+                </outputVariable>
+            </relations>          
+        </merge> 
+    </transformation>
+</transformationModule>

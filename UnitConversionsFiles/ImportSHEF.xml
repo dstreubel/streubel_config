@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unitConversions xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/unitConversions.xsd">
+	<unitConversion>
+		<inputUnitType>KCMS</inputUnitType>
+		<outputUnitType>m3/s</outputUnitType>
+		<multiplier>1000</multiplier>
+		<incrementer>0</incrementer>
+	</unitConversion>
+	<unitConversion>
+		<inputUnitType>CFS</inputUnitType>
+		<outputUnitType>CMS</outputUnitType>
+		<multiplier>.02832</multiplier>
+		<incrementer>0</incrementer>
+	</unitConversion>
+	<unitConversion>
+		<inputUnitType>KCFS</inputUnitType>
+		<outputUnitType>m3/s</outputUnitType>
+		<multiplier>28.32</multiplier>
+		<incrementer>0</incrementer>
+	</unitConversion>
+	<!-- Add a conversion for KCFS to CMS not sure why m3/s was configured above -bcj 11Oct15 -->
+	<unitConversion>
+		<inputUnitType>KCFS</inputUnitType>
+		<outputUnitType>CMS</outputUnitType>
+		<multiplier>28.32</multiplier>
+		<incrementer>0</incrementer>
+	</unitConversion>
+	<unitConversion>
+		<inputUnitType>IN</inputUnitType>
+		<outputUnitType>MM</outputUnitType>
+		<multiplier>25.4</multiplier>
+		<incrementer>0</incrementer>
+	</unitConversion>
+	<unitConversion>
+		<inputUnitType>DEGF</inputUnitType>
+		<outputUnitType>DEGC</outputUnitType>
+		<multiplier>0.5556</multiplier>
+		<incrementer>-17.7778</incrementer>
+	</unitConversion>
+	<unitConversion>
+		<inputUnitType>FT</inputUnitType>
+		<outputUnitType>M</outputUnitType>
+		<multiplier>0.3048</multiplier>
+		<incrementer>0</incrementer>
+	</unitConversion>
+	<unitConversion>
+		<inputUnitType>KCFS</inputUnitType>
+		<outputUnitType>CFS</outputUnitType>
+		<multiplier>1000</multiplier>
+		<incrementer>0</incrementer>
+	</unitConversion>
+</unitConversions>

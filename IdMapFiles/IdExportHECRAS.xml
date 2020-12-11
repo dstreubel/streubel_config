@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+	
+
+	
+	<!--<map internalLocation="TARC3CT" externalLocation="CT RIVER R1 134752.0" internalParameter="QINE" externalParameter="FLOW"/>
+	<map internalLocation="TMVC3CT" externalLocation="CT RIVER R1 334752.0" internalParameter="QINE" externalParameter="Flow"/>
+	<map internalLocation="SAYC3CT" externalLocation="CT RIVER R1 334752.0" internalParameter="STID" externalParameter="Stage"/>-->
+	
+	<!--<map internalLocation="TARC3CT" externalLocation="CT RIVER R1/334752.0" internalParameter="QINE" externalParameter="FLOW"/>-->
+		<map internalLocation="TMVC3CT" externalLocation="CT RIVER R1 334752.0" internalParameter="QINE" externalParameter="Flow Hydrograph"/>
+	<map internalLocation="SAYC3CT" externalLocation="CT RIVER R1 0.00" internalParameter="STID" externalParameter="Stage Hydrograph"/>
+	
+	<location external="CT RIVER R1/121968.0" internal="MDDC3"/>
+
+<enableOneToOneMapping/>
+	
+</idMap>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/transformationModule.xsd" version="1.0">
+    <variable>
+        <variableId>snow_cover</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>ImportNIC</moduleInstanceId>
+            <valueType>grid</valueType>
+            <parameterId>AESCNIC</parameterId>
+            <locationId>NIC</locationId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="day" multiplier="1"/>
+            <relativeViewPeriod unit="day" start="-30" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>read only</readWriteMode>
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>AESC_scalar_gages</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>NIC_PreProcessing</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>AESCNICX</parameterId>
+            <locationSetId>Gages_AK</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="day" multiplier="1"/>
+            <relativeViewPeriod unit="day" start="-30" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <expiryTime unit="day" multiplier="30"/>
+            
+        </timeSeriesSet>
+    </variable>
+    <variable>
+        <variableId>AESC_scalar_catchments</variableId>
+        <timeSeriesSet>
+            <moduleInstanceId>NIC_PreProcessing</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>AESCNICX</parameterId>
+            <locationSetId>Catchments</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="day" multiplier="1"/>
+            <relativeViewPeriod unit="day" start="-30" startOverrulable="true" end="0" endOverrulable="true"/>
+            <readWriteMode>add originals</readWriteMode>
+            <expiryTime unit="day" multiplier="30"/>
+            
+        </timeSeriesSet>
+    </variable>
+    
+  
+    <!-- Clip out the Basins and adjust the values to percentages. --> 
+    <transformation id="NIC_clip_gages">
+        <interpolationSpatial>
+            <average> 
+                <inputVariable>
+                    <variableId>snow_cover</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>AESC_scalar_gages</variableId>
+                </outputVariable>
+            </average>
+        </interpolationSpatial>
+    </transformation>
+    <transformation id="NIC_adjust">
+        <user>
+            <simple>
+                <expression>((AESC_scalar_gages-2)/2)</expression>
+                <outputVariable>
+                    <variableId>AESC_scalar_gages</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation> 
+    <transformation id="NIC_clip_basins">
+        <interpolationSpatial>
+            <average> 
+                <inputVariable>
+                    <variableId>snow_cover</variableId>
+                </inputVariable>
+                <outputVariable>
+                    <variableId>AESC_scalar_catchments</variableId>
+                </outputVariable>
+            </average>
+        </interpolationSpatial>
+    </transformation>
+ 
+    <transformation id="NIC_adjust">
+        <user>
+            <simple>
+                <expression>((AESC_scalar_catchments-2)/2)</expression>
+                <outputVariable>
+                    <variableId>AESC_scalar_catchments</variableId>
+                </outputVariable>
+            </simple>
+        </user>
+    </transformation> 
+</transformationModule>    

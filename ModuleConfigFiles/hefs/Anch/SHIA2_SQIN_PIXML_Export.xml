@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesExportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/timeSeriesExportRun.xsd">
+  <export>
+    <general>
+      <exportTypeStandard>pi 1.5</exportTypeStandard>
+      <folder>$EXPORT_FOLDER$/mefp</folder>
+      <exportFileName>
+        <!-- <name>_NFDC1HUF_HEFS.</name> -->
+        <name>_DCWC1_HEFS.</name>
+        <prefix>
+          <timeZeroFormattingString>yyyyMMddHH</timeZeroFormattingString>
+        </prefix>
+        <suffix>
+          <simpleString>xml</simpleString>
+        </suffix>
+      </exportFileName>
+      <!-- <idMapId>IdExportMEFPPE</idMapId> -->
+      <idMapId>IdExportPIXML</idMapId>
+      <unitConversionsId>importEnglishUnits</unitConversionsId>
+      <exportMissingValue>-999</exportMissingValue>
+    </general>
+
+		<timeSeriesSet>
+			<moduleInstanceId>ADDSUB_SHIA2_SHIA2UPR_Forecast</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>SQIN</parameterId>
+			<locationId>SHIA2</locationId>
+			<timeSeriesType>simulated forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+      			<relativeViewPeriod unit="hour" start="0" startOverrulable="false" end="360" endOverrulable="false"/>
+      			<readWriteMode>read only</readWriteMode>
+      			<ensembleId>MEFP</ensembleId>
+      			<ensembleMemberIndexRange start='1971' end='2005'/>
+		</timeSeriesSet>
+  </export>
+</timeSeriesExportRun>

@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 sp1 (x64) (http://www.altova.com) by Benjamin Balk (Amec E&I Inc.) -->
+<!--<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/workflow.xsd" version="1.1">-->
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<!--PreProcessing_Forecast-->
+	<!-- HAWAII NWM FORECAST POINTS-->
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="AEPH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ALEH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_ALEH1_ALEH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ALEH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_ALEH1_ALEH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="APHH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ELUH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HNRH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HUNH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLWH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KRSH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MKUH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MKLH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MKLH1_MKLH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MKLH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MKLH1_MKLH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="OKNH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KWKH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KWKH1_KWKH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KWKH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KWKH1_KWKH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WNIH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WNIH1_WNIH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WNIH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WNIH1_WNIH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HLEH1"/>
+			<string key="BASINAREA" value="48031400"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HLEH1_HLEH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HLEH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HLEH1_HLEH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLKH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KLKH1_KLKH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLKH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KLKH1_KLKH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HLAH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HLAH1_HLAH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HLAH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HLAH1_HLAH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WIEH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WIEH1_WIEH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WIEH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WIEH1_WIEH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WLRH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WTRH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="OLBH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_OLBH1_OLBH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="OLBH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_OLBH1_OLBH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WURH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WEBH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WEBH1_WEBH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WEBH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WEBH1_WEBH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WLDH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="UKRH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WSFH1"/>
+			<string key="BASINAREA" value="43423200"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WSFH1_WSFH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WSFH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WSFH1_WSFH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WRVH1"/>
+			<string key="BASINAREA" value="149202100"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MKHH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MKHH1_MKHH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MKHH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MKHH1_MKHH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KNNH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KNNH1_KNNH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KNNH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KNNH1_KNNH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HMRH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HLSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HLSH1_HLSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HLSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HLSH1_HLSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="NURH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="OPSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_OPSH1_OPSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="OPSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_OPSH1_OPSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KOWH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KOWH1_KOWH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KOWH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KOWH1_KOWH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KLSH1_KLSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KLSH1_KLSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="UHLH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KSFH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KSFH1_KSFH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KSFH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KSFH1_KSFH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUTH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KUTH1_KUTH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KUTH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KUTH1_KUTH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KNFH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KNFH1_KNFH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KNFH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KNFH1_KNFH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WKSH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="PNSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_PNSH1_PNSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="PNSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_PNSH1_PNSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="OPAH1"/>
+			<string key="BASINAREA" value="7767800"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_OPAH1_OPAH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="OPAH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_OPAH1_OPAH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WRSH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WRSH1_WRSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WRSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WRSH1_WRSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HOUH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HOUH1_HOUH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HOUH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HOUH1_HOUH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WKNH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WKNH1_WKNH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WKNH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WKNH1_WKNH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WKGH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WHSH1"/>
+			<string key="BASINAREA" value="9890500"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WHSH1_WHSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WHSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WHSH1_WHSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KNAH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KNAH1_KNAH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KNAH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KNAH1_KNAH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WESH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WESH1_WESH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WESH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WESH1_WESH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="NHSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_NHSH1_NHSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="NHSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_NHSH1_NHSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HUSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HUSH1_HUSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HUSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HUSH1_HUSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MNSH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MNSH1_MNSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MNSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MNSH1_MNSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MNWH1"/>
+			<string key="BASINAREA" value="11099800"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MNWH1_MNWH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MNWH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MNWH1_MNWH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MKSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MKSH1_MKSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MKSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MKSH1_MKSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KMSH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="PKSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_PKSH1_PKSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="PKSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_PKSH1_PKSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WISH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WISH1_WISH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WISH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WISH1_WISH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MWSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MWSH1_MWSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="MWSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_MWSH1_MWSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HLWH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HLWH1_HLWH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HLWH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HLWH1_HLWH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KKGH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KKGH1_KKGH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KKGH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KKGH1_KKGH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KWGH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KWGH1_KWGH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KWGH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KWGH1_KWGH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WKRH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HKSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HKSH1_HKSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HKSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HKSH1_HKSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KKLH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KKLH1_KKLH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KKLH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KKLH1_KKLH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KLRH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="IAOH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_IAOH1_IAOH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="IAOH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_IAOH1_IAOH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HPOH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HPOH1_HPOH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HPOH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HPOH1_HPOH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WKMH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WWKH1"/>
+			<string key="BASINAREA" value="9427900"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WWKH1_WWKH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WWKH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WWKH1_WWKH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WHRH1"/>
+			<string key="BASINAREA" value="11058900"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WHRH1_WHRH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WHRH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WHRH1_WHRH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="OHGH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_OHGH1_OHGH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="OHGH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_OHGH1_OHGH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HNWH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HNWH1_HNWH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="HNWH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_HNWH1_HNWH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KWSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KWSH1_KWSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KWSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KWSH1_KWSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KKSH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WKOH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ALKH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_ALKH1_ALKH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="ALKH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_ALKH1_ALKH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="SDQH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="NLIH1"/>
+			<string key="BASINAREA" value="31204600"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_NLIH1_NLIH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="NLIH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_NLIH1_NLIH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WLUH1"/>
+			<string key="BASINAREA" value="570665800"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WLUH1_WLUH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WLUH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_WLUH1_WLUH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="WASH1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>ImportNetCDF_NWMFcstHrly</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KHSH1"/>
+			<string key="BASIN_SQIN_MODULE" value="ImportSHEF"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KHSH1_KHSH1SIM_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_SIM_Forecast_template</moduleConfigFileName>
+	</activity>
+	<activity>
+		<properties>
+			<string key="SEGMENT" value="KHSH1"/>
+			<string key="BASINAREA" value="1"/>
+		</properties>
+		<runIndependent>false</runIndependent>
+		<moduleInstanceId>QSTAGE_KHSH1_KHSH1OB1_Forecast</moduleInstanceId>
+		<moduleConfigFileName>QSTAGE_OB1_Forecast_template</moduleConfigFileName>
+	</activity>
+</workflow>

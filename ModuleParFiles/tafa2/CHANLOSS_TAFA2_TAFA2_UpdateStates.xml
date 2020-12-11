@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+    <parameter id="OPERATION_CONTENTS">
+      <stringValue>SALCHAKET SLOUGH     FIXP           0.07            0.0     
+TAFA2      SQIN    6
+</stringValue>
+    </parameter>
+  </group>
+</parameters>

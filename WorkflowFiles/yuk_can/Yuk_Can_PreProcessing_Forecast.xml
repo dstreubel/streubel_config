@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>SetTimes_LastObserved</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>SetTimes_Forecast</moduleInstanceId>
+	</activity>
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Yuk_Can_MergeMAT_Forecast</moduleInstanceId>
+	</activity>
+	
+	<activity>
+		<runIndependent>true</runIndependent>
+		<moduleInstanceId>Yuk_Can_MergeMAP_Forecast</moduleInstanceId>
+	</activity>
+	
+</workflow>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters version="1.5" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://chps1/schemas/pi-schemas/pi_modelparameters.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI">
+  <group id="default">
+    <parameter id="OPERATION_CONTENTS">
+      <stringValue>CHENA R AT FAIRBANKS VARC                           0.0     
+CHFA2LOC   SQIN    6
+     -2.20     -1.85     -2.25     -2.30     -0.40     -0.80
+     -1.20     -0.50     -0.55     -0.80     -1.05     -1.75
+</stringValue>
+    </parameter>
+  </group>
+</parameters>

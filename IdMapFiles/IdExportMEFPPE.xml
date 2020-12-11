@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/idMap.xsd">
+
+    <!-- Mapping is required because MEFP uses TMIN and TMAX parameters, but RFCs appear
+         to define TAMN and TAMX. -->
+    <parameter external="TMAX" internal="TAMX"/>
+    <parameter external="TMIN" internal="TAMN"/>
+    
+    <enableOneToOneMapping/>
+</idMap>

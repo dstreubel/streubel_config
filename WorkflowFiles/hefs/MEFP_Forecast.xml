@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://chps1/schemas/workflow.xsd" version="1.1">
+    
+    <!-- IMPORTANT NOTE: Look for portions marked with the following:
+         
+         ***** FORECAST GROUP SPECIFIC ******
+         
+         Those sections must be modified if forecast groups 
+	     are changed or added for generating
+         lagged ensembles or executing MEFP. -->
+         
+    <!-- ============================================ -->
+    <!--              Preprocess Data                 -->
+    <!-- ============================================ -->
+    <!-- Uncomment this activity if RFC forecast source is to be used for
+         temperature forecasting.-->
+    <!--<activity>
+        <runIndependent>true</runIndependent>
+        <workflowId>MEFP_Preprocess_RFC_Forecast</workflowId>
+    </activity>-->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <workflowId>MEFP_Preprocess_GEFS_Forecast</workflowId>
+    </activity>
+     <!--activity>
+        <runIndependent>true</runIndependent>
+        <workflowId>MEFP_Preprocess_CFSv2_Forecast</workflowId>
+    </activity> -->
+
+    
+    <!-- ============================================ -->
+    <!--           Generate MEFP Forecast             -->
+    <!-- ============================================ -->
+    
+    <!-- ****** FORECAST GROUP SPECIFIC ****** -->
+    <!-- Execute the MEFP to generate FMAP and TFMN, 
+         TFMX forecasts -->
+    <!-- Add one activity per group and data type. -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Southeast_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Southeast_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Tanana_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Tanana_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <!--activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Yuk_Can_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Yuk_Can_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Fortym_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Fortym_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Porcupine_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Porcupine_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Koyukuk_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Koyukuk_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Northsl_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Northsl_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Upyukon_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Upyukon_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Midyukon_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Midyukon_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Matsu_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Matsu_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Copper_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Copper_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Anch_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Anch_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Kenai_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Kenai_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>S_West_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>S_West_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity-->
+    <!--activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Bradley_MEFP_FMAP_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Bradley_MEFP_TFMN_TFMX_Forecast</moduleInstanceId>
+    </activity-->
+    
+    <!-- Converts all TFMN/TFMX data to FMAT forecast data
+    for all groups at once. -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>MEFP_FMAT_Forecast</moduleInstanceId>
+        <ensemble>
+            <ensembleId>MEFP</ensembleId>
+            <runInLoop>true</runInLoop>
+        </ensemble>
+    </activity>
+    
+</workflow>
